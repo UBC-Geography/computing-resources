@@ -474,6 +474,8 @@ performance computers.
 
 -   [Building a project website with Jekyll and GitHub Pages](https://ubc-library-rc.github.io/intro-project-sites/)
 
+-   [Git and Jupyter Notebooks: The Ultimate Guide](https://www.reviewnb.com/git-jupyter-notebook-ultimate-guide)
+
 ## SQL Databases
 
 -   [How to create and access MySQL and PostgreSQL databases on DRI systems - Video](https://youtu.be/3uHSXXQwJpQ)
