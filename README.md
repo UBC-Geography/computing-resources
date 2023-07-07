@@ -1,7 +1,8 @@
 # Geography Computing Resources & Documentation
 
 This repository includes a listing of computing resources and accompanying documentation that can be helpful in familiarizing
-oneself with various tools and software that are used in Geography research, instruction, and learning.
+oneself with various tools and software that are used in Geography research, instruction, and learning. For more related materials and
+workshop oppurtunities, check out [UBC Library Research Commons Workshops](https://researchcommons.library.ubc.ca/workshops/).
 
 If you have recommendations for materials to add to this list, feel free to create a pull request or reach out to kellen.malek@ubc.ca.
 
