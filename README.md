@@ -158,22 +158,22 @@ websites.
 
 ## Python
 
-### Virtual Environment Manager
+Python is one of the most popular programming languages in the world. Its low learning curve paired with a massive ecosystem has made it a powerful tool for geospatial computing. GIS software like QGIS and ArcGIS, provide the ability to extend their functionality through Python, while many programming libraries that have been created to efficiently perform geospatial computing tasks have been either written in Python, released as Python packages, and/or include application programming interfaces (APIs) that coherently communicate with Python code.
 
-When using modules not found in Python's standard library, you should
-always install and run the module packages within a virtual environment.
-This isolates your code and packages from any globally installed Python
-packages and ensures you are using the appropriate package version for
-your code.
+- _[Python for Geographic Data Analysis](https://pythongis.org/)_
 
-#### conda
+- _[Python Crash Course](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12472396)_
 
-conda is an extremely powerful tool for both managing environments and packages. Using `conda install`
-provides the ability to install a range of powerful packages that aren't available via Python's `pip`.
-If you are very new to Python and still getting comfortable, try getting confident creating virtual
-environments and installing packages via venv and pip before using conda.
+### Virtual Environment Managers
 
-If you need to install conda on your device, we suggest using the link below to install it using Miniconda.
+Virtual environments are an important tool for isolating multiple Python projects on a single machine, and their use is highly recommended when starting new projects. By isolating your projects, you can ensure that each project is only using the specific Python packages that were identified and installed for running it. This makes the project easier to reproduce while also reducing errors caused by clashing package dependencies.
+
+#### Conda
+
+Conda is an extremely powerful tool for both managing environments and packages. Using `conda install`
+provides the ability to install a range of powerful packages that aren't available via Python's built-in package manager, pip. Additionally, Conda enables you to install and manage multiple versions of Python on a single machine using virtual environments.
+
+If you need to install Conda on your device, we suggest using the link below to install it using the Miniconda installer.
 
 - [Miniconda, a minimal installer for conda](https://docs.conda.io/en/latest/miniconda.html)
 
@@ -228,6 +228,34 @@ define tests that can run over your functions and ensure they are
 following expected behavior in a range of practical scenarios.
 
 - [pytest Documentation](https://docs.pytest.org/en/7.3.x/)
+
+### Geospatial Books
+
+- _[Geographic Data Science with Python](https://geographicdata.science/book/intro.html)_
+
+- _[Learning Geospatial Analysis with Python: Understand GIS Fundamentals and Perform Remote Sensing Data Analysis Using Python 3. 7](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=11126768)_
+
+- _[GIS Algorithms](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10279472)_
+
+- _[Python for Geospatial Data Analysis](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12429886)_
+
+- _[Applied Geospatial Data Science with Python](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12613206)_
+
+- _[Mastering Geospatial Analysis with Python: Explore GIS Processing and Learn to Work with GeoDjango, CARTOframes and MapboxGL-Jupyter](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10274346)_
+
+- _[Machine Learning on Geographical Data Using Python Introduction into Geodata with Applications and Use Cases](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12453975)_
+
+#### Extending GIS Software
+
+- _[A Geographer's Guide to Computing Fundamentals: Python in ArcGIS Pro](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12441298)_
+
+- _[Python for ArcGIS Pro](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12191128)_
+
+- _[Advanced Python scripting for ArcGIS Pro](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=11878622)_
+
+- _[Mastering Geospatial Development with QGIS 3](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10274348)_
+
+- _[QGIS Python programming cookbook](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10262853)_
 
 ### Geospatial Libraries/Packages
 
