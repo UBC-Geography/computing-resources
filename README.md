@@ -47,7 +47,7 @@ and taken advantage of by bad actors.
 
 - [WordPress 101 -- Video Course](https://learning.oreilly.com/videos/wordpress-101/9781800566415/?sso_link=yes&sso_link_from=univ-british-columbia)
 
-- [WordPress: The Missing Manual](https://gw2jh3xr2c.search.serialssolutions.com/log?L=GW2JH3XR2C&D=OODEK&J=TC_039927965&P=Link&PT=Redirector&A=WordPress%3A+The+Missing+Manual%2C+3rd+Edition&H=c8a3787037&U=https%3A%2F%2Fgo.oreilly.com%2Funiv-british-columbia%2Fhttps%3A%2F%2Flearning.oreilly.com%2Flibrary%2Fview%2F%7E%2F9781492074151%2F%3Far)
+- [WordPress: The Missing Manual](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=11890511)
 
 ## Static Site Generators (SSG) / Web Publishing
 
