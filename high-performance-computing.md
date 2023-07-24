@@ -39,6 +39,12 @@ Supported Software:
 - Note: Additionally, any software that is supported on Linux can be
   ran within an Apptainer container
 
+## QGIS
+
+QGIS can run on either UBC Sockeye or Alliance clusters. To interact with QGIS through a graphical user interface, you'll need to run in it within an interactive job with X11 forwarding enabled. You can find more information on creating graphical interactive jobs on UBC Sockeye [here](https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-GraphicalInteractive), while documentation for Alliance clusters is listed below.
+
+- [Alliance Documentation - QGIS](https://docs.alliancecan.ca/wiki/QGIS)
+
 ## JupyterLab / Notebooks
 
 - [Alliance Documentation - JupyterHub](https://docs.alliancecan.ca/wiki/JupyterHub)
@@ -461,7 +467,7 @@ need to convert the job script from PBS to SLURM.
 
 ## R
 
-- [Documentation](https://docs.alliancecan.ca/wiki/R)
+- [Alliance Documentation - R](https://docs.alliancecan.ca/wiki/R)
 
 - Supported Versions: 4.0, 4.1 & 4.2
 

@@ -164,6 +164,40 @@ Python is one of the most popular programming languages in the world. Its low le
 
 - _[Python Crash Course](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12472396)_
 
+### Geospatial Books
+
+- _[Geographic Data Science with Python](https://geographicdata.science/book/intro.html)_
+
+- _[Learning Geospatial Analysis with Python: Understand GIS Fundamentals and Perform Remote Sensing Data Analysis Using Python 3. 7](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=11126768)_
+
+- _[GIS Algorithms](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10279472)_
+
+- _[Python for Geospatial Data Analysis](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12429886)_
+
+- _[Applied Geospatial Data Science with Python](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12613206)_
+
+- _[Mastering Geospatial Analysis with Python: Explore GIS Processing and Learn to Work with GeoDjango, CARTOframes and MapboxGL-Jupyter](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10274346)_
+
+- _[Machine Learning on Geographical Data Using Python Introduction into Geodata with Applications and Use Cases](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12453975)_
+
+#### Extending GIS Software
+
+- _[A Geographer's Guide to Computing Fundamentals: Python in ArcGIS Pro](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12441298)_
+
+- _[Python for ArcGIS Pro](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12191128)_
+
+- _[Advanced Python scripting for ArcGIS Pro](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=11878622)_
+
+- _[Mastering Geospatial Development with QGIS 3](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10274348)_
+
+- _[QGIS Python programming cookbook](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10262853)_
+
+### Geospatial Libraries/Packages
+
+- [Awesome Geospatial - Python](https://github.com/sacridini/Awesome-Geospatial#python)
+
+- [GDAL Python Documentation](https://gdal.org/api/python_bindings.html)
+
 ### Virtual Environment Managers
 
 Virtual environments are an important tool for isolating multiple Python projects on a single machine, and their use is highly recommended when starting new projects. By isolating your projects, you can ensure that each project is only using the specific Python packages that were identified and installed for running it. This makes the project easier to reproduce while also reducing errors caused by clashing package dependencies.
@@ -229,81 +263,25 @@ following expected behavior in a range of practical scenarios.
 
 - [pytest Documentation](https://docs.pytest.org/en/7.3.x/)
 
-### Geospatial Books
-
-- _[Geographic Data Science with Python](https://geographicdata.science/book/intro.html)_
-
-- _[Learning Geospatial Analysis with Python: Understand GIS Fundamentals and Perform Remote Sensing Data Analysis Using Python 3. 7](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=11126768)_
-
-- _[GIS Algorithms](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10279472)_
-
-- _[Python for Geospatial Data Analysis](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12429886)_
-
-- _[Applied Geospatial Data Science with Python](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12613206)_
-
-- _[Mastering Geospatial Analysis with Python: Explore GIS Processing and Learn to Work with GeoDjango, CARTOframes and MapboxGL-Jupyter](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10274346)_
-
-- _[Machine Learning on Geographical Data Using Python Introduction into Geodata with Applications and Use Cases](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12453975)_
-
-#### Extending GIS Software
-
-- _[A Geographer's Guide to Computing Fundamentals: Python in ArcGIS Pro](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12441298)_
-
-- _[Python for ArcGIS Pro](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12191128)_
-
-- _[Advanced Python scripting for ArcGIS Pro](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=11878622)_
-
-- _[Mastering Geospatial Development with QGIS 3](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10274348)_
-
-- _[QGIS Python programming cookbook](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10262853)_
-
-### Geospatial Libraries/Packages
-
-- [Awesome Geospatial - Python](https://github.com/sacridini/Awesome-Geospatial#python)
-
 ### Other Related Libraries/Packages
-
-#### SciPy
 
 - [SciPy Documentation](https://docs.scipy.org/doc/scipy/)
 
-#### Numpy
-
 - [NumPy Documentation](https://numpy.org/doc/stable/)
-
-#### pandas
 
 - [pandas Documentation](https://pandas.pydata.org/docs/)
 
-#### GDAL Bindings
-
-- [GDAL Python Documentation](https://gdal.org/api/python_bindings.html)
-
-#### scikit-learn
-
 - [scikit-learn Documentation](https://scikit-learn.org/stable/user_guide.html)
-
-#### matplotlib
 
 - [matplotlib User Guide](https://matplotlib.org/stable/users/index)
 
-#### seaborn
-
 - [seaborn Tutorial](https://seaborn.pydata.org/tutorial.html)
-
-#### bokeh
 
 - [bokeh Documentation](https://docs.bokeh.org/en/latest/docs/user_guide.html)
 
-#### plotly
-
 - [plotly Fundamentals](https://plotly.com/python/plotly-fundamentals/)
 
-#### Folium
-
 - [Folium Documentation](https://python-visualization.github.io/folium/)
-
-#### Dask
 
 - [Dask Documentation](https://docs.dask.org/en/stable/)
 
@@ -312,6 +290,18 @@ following expected behavior in a range of practical scenarios.
 - [Introduction to R for Spatial Data Science](https://rspatial.org/intr/index.html)
 
 - [Spatial Data Science with Applications in R](https://r-spatial.org/book/)
+
+### Geospatial Libraries/Packages
+
+- [CRAN Task View: Analysis of Spatial Data](https://cran.r-project.org/web/views/Spatial.html)
+
+- [Awesome Geospatial - R](https://github.com/sacridini/Awesome-Geospatial#r)
+
+### Virtual Environment Managers
+
+- Conda
+
+- renv
 
 ### Linting
 
@@ -341,41 +331,23 @@ performance computers.
 
 - [bench Documentation](https://cran.r-project.org/web/packages/bench/bench.pdf)
 
-### Geospatial Libraries/Packages
-
-- [CRAN Task View: Analysis of Spatial Data](https://cran.r-project.org/web/views/Spatial.html)
-
-- [Awesome Geospatial - R](https://github.com/sacridini/Awesome-Geospatial#r)
-
 ### Other Related Libraries/Packages
-
-#### trajectories
 
 - [trajectories: Classes and Methods for Trajectory Data](https://cran.r-project.org/web/packages/trajectories/vignettes/article.pdf)
 
 - [trajectories Reference Manual](https://cran.r-project.org/web/packages/trajectories/trajectories.pdf)
 
-#### xts
-
 - [xts: Extensible Time Series](https://cran.r-project.org/web/packages/xts/vignettes/xts.pdf)
 
 - [xts Reference Manual](https://cran.r-project.org/web/packages/xts/xts.pdf)
-
-#### zoo
 
 - [zoo: An S3 Class and Methods for Indexed Totally Ordered Observations](https://cran.r-project.org/web/packages/zoo/vignettes/zoo.pdf)
 
 - [zoo Reference Manual](https://cran.r-project.org/web/packages/zoo/zoo.pdf)
 
-#### tidygraph
-
 - [tidygraph Reference Manual](https://cran.r-project.org/web/packages/tidygraph/tidygraph.pdf)
 
-#### proj4
-
 - [proj4 Reference Manual](https://cran.r-project.org/web/packages/proj4/proj4.pdf)
-
-#### dplyr
 
 - [Introduction to dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)
 
@@ -383,31 +355,21 @@ performance computers.
 
 - [dpylr Reference Manual](https://cran.r-project.org/web/packages/dplyr/dplyr.pdf)
 
-#### tidyr
-
 - [tidyr Documentation](https://tidyr.tidyverse.org/)
 
 - [tidyr Reference Manual](https://cran.r-project.org/web/packages/tidyr/tidyr.pdf)
-
-#### CAST
 
 - [Introduction to CAST](https://hannameyer.github.io/CAST/articles/cast01-CAST-intro.html)
 
 - [CAST Reference Manual](https://cran.r-project.org/web/packages/CAST/CAST.pdf)
 
-#### mlr3Spatial
-
 - [Spatial Data in the mlr3 Ecosystem](https://mlr-org.com/gallery/technical/2023-02-27-land-cover-classification/)
 
 - [mlr3Spatial Reference Manual](https://cran.r-project.org/web/packages/mlr3spatial/mlr3spatial.pdf)
 
-#### performanceEstimation
-
 - [performanceEstimation GitHub README](https://github.com/ltorgo/performanceEstimation/blob/master/README.md)
 
 - [performanceEstimation Reference Manual](https://cran.r-project.org/web/packages/performanceEstimation/performanceEstimation.pdf)
-
-#### plotly
 
 - [Interactive web-based data visualization with R, plotly, and shiny](https://plotly-r.com/)
 
@@ -441,13 +403,69 @@ performance computers.
 
 - [Observable Documentation](https://observablehq.com/@observablehq/documentation?collection=@observablehq/documentation)
 
-## Jupyter Notebooks
+## Jupyter
 
-- [JupyterHub Instructor Guide](https://lthub.ubc.ca/guides/jupyterhub-instructor-guide/)
+Project Jupyter consists of an ecosystem of open-source projects that support the creation and distribution of computational notebooks. While Jupyter supports computational notebooks with kernels from a wide range of programming languages, it specializes in Python followed by R and Julia. Much of the Python ecosystem has been written in and/or runs on Python.
 
-### GIS Packages/Libraries
+### Jupyter Notebooks
 
-#### Mapping
+The term Jupyter Notebooks is used interchangeably to refer to the Jupyter Notebook file format and the application used to author and edit them, the Jupyter Notebook user interface. In recent years, the Project Jupyter team has slowly encouraged users to migrate from the classic Jupyter Notebook interface to JupyterLab, its more feature-rich successor.
+
+- [Jupyter Notebook (File) Format Documentation](https://nbformat.readthedocs.io/en/latest/index.html)
+
+- [Jupyter Notebook (User Interface) Documentation](https://jupyter-notebook.readthedocs.io/en/latest/index.html)
+
+### JupyterLab
+
+JupyterLab can be installed and ran on your local machine in two separate ways. The traditional and most flexible approach is to install JupyterLab as a Python package using Pip or Conda and starting it with a single command via the Jupyter command line interface. This approach uses a locally installed version of Python to start a basic server on your machine and then navigates to that server through your preferred web browser. For those who may be uncomfortable with installing Python and/or using command line interfaces, Project Jupyter has also released a simple-to-use desktop application, named JupyterLab Desktop. This application comes packaged with Python and a default set of packages that are frequently used in scientific computing.
+
+- [JupyterLab Documentation](https://jupyterlab.readthedocs.io/en/latest/index.html)
+
+- [JupyterLab Desktop - Installation](https://github.com/jupyterlab/jupyterlab-desktop#installation)
+
+- [JupyterLab Desktop User Guide](https://github.com/jupyterlab/jupyterlab-desktop/blob/master/user-guide.md)
+
+### JupyterHub
+
+The easiest way to get started with creating and editing notebooks is through a JupyterHub service, like [UBC LT's Open Jupyter]() or [UBC Syzygy](). While convenient, these services come with significant drawbacks in computing power and will not work well in cases where computations are running on large datasets.
+
+- [UBC LT - JupyterHub Instructor Guide](https://lthub.ubc.ca/guides/jupyterhub-instructor-guide/)
+
+- [Introduction to Syzygy - Getting Started](https://intro.syzygy.ca/getting-started/)
+
+### Helpful Extensions
+
+#### Rendering
+
+- [GeoJSON Extension](https://github.com/jupyterlab/jupyter-renderers/tree/master/packages/geojson-extension#jupyterlab-geojson)
+
+#### Git & GitHub
+
+- [Git Extension](https://github.com/jupyterlab/jupyterlab-git)
+
+- [GitHub Extension](https://github.com/jupyterlab/jupyterlab-github#jupyterlab-github)
+
+- [Git and Jupyter Notebooks: The Ultimate Guide](https://www.reviewnb.com/git-jupyter-notebook-ultimate-guide)
+
+#### Linting, Formatting, and Benchmarking
+
+- [Language Server Protocol Extension](https://github.com/krassowski/jupyterlab-lsp#installation)
+
+- [Code Formatter Extension](https://jupyterlab-code-formatter.readthedocs.io/)
+
+- [Execution Time Extension](https://github.com/deshaw/jupyterlab-execute-time#jupyterlab-execute-time)
+
+- [System Monitor Extension](https://github.com/jtpio/jupyterlab-system-monitor#jupyterlab-system-monitor)
+
+#### Spellchecking
+
+- [Spellchecker Extension](https://github.com/jupyterlab-contrib/spellchecker#jupyterlab-spellchecker)
+
+#### AI
+
+- [Generative AI Extension](https://github.com/jupyterlab/jupyter-ai)
+
+### Geospatial Libraries
 
 - [ipyleaflet Documentation](https://ipyleaflet.readthedocs.io/en/latest/index.html)
 
@@ -469,7 +487,7 @@ performance computers.
 
 - [Remote Development Extension Overview](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
 
-#### Jupyter
+#### Jupyter Notebooks
 
 - [Jupyter Extension Overview](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
 
@@ -502,8 +520,6 @@ performance computers.
 - [GitHub InstructorGuide](https://lthub.ubc.ca/guides/github-instructor-guide/)
 
 - [Building a project website with Jekyll and GitHub Pages](https://ubc-library-rc.github.io/intro-project-sites/)
-
-- [Git and Jupyter Notebooks: The Ultimate Guide](https://www.reviewnb.com/git-jupyter-notebook-ultimate-guide)
 
 ## SQL Databases
 
@@ -581,6 +597,10 @@ performance computers.
 
 - [Geospatial Analysis with HPC Video](https://youtu.be/wRmRnVMjKXM)
 
+### QGIS in HPC
+
+- [Alliance Documentation](https://docs.alliancecan.ca/wiki/QGIS)
+
 ### Jupyter in HPC
 
 - [Alliance Documentation](https://docs.alliancecan.ca/wiki/JupyterHub)
@@ -604,12 +624,6 @@ performance computers.
 #### Digital Research Alliance (Compute Canada)
 
 - [Technical Documentation](https://docs.alliancecan.ca/wiki/Technical_documentation)
-
-#### For Instruction / Student Use
-
-- [UBC LT Support](https://lthub.ubc.ca/initiatives/high-performance-computing/)
-
-- [Introduction to Syzygy (JupyterHub)](https://intro.syzygy.ca/)
 
 ## Containers
 
