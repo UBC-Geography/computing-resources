@@ -2,7 +2,13 @@
 
 This repository includes a listing of computing resources and accompanying documentation that can be helpful in familiarizing
 oneself with various tools and software that are used in Geography research, instruction, and learning. For more related materials and
-workshop opportunities, check out [UBC Library Research Commons Workshops](https://researchcommons.library.ubc.ca/workshops/).
+workshop opportunities, check out the following resources:
+
+- [UBC Library Research Commons Workshops](https://researchcommons.library.ubc.ca/workshops/)
+
+- [UBC Library Geographic Information Systems (GIS) Guide](https://guides.library.ubc.ca/gis)
+
+- [UBC Geospatial Resources](https://gis.ubc.ca/)
 
 If you have recommendations for materials to add to this list, feel free to create a pull request or reach out to kellen.malek@ubc.ca.
 
@@ -152,9 +158,33 @@ websites.
 
 - [Research Data Management Video -- Part 2](https://www.youtube.com/watch?v=q5eXXps1o04)
 
-### GIS-Related Standards
+### Geospatial Standards
 
 - [Open Geospatial Consortium Standards](https://www.ogc.org/standard/sfs/)
+
+## GIS Software
+
+- _[Practical GIS](https://go.exlibris.link/0SQNwYkl)_
+
+- _[GIS Fundamentals](https://go.exlibris.link/zpbcsQHR)_
+
+### ArcGIS
+
+- _[Learning ArcGIS Pro 2](https://go.exlibris.link/GQq35Gf6)_
+
+### QGIS
+
+- _[QGIS Quick Start Guide](https://go.exlibris.link/vXrWwwJ9)_
+
+- _[Learn QGIS](https://go.exlibris.link/yGfccBXv)_
+
+- _[QGIS: Becoming a GIS Power User](https://go.exlibris.link/NcZblRWv)_
+
+### GeoServer
+
+- _[GeoServer Beginner's Guide](https://go.exlibris.link/ZSQc0jdm)_
+
+- _[Expert GeoServer](https://go.exlibris.link/VZSrV1cw)_
 
 ## Python
 
@@ -265,31 +295,49 @@ following expected behavior in a range of practical scenarios.
 
 ### Other Related Libraries/Packages
 
-- [SciPy Documentation](https://docs.scipy.org/doc/scipy/)
+- [SciPy](https://docs.scipy.org/doc/scipy/)
 
-- [NumPy Documentation](https://numpy.org/doc/stable/)
+- [NumPy](https://numpy.org/doc/stable/)
 
-- [pandas Documentation](https://pandas.pydata.org/docs/)
+- [pandas](https://pandas.pydata.org/docs/)
 
-- [scikit-learn Documentation](https://scikit-learn.org/stable/user_guide.html)
+- [scikit-learn](https://scikit-learn.org/stable/user_guide.html)
 
-- [matplotlib User Guide](https://matplotlib.org/stable/users/index)
+- [matplotlib](https://matplotlib.org/stable/users/index)
 
-- [seaborn Tutorial](https://seaborn.pydata.org/tutorial.html)
+- [seaborn](https://seaborn.pydata.org/tutorial.html)
 
-- [bokeh Documentation](https://docs.bokeh.org/en/latest/docs/user_guide.html)
+- [bokeh](https://docs.bokeh.org/en/latest/docs/user_guide.html)
 
-- [plotly Fundamentals](https://plotly.com/python/plotly-fundamentals/)
+- [plotly](https://plotly.com/python/plotly-fundamentals/)
 
-- [Folium Documentation](https://python-visualization.github.io/folium/)
+- [Folium](https://python-visualization.github.io/folium/)
 
-- [Dask Documentation](https://docs.dask.org/en/stable/)
+- [Dask](https://docs.dask.org/en/stable/)
+
+- [rpy2](https://rpy2.github.io/doc.html)
 
 ## R
 
-- [Introduction to R for Spatial Data Science](https://rspatial.org/intr/index.html)
+- _[R in Action](https://go.exlibris.link/BZcYBc0H)_
 
-- [Spatial Data Science with Applications in R](https://r-spatial.org/book/)
+- _[R for Data Science](https://go.exlibris.link/FW9jGNqj)_
+
+### Geospatial Books
+
+- _[Geographic Data Science with R: Visualizing and Analyzing Environmental Change](https://doi.org/10.1201/9781003326199)_
+
+- _[Learning R for Geospatial Analysis](https://go.exlibris.link/nMcRqq29)_
+
+- _[Introduction to R for Spatial Data Science](https://rspatial.org/intr/index.html)_
+
+- _[Spatial Data Science with Applications in R](https://r-spatial.org/book/)_
+
+- _[Geocomputation with R](https://resolve.library.ubc.ca/cgi-bin/catsearch?bid=9737992)_
+
+#### Extending GIS Software
+
+- _[Hands-On Geospatial Analysis with R and QGIS](https://go.exlibris.link/c835FCNj)_
 
 ### Geospatial Libraries/Packages
 
@@ -333,47 +381,49 @@ performance computers.
 
 ### Other Related Libraries/Packages
 
-- [trajectories: Classes and Methods for Trajectory Data](https://cran.r-project.org/web/packages/trajectories/vignettes/article.pdf)
+- [trajectories](https://cran.r-project.org/web/packages/trajectories/trajectories.pdf)
 
-- [trajectories Reference Manual](https://cran.r-project.org/web/packages/trajectories/trajectories.pdf)
+  - [trajectories: Classes and Methods for Trajectory Data](https://cran.r-project.org/web/packages/trajectories/vignettes/article.pdf)
 
-- [xts: Extensible Time Series](https://cran.r-project.org/web/packages/xts/vignettes/xts.pdf)
+- [xts](https://cran.r-project.org/web/packages/xts/xts.pdf)
 
-- [xts Reference Manual](https://cran.r-project.org/web/packages/xts/xts.pdf)
+  - [xts: Extensible Time Series](https://cran.r-project.org/web/packages/xts/vignettes/xts.pdf)
 
-- [zoo: An S3 Class and Methods for Indexed Totally Ordered Observations](https://cran.r-project.org/web/packages/zoo/vignettes/zoo.pdf)
+- [zoo](https://cran.r-project.org/web/packages/zoo/zoo.pdf)
 
-- [zoo Reference Manual](https://cran.r-project.org/web/packages/zoo/zoo.pdf)
+  - [zoo: An S3 Class and Methods for Indexed Totally Ordered Observations](https://cran.r-project.org/web/packages/zoo/vignettes/zoo.pdf)
 
-- [tidygraph Reference Manual](https://cran.r-project.org/web/packages/tidygraph/tidygraph.pdf)
+- [tidygraph](https://cran.r-project.org/web/packages/tidygraph/tidygraph.pdf)
 
-- [proj4 Reference Manual](https://cran.r-project.org/web/packages/proj4/proj4.pdf)
+- [proj4](https://cran.r-project.org/web/packages/proj4/proj4.pdf)
 
-- [Introduction to dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)
+- [dpylr](https://dplyr.tidyverse.org/)
 
-- [dpylr Documentation](https://dplyr.tidyverse.org/)
+  - [Introduction to dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)
 
-- [dpylr Reference Manual](https://cran.r-project.org/web/packages/dplyr/dplyr.pdf)
+  - [dpylr Reference Manual](https://cran.r-project.org/web/packages/dplyr/dplyr.pdf)
 
-- [tidyr Documentation](https://tidyr.tidyverse.org/)
+- [tidyr](https://tidyr.tidyverse.org/)
 
-- [tidyr Reference Manual](https://cran.r-project.org/web/packages/tidyr/tidyr.pdf)
+  - [tidyr Reference Manual](https://cran.r-project.org/web/packages/tidyr/tidyr.pdf)
 
-- [Introduction to CAST](https://hannameyer.github.io/CAST/articles/cast01-CAST-intro.html)
+- [CAST](https://cran.r-project.org/web/packages/CAST/CAST.pdf)
 
-- [CAST Reference Manual](https://cran.r-project.org/web/packages/CAST/CAST.pdf)
+  - [Introduction to CAST](https://hannameyer.github.io/CAST/articles/cast01-CAST-intro.html)
 
-- [Spatial Data in the mlr3 Ecosystem](https://mlr-org.com/gallery/technical/2023-02-27-land-cover-classification/)
+- [mlr3Spatial](https://cran.r-project.org/web/packages/mlr3spatial/mlr3spatial.pdf)
 
-- [mlr3Spatial Reference Manual](https://cran.r-project.org/web/packages/mlr3spatial/mlr3spatial.pdf)
+  - [Spatial Data in the mlr3 Ecosystem](https://mlr-org.com/gallery/technical/2023-02-27-land-cover-classification/)
 
-- [performanceEstimation GitHub README](https://github.com/ltorgo/performanceEstimation/blob/master/README.md)
+- [performanceEstimation](https://github.com/ltorgo/performanceEstimation/blob/master/README.md)
 
-- [performanceEstimation Reference Manual](https://cran.r-project.org/web/packages/performanceEstimation/performanceEstimation.pdf)
-
-- [Interactive web-based data visualization with R, plotly, and shiny](https://plotly-r.com/)
+  - [performanceEstimation Reference Manual](https://cran.r-project.org/web/packages/performanceEstimation/performanceEstimation.pdf)
 
 - [plotly Reference Manual](https://plotly-r.com/)
+
+  - [Interactive web-based data visualization with R, plotly, and shiny](https://plotly-r.com/)
+
+- [reticulate](https://rstudio.github.io/reticulate/index.html)
 
 ## JavaScript
 
@@ -525,6 +575,8 @@ The easiest way to get started with creating and editing notebooks is through a 
 
 - [How to create and access MySQL and PostgreSQL databases on DRI systems - Video](https://youtu.be/3uHSXXQwJpQ)
 
+- _[Geospatial Analysis with SQL](https://go.exlibris.link/R3s1pzG2)_
+
 ### PostgreSQL
 
 #### Hosting
@@ -548,6 +600,10 @@ The easiest way to get started with creating and editing notebooks is through a 
 #### GIS Extensions / Libraries
 
 - [PostGIS](https://postgis.net/documentation/)
+
+  - _[PostGIS in Action](https://go.exlibris.link/cKtRz8Pm)_
+
+  - _[Mastering PostGIS](https://go.exlibris.link/bCV4PRwJ)_
 
 - [pgRouting](https://docs.pgrouting.org/latest/en/pgRouting-introduction.html)
 
@@ -596,6 +652,8 @@ The easiest way to get started with creating and editing notebooks is through a 
 - [Research Computing Bootcamp Videos](https://www.ualberta.ca/information-services-and-technology/research-computing/bootcamps.html?1=HPC)
 
 - [Geospatial Analysis with HPC Video](https://youtu.be/wRmRnVMjKXM)
+
+- _[Parallel and High Performance Computing](https://go.exlibris.link/1VWhVDjZ)_
 
 ### QGIS in HPC
 
