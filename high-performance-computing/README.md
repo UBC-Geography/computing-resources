@@ -1,4 +1,4 @@
-# High Performance Computing Options
+# High Performance Computing
 
 High performance computing can provide a powerful solution when working
 with incredibly large datasets as they allow you and your collaborators
@@ -10,15 +10,15 @@ storage via Chinook. Additionally, the Canada-based organization,
 Digital Research Alliance, provides compute clusters across Canada,
 including one located at Simon Fraser University.
 
-The following options provide a condensed glimpse of computing
-environments that can be supported via high performance computing. When
-reviewing the following options, consider the following:
+- [Introduction to Compute Canada (Alliance) Video](https://www.youtube.com/watch?v=hWkWAaNBILs)
 
-- Your comfort with a programming language
+- [Intro to Linux and the Bash Shell in HPC Environments](https://confluence.it.ubc.ca/display/UARC/Introduction+to+Linux+and+Using+the+Command+Line+Interface)
 
-- The speed with which a language can complete your task
+- [Research Computing Bootcamp Videos](https://www.ualberta.ca/information-services-and-technology/research-computing/bootcamps.html?1=HPC)
 
-- Whether you plan on using interactive sessions for development
+- [Geospatial Analysis with HPC Video](https://youtu.be/wRmRnVMjKXM)
+
+- _[Parallel and High Performance Computing](https://go.exlibris.link/1VWhVDjZ)_
 
 ## UBC Advanced Research Computing Sockeye
 
@@ -45,7 +45,7 @@ QGIS can run on either UBC Sockeye or Alliance clusters. To interact with QGIS t
 
 - [Alliance Documentation - QGIS](https://docs.alliancecan.ca/wiki/QGIS)
 
-## JupyterLab / Notebooks
+## Jupyter
 
 - [Alliance Documentation - JupyterHub](https://docs.alliancecan.ca/wiki/JupyterHub)
 
@@ -66,6 +66,8 @@ QGIS can run on either UBC Sockeye or Alliance clusters. To interact with QGIS t
   - R 4.2
 
   - Julia 1.5 & 1.8
+
+  - Note: Other kernels can be supported using Apptainer containers.
 
 - Server Resource Options:
 
@@ -465,6 +467,10 @@ need to convert the job script from PBS to SLURM.
       salloc: Relinquishing job allocation 1234567
       ```
 
+### Other Resources
+
+- [Working with the Python Dask (Parallelization) Library Video](https://youtu.be/uGy5gT2vLdI)
+
 ## R
 
 - [Alliance Documentation - R](https://docs.alliancecan.ca/wiki/R)
@@ -510,6 +516,12 @@ need to convert the job script from PBS to SLURM.
       $ exit
       salloc: Relinquishing job allocation 1234567
       ```
+
+### Other Resources:
+
+- [Introduction to HPC in R Webinar](https://mint.westdri.ca/r/intro_hpc.html)
+
+- [High-performance R Tutorial](https://mint.westdri.ca/r/run_r_hpc.html)
 
 ## Other Supported Languages
 

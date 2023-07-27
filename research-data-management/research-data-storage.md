@@ -52,7 +52,7 @@ include:
 - or a cloud storage location that is synchronized with your local
   drive.
 
-UBC Geogrpahy IT can provide support in selecting and acquiring an external hard drive or installing
+UBC Geography IT can provide support in selecting and acquiring an external hard drive or installing
 a secondary disk on your desktop machine.
 
 'Far copies' are often stored in 'cloud' servers, where the servers are
@@ -88,7 +88,7 @@ using High Performance Computing resources.
 
 ### UBC Chinook
 
-Documenation: <https://confluence.it.ubc.ca/display/UARC/Using+Chinook>
+Documentation: <https://confluence.it.ubc.ca/display/UARC/Using+Chinook>
 
 Eligibility:
 
