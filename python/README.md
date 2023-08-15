@@ -11,7 +11,7 @@ Python code.
 
 - _[Python for Geographic Data Analysis](https://pythongis.org/)_
 
-- _[Python Crash Course](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12472396)_
+- _[Python Crash Course](https://go.exlibris.link/XmblT6hZ)_
 
 ## Geospatial Books
 
@@ -21,11 +21,11 @@ Python code.
 
 - _[GIS Algorithms](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10279472)_
 
-- _[Python for Geospatial Data Analysis](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12429886)_
+- _[Python for Geospatial Data Analysis](https://go.exlibris.link/LtW84CTr)_
 
-- _[Applied Geospatial Data Science with Python](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12613206)_
+- _[Applied Geospatial Data Science with Python](https://go.exlibris.link/6dc1QZpC)_
 
-- _[Mastering Geospatial Analysis with Python: Explore GIS Processing and Learn to Work with GeoDjango, CARTOframes and MapboxGL-Jupyter](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10274346)_
+- _[Mastering Geospatial Analysis with Python: Explore GIS Processing and Learn to Work with GeoDjango, CARTOframes and MapboxGL-Jupyter](https://go.exlibris.link/gsFBlwzR)_
 
 - _[Machine Learning on Geographical Data Using Python Introduction into Geodata with Applications and Use Cases](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12453975)_
 
@@ -33,13 +33,13 @@ Python code.
 
 - _[A Geographer's Guide to Computing Fundamentals: Python in ArcGIS Pro](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12441298)_
 
-- _[Python for ArcGIS Pro](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=12191128)_
+- _[Python for ArcGIS Pro](https://go.exlibris.link/M4qHpt5M)_
 
-- _[Advanced Python scripting for ArcGIS Pro](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=11878622)_
+- _[Advanced Python Scripting for ArcGIS Pro](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=11878622)_
 
-- _[Mastering Geospatial Development with QGIS 3](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10274348)_
+- _[Mastering Geospatial Development with QGIS 3](https://go.exlibris.link/gsFBlwzR)_
 
-- _[QGIS Python programming cookbook](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10262853)_
+- _[QGIS Python Programming Cookbook](https://go.exlibris.link/M6kWzbVK)_
 
 ## Geospatial Libraries/Packages
 

@@ -2,7 +2,7 @@
 
 - _[Practical GIS](https://go.exlibris.link/0SQNwYkl)_
 
-- _[GIS Fundamentals](https://go.exlibris.link/zpbcsQHR)_
+- _[GIS Fundamentals](https://go.exlibris.link/K2SdsWd1)_
 
 ## ArcGIS
 

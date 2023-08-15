@@ -1,6 +1,6 @@
 # R
 
-- _[R in Action](https://go.exlibris.link/BZcYBc0H)_
+- _[R in Action](https://go.exlibris.link/P6rJdt9g)_
 
 - _[R for Data Science](https://go.exlibris.link/FW9jGNqj)_
 

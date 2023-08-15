@@ -40,7 +40,7 @@ are frequently identified and taken advantage of by bad actors.
 
 - [WordPress 101 -- Video Course](https://learning.oreilly.com/videos/wordpress-101/9781800566415/?sso_link=yes&sso_link_from=univ-british-columbia)
 
-- [WordPress: The Missing Manual](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=11890511)
+- _[WordPress: The Missing Manual](https://go.exlibris.link/qfbFTbLz)_
 
 ## Static Site Generators (SSG) / Web Publishing
 
