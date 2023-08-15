@@ -29,16 +29,16 @@
 ## Linting
 
 Using a static analysis tool, or linter, is a common best practice among
-programmers that helps identify mistakes when writing code by ensuring
-that you follow the correct syntax and a guiding set of best practices.
+programmers that helps identify mistakes when writing code by ensuring that you
+follow the correct syntax and a guiding set of best practices.
 
 - [lintr Documentation](https://lintr.r-lib.org/)
 
 ## Formatting
 
 Sometimes writing code can get a bit messy. Formatters, like styler, can
-automatically reformat your code to make it cleaner and easier to read
-while following a set of standards and best practices.
+automatically reformat your code to make it cleaner and easier to read while
+following a set of standards and best practices.
 
 Note: RStudio includes a formatting tool via Code \> Reformat Code
 
@@ -46,21 +46,21 @@ Note: RStudio includes a formatting tool via Code \> Reformat Code
 
 ## Testing Framework
 
-Similar to type checking, unit testing can be a helpful tool when
-writing large and complex scripts or programs. Testing frameworks, like
-pytest, which is included in Python's standard library, enable you to
-define tests that can run over your functions and ensure they are
-following expected behavior in a range of practical scenarios.
+Similar to type checking, unit testing can be a helpful tool when writing large
+and complex scripts or programs. Testing frameworks, like pytest, which is
+included in Python's standard library, enable you to define tests that can run
+over your functions and ensure they are following expected behavior in a range
+of practical scenarios.
 
 - [testthat Documentation](https://testthat.r-lib.org/)
 
 ## Benchmarking
 
-When writing code, there is often a wide array of ways in which a task
-can be completed. Benchmarking your functions can help you find the most
-efficient approach possible. This is particularly important when writing
-scripts and programs that will be used on large datasets and/or on high
-performance computers.
+When writing code, there is often a wide array of ways in which a task can be
+completed. Benchmarking your functions can help you find the most efficient
+approach possible. This is particularly important when writing scripts and
+programs that will be used on large datasets and/or on high performance
+computers.
 
 - [bench Documentation](https://cran.r-project.org/web/packages/bench/bench.pdf)
 

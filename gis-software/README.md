@@ -27,3 +27,7 @@
 - _[GeoServer Beginner's Guide](https://go.exlibris.link/ZSQc0jdm)_
 
 - _[Expert GeoServer](https://go.exlibris.link/VZSrV1cw)_
+
+## MapKurator
+
+- [MapKurator Documentation](https://knowledge-computing.github.io/mapkurator-doc/#/docs/introduction)

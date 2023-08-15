@@ -1,6 +1,13 @@
 # Python
 
-Python is one of the most popular programming languages in the world. Its low learning curve paired with a massive ecosystem has made it a powerful tool for geospatial computing. GIS software like QGIS and ArcGIS, provide the ability to extend their functionality through Python, while many programming libraries that have been created to efficiently perform geospatial computing tasks have been either written in Python, released as Python packages, and/or include application programming interfaces (APIs) that coherently communicate with Python code.
+Python is one of the most popular programming languages in the world. Its low
+learning curve paired with a massive ecosystem has made it a powerful tool for
+geospatial computing. GIS software like QGIS and ArcGIS, provide the ability to
+extend their functionality through Python, while many programming libraries that
+have been created to efficiently perform geospatial computing tasks have been
+either written in Python, released as Python packages, and/or include
+application programming interfaces (APIs) that coherently communicate with
+Python code.
 
 - _[Python for Geographic Data Analysis](https://pythongis.org/)_
 
@@ -44,37 +51,35 @@ Python is one of the most popular programming languages in the world. Its low le
 
 Using a static analysis tool, or linter, is a common best practice among
 programmers that helps in identifying and fixings mistakes when writing code by
-ensuring that you follow the correct syntax and a guiding set of best
-practices.
+ensuring that you follow the correct syntax and a guiding set of best practices.
 
 - [flake8 Documentation](https://flake8.pycqa.org/en/latest/)
 
 ## Type Checking
 
 While Python is inherently a dynamically typed language, meaning you the
-programmer don't have to worry about the data types of each variable,
-static types can be helpful for reducing bugs when writing complex
-scripts or programs. Mypy enables programmers to annotate types into
-their code and returns a helpful error when those types aren't
-explicitly followed.
+programmer don't have to worry about the data types of each variable, static
+types can be helpful for reducing bugs when writing complex scripts or programs.
+Mypy enables programmers to annotate types into their code and returns a helpful
+error when those types aren't explicitly followed.
 
 - [mypy Documentation](https://mypy.readthedocs.io/en/stable/)
 
 ## Formatting
 
 Sometimes writing code can get a bit messy. Formatters, like black, can
-automatically reformat your code to make it cleaner and easier to read
-while following a set of standards and best practices.
+automatically reformat your code to make it cleaner and easier to read while
+following a set of standards and best practices.
 
 - [black Documentation](https://black.readthedocs.io/en/stable/)
 
 ## Testing Framework
 
-Similar to type checking, unit testing can be a helpful tool when
-writing large and complex scripts or programs. Testing frameworks, like
-pytest, which is included in Python's standard library, enable you to
-define tests that can run over your functions and ensure they are
-following expected behavior in a range of practical scenarios.
+Similar to type checking, unit testing can be a helpful tool when writing large
+and complex scripts or programs. Testing frameworks, like pytest, which is
+included in Python's standard library, enable you to define tests that can run
+over your functions and ensure they are following expected behavior in a range
+of practical scenarios.
 
 - [pytest Documentation](https://docs.pytest.org/en/7.3.x/)
 

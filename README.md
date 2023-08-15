@@ -1,9 +1,10 @@
 # Geography Computing Resources & Documentation
 
-This repository includes a listing of computing resources and accompanying documentation that can be helpful in familiarizing
-oneself with various tools and software that are used in Geography research, instruction, and learning.
+This repository includes a listing of computing resources and accompanying
+documentation that can be helpful in familiarizing oneself with various tools
+and software that are used in Geography research, instruction, and learning.
 
-- [Communications and Publishing](/communications-and-publishing/README.md)
+- [Digital Communications](/digital-communications/README.md)
 
   - [WordPress](/communications-and-publishing/README.md#wordpress)
 
@@ -21,27 +22,28 @@ oneself with various tools and software that are used in Geography research, ins
 
   - [Virtual Environments](/development-environments/README.md#virtual-environments)
 
-  - [Jupyter]()
+  - [Jupyter](/development-environments/README.md#jupyter)
 
-  - [RStudio]()
+  - [RStudio](/development-environments/README.md#rstudio)
 
-  - [Visual Studio Code]()
+  - [Visual Studio Code](/development-environments/README.md#visual-studio-code)
 
-- [Python]()
+- [Python](/python/README.md)
 
-- [R]()
+- [R](/r/README.md)
 
-- [JavaScript]()
+- [JavaScript](/javascript/README.md)
 
-- [SQL Databases]()
+- [SQL Databases](/sql-databases/README.md)
 
-- [Git & GitHub]()
+- [Git & GitHub](/git-and-github/README.md)
 
-- [High Performance Computing (HPC)]()
+- [High Performance Computing (HPC)](/high-performance-computing/README.md)
 
-- [Containers]()
+- [Containers](/containers/README.md)
 
-For more related materials and workshop opportunities, check out the following resources:
+For more related materials and workshop opportunities, check out the following
+resources:
 
 - [UBC Library Research Commons Workshops](https://researchcommons.library.ubc.ca/workshops/)
 
@@ -51,4 +53,5 @@ For more related materials and workshop opportunities, check out the following r
 
 - [The Turing Way - handbook to reproducible, ethical and collaborative data science](https://the-turing-way.netlify.app/index.html)
 
-If you have recommendations for materials to add to this list, feel free to create a pull request or reach out to kellen.malek@ubc.ca.
+If you have recommendations for materials to add to this list, feel free to
+create a pull request or reach out to kellen.malek@ubc.ca.
