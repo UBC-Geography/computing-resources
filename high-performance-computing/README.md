@@ -1,24 +1,23 @@
-# High Performance Computing Options
+# High Performance Computing
 
-High performance computing can provide a powerful solution when working
-with incredibly large datasets as they allow you and your collaborators
-to run scripts and programs over those datasets without facing
-limitations in your hardware and network speeds. UBC's Advanced Research
-Computing provides access to high performance computing via their
-Sockeye compute cluster along with secure and redundant digital object
-storage via Chinook. Additionally, the Canada-based organization,
-Digital Research Alliance, provides compute clusters across Canada,
-including one located at Simon Fraser University.
+High performance computing can provide a powerful solution when working with
+incredibly large datasets as they allow you and your collaborators to run
+scripts and programs over those datasets without facing limitations in your
+hardware and network speeds. UBC's Advanced Research Computing provides access
+to high performance computing via their Sockeye compute cluster along with
+secure and redundant digital object storage via Chinook. Additionally, the
+Canada-based organization, Digital Research Alliance, provides compute clusters
+across Canada, including one located at Simon Fraser University.
 
-The following options provide a condensed glimpse of computing
-environments that can be supported via high performance computing. When
-reviewing the following options, consider the following:
+- [Introduction to Compute Canada (Alliance) Video](https://www.youtube.com/watch?v=hWkWAaNBILs)
 
-- Your comfort with a programming language
+- [Intro to Linux and the Bash Shell in HPC Environments](https://confluence.it.ubc.ca/display/UARC/Introduction+to+Linux+and+Using+the+Command+Line+Interface)
 
-- The speed with which a language can complete your task
+- [Research Computing Bootcamp Videos](https://www.ualberta.ca/information-services-and-technology/research-computing/bootcamps.html?1=HPC)
 
-- Whether you plan on using interactive sessions for development
+- [Geospatial Analysis with HPC Video](https://youtu.be/wRmRnVMjKXM)
+
+- _[Parallel and High Performance Computing](https://go.exlibris.link/1VWhVDjZ)_
 
 ## UBC Advanced Research Computing Sockeye
 
@@ -26,26 +25,30 @@ Documentation: <https://confluence.it.ubc.ca/display/UARC/Using+Sockeye>
 
 Supported Software: <https://confluence.it.ubc.ca/display/UARC/Software>
 
-- Note: Linux (CentOS) software can be installed along with conda
-  packages or any software available within an Apptainer container
+- Note: Linux (CentOS) software can be installed along with conda packages or
+  any software available within an Apptainer container
 
 ## Digital Research Alliance Clusters
 
 Documentation: <https://docs.alliancecan.ca/wiki/Getting_started>
 
-Supported Software:
-<https://docs.alliancecan.ca/wiki/Available_software>
+Supported Software: <https://docs.alliancecan.ca/wiki/Available_software>
 
-- Note: Additionally, any software that is supported on Linux can be
-  ran within an Apptainer container
+- Note: Additionally, any software that is supported on Linux can be ran within
+  an Apptainer container
 
 ## QGIS
 
-QGIS can run on either UBC Sockeye or Alliance clusters. To interact with QGIS through a graphical user interface, you'll need to run in it within an interactive job with X11 forwarding enabled. You can find more information on creating graphical interactive jobs on UBC Sockeye [here](https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-GraphicalInteractive), while documentation for Alliance clusters is listed below.
+QGIS can run on either UBC Sockeye or Alliance clusters. To interact with QGIS
+through a graphical user interface, you'll need to run in it within an
+interactive job with X11 forwarding enabled. You can find more information on
+creating graphical interactive jobs on UBC Sockeye
+[here](https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-GraphicalInteractive),
+while documentation for Alliance clusters is listed below.
 
 - [Alliance Documentation - QGIS](https://docs.alliancecan.ca/wiki/QGIS)
 
-## JupyterLab / Notebooks
+## Jupyter
 
 - [Alliance Documentation - JupyterHub](https://docs.alliancecan.ca/wiki/JupyterHub)
 
@@ -67,6 +70,8 @@ QGIS can run on either UBC Sockeye or Alliance clusters. To interact with QGIS t
 
   - Julia 1.5 & 1.8
 
+  - Note: Other kernels can be supported using Apptainer containers.
+
 - Server Resource Options:
 
   - Time (Session Length): 30 minutes - 5 hours
@@ -77,35 +82,50 @@ QGIS can run on either UBC Sockeye or Alliance clusters. To interact with QGIS t
 
   - (Optional) GPU Configuration: none - 4 x V100L
 
-- Note: Nodes do not have internet access, so installing packages from external sources,
-  cloning repositories from GitHub, or running code
-  that downloads data from external sources will not work. You can only install packages
-  from Alliance's maintained set of [Python wheels](https://docs.alliancecan.ca/wiki/Available_Python_wheels).
-  To run JupyterLab with conda or external libraries held on PYPI, you'll need to run it
-  using an Apptainer container as documented in the alternative approaches below.
+- Note: Nodes do not have internet access, so installing packages from external
+  sources, cloning repositories from GitHub, or running code that downloads data
+  from external sources will not work. You can only install packages from
+  Alliance's maintained set of
+  [Python wheels](https://docs.alliancecan.ca/wiki/Available_Python_wheels). To
+  run JupyterLab with conda or external libraries held on PYPI, you'll need to
+  run it using an Apptainer container as documented in the alternative
+  approaches below.
 
 - Alternatives Approaches for Running JupyterLab:
 
-  - [Alliance - Instructions for running JupyterLab via a virtual
-    environment](https://docs.alliancecan.ca/wiki/Advanced_Jupyter_configuration)
+  - [Alliance - Instructions for running JupyterLab via a virtual environment](https://docs.alliancecan.ca/wiki/Advanced_Jupyter_configuration)
 
-  - [UBC ARC Sockeye - Instructions for running JupyterLab via an Apptainer
-    container](https://confluence.it.ubc.ca/display/UARC/Jupyter+Notebooks+with+Singularity)
+  - [UBC ARC Sockeye - Instructions for running JupyterLab via an Apptainer container](https://confluence.it.ubc.ca/display/UARC/Jupyter+Notebooks+with+Singularity)
 
 ### Running a Jupyter Kernel from a Container
 
-Containers enable you to pre-build customized environments from which you can run software that is not supported on the Alliance clusters, and they can be leveraged to extend the Alliance's JupyterHub clusters by running them as a custom Jupyter kernels. This can be extraordinarily useful considering Conda is not supported on the cluster.
+Containers enable you to pre-build customized environments from which you can
+run software that is not supported on the Alliance clusters, and they can be
+leveraged to extend the Alliance's JupyterHub clusters by running them as a
+custom Jupyter kernels. This can be extraordinarily useful considering Conda is
+not supported on the cluster.
 
-Before using this approach, double-check that the software you need is not already available on the cluster either as [modules](https://docs.alliancecan.ca/wiki/Available_software) or [Python wheels](https://docs.alliancecan.ca/wiki/Available_Python_wheels). Software installed and ran within a container is going to perform less efficiently than equivalent modules on Alliance, which have been optimized for HPC.
+Before using this approach, double-check that the software you need is not
+already available on the cluster either as
+[modules](https://docs.alliancecan.ca/wiki/Available_software) or
+[Python wheels](https://docs.alliancecan.ca/wiki/Available_Python_wheels).
+Software installed and ran within a container is going to perform less
+efficiently than equivalent modules on Alliance, which have been optimized for
+HPC.
 
 #### Creating the container environment with Mamba (Conda)
 
-While this can be done within the Alliance login node, it is highly recommended that the containers are built from another Linux machine and copied onto the cluster. This will ensure the build runs a bit faster and you aren't competing for resources with other researchers on the login node.
+While this can be done within the Alliance login node, it is highly recommended
+that the containers are built from another Linux machine and copied onto the
+cluster. This will ensure the build runs a bit faster and you aren't competing
+for resources with other researchers on the login node.
 
-Note: Whenever you start a new Jupyter server on the cluster, you'll need to load the apptainer module again in order for the kernel to run.
+Note: Whenever you start a new Jupyter server on the cluster, you'll need to
+load the apptainer module again in order for the kernel to run.
 
-If you need flexibility in your container, you might be able to create a sandbox environment from your uploaded container and modify the sandbox container
-from your terminal with conda/mamba.
+If you need flexibility in your container, you might be able to create a sandbox
+environment from your uploaded container and modify the sandbox container from
+your terminal with conda/mamba.
 
 1. Ensure Apptainer is installed on the Linux machine
 
@@ -113,7 +133,8 @@ from your terminal with conda/mamba.
    $ apptainer --version
    ```
 
-   If Apptainer is not installed, you can use the following steps on Debian or Ubuntu
+   If Apptainer is not installed, you can use the following steps on Debian or
+   Ubuntu
 
    ```bash
    $ sudo apt update
@@ -123,7 +144,10 @@ from your terminal with conda/mamba.
    $ sudo apt install -y apptainer
    ```
 
-2. Pull the conda-forge/mambaforge Docker container from Docker Hub and build a sandbox container from it. This will enable you to use Mamba, an alternative to Conda that runs more efficiently in environments where resources are limited.
+2. Pull the conda-forge/mambaforge Docker container from Docker Hub and build a
+   sandbox container from it. This will enable you to use Mamba, an alternative
+   to Conda that runs more efficiently in environments where resources are
+   limited.
 
    ```bash
    $ apptainer build --sandbox <container_name>/ docker://condaforge/mambaforge
@@ -141,7 +165,8 @@ from your terminal with conda/mamba.
    Apptainer> mamba update mamba -y
    ```
 
-5. Use Mamba to install the kernel package needed for your preferred programming language (Python: ipykernel; R: r-irkernel) and any other packages you need.
+5. Use Mamba to install the kernel package needed for your preferred programming
+   language (Python: ipykernel; R: r-irkernel) and any other packages you need.
 
    ```bash
    Apptainer> mamba install <kernel_package> <other_packages> -y
@@ -153,7 +178,9 @@ from your terminal with conda/mamba.
    Apptainer> exit
    ```
 
-7. Build your Apptainer container from the sandbox container. Including a time stamp with `<container_name>` is recommended when building a container as you may want to rebuild the container with updated packages in the future.
+7. Build your Apptainer container from the sandbox container. Including a time
+   stamp with `<container_name>` is recommended when building a container as you
+   may want to rebuild the container with updated packages in the future.
 
    ```bash
    $ apptainer build <container_name>_<timestamp>.sif <container_name>
@@ -179,7 +206,9 @@ from your terminal with conda/mamba.
    $ python -m ipykernel install --user --name <container_name> --display-name="Python (<container_name>)"
    ```
 
-6. The previous step provided an initial configuration for the kernel, but we will need to slightly modify it to ensure the kernel executes from the container.
+6. The previous step provided an initial configuration for the kernel, but we
+   will need to slightly modify it to ensure the kernel executes from the
+   container.
 
    ```bash
    $ nano /home/<username>/.local/share/jupyter/kernels/<container_name>/kernel.json
@@ -207,7 +236,8 @@ from your terminal with conda/mamba.
    }
    ```
 
-7. Close the terminal and wait a few seconds for the kernel to register in the JupyterLab launcher.
+7. Close the terminal and wait a few seconds for the kernel to register in the
+   JupyterLab launcher.
 
 #### Installing an R-Based Container as a Kernel
 
@@ -223,7 +253,8 @@ from your terminal with conda/mamba.
 
 4. Close the terminal and start a new one.
 
-5. Using the `nano` text editor, create a new directory and file to store the custom Jupyter kernel configuration
+5. Using the `nano` text editor, create a new directory and file to store the
+   custom Jupyter kernel configuration
 
    ```bash
    $ nano <container_name>/kernel.json
@@ -258,30 +289,35 @@ from your terminal with conda/mamba.
    $ jupyter kernelspec install <container_name> --user
    ```
 
-7. Close the terminal and wait a few seconds for the kernel to register in the JupyterLab launcher.
+7. Close the terminal and wait a few seconds for the kernel to register in the
+   JupyterLab launcher.
 
 ## RStudio Server
 
 ### via JupyterHub
 
-The easiest way to start an RStudio session in a HPC environment is to launch it within a JupyterLab session.
-See the entry above for session limits and documentation on starting a JupyterLab session from a JupyterHub cluster.
-Once your JupyterLab session is running, select the Software tab in the sidebar and find/load the rstudio-server module.
-You can then click the RStudio laucher, to open a new RStudio session. While you can install any R library from CRAN,
-you can't use tools like conda and can only use software loaded as modules from the Alliance. If you need more flexibility
-for your RStudio session, setup and run your environment within an Apptainer container as documented below.
+The easiest way to start an RStudio session in a HPC environment is to launch it
+within a JupyterLab session. See the entry above for session limits and
+documentation on starting a JupyterLab session from a JupyterHub cluster. Once
+your JupyterLab session is running, select the Software tab in the sidebar and
+find/load the rstudio-server module. You can then click the RStudio laucher, to
+open a new RStudio session. While you can install any R library from CRAN, you
+can't use tools like conda and can only use software loaded as modules from the
+Alliance. If you need more flexibility for your RStudio session, setup and run
+your environment within an Apptainer container as documented below.
 
 ### [via Container](https://confluence.it.ubc.ca/display/UARC/RStudio+with+Apptainer)
 
-Note: the linked instructions above cover running RStudio Server on the
-UBC ARC Sockeye cluster using Apptainer, but the instructions should be
-extremely similar for running on an Alliance cluster as you would just
-need to convert the job script from PBS to SLURM.
+Note: the linked instructions above cover running RStudio Server on the UBC ARC
+Sockeye cluster using Apptainer, but the instructions should be extremely
+similar for running on an Alliance cluster as you would just need to convert the
+job script from PBS to SLURM.
 
-- Instructions for creating an Apptainer container with pre-installed dependencies:
+- Instructions for creating an Apptainer container with pre-installed
+  dependencies:
 
-  - Note: You can either build your container on a local Linux
-    system and copy the container to the cluster or build it directly on a login node.
+  - Note: You can either build your container on a local Linux system and copy
+    the container to the cluster or build it directly on a login node.
 
   - Example of building an RStudio container on a local Linux (Ubuntu) system
 
@@ -322,7 +358,12 @@ need to convert the job script from PBS to SLURM.
 
     - [Using Virtual Environments on Sockeye](https://confluence.it.ubc.ca/display/UARC/Using+Virtual+Environments+on+Sockeye)
 
-  - Alliance: virtualenv or venv. conda is not supported, but it can be ran using an Apptainer container. In general, Alliance recommends avoiding conda and Anaconda packages if possible. Go [here](https://docs.alliancecan.ca/wiki/Anaconda/en) for more details. See instructions below for creating and running conda from an Apptainer container:
+  - Alliance: virtualenv or venv. conda is not supported, but it can be ran
+    using an Apptainer container. In general, Alliance recommends avoiding conda
+    and Anaconda packages if possible. Go
+    [here](https://docs.alliancecan.ca/wiki/Anaconda/en) for more details. See
+    instructions below for creating and running conda from an Apptainer
+    container:
 
     - Creating an Apptainer container with conda and Anaconda packages:
 
@@ -340,7 +381,8 @@ need to convert the job script from PBS to SLURM.
       $ apptainer build conda.sif conda
       ```
 
-    - SLURM job script for running a Python script within the container created above:
+    - SLURM job script for running a Python script within the container created
+      above:
 
       ```bash
       #!/bin/bash
@@ -357,11 +399,12 @@ need to convert the job script from PBS to SLURM.
       $ apptainer run -C -B <directory holding Python script> -W $SLURM_TMPDIR conda.sif conda run -n <env_name> python <script>
       ```
 
-- Supported Packages (Alliance): <https://docs.alliancecan.ca/wiki/Available_Python_wheels>
+- Supported Packages (Alliance):
+  <https://docs.alliancecan.ca/wiki/Available_Python_wheels>
 
-  - Note: include `--no-index` flag with `pip` to only install Alliance
-    wheels. The Alliance Python wheels have been specifically compiled
-    and optimized to run as effectively on HPC clusters as possible.
+  - Note: include `--no-index` flag with `pip` to only install Alliance wheels.
+    The Alliance Python wheels have been specifically compiled and optimized to
+    run as effectively on HPC clusters as possible.
 
 - Example Job Scripts:
 
@@ -392,7 +435,8 @@ need to convert the job script from PBS to SLURM.
 
   - PBS (UBC ARC Sockeye with conda):
 
-    1. Prior to running your job, pre-install conda into your job directory and recreate your virtual environment
+    1. Prior to running your job, pre-install conda into your job directory and
+       recreate your virtual environment
 
     ```bash
     $ wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
@@ -439,11 +483,9 @@ need to convert the job script from PBS to SLURM.
   - Alliance
 
     - Use the Slurm allocation
-      ([salloc](https://docs.alliancecan.ca/wiki/Running_jobs))
-      command
+      ([salloc](https://docs.alliancecan.ca/wiki/Running_jobs)) command
 
-    - Example command for starting a single core IPython session
-      on Alliance:
+    - Example command for starting a single core IPython session on Alliance:
 
       ```bash
       $ salloc --time=00:15:00
@@ -464,6 +506,10 @@ need to convert the job script from PBS to SLURM.
       $ exit
       salloc: Relinquishing job allocation 1234567
       ```
+
+### Other Resources
+
+- [Working with the Python Dask (Parallelization) Library Video](https://youtu.be/uGy5gT2vLdI)
 
 ## R
 
@@ -490,8 +536,7 @@ need to convert the job script from PBS to SLURM.
   - Alliance
 
     - Use the Slurm allocation
-      ([salloc](https://docs.alliancecan.ca/wiki/Running_jobs))
-      command
+      ([salloc](https://docs.alliancecan.ca/wiki/Running_jobs)) command
 
     - Example command for starting session:
 
@@ -510,6 +555,12 @@ need to convert the job script from PBS to SLURM.
       $ exit
       salloc: Relinquishing job allocation 1234567
       ```
+
+### Other Resources:
+
+- [Introduction to HPC in R Webinar](https://mint.westdri.ca/r/intro_hpc.html)
+
+- [High-performance R Tutorial](https://mint.westdri.ca/r/run_r_hpc.html)
 
 ## Other Supported Languages
 
@@ -541,7 +592,8 @@ need to convert the job script from PBS to SLURM.
 
   - Running software that is not already included as an HPC module
 
-  - Building runtime environments from existing projects and easily reproducing research
+  - Building runtime environments from existing projects and easily reproducing
+    research
 
 - Documentation
 
