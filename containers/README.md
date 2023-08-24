@@ -8,8 +8,8 @@ agile than virtual machines but can include increased security risks.
 
 It's important to note that most containers can only run in Linux environments.
 Each of the container systems listed below include tools and steps for setting
-up simple, Linux virtual machines from which containers can be ran on either
-Windows or Mac machines.
+up simple, Linux environments from which containers can be ran on either Windows
+or Mac machines.
 
 ## Apptainer (formerly Singularity)
 

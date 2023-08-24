@@ -9,6 +9,10 @@ either written in Python, released as Python packages, and/or include
 application programming interfaces (APIs) that coherently communicate with
 Python code.
 
+If you need recommendations for installing and getting started with Python on
+your local machine, see
+[Getting Started with Conda, Virtual Environments, and Python](/development-environments/conda-getting-started.md).
+
 - _[Python for Geographic Data Analysis](https://pythongis.org/)_
 
 - _[Python Crash Course](https://go.exlibris.link/XmblT6hZ)_

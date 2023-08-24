@@ -59,8 +59,9 @@ be used for setting up either Python or R-based environments.
     $ mamba create -p <environment_name> r-irkernel -y
     ```
 
-3.  Initialize Mamba and restart the Bash shell, so you can start interacting
-    with your newly created environment.
+3.  Before you can activate your virtual environment and start installing
+    packages within it, you will need to initialize Mamba and restart your Bash
+    shell.
 
     ```bash
     $ mamba init -q && source ~/.bashrc
@@ -86,7 +87,7 @@ be used for setting up either Python or R-based environments.
     package repository, conda-forge, and are only available from the Python
     Package Index (PyPI) or the Comprehensive R Archive Network (CRAN). To
     install those packages, you can use Python's `pip` or R's
-    `install.packages()` with the following commands:
+    `install.packages()` with one of the following commands:
 
     ```bash
     $ python -m pip install <python_package_names>
@@ -122,8 +123,8 @@ JupyterLab terminal.
 
 It is important to note that the directories created for each virtual
 environment can be quite large as more packages are installed within them.
-Consider purging the environments when they are no longer needed and include the
-directory in your `.gitignore` file if you are using Git/GitHub.
+Consider purging the environments when they are no longer needed and remember to
+include the directory in your `.gitignore` file if you are using Git/GitHub.
 
 You can purge an environment from JupyterHub by completing the following steps:
 
