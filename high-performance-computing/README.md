@@ -186,6 +186,10 @@ your terminal with conda/mamba.
    $ apptainer build <container_name>_<timestamp>.sif <container_name>
    ```
 
+Note: Running containers within JupyterHub can be supported by installing
+Apptainer via Mamba. Containers must be in Sandbox Mode and . You can create
+Apptainer .SIF containers on JupyterHub, but you can't run them.
+
 #### Installing a Python-Based Container as a Kernel
 
 1. Start a server on the JupyterHub cluster.
@@ -300,7 +304,7 @@ The easiest way to start an RStudio session in a HPC environment is to launch it
 within a JupyterLab session. See the entry above for session limits and
 documentation on starting a JupyterLab session from a JupyterHub cluster. Once
 your JupyterLab session is running, select the Software tab in the sidebar and
-find/load the rstudio-server module. You can then click the RStudio laucher, to
+find/load the rstudio-server module. You can then click the RStudio launcher, to
 open a new RStudio session. While you can install any R library from CRAN, you
 can't use tools like conda and can only use software loaded as modules from the
 Alliance. If you need more flexibility for your RStudio session, setup and run

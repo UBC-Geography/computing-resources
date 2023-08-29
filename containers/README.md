@@ -3,17 +3,75 @@
 Similar to virtual machines, containers are a form of virtualization that
 packages software and the multiple dependencies required to run that software
 into a single, distributable container. That container can then be run on any
-system that is running the appropriate engine. They are often lighter and more
-agile than virtual machines but can include increased security risks.
+system that is running the appropriate engine (Docker, Podman, etc.). They are
+often lighter and more agile than virtual machines but can include increased
+security risks if deployed for web services.
+
+For examples on leveraging containers to run highly-customized development
+environments with Jupyter, RStudio, or VS Code, see
+[Using Containers for Development Environments](/development-environments/containerized-environments.md).
 
 It's important to note that most containers can only run in Linux environments.
 Each of the container systems listed below include tools and steps for setting
 up simple, Linux environments from which containers can be ran on either Windows
 or Mac machines.
 
-## Apptainer (formerly Singularity)
+Additionally, a large majority of container images are built with a simplified
+Linux distribution (often Ubuntu) as their base image. Some images have been
+built with Windows Server as their base image, but it's important to note that
+these images cannot and likely never will run a desktop environment and/or
+graphical user interface (GUI).
 
-Developed specifically for academic and high-performance computing, Apptainer
+## Container Images
+
+There are many open container registries, where you can find publicly shared
+container images. [Docker Hub](https://hub.docker.com) is one of the most
+popular options and can be a useful tool when searching for images. In general,
+you should be careful when selecting images and be sure to select images that
+are well-maintained and shared by publishers that you trust. If you need a very
+minimal environment with Conda/Mamba, Conda-forge's
+[mambaforge](https://hub.docker.com/r/condaforge/mambaforge) image can be a good
+place to start as you'll be able to install packages with APT or Conda/Mamba.
+
+### Python
+
+- [Jupyter - Minimal Notebook](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-minimal-notebook):
+  A Jupyter server running JupyterLab and a Python kernel. No geospatial
+  packages are included in this environment, but it is an excellent base image
+  for creating customized Jupyter environments.
+
+- [GDS_ENV - GDS_PY](https://darribas.org/gds_env/stacks/gds_py/): Built on top
+  of Jupyter - Minimal Notebook, this image includes a large selection of Python
+  geospatial packages.
+
+### R
+
+- [Jupyter - R Notebook](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-r-notebook):
+  Similarly built from Jupyter - Minimal Notebook, this image includes an R
+  kernel and a few R packages. Custom R environments with a preference towards
+  JupyterLab should use this as their base image.
+
+- [GDS_ENV - GDS](https://darribas.org/gds_env/stacks/gds/): Built on top of
+  GDS_ENV - GDS_PY, this image includes an R kernel and a wide selection of R
+  geospatial packages.
+
+- [Rocker - Geospatial](https://rocker-project.org/images/versioned/rstudio.html):
+  Swapping JupyterLab for RStudio, this container image includes a range of R
+  packages with a heavy focus on geospatial research.
+
+### Others
+
+- [PostGIS](https://github.com/postgis/docker-postgis)
+
+- [GeoServer](https://docs.geoserver.org/latest/en/user/installation/docker.html)
+
+- [QGIS Server](https://docs.qgis.org/latest/en/docs/server_manual/containerized_deployment.html)
+
+## Engines
+
+### Apptainer (formerly Singularity)
+
+Developed specifically for academic and high performance computing, Apptainer
 avoids some of the security pitfalls of other engines like Docker at the expense
 of certain functionalities. Apptainer can only run a specific container format,
 but it provides all the necessary tools to complete conversions.
@@ -24,7 +82,10 @@ but it provides all the necessary tools to complete conversions.
 
 - [Running Apptainer on UBC ARCSockeye](https://confluence.it.ubc.ca/display/UARC/Using+Apptainer+or+Singularity+Containers)
 
-## Podman
+For a few simple examples on using and running Apptainer, see
+[High Performance Computing (HPC)](/high-performance-computing/README.md).
+
+### Podman
 
 Similar to Apptainer, Podman avoids some of the security pitfalls found in
 Docker, but unlike Apptainer, Podman provides a more general-purpose container
@@ -37,7 +98,7 @@ prior to running in an HPC environment.
 
 - _[Podman in Action](https://go.exlibris.link/XZMWFsdp)_
 
-## Docker
+### Docker
 
 Docker is by far the most popular container system, so similar to Podman, it can
 provide a helpful tool for developing and running containers on your local

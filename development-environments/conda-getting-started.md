@@ -110,8 +110,8 @@ it continue logging info, and we'll jump into a new terminal session within
 JupyterLab. Because we are running JupyterLab within our virtual environment, we
 won't actually see the environment name prepended to the terminal prompt as we
 did before, but we can be confident that the virtual environment is activated
-within our terminal. If want to double-check, we can always run the following
-command to list our virtual environments:
+within our terminal. If you want to double-check, we can always run the
+following command to list our virtual environments:
 
 ```bash
 $ conda info --envs
@@ -126,11 +126,11 @@ virtual environments.
 
 From here, you can continue using Conda to install any other packages that you
 want within this environment. You could add R, Julia and their accompanying
-kernels along with some helpful JupyterLabe extensions, like `jupyterlab-git` or
-`jupyterlab-github`. You can also use Python's built-in package manager to
-install packages that are available from the Python Package Index (PyPI).
-Consider installing packages that you think would be useful in all of your
-projects.
+kernel packages along with some helpful JupyterLab extensions, like
+`jupyterlab-git` or `jupyterlab-github`. You can also use Python's built-in
+package manager to install packages that are available from the Python Package
+Index (PyPI). Consider installing packages that you think would be useful in all
+of your projects.
 
 Now that we've setup our basic JupyterLab environment, we can clone the
 environment to start working on a new project, where we'll install packages that
@@ -148,7 +148,7 @@ local machine, it's not going to be much help if you want to share a virtual
 environment with someone else or transfer it to a different machine. To make the
 process easy, Conda includes the ability to take a snapshot of all the packages
 installed within an environment and store the name and versions of those
-packages into a text-based YAML file using the following command.
+packages into a text-based YAML (.yml) file using the following command.
 
 ```bash
 $ conda activate jupyter
