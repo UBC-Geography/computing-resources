@@ -5,7 +5,13 @@ packages software and the multiple dependencies required to run that software
 into a single, distributable container. That container can then be run on any
 system that is running the appropriate engine (Docker, Podman, etc.). They are
 often lighter and more agile than virtual machines but can include increased
-security risks if deployed for web services.
+security risks if not deployed correctly. In general, virtual environments
+managed using tools like `conda` as discussed in
+['Getting started with Conda, Virtual Environments, and Python'](/development-environments/conda-getting-started.md)
+should provide sufficient isolation for most geospatial computing cases without
+the need to familiarize oneself with container technologies, but containers can
+be a helpful tool in cases when neither virtual environments or virtual machines
+are feasible.
 
 For examples on leveraging containers to run highly-customized development
 environments with Jupyter, RStudio, or VS Code, see
@@ -28,10 +34,10 @@ There are many open container registries, where you can find publicly shared
 container images. [Docker Hub](https://hub.docker.com) is one of the most
 popular options and can be a useful tool when searching for images. In general,
 you should be careful when selecting images and be sure to select images that
-are well-maintained and shared by publishers that you trust. If you need a very
-minimal environment with Conda/Mamba, Conda-forge's
-[mambaforge](https://hub.docker.com/r/condaforge/mambaforge) image can be a good
-place to start as you'll be able to install packages with APT or Conda/Mamba.
+are well-maintained. If you need a very minimal environment with Conda/Mamba,
+Conda-forge's [mambaforge](https://hub.docker.com/r/condaforge/mambaforge) image
+can be a good place to start as you'll be able to install packages with APT or
+Conda/Mamba.
 
 ### Python
 

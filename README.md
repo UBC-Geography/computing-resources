@@ -42,6 +42,8 @@ and software that are used in Geography research, instruction, and learning.
 
 - [Containers](/containers/README.md)
 
+- [XR - Virtual Reality / Augmented Reality](/xr/README.md)
+
 For more related materials and workshop opportunities, check out the following
 resources:
 

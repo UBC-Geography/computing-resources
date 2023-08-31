@@ -24,6 +24,8 @@
 
 - [Observable Plot Documentation](https://observablehq.com/plot/getting-started)
 
+- [Deck.gl Documentation](https://deck.gl/docs)
+
 ### Observable JS
 
 - [Observable Documentation](https://observablehq.com/@observablehq/documentation?collection=@observablehq/documentation)
