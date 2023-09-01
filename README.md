@@ -44,8 +44,8 @@ and software that are used in Geography research, instruction, and learning.
 
 - [XR - Virtual Reality / Augmented Reality](/xr/README.md)
 
-For more related materials and workshop opportunities, check out the following
-resources:
+For in-depth workshop opportunities on applying some of these resources and more
+relevant materials, check out the following resources:
 
 - [UBC Library Research Commons Workshops](https://researchcommons.library.ubc.ca/workshops/)
 
@@ -55,5 +55,10 @@ resources:
 
 - [The Turing Way - handbook to reproducible, ethical and collaborative data science](https://the-turing-way.netlify.app/index.html)
 
-If you have recommendations for materials to add to this list, feel free to
-create a pull request or reach out to kellen.malek@ubc.ca.
+If you have recommendations for additions or edits, feel free to create a pull
+request or reach out to kellen.malek@ubc.ca.
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This
+work is licensed under a
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative
+Commons Attribution 4.0 International License</a>.
