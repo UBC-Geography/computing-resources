@@ -1,14 +1,15 @@
 # Using Containers for Development Environments
 
 While Conda can provide extremely convenient development environments, you may
-run into some instances where Conda doesn't afford you the level of isolation
+run into some instances where Conda does not afford you the level of isolation
 required to install or run a piece of software that you need for your research.
 This is an area where containers can be particularly useful as they provide a
 valuable middle ground between a Conda virtual environment and a full virtual
 machine.
 
 For more information about containers and a few of the container engines
-available, see [Containers](/containers/README.md).
+available, see [Containers](/containers/README.md). To build and run containers
+on your local machine, you'll need to have one of these engines installed.
 
 ## JupyterLab
 
@@ -18,12 +19,11 @@ to create new container images that include and software you may need.
 
 - [Jupyter Docker Stacks Documentation](https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html)
 
-Dockerfiles, or alternatively Containerfiles, provide instructions for creating
-your customized container image. These files can be easily shared and reused to
-build your container. The following example walks through a basic Dockerfile
-that builds a new image based on the jupyter/minimal-notebook image, which
-includes everything you need to get Jupyter up and running with all the
-necessities. Review the
+Dockerfiles provide instructions for creating your customized container image.
+These files can be easily shared and reused to build your container. The
+following example walks through a basic Dockerfile that builds a new image based
+on the jupyter/minimal-notebook image, which includes everything you need to get
+Jupyter up and running with all the necessities. Review the
 ['Selecting an image'](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html)
 when selecting a Jupyter image to build on top of.
 
