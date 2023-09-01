@@ -1,12 +1,12 @@
 # Containers
 
 Similar to virtual machines, containers are a form of virtualization that
-packages software and the multiple dependencies required to run that software
-into a single, distributable container. That container can then be run on any
+package software and the multiple dependencies required to run that software
+into a single, distributable environment. That container can then be run on any
 system that is running the appropriate engine (Docker, Podman, etc.). They are
 often lighter and more agile than virtual machines but can include increased
 security risks if not deployed correctly. In general, virtual environments
-managed using tools like `conda` as discussed in
+managed using tools like Conda as discussed in
 ['Getting started with Conda, Virtual Environments, and Python'](/development-environments/conda-getting-started.md)
 should provide sufficient isolation for most geospatial computing cases without
 the need to familiarize oneself with container technologies, but containers can
@@ -17,14 +17,14 @@ For examples on leveraging containers to run highly-customized development
 environments with Jupyter, RStudio, or VS Code, see
 [Using Containers for Development Environments](/development-environments/containerized-environments.md).
 
-It's important to note that most containers can only run in Linux environments.
+It is important to note that most containers can only run in Linux environments.
 Each of the container systems listed below include tools and steps for setting
 up simple, Linux environments from which containers can be ran on either Windows
 or Mac machines.
 
 Additionally, a large majority of container images are built with a simplified
-Linux distribution (often Ubuntu) as their base image. Some images have been
-built with Windows Server as their base image, but it's important to note that
+Linux distribution (often Ubuntu) as their base image. While some images have
+been built with Windows Server as their base image, it is important to note that
 these images cannot and likely never will run a desktop environment and/or
 graphical user interface (GUI).
 
@@ -36,8 +36,9 @@ popular options and can be a useful tool when searching for images. In general,
 you should be careful when selecting images and be sure to select images that
 are well-maintained. If you need a very minimal environment with Conda/Mamba,
 Conda-forge's [mambaforge](https://hub.docker.com/r/condaforge/mambaforge) image
-can be a good place to start as you'll be able to install packages with APT or
-Conda/Mamba.
+can be a good place to start as you'll be able to install packages with
+[APT](https://manpages.debian.org/bookworm/apt/apt-get.8.en.html) or
+[Mamba](https://mamba.readthedocs.io/en/latest/index.html).
 
 ### Python
 
@@ -78,9 +79,9 @@ Conda/Mamba.
 ### Apptainer (formerly Singularity)
 
 Developed specifically for academic and high performance computing, Apptainer
-avoids some of the security pitfalls of other engines like Docker at the expense
-of certain functionalities. Apptainer can only run a specific container format,
-but it provides all the necessary tools to complete conversions.
+avoids some of the security pitfalls of other engines, like Docker, at the
+expense of certain functionalities. Apptainer can only run a specific container
+format, but it provides all the necessary tools to complete conversions.
 
 - [Apptainer Documentation](https://apptainer.org/docs/user/main/)
 
