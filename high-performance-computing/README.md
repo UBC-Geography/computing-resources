@@ -607,3 +607,89 @@ job script from PBS to SLURM.
 
 - Documentation for HPC Container Platform -
   [Apptainer](https://apptainer.org/docs/user/main/)
+
+## Photogrammetry
+
+Photogrammetry software can be incredibly resource intensive, so running it on
+an HPC cluster can save you a lot of time and resources when working with
+extraordinarily large datasets.
+
+For an assortment of reasons, most HPC clusters only install free and
+open-source software. This includes UBC ARC's Sockeye cluster and the Digital
+Research Alliance's clusters. This means that software like Agisoft Metashape,
+ArcGIS Drone2Map, and Pix4D are unfortunately not available for use on HPC
+clusters.
+
+To leverage HPC clusters for processing drone images or video into orthophotos,
+3D models, point clouds, or elevation models,
+[Open Drone Map (ODM)](https://docs.opendronemap.org/) will likely be your best
+option.
+
+ODM is most often distributed and ran within a Docker container, and it can just
+as easily run within alternative container engines, like Apptainer or Podman.
+Prior to running ODM on an HPC cluster, it is highly recommended that you take a
+few test runs on a local machine with a subset of your data. This will give you
+an opportunity to explore and optimize any option flags to produce the best
+results for your dataset. You can find information on installing Apptainer
+[here](https://apptainer.org/docs/admin/main/installation.html#).
+
+To test ODM on a local machine that has Apptainer installed, make a directory
+that will be bound to the container for ODM's input and output. Then nest
+another directory named 'images' with a subset of your data stored within it.
+The example below uses a directory named 'odm_test'.
+
+```bash
+$ apptainer run -B odm_test:/project/code docker://opendronemap/odm:latest --project-path /project
+```
+
+After processing your dataset, ODM creates a report at
+'odm_test/odm_report/report.pdf', which can be used to quickly analyze your
+results and start calculating a total job time estimate for your HPC job script.
+
+Once you've identified any flags that you want to add to the command, you will
+need to convert the ODM Docker container into an Apptainer SIF container with
+the following command on your local machine:
+
+```bash
+$ apptainer build odm_latest.sif docker://opendronemap/odm:latest
+# For a container with GPU support, run:
+# apptainer build odm_gpu.sif docker://opendronemap/odm:gpu
+```
+
+Then copy the Apptainer SIF file from your local machine to your HPC home
+directory and ensure your dataset is stored in a project directory.
+
+you can use the following in a SLURM job script on the HPC cluster:
+
+```bash
+#!/bin/bash
+# Include the shebang at the top of the file, to clearly identify that the following script is meant for the Bash Shell
+# Provide flags as comments in the script. These will be read by SLURM to set option flags
+# Identify your user account
+#SBATCH --account=def-someuser
+# Identify the amount of memory to use per CPU
+#SBATCH --mem-per-cpu=1.5G  # In this case the job will only use one CPU with 1.5 GB of memory, adjust as needed
+#SBATCH --time=1:00:00 # You can use the test runs on your local machine to help you estimate this
+# At the beginning of your job load the Apptainer module
+module load apptainer
+# CPU Only
+apptainer run -C -W $SLURM_TMPDIR -B /project/images:/project/code/images,/scratch:/project odm_latest.sif --project-path /project
+# For a container with GPU support, run:
+# apptainer run -C -W $SLURM_TMPDIR -B /project/images:/project/code/images,/scratch:/project --nv odm_gpu.sif --project-path /project
+```
+
+The command in the above job script may need to be slightly adjusted based on
+the structure of the HPC cluster that you are using with the job script
+parameters being also being modified to account for the overall size of your
+dataset.
+
+Based on best practices, you will want to store your dataset within your project
+folder and bind the directory holding your dataset to a directory within the
+container with the path '/project/code/images'. You will also want to set ODM to
+output to your scratch directory by binding it to the ODM project directory.
+Finally, flag ODM to use the bound scratch directory as the project output
+directory.
+
+Once the job has been completed, you will need to review ODMs output within the
+scratch directory and transfer any relevant files back into your project
+directory before cleaning up the scratch directory.
