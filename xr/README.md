@@ -95,10 +95,41 @@ its functionality and cohesively work with GIS software.
 
 - _[Unity Virtual Reality Development with VRTK4](https://go.exlibris.link/RZ4dSxDl)_
 
-#### Software Development Kits
+#### Relevant Plugins and SDK
 
 - [ArcGIS Maps SDK for Unity](https://developers.arcgis.com/unity/)
 
 - [MapBox Maps SDK for Unity](https://docs.mapbox.com/unity/maps/guides/)
 
 - [Cesium for Unity Quickstart](https://cesium.com/learn/unity/unity-quickstart/)
+
+### Godot
+
+While lacking the maturity, ease-of-use, and breadth of GIS integrations
+compared to Unity, the Godot game engine is an increasingly popular choice for
+AR and VR development in both commercial and academic settings due to it being a
+powerful, free and open-source option.
+[LandscapeLab](https://landscapelab.boku.ac.at) provides an excellent example of
+how the engine can be applied within a geography-centered setting.
+
+- [Godot Engine Documentation](https://docs.godotengine.org/en/stable/)
+
+- _[Godot 4 Game Development Projects](https://go.exlibris.link/rQkxd2Bl)_
+
+- _[Godot 4 Game Development Cookbook](https://go.exlibris.link/Zh53LNQs)_
+
+- _[Game Development with Blender and Godot](https://go.exlibris.link/mpqzSL4G)_
+
+#### Relevant Plugins and SDK
+
+- [Geodot-Plugin README](https://github.com/boku-ilen/geodot-plugin)
+
+- [HTerrain Plugin Documentation](https://hterrain-plugin.readthedocs.io/en/latest/)
+
+### Other Tools
+
+- [DEM.Net Elevation API](https://elevationapi.com/) - Quickly generate 3D
+  Models from Open Street Map data
+
+- [Qgis2threejs Plugin](https://qgis2threejs.readthedocs.io/en/docs/Exporter.html) -
+  Export DEM data in QGIS to 3D models
