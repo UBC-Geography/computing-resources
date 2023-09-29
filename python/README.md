@@ -11,7 +11,7 @@ Python code.
 
 If you need recommendations for installing and getting started with Python on
 your local machine, see
-[Getting Started with Conda, Virtual Environments, and Python](/development-environments/conda-getting-started.md).
+[Getting Started with Conda, Virtual Environments, and Python](https://github.com/UBC-Geography/computing-resources/blob/main/development-environments/conda-getting-started.md#getting-started-with-conda-virtual-environments-and-python).
 
 - _[Python for Geographic Data Analysis](https://pythongis.org/)_
 

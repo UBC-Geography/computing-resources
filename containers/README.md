@@ -7,7 +7,7 @@ system that is running the appropriate engine (Docker, Podman, etc.). They are
 often lighter and more agile than virtual machines but can include increased
 security risks if not deployed correctly. In general, virtual environments
 managed using tools like Conda as discussed in
-['Getting started with Conda, Virtual Environments, and Python'](/development-environments/conda-getting-started.md)
+['Getting started with Conda, Virtual Environments, and Python'](https://github.com/UBC-Geography/computing-resources/blob/main/development-environments/conda-getting-started.md#getting-started-with-conda-virtual-environments-and-python)
 should provide sufficient isolation for most geospatial computing cases without
 the need to familiarize oneself with container technologies, but containers can
 be a helpful tool in cases when neither virtual environments or virtual machines
@@ -15,7 +15,7 @@ are feasible.
 
 For examples on leveraging containers to run highly-customized development
 environments with Jupyter, RStudio, or VS Code, see
-[Using Containers for Development Environments](/development-environments/containerized-environments.md).
+[Using Containers for Development Environments](https://github.com/UBC-Geography/computing-resources/blob/main/development-environments/containerized-environments.md#using-containers-for-development-environments).
 
 It is important to note that most containers can only run in Linux environments.
 Each of the container systems listed below include tools and steps for setting
@@ -90,7 +90,7 @@ format, but it provides all the necessary tools to complete conversions.
 - [Running Apptainer on UBC ARCSockeye](https://confluence.it.ubc.ca/display/UARC/Using+Apptainer+or+Singularity+Containers)
 
 For a few simple examples on using and running Apptainer, see
-[High Performance Computing (HPC)](/high-performance-computing/README.md).
+[High Performance Computing (HPC)](https://github.com/UBC-Geography/computing-resources/tree/main/high-performance-computing#high-performance-computing).
 
 ### Podman
 

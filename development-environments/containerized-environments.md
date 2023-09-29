@@ -8,8 +8,10 @@ valuable middle ground between a Conda virtual environment and a full virtual
 machine.
 
 For more information about containers and a few of the container engines
-available, see [Containers](/containers/README.md). To build and run containers
-on your local machine, you'll need to have one of these engines installed.
+available, see
+[Containers](https://github.com/UBC-Geography/computing-resources/tree/main/containers#containers).
+To build and run containers on your local machine, you'll need to have one of
+these engines installed.
 
 ## JupyterLab
 

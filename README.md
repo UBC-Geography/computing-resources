@@ -4,45 +4,45 @@ This repository includes a listing of computing resources and accompanying
 documentation that can be helpful in familiarizing oneself with various tools
 and software that are used in Geography research, instruction, and learning.
 
-- [Digital Communications](/digital-communications/README.md)
+- [Digital Communications](https://github.com/UBC-Geography/computing-resources/tree/main/digital-communications#digital-communications)
 
-  - [WordPress](/communications-and-publishing/README.md#wordpress)
+  - [WordPress](https://github.com/UBC-Geography/computing-resources/tree/main/digital-communications#wordpress)
 
-  - [Static Site Generators / Web Publishing](/communications-and-publishing/README.md#static-site-generators-ssg--web-publishing)
+  - [Static Site Generators / Web Publishing](https://github.com/UBC-Geography/computing-resources/tree/main/digital-communications#static-site-generators-ssg--web-publishing)
 
-  - [Digital Exhibit Tools](/communications-and-publishing/README.md#digital-exhibit-tools)
+  - [Digital Exhibit Tools](https://github.com/UBC-Geography/computing-resources/tree/main/digital-communications#digital-exhibit-tools)
 
-- [Research Data Management](/research-data-management/README.md)
+- [Research Data Management](https://github.com/UBC-Geography/computing-resources/tree/main/research-data-management#research-data-management-rdm)
 
-- [GIS Software](/gis-software/README.md)
+- [GIS Software](https://github.com/UBC-Geography/computing-resources/tree/main/gis-software#gis-software)
 
-- [UNIX Shells & Command Line Interfaces (CLI)](/unix-shells-and-clis/README.md)
+- [UNIX Shells & Command Line Interfaces (CLI)](https://github.com/UBC-Geography/computing-resources/tree/main/unix-shells-and-clis#unix-shells--command-line-interfaces-cli)
 
-- [Development Environments](/development-environments/README.md)
+- [Development Environments](https://github.com/UBC-Geography/computing-resources/tree/main/development-environments#development-environments)
 
-  - [Virtual Environments](/development-environments/README.md#virtual-environments)
+  - [Virtual Environments](https://github.com/UBC-Geography/computing-resources/tree/main/development-environments#virtual-environment-managers)
 
-  - [Jupyter](/development-environments/README.md#jupyter)
+  - [Jupyter](https://github.com/UBC-Geography/computing-resources/tree/main/development-environments#jupyter)
 
-  - [RStudio](/development-environments/README.md#rstudio)
+  - [RStudio](https://github.com/UBC-Geography/computing-resources/tree/main/development-environments#rstudio)
 
-  - [Visual Studio Code](/development-environments/README.md#visual-studio-code)
+  - [Visual Studio Code](https://github.com/UBC-Geography/computing-resources/tree/main/development-environments#visual-studio-code)
 
-- [Python](/python/README.md)
+- [Python](https://github.com/UBC-Geography/computing-resources/tree/main/python#python)
 
-- [R](/r/README.md)
+- [R](https://github.com/UBC-Geography/computing-resources/tree/main/r#r)
 
-- [JavaScript](/javascript/README.md)
+- [JavaScript](https://github.com/UBC-Geography/computing-resources/tree/main/javascript#javascript)
 
-- [SQL Databases](/sql-databases/README.md)
+- [SQL Databases](https://github.com/UBC-Geography/computing-resources/tree/main/sql-databases#sql-databases)
 
-- [Git & GitHub](/git-and-github/README.md)
+- [Git & GitHub](https://github.com/UBC-Geography/computing-resources/tree/main/git-and-github#git--github)
 
-- [High Performance Computing (HPC)](/high-performance-computing/README.md)
+- [High Performance Computing (HPC)](https://github.com/UBC-Geography/computing-resources/tree/main/high-performance-computing#high-performance-computing)
 
-- [Containers](/containers/README.md)
+- [Containers](https://github.com/UBC-Geography/computing-resources/tree/main/containers#containers)
 
-- [XR - Virtual Reality / Augmented Reality](/xr/README.md)
+- [XR - Virtual Reality / Augmented Reality](https://github.com/UBC-Geography/computing-resources/tree/main/xr#xr---virtual-reality--augmented-reality)
 
 For in-depth workshop opportunities on applying some of these resources and more
 relevant materials, check out the following resources:

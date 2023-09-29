@@ -136,11 +136,11 @@ The following algorithms are important to note:
   software.
 
 - [WEBP](https://developers.google.com/speed/webp/) - While it is well supported
-  by modern web browsers, this algorithm supports both lossy and lossless
-  compression, but it is not developed on open-source standards. This algorithm
-  provides improved compression ratios over JPEG and currently provides the best
-  option for displaying a raster on the web, but it lacks broader support in
-  other software and will likely be replaced by JXL in the future.
+  by modern web browsers, this algorithm is not developed on open-source
+  standards. It supports both lossy and lossless compression. It also provides
+  improved compression ratios over JPEG and currently provides the best option
+  for displaying a raster on the web, but it lacks broader support in other
+  software and will likely be replaced by JXL in the future.
 
 - [JXL](https://jpeg.org/jpegxl/index.html) - This is still a relatively new
   standard that has been developed as a successor to JPEG and JPEG2000. Similar

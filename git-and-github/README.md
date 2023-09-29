@@ -37,6 +37,16 @@ GitHub.
 
 - [GitHub Desktop Documentation](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop)
 
+An additional benefit to storing your code in a public repository on GitHub is
+that your code can easily be archived into [Zenodo](https://about.zenodo.org/),
+where it will receive a digital object identifier (DOI). This then makes it
+extraordinarily easy for your code to be cited and accessed by other
+researchers. If later you make revisions or improvements to your code, you can
+cut a new release and Zenodo will automatically update your archive and assign a
+new DOI.
+
+- [GitHub Documentation - Referencing and Citing Content](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
+
 ## Integrations
 
 ### JupyterLab

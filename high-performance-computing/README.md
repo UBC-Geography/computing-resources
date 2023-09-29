@@ -17,6 +17,8 @@ across Canada, including one located at Simon Fraser University.
 
 - [Geospatial Analysis with HPC Video](https://youtu.be/wRmRnVMjKXM)
 
+- [Supercomputing Conference - Recorded Sessions](https://www.youtube.com/@SCconferenceseries/playlists)
+
 - _[Parallel and High Performance Computing](https://go.exlibris.link/1VWhVDjZ)_
 
 ## UBC Advanced Research Computing Sockeye
