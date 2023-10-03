@@ -53,6 +53,10 @@ relevant materials, check out the following resources:
 
 - [UBC Geospatial Resources](https://gis.ubc.ca/)
 
+- [UBC Open Geography](https://open.geog.ubc.ca/)
+
+- [Earth Lab](https://www.earthdatascience.org/)
+
 - [The Turing Way - handbook to reproducible, ethical and collaborative data science](https://the-turing-way.netlify.app/index.html)
 
 If you have recommendations for additions or edits, feel free to create a pull
