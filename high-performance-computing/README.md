@@ -188,10 +188,6 @@ your terminal with conda/mamba.
    $ apptainer build <container_name>_<timestamp>.sif <container_name>
    ```
 
-Note: Running containers within JupyterHub can be supported by installing
-Apptainer via Mamba. Containers must be in Sandbox Mode and . You can create
-Apptainer .SIF containers on JupyterHub, but you can't run them.
-
 #### Installing a Python-Based Container as a Kernel
 
 1. Start a server on the JupyterHub cluster.
