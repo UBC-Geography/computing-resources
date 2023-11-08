@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/containers/index.html</loc>
-    <lastmod>2023-11-08T20:24:30.605Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/containers/index.html</loc>
+    <lastmod>2023-11-08T20:30:54.760Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/git-and-github/index.html</loc>
-    <lastmod>2023-11-08T20:24:28.355Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/git-and-github/index.html</loc>
+    <lastmod>2023-11-08T20:30:53.200Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/javascript/index.html</loc>
-    <lastmod>2023-11-08T20:24:26.884Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/javascript/index.html</loc>
+    <lastmod>2023-11-08T20:30:52.300Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/python/index.html</loc>
-    <lastmod>2023-11-08T20:24:25.406Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/python/index.html</loc>
+    <lastmod>2023-11-08T20:30:51.384Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/unix-shells-and-clis/index.html</loc>
-    <lastmod>2023-11-08T20:24:23.630Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/unix-shells-and-clis/index.html</loc>
+    <lastmod>2023-11-08T20:30:50.224Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/research-data-management/index.html</loc>
-    <lastmod>2023-11-08T20:24:22.244Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/research-data-management/index.html</loc>
+    <lastmod>2023-11-08T20:30:49.440Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/index.html</loc>
-    <lastmod>2023-11-08T20:24:20.473Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/index.html</loc>
+    <lastmod>2023-11-08T20:30:48.300Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/development-environments/jupyterhub-installing-packages.html</loc>
-    <lastmod>2023-11-08T20:24:18.668Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/development-environments/jupyterhub-installing-packages.html</loc>
+    <lastmod>2023-11-08T20:30:47.296Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/development-environments/conda-getting-started.html</loc>
-    <lastmod>2023-11-08T20:24:16.745Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/development-environments/conda-getting-started.html</loc>
+    <lastmod>2023-11-08T20:30:44.400Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/development-environments/containerized-environments.html</loc>
-    <lastmod>2023-11-08T20:24:17.754Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/development-environments/containerized-environments.html</loc>
+    <lastmod>2023-11-08T20:30:46.748Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/research-data-management/research-data-storage.html</loc>
-    <lastmod>2023-11-08T20:24:19.581Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/research-data-management/research-data-storage.html</loc>
+    <lastmod>2023-11-08T20:30:47.852Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/digital-communications/index.html</loc>
-    <lastmod>2023-11-08T20:24:21.326Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/digital-communications/index.html</loc>
+    <lastmod>2023-11-08T20:30:48.856Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/gis-software/index.html</loc>
-    <lastmod>2023-11-08T20:24:22.926Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/gis-software/index.html</loc>
+    <lastmod>2023-11-08T20:30:49.840Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/development-environments/index.html</loc>
-    <lastmod>2023-11-08T20:24:24.550Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/development-environments/index.html</loc>
+    <lastmod>2023-11-08T20:30:50.836Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/r/index.html</loc>
-    <lastmod>2023-11-08T20:24:26.204Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/r/index.html</loc>
+    <lastmod>2023-11-08T20:30:51.896Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/sql-databases/index.html</loc>
-    <lastmod>2023-11-08T20:24:27.587Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/sql-databases/index.html</loc>
+    <lastmod>2023-11-08T20:30:52.732Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/high-performance-computing/index.html</loc>
-    <lastmod>2023-11-08T20:24:29.772Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/high-performance-computing/index.html</loc>
+    <lastmod>2023-11-08T20:30:54.240Z</lastmod>
   </url>
   <url>
-    <loc>https://UBC-Geography.github.io/computing-resources/xr/index.html</loc>
-    <lastmod>2023-11-08T20:24:31.436Z</lastmod>
+    <loc>https://github.com/UBC-Geography/computing-resources/xr/index.html</loc>
+    <lastmod>2023-11-08T20:30:55.288Z</lastmod>
   </url>
 </urlset>
