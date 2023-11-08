@@ -1,0 +1,96 @@
+project:
+  type: website
+  render:
+    - "*.md"
+    - "README.md"
+    - "digital-communications/README.md"
+    - "research-data-management/README.md"
+    - "gis-software/README.md"
+    - "unix-shells-and-clis/README.md"
+    - "development-environments/README.md"
+    - "python/README.md"
+    - "r/README.md"
+    - "javascript/README.md"
+    - "sql-databases/README.md"
+    - "git-and-github/README.md"
+    - "high-performance-computing/README.md"
+    - "containers/README.md"
+    - "xr/README.md"
+    - "404.qmd"
+    - "!TODO.md"
+
+website:
+  title: "UBC Geography Computing Resources"
+  back-to-top-navigation: true
+  repo-url: https://github.com/UBC-Geography/computing-resources
+  repo-actions: edit
+  sidebar:
+    style: "floating"
+    search: true
+    contents:
+      - section: "Digital Communications"
+        contents:
+        - href: digital-communications/index.html
+          text: Overview
+        - href: digital-communications/#wordpress
+          text: WordPress
+        - href: digital-communications/#static-site-generators-ssg-web-publishing
+          text: Static Site Generators / Web Publishing
+      - section: "Research Data Management"
+        contents:
+          - href: research-data-management/index.html
+            text: Overview
+          - href: research-data-management/research-data-storage.html
+            text: Research Data Storage
+      - href: "gis-software/index.html"
+        text: "GIS Software"
+      - href: "unix-shells-and-clis/index.html"
+        text: "UNIX Shells and CLIs"
+      - section: "Development Environments"
+        contents:
+          - href: development-environments/index.html
+            text: Overview
+          - section: "Virtual Environments"
+            contents:
+            - href: development-environments/#virtual-environment-managers
+              text: Overview
+            - href: development-environments/conda-getting-started.html
+              text: Conda - Getting Started
+          - section: "Jupyter"
+            contents:
+            - href: development-environments/#jupyter
+              text: Overview
+            - href: development-environments/jupyterhub-installing-packages.html
+              text: JupyterHub - Installing Packages
+          - href: development-environments/#rstudio
+            text: RStudio
+          - href: development-environments/#visual-studio-code
+            text: Visual Studio Code
+          - href: development-environments/containerized-environments.html
+            text: Containerized Environments
+      - href: python/index.html
+        text: Python
+      - href: r/index.html
+        text: R
+      - href: javascript/index.html
+        text: JavaScript
+      - href: sql-databases/index.html
+        text: SQL Databases
+      - href: git-and-github/index.html
+        text: Git & GitHub
+      - href: high-performance-computing/index.html
+        text: High Performance Computing (HPC)
+      - href: containers/index.html
+        text: Containers
+      - href: xr/index.html
+        text: XR - Virtual Reality / Augmented Reality
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    toc: true
+
+execute:
+  freeze: auto

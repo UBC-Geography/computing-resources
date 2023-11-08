@@ -1,3 +1,7 @@
+---
+output-file: index.html
+---
+
 # Digital Communications
 
 ## WordPress
@@ -90,8 +94,6 @@ can be used to customize the style of a website.
 - [UBC Library Research Commons - Intermediate Jekyll](https://ubc-library-rc.github.io/intermediate-Jekyll/)
 
 - [UBC Library Research Commons - Building a project website with Jekyll and GitHub Pages](https://ubc-library-rc.github.io/intro-project-sites/)
-
-- [Jekyll Documentation](https://jekyllrb.com/docs/)
 
 ## Digital Exhibit Tools
 

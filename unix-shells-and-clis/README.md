@@ -1,3 +1,7 @@
+---
+output-file: index.html
+---
+
 # Unix Shells & Command Line Interfaces (CLI)
 
 - [Introduction to the UNIX Shell](https://ubc-library-rc.github.io/intro-shell/)

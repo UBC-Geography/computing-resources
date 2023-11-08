@@ -1,3 +1,7 @@
+---
+output-file: index.html
+---
+
 # GIS Software
 
 - _[Practical GIS](https://go.exlibris.link/0SQNwYkl)_

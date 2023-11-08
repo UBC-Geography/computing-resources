@@ -1,3 +1,7 @@
+---
+output-file: index.html
+---
+
 # Python
 
 Python is one of the most popular programming languages in the world. Its low
@@ -11,7 +15,7 @@ Python code.
 
 If you need recommendations for installing and getting started with Python on
 your local machine, see
-[Getting Started with Conda, Virtual Environments, and Python](https://github.com/UBC-Geography/computing-resources/blob/main/development-environments/conda-getting-started.md#getting-started-with-conda-virtual-environments-and-python).
+[Getting Started with Conda, Virtual Environments, and Python](https://UBC-Geography.github.io/development-environments/conda-getting-started).
 
 - _[Python for Geographic Data Analysis](https://pythongis.org/)_
 
@@ -86,6 +90,48 @@ over your functions and ensure they are following expected behavior in a range
 of practical scenarios.
 
 - [pytest Documentation](https://docs.pytest.org/en/7.3.x/)
+
+## Web Frameworks
+
+While Python supports a large number of popular all-purpose web frameworks,
+including Django, Flask, and FastAPI, it also supports specialized frameworks
+that excel at supporting and sharing geospatial research.
+
+### Interactive Visualizations and Dashboards
+
+- [Voila](https://voila.readthedocs.io/en/stable/index.html) - Developed under
+  the Jupyter Project, Voilà is a tool for converting and rendering Jupyter
+  notebooks as interactive web applications. These applications can be deployed
+  on a private server or via hosting providers like Binder, Railway, or Google
+  App Engine.
+
+- [Voici](https://voici.readthedocs.io/en/latest/) - Built by the same team
+  behind Voilà, Voici is an experimental tool that can similarly convert
+  notebooks to interactive applications, but rather than running the Python
+  kernel on a server, Voici shifts computation off of the server and into a
+  user's web browser using WebAssembly (WASM) and a static webpage. This makes
+  hosting the application virtually free via services like GitHub Pages while
+  also making it easier to manage and preserve. The crucial downside to note is
+  that user's with poor internet connections and/or limited hardware will
+  struggle to run the applications, especially those that include large datasets
+  and long, resource-intensive computations.
+
+- [Mercury](https://runmercury.com/) -
+
+- [Shiny for Python](https://shiny.posit.co/py/)
+
+  - [Shiny for Python Ultimate - Course](https://learning.oreilly.com/videos/shiny-for-python/9781805122753/) -
+    Access via https://go.oreilly.com/univ-british-columbia
+
+- [Streamlit](https://docs.streamlit.io/)
+
+- [Dash](https://dash.plotly.com/)
+
+- [Panel](https://panel.holoviz.org/)
+
+### Geographic Web Frameworks
+
+- [GeoDjango](https://docs.djangoproject.com/en/4.2/ref/contrib/gis/)
 
 ## Other Related Libraries/Packages
 

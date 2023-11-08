@@ -1,3 +1,7 @@
+---
+output-file: index.html
+---
+
 # R
 
 - _[R in Action](https://go.exlibris.link/P6rJdt9g)_

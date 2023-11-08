@@ -1,48 +1,52 @@
+---
+output-file: index.html
+---
+
 # Geography Computing Resources & Documentation
 
 This repository includes a listing of computing resources and accompanying
 documentation that can be helpful in familiarizing oneself with various tools
 and software that are used in Geography research, instruction, and learning.
 
-- [Digital Communications](https://github.com/UBC-Geography/computing-resources/tree/main/digital-communications#digital-communications)
+- [Digital Communications](https://UBC-Geography.github.io/computing-resources/digital-communications/index.html)
 
-  - [WordPress](https://github.com/UBC-Geography/computing-resources/tree/main/digital-communications#wordpress)
+  - [WordPress](https://UBC-Geography.github.io/computing-resources/digital-communications/#wordpress)
 
-  - [Static Site Generators / Web Publishing](https://github.com/UBC-Geography/computing-resources/tree/main/digital-communications#static-site-generators-ssg--web-publishing)
+  - [Static Site Generators / Web Publishing](https://UBC-Geography.github.io/computing-resources/digital-communications#static-site-generators-ssg-web-publishing)
 
-  - [Digital Exhibit Tools](https://github.com/UBC-Geography/computing-resources/tree/main/digital-communications#digital-exhibit-tools)
+  - [Digital Exhibit Tools](https://UBC-Geography.github.io/computing-resources/digital-communications#digital-exhibit-tools)
 
-- [Research Data Management](https://github.com/UBC-Geography/computing-resources/tree/main/research-data-management#research-data-management-rdm)
+- [Research Data Management](https://UBC-Geography.github.io/computing-resources/research-data-management#research-data-management-rdm)
 
-- [GIS Software](https://github.com/UBC-Geography/computing-resources/tree/main/gis-software#gis-software)
+- [GIS Software](https://UBC-Geography.github.io/computing-resources/gis-software#gis-software)
 
-- [UNIX Shells & Command Line Interfaces (CLI)](https://github.com/UBC-Geography/computing-resources/tree/main/unix-shells-and-clis#unix-shells--command-line-interfaces-cli)
+- [UNIX Shells & Command Line Interfaces (CLI)](https://UBC-Geography.github.io/computing-resources/unix-shells-and-clis#unix-shells--command-line-interfaces-cli)
 
-- [Development Environments](https://github.com/UBC-Geography/computing-resources/tree/main/development-environments#development-environments)
+- [Development Environments](https://UBC-Geography.github.io/computing-resources/development-environments#development-environments)
 
-  - [Virtual Environments](https://github.com/UBC-Geography/computing-resources/tree/main/development-environments#virtual-environment-managers)
+  - [Virtual Environments](https://UBC-Geography.github.io/computing-resources/development-environments#virtual-environment-managers)
 
-  - [Jupyter](https://github.com/UBC-Geography/computing-resources/tree/main/development-environments#jupyter)
+  - [Jupyter](https://UBC-Geography.github.io/computing-resources/development-environments#jupyter)
 
-  - [RStudio](https://github.com/UBC-Geography/computing-resources/tree/main/development-environments#rstudio)
+  - [RStudio](https://UBC-Geography.github.io/computing-resources/development-environments#rstudio)
 
-  - [Visual Studio Code](https://github.com/UBC-Geography/computing-resources/tree/main/development-environments#visual-studio-code)
+  - [Visual Studio Code](https://UBC-Geography.github.io/computing-resources/development-environments#visual-studio-code)
 
-- [Python](https://github.com/UBC-Geography/computing-resources/tree/main/python#python)
+- [Python](https://UBC-Geography.github.io/computing-resources/python#python)
 
-- [R](https://github.com/UBC-Geography/computing-resources/tree/main/r#r)
+- [R](https://UBC-Geography.github.io/computing-resources/r#r)
 
-- [JavaScript](https://github.com/UBC-Geography/computing-resources/tree/main/javascript#javascript)
+- [JavaScript](https://UBC-Geography.github.io/computing-resources/javascript#javascript)
 
-- [SQL Databases](https://github.com/UBC-Geography/computing-resources/tree/main/sql-databases#sql-databases)
+- [SQL Databases](https://UBC-Geography.github.io/computing-resources/sql-databases#sql-databases)
 
-- [Git & GitHub](https://github.com/UBC-Geography/computing-resources/tree/main/git-and-github#git--github)
+- [Git & GitHub](https://UBC-Geography.github.io/computing-resources/git-and-github#git--github)
 
-- [High Performance Computing (HPC)](https://github.com/UBC-Geography/computing-resources/tree/main/high-performance-computing#high-performance-computing)
+- [High Performance Computing (HPC)](https://UBC-Geography.github.io/computing-resources/high-performance-computing#high-performance-computing)
 
-- [Containers](https://github.com/UBC-Geography/computing-resources/tree/main/containers#containers)
+- [Containers](https://UBC-Geography.github.io/computing-resources/containers#containers)
 
-- [XR - Virtual Reality / Augmented Reality](https://github.com/UBC-Geography/computing-resources/tree/main/xr#xr---virtual-reality--augmented-reality)
+- [XR - Virtual Reality / Augmented Reality](https://UBC-Geography.github.io/computing-resources/xr#xr---virtual-reality--augmented-reality)
 
 For in-depth workshop opportunities on applying some of these resources and more
 relevant materials, check out the following resources:

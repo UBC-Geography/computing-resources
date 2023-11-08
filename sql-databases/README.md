@@ -1,10 +1,22 @@
+---
+output-file: index.html
+---
+
 # SQL Databases
 
 - [How to create and access MySQL and PostgreSQL databases on DRI systems - Video](https://youtu.be/3uHSXXQwJpQ)
 
-- _[Geospatial Analysis with SQL](https://go.exlibris.link/R3s1pzG2)_
+- _[Geospatial Analysis with SQL](https://go.exlibris.link/N6ybsHyL)_
+
+## SQLite
+
+### GIS Extensions / Libraries
+
+- [SpatiaLite](https://www.gaia-gis.it/fossil/libspatialite/index)
 
 ## PostgreSQL
+
+- _[Learn PostgreSQL](https://go.exlibris.link/DPVZ3PFk)_
 
 ### Hosting
 

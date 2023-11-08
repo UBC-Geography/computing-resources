@@ -1,3 +1,7 @@
+---
+output-file: index.html
+---
+
 # Containers
 
 Similar to virtual machines, containers are a form of virtualization that
@@ -7,7 +11,7 @@ system that is running the appropriate engine (Docker, Podman, etc.). They are
 often lighter and more agile than virtual machines but can include increased
 security risks if not deployed correctly. In general, virtual environments
 managed using tools like Conda as discussed in
-['Getting started with Conda, Virtual Environments, and Python'](https://github.com/UBC-Geography/computing-resources/blob/main/development-environments/conda-getting-started.md#getting-started-with-conda-virtual-environments-and-python)
+['Getting started with Conda, Virtual Environments, and Python'](https://UBC-Geography.github.io/computing-resources/development-environments/conda-getting-started)
 should provide sufficient isolation for most geospatial computing cases without
 the need to familiarize oneself with container technologies, but containers can
 be a helpful tool in cases when neither virtual environments or virtual machines
@@ -15,7 +19,7 @@ are feasible.
 
 For examples on leveraging containers to run highly-customized development
 environments with Jupyter, RStudio, or VS Code, see
-[Using Containers for Development Environments](https://github.com/UBC-Geography/computing-resources/blob/main/development-environments/containerized-environments.md#using-containers-for-development-environments).
+[Using Containers for Development Environments](https://UBC-Geography.github.io/computing-resources/development-environments/containerized-environments).
 
 It is important to note that most containers can only run in Linux environments.
 Each of the container systems listed below include tools and steps for setting
@@ -90,7 +94,7 @@ format, but it provides all the necessary tools to complete conversions.
 - [Running Apptainer on UBC ARCSockeye](https://confluence.it.ubc.ca/display/UARC/Using+Apptainer+or+Singularity+Containers)
 
 For a few simple examples on using and running Apptainer, see
-[High Performance Computing (HPC)](https://github.com/UBC-Geography/computing-resources/tree/main/high-performance-computing#high-performance-computing).
+[High Performance Computing (HPC)](https://UBC-Geography.github.io/computing-resources/high-performance-computing).
 
 ### Podman
 

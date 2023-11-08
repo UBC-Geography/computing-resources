@@ -1,3 +1,7 @@
+---
+output-file: index.html
+---
+
 # High Performance Computing
 
 High performance computing can provide a powerful solution when working with

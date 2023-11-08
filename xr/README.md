@@ -1,3 +1,7 @@
+---
+output-file: index.html
+---
+
 # XR - Virtual Reality / Augmented Reality
 
 Extended reality (XR), which encompasses virtual reality (VR), augmented reality

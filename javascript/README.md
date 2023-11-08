@@ -1,3 +1,7 @@
+---
+output-file: index.html
+---
+
 # JavaScript
 
 ## GIS Libraries/Packages

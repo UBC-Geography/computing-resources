@@ -1,3 +1,7 @@
+---
+output-file: index.html
+---
+
 # Git & GitHub
 
 Implementing version control is a commonly used best practice among programmers,
@@ -9,7 +13,7 @@ stable, main codebase in easily managed branches.
 
 - [UBC Library Research Commons - Introduction to Git and GitHub](https://ubc-library-rc.github.io/intro-git/)
 
-## Git
+## [Git](https://git-scm.com/)
 
 Git is by far the most popular version control system and comes with a powerful
 command line interface while integrating with code sharing and development
@@ -64,3 +68,14 @@ new DOI.
 ### VS Code
 
 - [VS Code Extensions - Remote Repositories](https://marketplace.visualstudio.com/items?itemName=github.remotehub)
+
+## [Kart](https://kartproject.org/)
+
+Kart is a tool that has been built on top of Git and extends its functionality
+to work with vector datasets while also integrating with Git LFS (Large File
+Storage) to handle large raster datasets. The Kart developers also provide a
+QGIS plugin to ensure easy integration.
+
+- [Kart Documentation](https://docs.kartproject.org/en/latest/index.html)
+
+- [Kart QGIS Plugin](https://plugins.qgis.org/plugins/kart/)

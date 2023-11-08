@@ -1,3 +1,7 @@
+---
+output-file: index.html
+---
+
 # Development Environments
 
 ## Virtual Environment Managers
@@ -9,7 +13,7 @@ only using the specific Python packages that were identified and installed for
 running it. This makes the project easier to reproduce while also reducing
 errors caused by clashing package dependencies.
 
-- [Getting Started with Conda, Virtual Environments, and Python](https://github.com/UBC-Geography/computing-resources/blob/main/development-environments/conda-getting-started.md#getting-started-with-conda-virtual-environments-and-python)
+- [Getting Started with Conda, Virtual Environments, and Python](https://UBC-Geography.github.io/development-environments/conda-getting-started)
 
 ### Conda
 
