@@ -397,7 +397,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Documentation: <a href="https://docs.alliancecan.ca/wiki/Getting_started" class="uri">https://docs.alliancecan.ca/wiki/Getting_started</a></p>
 <p>Supported Software: <a href="https://docs.alliancecan.ca/wiki/Available_software" class="uri">https://docs.alliancecan.ca/wiki/Available_software</a></p>
 <ul>
-<li>Note: Additionally, any software that is supported on Linux can be ran within an Apptainer container</li>
+<li>Note: Additionally, any software that is supported on Linux can run within an Apptainer container</li>
 </ul>
 </section>
 <section id="qgis" class="level2">
@@ -442,7 +442,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="running-a-jupyter-kernel-from-a-container" class="level3">
 <h3 class="anchored" data-anchor-id="running-a-jupyter-kernel-from-a-container">Running a Jupyter Kernel from a Container</h3>
 <p>Containers enable you to pre-build customized environments from which you can run software that is not supported on the Alliance clusters, and they can be leveraged to extend the Alliance’s JupyterHub clusters by running them as a custom Jupyter kernels. This can be extraordinarily useful considering Conda is not supported on the cluster.</p>
-<p>Before using this approach, double-check that the software you need is not already available on the cluster either as <a href="https://docs.alliancecan.ca/wiki/Available_software">modules</a> or <a href="https://docs.alliancecan.ca/wiki/Available_Python_wheels">Python wheels</a>. Software installed and ran within a container is going to perform less efficiently than equivalent modules on Alliance, which have been optimized for HPC.</p>
+<p>Before using this approach, double-check that the software you need is not already available on the cluster either as <a href="https://docs.alliancecan.ca/wiki/Available_software">modules</a> or <a href="https://docs.alliancecan.ca/wiki/Available_Python_wheels">Python wheels</a>. Software installed within a container is going to perform less efficiently than equivalent modules on Alliance, which have been optimized for HPC.</p>
 <section id="creating-the-container-environment-with-mamba-conda" class="level4">
 <h4 class="anchored" data-anchor-id="creating-the-container-environment-with-mamba-conda">Creating the container environment with Mamba (Conda)</h4>
 <p>While this can be done within the Alliance login node, it is highly recommended that the containers are built from another Linux machine and copied onto the cluster. This will ensure the build runs a bit faster and you aren’t competing for resources with other researchers on the login node.</p>
@@ -572,7 +572,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
 <span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> q<span class="kw">()</span></span>
 <span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> exit</span>
-<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the sandbox container into a SIF container to be ran on the HPC cluster</span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the sandbox container into a SIF container to be transferred to the HPC cluster</span></span>
 <span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer build rstudio.sif rstudio</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul></li>
 </ul>
@@ -590,7 +590,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>conda, virtualenv, and venv</p></li>
 <li><p><a href="https://confluence.it.ubc.ca/display/UARC/Using+Virtual+Environments+on+Sockeye">Using Virtual Environments on Sockeye</a></p></li>
 </ul></li>
-<li><p>Alliance: virtualenv or venv. conda is not supported, but it can be ran using an Apptainer container. In general, Alliance recommends avoiding conda and Anaconda packages if possible. Go <a href="https://docs.alliancecan.ca/wiki/Anaconda/en">here</a> for more details. See instructions below for creating and running conda from an Apptainer container:</p>
+<li><p>Alliance: virtualenv or venv. conda is not supported, but it can be run using an Apptainer container. In general, Alliance recommends avoiding conda and Anaconda packages if possible. Go <a href="https://docs.alliancecan.ca/wiki/Anaconda/en">here</a> for more details. See instructions below for creating and running conda from an Apptainer container:</p>
 <ul>
 <li><p>Creating an Apptainer container with conda and Anaconda packages:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pull the miniconda3 Docker container and create a new sandbox container from it</span></span>
@@ -799,7 +799,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Photogrammetry software can be incredibly resource intensive, so running it on an HPC cluster can save you a lot of time and resources when working with extraordinarily large datasets.</p>
 <p>For an assortment of reasons, most HPC clusters only install free and open-source software. This includes UBC ARC’s Sockeye cluster and the Digital Research Alliance’s clusters. This means that software like Agisoft Metashape, ArcGIS Drone2Map, and Pix4D are unfortunately not available for use on HPC clusters.</p>
 <p>To leverage HPC clusters for processing drone images or video into orthophotos, 3D models, point clouds, or elevation models, <a href="https://docs.opendronemap.org/">Open Drone Map (ODM)</a> will likely be your best option.</p>
-<p>ODM is most often distributed and ran within a Docker container, and it can just as easily run within alternative container engines, like Apptainer or Podman. Prior to running ODM on an HPC cluster, it is highly recommended that you take a few test runs on a local machine with a subset of your data. This will give you an opportunity to explore and optimize any option flags to produce the best results for your dataset. You can find information on installing Apptainer <a href="https://apptainer.org/docs/admin/main/installation.html#">here</a>.</p>
+<p>ODM is most often distributed within a Docker container, and it can just as easily run within alternative container engines, like Apptainer or Podman. Prior to running ODM on an HPC cluster, it is highly recommended that you take a few test runs on a local machine with a subset of your data. This will give you an opportunity to explore and optimize any option flags to produce the best results for your dataset. You can find information on installing Apptainer <a href="https://apptainer.org/docs/admin/main/installation.html#">here</a>.</p>
 <p>To test ODM on a local machine that has Apptainer installed, make a directory that will be bound to the container for ODM’s input and output. Then nest another directory named ‘images’ with a subset of your data stored within it. The example below uses a directory named ‘odm_test’.</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer run <span class="at">-B</span> odm_test:/project/code docker://opendronemap/odm:latest <span class="at">--project-path</span> /project</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>After processing your dataset, ODM creates a report at ‘odm_test/odm_report/report.pdf’, which can be used to quickly analyze your results and start calculating a total job time estimate for your HPC job script.</p>
