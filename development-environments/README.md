@@ -79,7 +79,7 @@ JupyterLab, its more feature-rich successor.
 
 #### JupyterLab
 
-JupyterLab can be installed and ran on your local machine in two separate ways.
+You can install and run JupyterLab on your local machine in two separate ways.
 The traditional and most flexible approach is to install JupyterLab as a Python
 package using Pip or Conda and starting it from the Jupyter command line
 interface. This approach uses a locally installed version of Python to start a

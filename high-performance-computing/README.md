@@ -40,8 +40,8 @@ Documentation: <https://docs.alliancecan.ca/wiki/Getting_started>
 
 Supported Software: <https://docs.alliancecan.ca/wiki/Available_software>
 
-- Note: Additionally, any software that is supported on Linux can be ran within
-  an Apptainer container
+- Note: Additionally, any software that is supported on Linux can run within an
+  Apptainer container
 
 ## QGIS
 
@@ -115,9 +115,8 @@ Before using this approach, double-check that the software you need is not
 already available on the cluster either as
 [modules](https://docs.alliancecan.ca/wiki/Available_software) or
 [Python wheels](https://docs.alliancecan.ca/wiki/Available_Python_wheels).
-Software installed and ran within a container is going to perform less
-efficiently than equivalent modules on Alliance, which have been optimized for
-HPC.
+Software installed within a container is going to perform less efficiently than
+equivalent modules on Alliance, which have been optimized for HPC.
 
 #### Creating the container environment with Mamba (Conda)
 
@@ -346,7 +345,7 @@ job script from PBS to SLURM.
     ...
     > q()
     Apptainer> exit
-    # Convert the sandbox container into a SIF container to be ran on the HPC cluster
+    # Convert the sandbox container into a SIF container to be transferred to the HPC cluster
     $ apptainer build rstudio.sif rstudio
     ```
 
@@ -364,7 +363,7 @@ job script from PBS to SLURM.
 
     - [Using Virtual Environments on Sockeye](https://confluence.it.ubc.ca/display/UARC/Using+Virtual+Environments+on+Sockeye)
 
-  - Alliance: virtualenv or venv. conda is not supported, but it can be ran
+  - Alliance: virtualenv or venv. conda is not supported, but it can be run
     using an Apptainer container. In general, Alliance recommends avoiding conda
     and Anaconda packages if possible. Go
     [here](https://docs.alliancecan.ca/wiki/Anaconda/en) for more details. See
@@ -627,12 +626,12 @@ To leverage HPC clusters for processing drone images or video into orthophotos,
 [Open Drone Map (ODM)](https://docs.opendronemap.org/) will likely be your best
 option.
 
-ODM is most often distributed and ran within a Docker container, and it can just
-as easily run within alternative container engines, like Apptainer or Podman.
-Prior to running ODM on an HPC cluster, it is highly recommended that you take a
-few test runs on a local machine with a subset of your data. This will give you
-an opportunity to explore and optimize any option flags to produce the best
-results for your dataset. You can find information on installing Apptainer
+ODM is most often distributed within a Docker container, and it can just as
+easily run within alternative container engines, like Apptainer or Podman. Prior
+to running ODM on an HPC cluster, it is highly recommended that you take a few
+test runs on a local machine with a subset of your data. This will give you an
+opportunity to explore and optimize any option flags to produce the best results
+for your dataset. You can find information on installing Apptainer
 [here](https://apptainer.org/docs/admin/main/installation.html#).
 
 To test ODM on a local machine that has Apptainer installed, make a directory
