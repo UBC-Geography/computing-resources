@@ -51,6 +51,22 @@ new DOI.
 
 - [GitHub Documentation - Referencing and Citing Content](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
 
+While GitHub excels at displaying code on the web, it also supports some other
+interesting functionalities relevant to geospatial computing. For example, if
+you don't mind storing your tabular data in CSV or GeoCSV, GitHub will render
+the data to an interactive table, which can be easily searched and edited.
+
+- [GitHub Documentation - Rendering CSV and TSV Data](https://docs.github.com/en/repositories/working-with-files/using-files/working-with-non-code-files#rendering-csv-and-tsv-data)
+
+You can also quickly generate basic web maps directly within your repository by
+storing your vector data in the GeoJSON or TopoJSON format. GitHub will render
+the vector data with Azure Maps and Leaflet.js. The generated web map can then
+be embedded on different sites with a simple snippet of JavaScript.
+
+- [GitHub Documentation - Mapping GeoJSON/TopoJSON files on GitHub](https://docs.github.com/en/repositories/working-with-files/using-files/working-with-non-code-files#mapping-geojsontopojson-files-on-github)
+
+- [GitHub GeoJSON Web Map Example](https://viewscreen.githubusercontent.com/view/geojson?url=https%3a%2f%2fraw.githubusercontent.com%2fbenbalter%2fdc-wifi-social%2fmaster%2fbars.geojson)
+
 ## Integrations
 
 ### JupyterLab
