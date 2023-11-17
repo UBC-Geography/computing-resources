@@ -21,6 +21,10 @@ project:
 
 website:
   title: "UBC Geography Computing Resources"
+  open-graph:
+    locale: en_US
+    description: A listing of computing resources and accompanying documentation that can be helpful in familiarizing oneself with various tools and software that are used in Geography research, instruction, and learning.
+    image: https://avatars.githubusercontent.com/u/101839150?s=400&u=adcfa46cecc67f714d828dcb66a26a6d1093d8bd&v=4
   back-to-top-navigation: true
   repo-url: https://github.com/UBC-Geography/computing-resources
   repo-actions: edit
