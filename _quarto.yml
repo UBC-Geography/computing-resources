@@ -14,6 +14,7 @@ project:
     - "sql-databases/README.md"
     - "git-and-github/README.md"
     - "high-performance-computing/README.md"
+    - "cloud-computing/README.md"
     - "containers/README.md"
     - "xr/README.md"
     - "404.qmd"
@@ -84,6 +85,8 @@ website:
         text: Git & GitHub
       - href: high-performance-computing/index.html
         text: High Performance Computing (HPC)
+      - href: cloud-computing/index.html
+        text: Cloud Computing
       - href: containers/index.html
         text: Containers
       - href: xr/index.html

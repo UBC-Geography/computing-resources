@@ -44,6 +44,8 @@ and software that are used in Geography research, instruction, and learning.
 
 - [High Performance Computing (HPC)](https://UBC-Geography.github.io/computing-resources/high-performance-computing#high-performance-computing)
 
+- [Cloud Computing](https://UBC-Geography.github.io/computing-resources/cloud-computing#cloud-computing)
+
 - [Containers](https://UBC-Geography.github.io/computing-resources/containers#containers)
 
 - [XR - Virtual Reality / Augmented Reality](https://UBC-Geography.github.io/computing-resources/xr#xr---virtual-reality--augmented-reality)
