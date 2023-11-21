@@ -21,6 +21,8 @@ your local machine, see
 
 - _[Python Crash Course](https://go.exlibris.link/XmblT6hZ)_
 
+- _[Python Tools for Scientists](https://go.exlibris.link/7MxPJqXz)_
+
 ## Geospatial Books
 
 - _[Geographic Data Science with Python](https://geographicdata.science/book/intro.html)_
@@ -116,7 +118,7 @@ that excel at supporting and sharing geospatial research.
   struggle to run the applications, especially those that include large datasets
   and long, resource-intensive computations.
 
-- [Mercury](https://runmercury.com/) -
+- [Mercury](https://runmercury.com/)
 
 - [Shiny for Python](https://shiny.posit.co/py/)
 

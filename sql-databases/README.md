@@ -8,6 +8,8 @@ output-file: index.html
 
 - _[Geospatial Analysis with SQL](https://go.exlibris.link/N6ybsHyL)_
 
+- _[Practical SQL](https://go.exlibris.link/KT2RjyVN)_
+
 ## SQLite
 
 ### GIS Extensions / Libraries

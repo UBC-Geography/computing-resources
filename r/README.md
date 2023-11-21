@@ -8,6 +8,8 @@ output-file: index.html
 
 - _[R for Data Science](https://go.exlibris.link/FW9jGNqj)_
 
+- _[R 4 Data Science Quick Reference](https://go.exlibris.link/PLPKnlK4)_
+
 ## Geospatial Books
 
 - _[Geographic Data Science with R: Visualizing and Analyzing Environmental Change](https://doi.org/10.1201/9781003326199)_
@@ -19,6 +21,8 @@ output-file: index.html
 - _[Spatial Data Science with Applications in R](https://r-spatial.org/book/)_
 
 - _[Geocomputation with R](https://resolve.library.ubc.ca/cgi-bin/catsearch?bid=9737992)_
+
+- _[Remote Sensing and Digital Image Processing with R](https://go.exlibris.link/JMr62B9N)_
 
 ### Extending GIS Software
 

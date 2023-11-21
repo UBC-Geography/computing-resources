@@ -8,6 +8,8 @@ output-file: index.html
 
 - _[GIS Fundamentals](https://go.exlibris.link/K2SdsWd1)_
 
+- _[GIS: An Introduction to Mapping Technologies](https://go.exlibris.link/XDzhC2Pd)_
+
 ## ArcGIS
 
 - [UBC Library Research Commons - Understanding Map Projections](https://ubc-library-rc.github.io/map-projections/)
