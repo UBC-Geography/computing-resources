@@ -1,1 +1,1 @@
-Sitemap: https://github.com/UBC-Geography/computing-resources/sitemap.xml
+Sitemap: https://ubc-geography.github.io/computing-resources/sitemap.xml
