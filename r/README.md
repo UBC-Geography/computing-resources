@@ -34,14 +34,6 @@ output-file: index.html
 
 - [Awesome Geospatial - R](https://github.com/sacridini/Awesome-Geospatial#r)
 
-## Linting
-
-Using a static analysis tool, or linter, is a common best practice among
-programmers that helps identify mistakes when writing code by ensuring that you
-follow the correct syntax and a guiding set of best practices.
-
-- [lintr Documentation](https://lintr.r-lib.org/)
-
 ## Formatting
 
 Sometimes writing code can get a bit messy. Formatters, like styler, can
@@ -52,13 +44,20 @@ Note: RStudio includes a formatting tool via Code \> Reformat Code
 
 - [styler Documentation](https://styler.r-lib.org/)
 
+## Linting
+
+Using a static analysis tool, or linter, is a common best practice among
+programmers that helps identify mistakes when writing code by ensuring that you
+follow the correct syntax and a guiding set of best practices.
+
+- [lintr Documentation](https://lintr.r-lib.org/)
+
 ## Testing Framework
 
 Similar to type checking, unit testing can be a helpful tool when writing large
-and complex scripts or programs. Testing frameworks, like pytest, which is
-included in Python's standard library, enable you to define tests that can run
-over your functions and ensure they are following expected behavior in a range
-of practical scenarios.
+and complex scripts or programs. Testing frameworks enable you to define tests
+that can run over your functions and ensure they are following expected behavior
+in a range of practical scenarios.
 
 - [testthat Documentation](https://testthat.r-lib.org/)
 

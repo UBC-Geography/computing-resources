@@ -22,6 +22,12 @@ are frequently identified and taken advantage of by bad actors.
 
 - [WordPress Clinics at UBC CTLT](https://events.ctlt.ubc.ca/?s=wordpress)
 
+- [WordPress Documentation](https://wordpress.org/documentation/)
+
+- [WordPress 101 -- Video Course](https://learning.oreilly.com/videos/wordpress-101/9781800566415/?sso_link=yes&sso_link_from=univ-british-columbia)
+
+- _[WordPress: The Missing Manual](https://go.exlibris.link/qfbFTbLz)_
+
 ### UBC Blogs
 
 - [UBC Blogs vs. UBC CMS](https://support.cms.ubc.ca/cms-manual/getting-started/differences-between-ubc-cms-and-ubc-blogs/)
@@ -40,11 +46,9 @@ are frequently identified and taken advantage of by bad actors.
 
 - [UBC IT Shared Hosting](https://it.ubc.ca/services/web-servers-storage/shared-web-hosting)
 
-- [WordPress Documentation](https://wordpress.org/documentation/)
+- [Digital Research Alliance - Cloud](https://docs.alliancecan.ca/wiki/Cloud#Preparing_your_request)
 
-- [WordPress 101 -- Video Course](https://learning.oreilly.com/videos/wordpress-101/9781800566415/?sso_link=yes&sso_link_from=univ-british-columbia)
-
-- _[WordPress: The Missing Manual](https://go.exlibris.link/qfbFTbLz)_
+- [Reclaim Hosting](https://www.reclaimhosting.com/)
 
 ## Static Site Generators (SSG) / Web Publishing
 
@@ -55,6 +59,12 @@ managed via a set of Markdown files. Additionally, these tools often have
 smaller sets of themes that users can install to customize the styling of their
 website, thus requiring a better understanding of HTML, CSS, and JavaScript to
 develop a more customized look and feel to a website.
+
+Statically generated sites can be hosted nearly anywhere on the web, including:
+
+- [Digital Research Alliance - Cloud / Arbutus Object Storage](https://docs.alliancecan.ca/wiki/Arbutus_object_storage)
+
+- [GitHub Pages](https://docs.github.com/en/pages) - 1 GB Limit
 
 ### Quarto
 

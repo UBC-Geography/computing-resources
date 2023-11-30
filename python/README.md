@@ -27,11 +27,13 @@ your local machine, see
 
 - _[Geographic Data Science with Python](https://geographicdata.science/book/intro.html)_
 
-- _[Learning Geospatial Analysis with Python: Understand GIS Fundamentals and Perform Remote Sensing Data Analysis Using Python 3. 7](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=11126768)_
+- _[Learning Geospatial Analysis with Python](https://learning.oreilly.com/library/view/learning-geospatial-analysis/9781837639175/)_
 
 - _[GIS Algorithms](http://resolve.library.ubc.ca/cgi-bin/catsearch?bid=10279472)_
 
 - _[Python for Geospatial Data Analysis](https://go.exlibris.link/LtW84CTr)_
+
+- _[Geocomputation with Python](https://py.geocompx.org/)_
 
 - _[Applied Geospatial Data Science with Python](https://go.exlibris.link/6dc1QZpC)_
 
@@ -57,6 +59,14 @@ your local machine, see
 
 - [GDAL Python Documentation](https://gdal.org/api/python_bindings.html)
 
+## Formatting
+
+Sometimes writing code can get a bit messy. Formatters, like black, can
+automatically reformat your code to make it cleaner and easier to read while
+following a set of standards and best practices.
+
+- [black Documentation](https://black.readthedocs.io/en/stable/)
+
 ## Linting
 
 Using a static analysis tool, or linter, is a common best practice among
@@ -74,14 +84,6 @@ Mypy enables programmers to annotate types into their code and returns a helpful
 error when those types aren't explicitly followed.
 
 - [mypy Documentation](https://mypy.readthedocs.io/en/stable/)
-
-## Formatting
-
-Sometimes writing code can get a bit messy. Formatters, like black, can
-automatically reformat your code to make it cleaner and easier to read while
-following a set of standards and best practices.
-
-- [black Documentation](https://black.readthedocs.io/en/stable/)
 
 ## Testing Framework
 

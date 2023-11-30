@@ -10,6 +10,8 @@ output-file: index.html
 
 - [Research Data Management Video -- Part 2](https://www.youtube.com/watch?v=q5eXXps1o04)
 
+- _[Research Data Management in the Canadian Context: A Guide for Practitioners and Learners](https://ecampusontario.pressbooks.pub/canadardm/)_
+
 ## Recommended GIS and Geospatial File Formats
 
 GIS software and other geospatial computing software and packages can support a
