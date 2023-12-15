@@ -94,7 +94,7 @@ extract the environment variables held in this file and enter them into QGIS by
 opening Settings -> Options... -> System -> Environment. Be sure to check the
 box to use custom variables and start copying in the variables from the RC file.
 
-![QGIS Settings with custom environment variables](https://ubc-geography.github.io/assets/images/qgis_s3.PNG)
+![QGIS Settings with custom environment variables](/assets/images/qgis_s3.PNG)
 
 Once you have copied your credentials, you will need to restart QGIS. You can
 then load a file from your OpenStack container by adding the layer using the

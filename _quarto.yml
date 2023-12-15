@@ -90,8 +90,12 @@ website:
         text: Git & GitHub
       - href: "high-performance-computing/index.html"
         text: High Performance Computing (HPC)
-      - href: "cloud-computing/index.html"
-        text: Cloud Computing
+      - section: Cloud Computing
+        contents:
+          - href: "cloud-computing/index.html"
+            text: Overview
+          - href: "cloud-computing/object-storage.html"
+            text: Object Storage
       - href: "containers/index.html"
         text: Containers
       - href: "xr/index.html"
