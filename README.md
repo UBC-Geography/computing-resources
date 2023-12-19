@@ -40,7 +40,11 @@ and software that are used in Geography research, instruction, and learning.
 
 - [SQL Databases](https://UBC-Geography.github.io/computing-resources/sql-databases#sql-databases)
 
-- [Git & GitHub](https://UBC-Geography.github.io/computing-resources/git-and-github#git--github)
+- [Version Control Systems](https://UBC-Geography.github.io/computing-resources/version-control-systems#version-control-systems)
+
+  - [Git](https://UBC-Geography.github.io/computing-resources/version-control-systems#git)
+
+  - [GitHub](https://UBC-Geography.github.io/computing-resources/version-control-systems#github)
 
 - [High Performance Computing (HPC)](https://UBC-Geography.github.io/computing-resources/high-performance-computing#high-performance-computing)
 

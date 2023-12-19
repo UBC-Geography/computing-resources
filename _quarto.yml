@@ -12,7 +12,7 @@ project:
     - "r/README.md"
     - "javascript/README.md"
     - "sql-databases/README.md"
-    - "git-and-github/README.md"
+    - "version-control-systems/README.md"
     - "high-performance-computing/README.md"
     - "cloud-computing/README.md"
     - "containers/README.md"
@@ -87,8 +87,12 @@ website:
         text: JavaScript
       - href: "sql-databases/index.html"
         text: SQL Databases
-      - href: "git-and-github/index.html"
-        text: Git & GitHub
+      - section: Version Control Systems
+        contents:
+          - href: "version-control-systems/index.html"
+            text: Overview
+          - href: "version-control-systems/jupyterhub-private-repo.html"
+            text: Working with Private GitHub Repositories from JupyterHub
       - href: "high-performance-computing/index.html"
         text: High Performance Computing (HPC)
       - section: Cloud Computing

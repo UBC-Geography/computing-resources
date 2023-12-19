@@ -2,7 +2,7 @@
 output-file: index.html
 ---
 
-# Git & GitHub
+# Version Control Systems
 
 Implementing version control is a commonly used best practice among programmers,
 and its usage is strongly encouraged for researchers whether they are working
@@ -11,19 +11,23 @@ helpful when collaborating with other researchers or developers as it enables
 changes to be tracked coherently and new code to be explored separately from a
 stable, main codebase in easily managed branches.
 
-- [UBC Library Research Commons - Introduction to Git and GitHub](https://ubc-library-rc.github.io/intro-git/)
+- [The Turing Way - Version Control](https://the-turing-way.netlify.app/reproducible-research/vcs)
 
-## [Git](https://git-scm.com/)
+## Code
+
+### [Git](https://git-scm.com/)
 
 Git is by far the most popular version control system and comes with a powerful
 command line interface while integrating with code sharing and development
 platforms, like GitHub and GitLab.
 
+- [UBC Library Research Commons - Introduction to Git and GitHub](https://ubc-library-rc.github.io/intro-git/)
+
 - [Digital Research Alliance - Git Tutorial and Workshops](https://mint.westdri.ca/git/)
 
 - _[Pro Git](https://git-scm.com/book/en/v2)_
 
-## GitHub
+### GitHub
 
 GitHub is a popular platform for sharing source code and Jupyter Notebooks as
 Git repositories. These can either be public and shared broadly with other users
@@ -67,25 +71,38 @@ be embedded on different sites with a simple snippet of JavaScript.
 
 - [GitHub GeoJSON Web Map Example](https://viewscreen.githubusercontent.com/view/geojson?url=https%3a%2f%2fraw.githubusercontent.com%2fbenbalter%2fdc-wifi-social%2fmaster%2fbars.geojson)
 
-## Integrations
+### Integrations
 
-### JupyterLab
+#### JupyterLab
 
 - [How to Use the JupyterLab Git Extension](https://blog.reviewnb.com/jupyterlab-git-extension/)
 
 - [JupyterLab-Git README](https://github.com/jupyterlab/jupyterlab-git#jupyterlab-git)
 
-### RStudio
+- [Working with Private GitHub Repositories from JupyterHub](https://ubc-geography.github.io/computing-resources/version-control-systems/jupyterhub-private-repo.html)
+
+#### RStudio
 
 - [GitHub and RStudio](https://resources.github.com/github-and-rstudio)
 
 - _[Happy Git and GitHub for the UseR](https://happygitwithr.com/usage-intro.html)_
 
-### VS Code
+#### VS Code
 
 - [VS Code Extensions - Remote Repositories](https://marketplace.visualstudio.com/items?itemName=github.remotehub)
 
-## [Kart](https://kartproject.org/)
+## Data
+
+While version control systems are most commonly applied to code, to further
+ensure the reproducibility of their work, researchers have been developing and
+improving systems that can work fluently with their data as well. These systems
+are often built to work atop or adjacent to Git while adding functionality to
+manage and store large datasets via [Git LFS](https://git-lfs.com/) or
+[object storage](https://ubc-geography.github.io/computing-resources/cloud-computing/object-storage.html).
+
+- [The Turing Way - Version Control for Data](https://the-turing-way.netlify.app/reproducible-research/vcs/vcs-data)
+
+### [Kart](https://kartproject.org/)
 
 Kart is a tool that has been built on top of Git and extends its functionality
 to work with vector datasets while also integrating with Git LFS (Large File
@@ -95,3 +112,23 @@ QGIS plugin to ensure easy integration.
 - [Kart Documentation](https://docs.kartproject.org/en/latest/index.html)
 
 - [Kart QGIS Plugin](https://plugins.qgis.org/plugins/kart/)
+
+### [DataLad](https://www.datalad.org/)
+
+Datalad provides a general-purpose data version control system that supports a
+broad set of storage options including Microsoft OneDrive, DRA's Arbutus object
+storage (OpenStack Swift), and a range of other S3-compatible object storage
+providers.
+
+- _[Datalad: The Handbook](https://handbook.datalad.org/en/latest/index.html)_
+
+### [DVC](https://dvc.org/)
+
+While applicable to a range of other data-intensive tasks, DVC is a data version
+control system that specializes in machine learning. It supports fewer storage
+options compared to Datalad, but can provide a smoother integration and setup
+experience in certain applications.
+
+- [DVC Documentation](https://dvc.org/doc)
+
+- [WestDRI - Version Control for Data Science and Machine Learning with DVC](https://youtu.be/2MQVF78FRKs?si=b2UnIRcPPTMQSL7K)
