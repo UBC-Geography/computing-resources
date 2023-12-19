@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>UBC Geography Computing Resources – readme</title>
+<title>UBC Geography Computing Resources – jupyterhub-private-repo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -79,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../git-and-github/index.html">Git &amp; GitHub</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../version-control-systems/index.html">Version Control Systems</a></li><li class="breadcrumb-item"><a href="../version-control-systems/jupyterhub-private-repo.html">Working with Private GitHub Repositories from JupyterHub</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -276,12 +310,29 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">SQL Databases</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true">
+ <span class="menu-text">Version Control Systems</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../git-and-github/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Git &amp; GitHub</span></a>
+  <a href="../version-control-systems/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control-systems/jupyterhub-private-repo.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Working with Private GitHub Repositories from JupyterHub</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../high-performance-computing/index.html" class="sidebar-item-text sidebar-link">
@@ -290,13 +341,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
  <span class="menu-text">Cloud Computing</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cloud-computing/index.html" class="sidebar-item-text sidebar-link">
@@ -333,95 +384,56 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#git-github" id="toc-git-github" class="nav-link active" data-scroll-target="#git-github">Git &amp; GitHub</a>
+  <li><a href="#working-with-private-github-repositories-from-jupyterhub" id="toc-working-with-private-github-repositories-from-jupyterhub" class="nav-link active" data-scroll-target="#working-with-private-github-repositories-from-jupyterhub">Working with Private GitHub Repositories from JupyterHub</a>
   <ul class="collapse">
-  <li><a href="#git" id="toc-git" class="nav-link" data-scroll-target="#git">Git</a></li>
-  <li><a href="#github" id="toc-github" class="nav-link" data-scroll-target="#github">GitHub</a></li>
-  <li><a href="#integrations" id="toc-integrations" class="nav-link" data-scroll-target="#integrations">Integrations</a>
-  <ul class="collapse">
-  <li><a href="#jupyterlab" id="toc-jupyterlab" class="nav-link" data-scroll-target="#jupyterlab">JupyterLab</a></li>
-  <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio">RStudio</a></li>
-  <li><a href="#vs-code" id="toc-vs-code" class="nav-link" data-scroll-target="#vs-code">VS Code</a></li>
-  </ul></li>
-  <li><a href="#kart" id="toc-kart" class="nav-link" data-scroll-target="#kart">Kart</a></li>
+  <li><a href="#using-fine-grained-personal-access-tokens" id="toc-using-fine-grained-personal-access-tokens" class="nav-link" data-scroll-target="#using-fine-grained-personal-access-tokens">Using Fine-Grained Personal Access Tokens</a></li>
+  <li><a href="#using-ssh" id="toc-using-ssh" class="nav-link" data-scroll-target="#using-ssh">Using SSH</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UBC-Geography/computing-resources/edit/main/git-and-github/README.md" class="toc-action">Edit this page</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UBC-Geography/computing-resources/edit/main/version-control-systems/jupyterhub-private-repo.md" class="toc-action">Edit this page</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
 
-<section id="git-github" class="level1">
-<h1>Git &amp; GitHub</h1>
-<p>Implementing version control is a commonly used best practice among programmers, and its usage is strongly encouraged for researchers whether they are working with large codebases or small Jupyter Notebooks. Version control is especially helpful when collaborating with other researchers or developers as it enables changes to be tracked coherently and new code to be explored separately from a stable, main codebase in easily managed branches.</p>
-<ul>
-<li><a href="https://ubc-library-rc.github.io/intro-git/">UBC Library Research Commons - Introduction to Git and GitHub</a></li>
-</ul>
-<section id="git" class="level2">
-<h2 class="anchored" data-anchor-id="git"><a href="https://git-scm.com/">Git</a></h2>
-<p>Git is by far the most popular version control system and comes with a powerful command line interface while integrating with code sharing and development platforms, like GitHub and GitLab.</p>
-<ul>
-<li><p><a href="https://mint.westdri.ca/git/">Digital Research Alliance - Git Tutorial and Workshops</a></p></li>
-<li><p><em><a href="https://git-scm.com/book/en/v2">Pro Git</a></em></p></li>
-</ul>
+<section id="working-with-private-github-repositories-from-jupyterhub" class="level1">
+<h1>Working with Private GitHub Repositories from JupyterHub</h1>
+<section id="using-fine-grained-personal-access-tokens" class="level2">
+<h2 class="anchored" data-anchor-id="using-fine-grained-personal-access-tokens">Using Fine-Grained Personal Access Tokens</h2>
+<p>This is the recommended method for cloning and pushing commits to a private GitHub repository while working within a JupyterHub server. A fine-grained personal access token, acts as a password for your account and provides a limited set of functionality when working with your GitHub repositories.</p>
+<p>You can have multiple personal access tokens associated with your GitHub account with various levels of access to your account and specific repositories associated with it. You can generate tokens from within the <a href="https://github.com/settings/tokens?type=beta">developer settings</a> of your personal account.</p>
+<p>When creating a new token, ensure that you provided it with the minimum privileges necessary to interact with your private repositories via JupyterHub. This includes setting a short expiration date for the token and restricting the token to only work with a specific repository.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/images/github-personal-token-1.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">GitHub fine-grained personal access token - name, expiration, description, and repository access</figcaption>
+</figure>
+</div>
+<p>Also set restrictive permissions for the token. If you only need to clone a private repository from JupyterHub, set the ‘Contents’ permissions to ‘Read-only’. Otherwise, if you plan to make changes to any files in the repository and push those changes to GitHub, set the ‘Contents’ permissions to ‘Read and write’.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/images/github-personal-token-2.PNG" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">GitHub fine-grained personal access token - permissions</figcaption>
+</figure>
+</div>
+<p>Once you click ‘Generate token’, GitHub will display your new personal access token. Be sure to copy and store the token in a secure place. From JupyterLab’s Git extension, you can now provide your GitHub username and your token in place of a password to clone and push changes to token’s associated repository.</p>
 </section>
-<section id="github" class="level2">
-<h2 class="anchored" data-anchor-id="github">GitHub</h2>
-<p>GitHub is a popular platform for sharing source code and Jupyter Notebooks as Git repositories. These can either be public and shared broadly with other users to copy (clone) or private for restricted sharing among invited users. UBC LT provides access to GitHub Enterprise which can securely share repositories among students within a single course or with other UBC collaborators.</p>
-<ul>
-<li><p><a href="https://docs.github.com/en">GitHub Documentation</a></p></li>
-<li><p><a href="https://lthub.ubc.ca/guides/github-instructor-guide/">UBC LT - GitHub Instructor Guide</a></p></li>
-</ul>
-<p>GitHub Desktop provides a helpful graphical user interface that can help in managing local Git repositories and pushing changes to remote repositories on GitHub.</p>
-<ul>
-<li><a href="https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop">GitHub Desktop Documentation</a></li>
-</ul>
-<p>An additional benefit to storing your code in a public repository on GitHub is that your code can easily be archived into <a href="https://about.zenodo.org/">Zenodo</a>, where it will receive a digital object identifier (DOI). This then makes it extraordinarily easy for your code to be cited and accessed by other researchers. If later you make revisions or improvements to your code, you can cut a new release and Zenodo will automatically update your archive and assign a new DOI.</p>
-<ul>
-<li><a href="https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content">GitHub Documentation - Referencing and Citing Content</a></li>
-</ul>
-<p>While GitHub excels at displaying code on the web, it also supports some other interesting functionalities relevant to geospatial computing. For example, if you don’t mind storing your tabular data in CSV or GeoCSV, GitHub will render the data to an interactive table, which can be easily searched and edited.</p>
-<ul>
-<li><a href="https://docs.github.com/en/repositories/working-with-files/using-files/working-with-non-code-files#rendering-csv-and-tsv-data">GitHub Documentation - Rendering CSV and TSV Data</a></li>
-</ul>
-<p>You can also quickly generate basic web maps directly within your repository by storing your vector data in the GeoJSON or TopoJSON format. GitHub will render the vector data with Azure Maps and Leaflet.js. The generated web map can then be embedded on different sites with a simple snippet of JavaScript.</p>
-<ul>
-<li><p><a href="https://docs.github.com/en/repositories/working-with-files/using-files/working-with-non-code-files#mapping-geojsontopojson-files-on-github">GitHub Documentation - Mapping GeoJSON/TopoJSON files on GitHub</a></p></li>
-<li><p><a href="https://viewscreen.githubusercontent.com/view/geojson?url=https%3a%2f%2fraw.githubusercontent.com%2fbenbalter%2fdc-wifi-social%2fmaster%2fbars.geojson">GitHub GeoJSON Web Map Example</a></p></li>
-</ul>
-</section>
-<section id="integrations" class="level2">
-<h2 class="anchored" data-anchor-id="integrations">Integrations</h2>
-<section id="jupyterlab" class="level3">
-<h3 class="anchored" data-anchor-id="jupyterlab">JupyterLab</h3>
-<ul>
-<li><p><a href="https://blog.reviewnb.com/jupyterlab-git-extension/">How to Use the JupyterLab Git Extension</a></p></li>
-<li><p><a href="https://github.com/jupyterlab/jupyterlab-git#jupyterlab-git">JupyterLab-Git README</a></p></li>
-</ul>
-</section>
-<section id="rstudio" class="level3">
-<h3 class="anchored" data-anchor-id="rstudio">RStudio</h3>
-<ul>
-<li><p><a href="https://resources.github.com/github-and-rstudio">GitHub and RStudio</a></p></li>
-<li><p><em><a href="https://happygitwithr.com/usage-intro.html">Happy Git and GitHub for the UseR</a></em></p></li>
-</ul>
-</section>
-<section id="vs-code" class="level3">
-<h3 class="anchored" data-anchor-id="vs-code">VS Code</h3>
-<ul>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=github.remotehub">VS Code Extensions - Remote Repositories</a></li>
-</ul>
-</section>
-</section>
-<section id="kart" class="level2">
-<h2 class="anchored" data-anchor-id="kart"><a href="https://kartproject.org/">Kart</a></h2>
-<p>Kart is a tool that has been built on top of Git and extends its functionality to work with vector datasets while also integrating with Git LFS (Large File Storage) to handle large raster datasets. The Kart developers also provide a QGIS plugin to ensure easy integration.</p>
-<ul>
-<li><p><a href="https://docs.kartproject.org/en/latest/index.html">Kart Documentation</a></p></li>
-<li><p><a href="https://plugins.qgis.org/plugins/kart/">Kart QGIS Plugin</a></p></li>
-</ul>
+<section id="using-ssh" class="level2">
+<h2 class="anchored" data-anchor-id="using-ssh">Using SSH</h2>
+<p>Warning: This method is not recommended. While there are multiple precautions taken by UBC LT and Syzygy to isolate and secure your JupyterHub environment, if for any reason your environment were to be compromised, a bad actor could gain full access to your GitHub account.</p>
+<p>If you must use this method, ensure you generate a new SSH key on JupyterHub with a strong passphrase. Never reuse/store an SSH private key that you have generated on your local machine within a JupyterHub environment.</p>
+<p>From a Terminal in your JupyterHub server, run the following command to generate a new SSH key.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jovyan@jupyter-</span><span class="op">&lt;</span>your_cwl<span class="op">&gt;</span>:~$ ssh-keygen</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Generating</span> public/private rsa key pair.</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> file in which to save the key <span class="er">(</span><span class="ex">/home/jovyan/.ssh/id_rsa</span><span class="kw">)</span><span class="bu">:</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">Created</span> directory <span class="st">'/home/jovyan/.ssh'</span>.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> passphrase <span class="er">(</span><span class="ex">empty</span> for no passphrase<span class="kw">)</span><span class="bu">:</span> <span class="op">&lt;</span>enter_a_strong_passphrase_here<span class="op">&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> same passphrase again:</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> identification has been saved in /home/jovyan/.ssh/id_rsa</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> public key has been saved in /home/jovyan/.ssh/id_rsa.pub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To use your new SSH key, add a public key to your GitHub personal account from the <a href="https://github.com/settings/ssh/new">SSH Key Settings page</a> by copying the contents of /home/jovyan/.ssh/id_rsa.pub into the key field.</p>
+<p>From JupyterHub, you’ll then be able to clone and push changes to all of your private repositories within GitHub using the SSH protocol.</p>
 
 
 </section>
