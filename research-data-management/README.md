@@ -1,8 +1,7 @@
 ---
 output-file: index.html
+title: Research Data Management
 ---
-
-# Research Data Management (RDM)
 
 - [UBC Library Research Commons - Research Data Management](https://ubc-library-rc.github.io/rdm/)
 

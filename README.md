@@ -1,8 +1,7 @@
 ---
 output-file: index.html
+title: "Home"
 ---
-
-# Geography Computing Resources & Documentation
 
 This repository includes a listing of computing resources and accompanying
 documentation that can be helpful in familiarizing oneself with various tools
@@ -38,7 +37,7 @@ and software that are used in Geography research, instruction, and learning.
 
 - [JavaScript](https://UBC-Geography.github.io/computing-resources/javascript#javascript)
 
-- [SQL Databases](https://UBC-Geography.github.io/computing-resources/sql-databases#sql-databases)
+- [Databases](https://UBC-Geography.github.io/computing-resources/databases#databases)
 
 - [Version Control Systems](https://UBC-Geography.github.io/computing-resources/version-control-systems#version-control-systems)
 

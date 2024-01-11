@@ -1,8 +1,7 @@
 ---
 output-file: index.html
+title: Databases
 ---
-
-# SQL Databases
 
 - [How to create and access MySQL and PostgreSQL databases on DRI systems - Video](https://youtu.be/3uHSXXQwJpQ)
 

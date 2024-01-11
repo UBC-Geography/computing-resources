@@ -1,8 +1,7 @@
 ---
 output-file: index.html
+title: Cloud Computing
 ---
-
-# Cloud Computing
 
 Similar to high performance computing (HPC), cloud computing provides hardware
 for running resource-intensive computations, but while HPC focuses on completing

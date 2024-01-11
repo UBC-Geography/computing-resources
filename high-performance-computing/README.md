@@ -1,8 +1,7 @@
 ---
 output-file: index.html
+title: High Performance Computing
 ---
-
-# High Performance Computing
 
 High performance computing can provide a powerful solution when working with
 incredibly large datasets as they allow you and your collaborators to run
@@ -20,6 +19,8 @@ across Canada, including one located at Simon Fraser University.
 - [Research Computing Bootcamp Videos](https://www.ualberta.ca/information-services-and-technology/research-computing/bootcamps.html?1=HPC)
 
 - [Geospatial Analysis with HPC Video](https://youtu.be/wRmRnVMjKXM)
+
+- _[High Performance Computing for Geospatial Applications](https://go.exlibris.link/619Mq3H3)_
 
 - [Supercomputing Conference - Recorded Sessions](https://www.youtube.com/@SCconferenceseries/playlists)
 

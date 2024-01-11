@@ -1,4 +1,6 @@
-# Using Containers for Development Environments
+---
+title: Using Containers for Development Environments
+---
 
 While Conda can provide extremely convenient development environments, you may
 run into some instances where Conda does not afford you the level of isolation

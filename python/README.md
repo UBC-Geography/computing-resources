@@ -1,8 +1,7 @@
 ---
 output-file: index.html
+title: Python
 ---
-
-# Python
 
 Python is one of the most popular programming languages in the world. Its low
 learning curve paired with a massive ecosystem has made it a powerful tool for

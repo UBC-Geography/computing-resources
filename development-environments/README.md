@@ -1,8 +1,7 @@
 ---
 output-file: index.html
+title: Development Environments
 ---
-
-# Development Environments
 
 ## Virtual Environment Managers
 

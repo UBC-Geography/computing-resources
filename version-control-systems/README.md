@@ -1,8 +1,7 @@
 ---
 output-file: index.html
+title: Version Control Systems
 ---
-
-# Version Control Systems
 
 Implementing version control is a commonly used best practice among programmers,
 and its usage is strongly encouraged for researchers whether they are working

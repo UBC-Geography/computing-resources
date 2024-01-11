@@ -1,8 +1,7 @@
 ---
 output-file: index.html
+title: Containers
 ---
-
-# Containers
 
 Similar to virtual machines, containers are a form of virtualization that
 package software and the multiple dependencies required to run that software

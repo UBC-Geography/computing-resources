@@ -1,8 +1,7 @@
 ---
 output-file: index.html
+title: JavaScript
 ---
-
-# JavaScript
 
 While not nearly as useful as Python or R in geospatial computing, JavaScript
 can be a useful language for a geographer to have on their radar, especially if

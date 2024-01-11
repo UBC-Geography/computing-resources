@@ -1,8 +1,7 @@
 ---
 output-file: index.html
+title: XR - Virtual Reality / Augmented Reality
 ---
-
-# XR - Virtual Reality / Augmented Reality
 
 Extended reality (XR), which encompasses virtual reality (VR), augmented reality
 (AR), and mixed reality (MR), is a collection of rapidly growing technologies

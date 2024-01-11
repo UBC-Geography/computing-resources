@@ -1,4 +1,6 @@
-# Object Storage
+---
+title: Object Storage
+---
 
 Object storage, also known as blob storage or even S3 storage in the context of
 cloud computing as it has become synonymous with Amazon's Simple Storage Service

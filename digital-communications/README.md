@@ -1,8 +1,7 @@
 ---
 output-file: index.html
+title: Digital Communications
 ---
-
-# Digital Communications
 
 ## WordPress
 

@@ -1,4 +1,6 @@
-# Getting Started with Conda, Virtual Environments, and Python
+---
+title: Getting Started with Conda, Virtual Environments, and Python
+---
 
 There are many different ways to install and start using Python on your personal
 device, and no one way is the correct way. How one installs Python often simply

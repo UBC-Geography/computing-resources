@@ -1,4 +1,6 @@
-# Installing Packages in [UBC LT's Jupyter Open](https://open.jupyter.ubc.ca/) or [UBC Syzygy](https://ubc.syzygy.ca/)
+---
+title: Installing Packages in UBC LT's Jupyter Open or UBC Syzygy
+---
 
 When using one of UBC's remote Jupyter services, you will likely find that
 JupyterHub's default environment does not include a range of packages needed to

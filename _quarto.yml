@@ -11,7 +11,7 @@ project:
     - "python/README.md"
     - "r/README.md"
     - "javascript/README.md"
-    - "sql-databases/README.md"
+    - "databases/README.md"
     - "version-control-systems/README.md"
     - "high-performance-computing/README.md"
     - "cloud-computing/README.md"
@@ -33,7 +33,9 @@ website:
     image-alt: UBC Geography logo
   back-to-top-navigation: true
   repo-url: "https://github.com/UBC-Geography/computing-resources"
-  repo-actions: edit
+  repo-actions:
+    - edit
+    - issue
   sidebar:
     style: floating
     search: true
@@ -85,8 +87,8 @@ website:
         text: R
       - href: "javascript/index.html"
         text: JavaScript
-      - href: "sql-databases/index.html"
-        text: SQL Databases
+      - href: "databases/index.html"
+        text: Databases
       - section: Version Control Systems
         contents:
           - href: "version-control-systems/index.html"

@@ -1,4 +1,6 @@
-# Working with Private GitHub Repositories from JupyterHub
+---
+title: Working with Private GitHub Repositories from JupyterHub
+---
 
 ## Using Fine-Grained Personal Access Tokens
 

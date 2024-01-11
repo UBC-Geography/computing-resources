@@ -1,4 +1,6 @@
-# Research Data Storage
+---
+title: Research Data Storage
+---
 
 This document lists current data storage options available to UBC Geography
 researchers and could be consulted when developing Data Management Plans for new
