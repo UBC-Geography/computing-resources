@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>UBC Geography Computing Resources – readme</title>
+<title>UBC Geography Computing Resources - Containers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -272,8 +272,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sql-databases/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">SQL Databases</span></a>
+  <a href="../databases/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Databases</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -350,9 +350,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#containers" id="toc-containers" class="nav-link active" data-scroll-target="#containers">Containers</a>
-  <ul class="collapse">
-  <li><a href="#container-images" id="toc-container-images" class="nav-link" data-scroll-target="#container-images">Container Images</a>
+  <li><a href="#container-images" id="toc-container-images" class="nav-link active" data-scroll-target="#container-images">Container Images</a>
   <ul class="collapse">
   <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
   <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
@@ -364,17 +362,29 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#podman" id="toc-podman" class="nav-link" data-scroll-target="#podman">Podman</a></li>
   <li><a href="#docker" id="toc-docker" class="nav-link" data-scroll-target="#docker">Docker</a></li>
   </ul></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UBC-Geography/computing-resources/edit/main/containers/README.md" class="toc-action">Edit this page</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UBC-Geography/computing-resources/edit/main/containers/README.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Containers</h1>
+</div>
 
 
-<section id="containers" class="level1">
-<h1>Containers</h1>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>Similar to virtual machines, containers are a form of virtualization that package software and the multiple dependencies required to run that software into a single, distributable environment. That container can then be run on any system that is running the appropriate engine (Docker, Podman, etc.). They are often lighter and more agile than virtual machines but can include increased security risks if not deployed correctly. In general, virtual environments managed using tools like Conda as discussed in <a href="https://UBC-Geography.github.io/computing-resources/development-environments/conda-getting-started">‘Getting started with Conda, Virtual Environments, and Python’</a> should provide sufficient isolation for most geospatial computing cases without the need to familiarize oneself with container technologies, but containers can be a helpful tool in cases when neither virtual environments or virtual machines are feasible.</p>
 <p>For examples on leveraging containers to run highly-customized development environments with Jupyter, RStudio, or VS Code, see <a href="https://UBC-Geography.github.io/computing-resources/development-environments/containerized-environments">Using Containers for Development Environments</a>.</p>
 <p>It is important to note that most containers can only run in Linux environments. Each of the container systems listed below include tools and steps for setting up simple, Linux environments from which containers can be ran on either Windows or Mac machines.</p>
@@ -438,7 +448,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 
 
-</section>
 </section>
 </section>
 

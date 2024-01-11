@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>UBC Geography Computing Resources – containerized-environments</title>
+<title>UBC Geography Computing Resources - Using Containers for Development Environments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -306,8 +306,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sql-databases/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">SQL Databases</span></a>
+  <a href="../databases/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Databases</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -384,22 +384,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#using-containers-for-development-environments" id="toc-using-containers-for-development-environments" class="nav-link active" data-scroll-target="#using-containers-for-development-environments">Using Containers for Development Environments</a>
-  <ul class="collapse">
-  <li><a href="#jupyterlab" id="toc-jupyterlab" class="nav-link" data-scroll-target="#jupyterlab">JupyterLab</a></li>
+  <li><a href="#jupyterlab" id="toc-jupyterlab" class="nav-link active" data-scroll-target="#jupyterlab">JupyterLab</a></li>
   <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio">RStudio</a></li>
   <li><a href="#vs-code" id="toc-vs-code" class="nav-link" data-scroll-target="#vs-code">VS Code</a></li>
-  </ul></li>
   </ul>
-<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UBC-Geography/computing-resources/edit/main/development-environments/containerized-environments.md" class="toc-action">Edit this page</a></p></div></div></nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/UBC-Geography/computing-resources/edit/main/development-environments/containerized-environments.md" class="toc-action">Edit this page</a></p><p><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Using Containers for Development Environments</h1>
+</div>
 
 
-<section id="using-containers-for-development-environments" class="level1">
-<h1>Using Containers for Development Environments</h1>
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
 <p>While Conda can provide extremely convenient development environments, you may run into some instances where Conda does not afford you the level of isolation required to install or run a piece of software that you need for your research. This is an area where containers can be particularly useful as they provide a valuable middle ground between a Conda virtual environment and a full virtual machine.</p>
 <p>For more information about containers and a few of the container engines available, see <a href="https://UBC-Geography.github.io/computing-resources/containers">Containers</a>. To build and run containers on your local machine, you’ll need to have one of these engines installed.</p>
 <section id="jupyterlab" class="level2">
@@ -513,7 +523,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Hold down <code>ctrl</code>+<code>shift</code>+<code>p</code> to open VS Code’s command pallette and run the command ‘Dev Containers: Reopen in Container’ if you are creating the container for the first time or ‘Dev Containers: Rebuild and Reopen Container’ if not. You can then start editing and running your code within the development container.</p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
