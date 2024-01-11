@@ -12,6 +12,11 @@ packages already included in the default environment. The following instructions
 provide walkthrough documentation for installing new packages and creating
 customized kernels within a JupyterHub environment.
 
+If you need to share a reproducible Jupyter environment or would like to
+automate the creation and management of your kernels, copy the Makefile from
+this [repository](https://github.com/UBC-Geography/jupyter-makefile) into your
+project and follow the instructions found in the repository's README.
+
 ## Mamba
 
 If you are simply running into issues with installing packages via Conda, try
