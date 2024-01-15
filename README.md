@@ -15,13 +15,13 @@ and software that are used in Geography research, instruction, and learning.
 
   - [Digital Exhibit Tools](https://UBC-Geography.github.io/computing-resources/digital-communications#digital-exhibit-tools)
 
-- [Research Data Management](https://UBC-Geography.github.io/computing-resources/research-data-management#research-data-management-rdm)
+- [Research Data Management](https://UBC-Geography.github.io/computing-resources/research-data-management)
 
-- [GIS Software](https://UBC-Geography.github.io/computing-resources/gis-software#gis-software)
+- [GIS Software](https://UBC-Geography.github.io/computing-resources/gis-software)
 
-- [UNIX Shells & Command Line Interfaces (CLI)](https://UBC-Geography.github.io/computing-resources/unix-shells-and-clis#unix-shells--command-line-interfaces-cli)
+- [UNIX Shells & Command Line Interfaces (CLI)](https://UBC-Geography.github.io/computing-resources/unix-shells-and-clis)
 
-- [Development Environments](https://UBC-Geography.github.io/computing-resources/development-environments#development-environments)
+- [Development Environments](https://UBC-Geography.github.io/computing-resources/development-environments)
 
   - [Virtual Environments](https://UBC-Geography.github.io/computing-resources/development-environments#virtual-environment-managers)
 
@@ -31,27 +31,29 @@ and software that are used in Geography research, instruction, and learning.
 
   - [Visual Studio Code](https://UBC-Geography.github.io/computing-resources/development-environments#visual-studio-code)
 
-- [Python](https://UBC-Geography.github.io/computing-resources/python#python)
+- [Python](https://UBC-Geography.github.io/computing-resources/python)
 
-- [R](https://UBC-Geography.github.io/computing-resources/r#r)
+- [R](https://UBC-Geography.github.io/computing-resources/r)
 
-- [JavaScript](https://UBC-Geography.github.io/computing-resources/javascript#javascript)
+- [JavaScript](https://UBC-Geography.github.io/computing-resources/javascript)
 
-- [Databases](https://UBC-Geography.github.io/computing-resources/databases#databases)
+- [Julia](https://UBC-Geography.github.io/computing-resources/julia)
 
-- [Version Control Systems](https://UBC-Geography.github.io/computing-resources/version-control-systems#version-control-systems)
+- [Databases](https://UBC-Geography.github.io/computing-resources/databases)
+
+- [Version Control Systems](https://UBC-Geography.github.io/computing-resources/version-control-systems)
 
   - [Git](https://UBC-Geography.github.io/computing-resources/version-control-systems#git)
 
   - [GitHub](https://UBC-Geography.github.io/computing-resources/version-control-systems#github)
 
-- [High Performance Computing (HPC)](https://UBC-Geography.github.io/computing-resources/high-performance-computing#high-performance-computing)
+- [High Performance Computing (HPC)](https://UBC-Geography.github.io/computing-resources/high-performance-computing)
 
-- [Cloud Computing](https://UBC-Geography.github.io/computing-resources/cloud-computing#cloud-computing)
+- [Cloud Computing](https://UBC-Geography.github.io/computing-resources/cloud-computing)
 
-- [Containers](https://UBC-Geography.github.io/computing-resources/containers#containers)
+- [Containers](https://UBC-Geography.github.io/computing-resources/containers)
 
-- [XR - Virtual Reality / Augmented Reality](https://UBC-Geography.github.io/computing-resources/xr#xr---virtual-reality--augmented-reality)
+- [XR - Virtual Reality / Augmented Reality](https://UBC-Geography.github.io/computing-resources/xr)
 
 For in-depth workshop opportunities on applying some of these resources and more
 relevant materials, check out the following resources:

@@ -59,6 +59,8 @@ while documentation for Alliance clusters is listed below.
 
 - [Alliance Documentation - JupyterHub](https://docs.alliancecan.ca/wiki/JupyterHub)
 
+- [Working with Jupyter on Clusters (Alliance) Video](https://youtu.be/Qk3Le5HBxeg?si=IANIgAciBdOLwMQy)
+
 - Clusters Running JupyterHub (requires an Alliance account):
 
   - [Cedar (SFU)](https://jupyterhub.cedar.computecanada.ca/)
