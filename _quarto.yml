@@ -22,7 +22,7 @@ project:
 
 website:
   title: "UBC Geography Computing Resources"
-  site-url: "https://ubc-geography.github.io/computing-resources/"
+  site-url: "https://ubc-geography.github.io/computing-resources"
   open-graph:
     title: "UBC Geography Computing Resources"
     description:
@@ -117,6 +117,7 @@ format:
       light: flatly
       dark: darkly
     toc: true
+    canonical-url: true
     include-in-header:
       - text:
           <meta name="google-site-verification"
