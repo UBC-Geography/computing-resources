@@ -59,7 +59,7 @@ other geospatial software.
 
 GeoJSON provides a lightweight format that can be easily read and written via
 JavaScript. This format is particularly well-suited for web mapping and easily
-integrates with Leaflet.
+integrates with web mapping libraries, like Leaflet and OpenLayers.
 
 #### [FlatGeobuf](https://flatgeobuf.org/)
 
@@ -86,8 +86,8 @@ standards. It's also often the default and recommended format in libraries like
 GDAL and GIS software like QGIS. The format has been further improved thanks to
 the development of Cloud Optimized GeoTIFFs (COG), which enhances the capacity
 of GeoTIFF for cloud computing and access via the web. COG files can be stored
-and easily accessed via S3 object stores, like that supported by UBC ARC
-Chinook.
+and easily accessed via S3 object stores, like that supported by UBC ARC Chinook
+and the DRA's Arbutus Object Storage.
 
 Built atop the TIFF file format, GeoTIFFs also support multiple compression
 algorithms that can significantly reduce their overall file size. Understanding

@@ -37,10 +37,14 @@ of a password to clone and push changes to token's associated repository.
 
 ## Using SSH
 
-Warning: This method is not recommended. While there are multiple precautions
-taken by UBC LT and Syzygy to isolate and secure your JupyterHub environment, if
-for any reason your environment were to be compromised, a bad actor could gain
-full access to your GitHub account.
+::: {.callout-important}
+
+This method is not recommended. While there are multiple precautions taken by
+UBC LT and Syzygy to isolate and secure your JupyterHub environment, if for any
+reason your environment were to be compromised, a bad actor could gain full
+access to your GitHub account.
+
+:::
 
 If you must use this method, ensure you generate a new SSH key on JupyterHub
 with a strong passphrase. Never reuse/store an SSH private key that you have

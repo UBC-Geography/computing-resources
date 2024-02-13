@@ -3,6 +3,11 @@ output-file: index.html
 title: R
 ---
 
+Alongside Python, R is one of the commonly used programming languages in
+geography research due in part to the large collection of geospatial packages
+that have been developed with it along with it's broad adoption for scientific
+computing.
+
 - _[R in Action](https://go.exlibris.link/P6rJdt9g)_
 
 - _[R for Data Science](https://go.exlibris.link/FW9jGNqj)_
@@ -23,6 +28,8 @@ title: R
 
 - _[Remote Sensing and Digital Image Processing with R](https://go.exlibris.link/JMr62B9N)_
 
+- _[Surveying with Geomatics and R](https://go.exlibris.link/yzsrpMzv)_
+
 ### Extending GIS Software
 
 - _[Hands-On Geospatial Analysis with R and QGIS](https://go.exlibris.link/c835FCNj)_
@@ -39,7 +46,11 @@ Sometimes writing code can get a bit messy. Formatters, like styler, can
 automatically reformat your code to make it cleaner and easier to read while
 following a set of standards and best practices.
 
-Note: RStudio includes a formatting tool via Code \> Reformat Code
+::: {.callout-note}
+
+RStudio includes a formatting tool via Code \> Reformat Code
+
+:::
 
 - [styler Documentation](https://styler.r-lib.org/)
 

@@ -8,13 +8,13 @@ and its usage is strongly encouraged for researchers whether they are working
 with large codebases or small Jupyter Notebooks. Version control is especially
 helpful when collaborating with other researchers or developers as it enables
 changes to be tracked coherently and new code to be explored separately from a
-stable, main codebase in easily managed branches.
+stable, main codebase.
 
 - [The Turing Way - Version Control](https://the-turing-way.netlify.app/reproducible-research/vcs)
 
 ## Code
 
-### [Git](https://git-scm.com/)
+### Git
 
 Git is by far the most popular version control system and comes with a powerful
 command line interface while integrating with code sharing and development

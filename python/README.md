@@ -123,9 +123,6 @@ that excel at supporting and sharing geospatial research.
 
 - [Shiny for Python](https://shiny.posit.co/py/)
 
-  - [Shiny for Python Ultimate - Course](https://learning.oreilly.com/videos/shiny-for-python/9781805122753/) -
-    Access via https://go.oreilly.com/univ-british-columbia
-
 - [Streamlit](https://docs.streamlit.io/)
 
 - [Dash](https://dash.plotly.com/)

@@ -32,8 +32,12 @@ Documentation: <https://confluence.it.ubc.ca/display/UARC/Using+Sockeye>
 
 Supported Software: <https://confluence.it.ubc.ca/display/UARC/Software>
 
-- Note: Linux (CentOS) software can be installed along with conda packages or
-  any software available within an Apptainer container
+::: {.callout-note}
+
+Linux (CentOS) software can be installed along with conda packages or any
+software available within an Apptainer container.
+
+:::
 
 ## Digital Research Alliance Clusters
 
@@ -41,8 +45,11 @@ Documentation: <https://docs.alliancecan.ca/wiki/Getting_started>
 
 Supported Software: <https://docs.alliancecan.ca/wiki/Available_software>
 
-- Note: Additionally, any software that is supported on Linux can run within an
-  Apptainer container
+::: {.callout-note}
+
+Additionally, any software that can be installed within an Apptainer container.
+
+:::
 
 ## QGIS
 
@@ -79,7 +86,13 @@ while documentation for Alliance clusters is listed below.
 
   - Julia 1.5 & 1.8
 
-  - Note: Other kernels can be supported using Apptainer containers.
+::: {.callout-note}
+
+Other kernels can be supported using Apptainer containers. See
+[Running a Jupyter Kernel from a Container](https://ubc-geography.github.io/computing-resources/high-performance-computing/#running-a-jupyter-kernel-from-a-container)
+for more details.
+
+:::
 
 - Server Resource Options:
 
@@ -91,14 +104,15 @@ while documentation for Alliance clusters is listed below.
 
   - (Optional) GPU Configuration: none - 4 x V100L
 
-- Note: Nodes do not have internet access, so installing packages from external
-  sources, cloning repositories from GitHub, or running code that downloads data
-  from external sources will not work. You can only install packages from
-  Alliance's maintained set of
-  [Python wheels](https://docs.alliancecan.ca/wiki/Available_Python_wheels). To
-  run JupyterLab with conda or external libraries held on PYPI, you'll need to
-  run it using an Apptainer container as documented in the alternative
-  approaches below.
+::: {.callout-note}
+
+You can only install packages from Alliance's maintained set of
+[Python wheels](https://docs.alliancecan.ca/wiki/Available_Python_wheels). To
+run JupyterLab with conda or external libraries held on PYPI, you'll need to run
+it using an Apptainer container as documented in the alternative approaches
+below.
+
+:::
 
 - Alternatives Approaches for Running JupyterLab:
 
@@ -128,8 +142,12 @@ that the containers are built from another Linux machine and copied onto the
 cluster. This will ensure the build runs a bit faster and you aren't competing
 for resources with other researchers on the login node.
 
-Note: Whenever you start a new Jupyter server on the cluster, you'll need to
-load the apptainer module again in order for the kernel to run.
+::: {.callout-note}
+
+Whenever you start a new Jupyter server on the cluster, you'll need to load the
+apptainer module again in order for the kernel to run.
+
+:::
 
 If you need flexibility in your container, you might be able to create a sandbox
 environment from your uploaded container and modify the sandbox container from
@@ -224,7 +242,7 @@ your terminal with conda/mamba.
 
    Modify kernel.json file to match the following:
 
-   ```json
+   ```json {.json filename='kernel.json'}
    {
      "argv": [
        "apptainer",
@@ -270,7 +288,7 @@ your terminal with conda/mamba.
 
    Within the kernel.json file, enter the following:
 
-   ```json
+   ```json {.json filename='kernel.json'}
    {
      "argv": [
        "apptainer",
@@ -316,16 +334,20 @@ your environment within an Apptainer container as documented below.
 
 ### [via Container](https://confluence.it.ubc.ca/display/UARC/RStudio+with+Apptainer)
 
-Note: the linked instructions above cover running RStudio Server on the UBC ARC
+::: {.callout-note}
+
+the linked instructions above cover running RStudio Server on the UBC ARC
 Sockeye cluster using Apptainer, but the instructions should be extremely
 similar for running on an Alliance cluster as you would just need to convert the
 job script from PBS to SLURM.
 
+:::
+
 - Instructions for creating an Apptainer container with pre-installed
   dependencies:
 
-  - Note: You can either build your container on a local Linux system and copy
-    the container to the cluster or build it directly on a login node.
+  - You can either build your container on a local Linux system and copy the
+    container to the cluster or build it directly on a login node.
 
   - Example of building an RStudio container on a local Linux (Ubuntu) system
 

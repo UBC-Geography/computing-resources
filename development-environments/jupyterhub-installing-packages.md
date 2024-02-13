@@ -37,10 +37,11 @@ re-install them whenever you start a new Jupyter session. It is important to
 note that the default environment does not only contain a set of packages that
 JupyterHub administrators thought would be frequently useful to users, it also
 contains packages that run the Jupyter user interface (JupyterLab) and the
-pre-installed Jupyter kernels. To avoid some of those issues, such as conflicts
-between package dependencies, you can use virtual environments, which help to
-isolate your computing environment from the default environment thus enabling
-you to more freely install, manage, and persist your packages.
+pre-installed Jupyter kernels. To avoid some common issues, such as conflicts
+between package dependencies, you can use virtual environments located within
+your home directory, which help to isolate your computing environment from the
+default environment thus enabling you to more freely install, manage, and
+persist your packages.
 
 The following instructions use Mamba as a drop in replacement for Conda and can
 be used for setting up either Python or R-based environments.
@@ -51,8 +52,7 @@ be used for setting up either Python or R-based environments.
 2.  From the terminal, create a new virtual environment and install the
     appropriate kernel package. Replace `<environment_name>` with a unique name
     that can be used to easily identify your environment, like a project name.
-    The name will be used to create a new directory in your Home directory, so
-    avoid including any spaces.
+    The name will be used to create a new directory in your home directory.
 
     Python:
 
@@ -90,11 +90,11 @@ be used for setting up either Python or R-based environments.
     $ mamba install <package_names> -y
     ```
 
-    Note: Some packages that you need may not be available via Mamba's default
-    package repository, conda-forge, and are only available from the Python
-    Package Index (PyPI) or the Comprehensive R Archive Network (CRAN). To
-    install those packages, you can use Python's `pip` or R's
-    `install.packages()` with one of the following commands:
+    Some packages that you need may not be available via Mamba's default package
+    repository, conda-forge, and are only available from the Python Package
+    Index (PyPI) or the Comprehensive R Archive Network (CRAN). To install those
+    packages, you can use Python's `pip` or R's `install.packages()` with one of
+    the following commands:
 
     ```bash
     $ python -m pip install <python_package_names>
@@ -125,7 +125,7 @@ After a few seconds, the custom kernel built from you virtual environment will
 be listed in the JupyterLab launcher and you will be able to select it as the
 preferred kernel to run within your notebooks.
 
-To install more packages into your environment, repeat Steps 3-5 from a
+To install more packages into your environment, repeat steps 3-5 from a
 JupyterLab terminal.
 
 It is important to note that the directories created for each virtual

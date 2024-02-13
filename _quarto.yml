@@ -42,14 +42,8 @@ website:
     search: true
     collapse-level: 1
     contents:
-      - section: Digital Communications
-        contents:
-          - href: "digital-communications/index.html"
-            text: Overview
-          - href: "digital-communications/#wordpress"
-            text: WordPress
-          - href: "digital-communications/#static-site-generators-ssg-web-publishing"
-            text: Static Site Generators / Web Publishing
+      - href: "digital-communications/index.html"
+        text: Digital Communications
       - section: Research Data Management
         contents:
           - href: "research-data-management/index.html"
@@ -64,22 +58,10 @@ website:
         contents:
           - href: "development-environments/index.html"
             text: Overview
-          - section: Virtual Environments
-            contents:
-              - href: "development-environments/#virtual-environment-managers"
-                text: Overview
-              - href: "development-environments/conda-getting-started.html"
-                text: Conda - Getting Started
-          - section: Jupyter
-            contents:
-              - href: "development-environments/#jupyter"
-                text: Overview
-              - href: "development-environments/jupyterhub-installing-packages.html"
-                text: JupyterHub - Installing Packages
-          - href: "development-environments/#rstudio"
-            text: RStudio
-          - href: "development-environments/#visual-studio-code"
-            text: Visual Studio Code
+          - href: "development-environments/conda-getting-started.html"
+            text: Conda - Getting Started
+          - href: "development-environments/jupyterhub-installing-packages.html"
+            text: JupyterHub - Installing Packages
           - href: "development-environments/containerized-environments.html"
             text: Containerized Environments
       - href: "python/index.html"

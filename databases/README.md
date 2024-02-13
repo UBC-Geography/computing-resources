@@ -3,21 +3,28 @@ output-file: index.html
 title: Databases
 ---
 
+Databases, and particularly spatial databases as piece of GIS software, play a
+crucial role in storing and accessing geospatial data. Multiple relational
+database management systems can be extended to support spatial databases, while
+common geospatial data formats like GeoPackage and Esri's Geodatabase are
+self-contained databases.
+
+Understanding how databases and how to query them efficiently with SQL, is an
+extraordinarily useful skill when working with geospatial data.
+
 - [How to create and access MySQL and PostgreSQL databases on DRI systems - Video](https://youtu.be/3uHSXXQwJpQ)
 
 - _[Geospatial Analysis with SQL](https://go.exlibris.link/N6ybsHyL)_
 
 - _[Practical SQL](https://go.exlibris.link/KT2RjyVN)_
 
-## SQLite
-
-### GIS Extensions / Libraries
-
-- [SpatiaLite](https://www.gaia-gis.it/fossil/libspatialite/index)
+- _[Getting Started with SQL and Databases: Managing and Manipulating Data with SQL](https://go.exlibris.link/8P3M1W2j)_
 
 ## PostgreSQL
 
 - _[Learn PostgreSQL](https://go.exlibris.link/DPVZ3PFk)_
+
+- _[PostgreSQL Query Optimization](https://go.exlibris.link/Mp0jzFgZ)_
 
 ### Hosting
 

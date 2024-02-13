@@ -45,6 +45,14 @@ not free and open-source meaning that it must be paired with Mapbox's APIs.
 
 - [Mapbox GL JS Guide](https://docs.mapbox.com/mapbox-gl-js/guides/)
 
+#### MapLibre GL JS
+
+MapLibre is a free and open-source fork of Mapbox GL that retains some of the
+unique functionalities of Mapbox GL while enabling the usage of alternative
+datasets and APIs.
+
+- [MapLibre GL JS Documentation](https://maplibre.org/maplibre-gl-js/docs/)
+
 ### Visualizations
 
 - [D3 Documentation](https://github.com/d3/d3/wiki)
@@ -59,9 +67,9 @@ not free and open-source meaning that it must be paired with Mapbox's APIs.
 
 ## Formatting
 
-Sometimes writing code can get a bit messy. Formatters, like black, can
-automatically reformat your code to make it cleaner and easier to read while
-following a set of standards and best practices.
+Sometimes writing code can get a bit messy. Formatters can automatically
+reformat your code to make it cleaner and easier to read while following a set
+of standards and best practices.
 
 - [Prettier Documentation](https://prettier.io/docs/en/index.html)
 

@@ -5,13 +5,10 @@ title: Digital Communications
 
 ## WordPress
 
-Open-source content management system software that is used to host a wide range
-of websites and web applications. Both UBC Blogs and UBC CMS are built on top of
+An open-source content management system that is used to host a wide range of
+websites and web applications. Both UBC Blogs and UBC CMS are built on top of
 this software, so UBC provides a large collection of documentation to help
-faculty and students in getting started with using it. The wide adoption of this
-software also means there is plenty of documentation for self-hosting a
-WordPress server, but strong caution should be taken as security vulnerabilities
-are frequently identified and taken advantage of by bad actors.
+faculty and students in getting started with using it.
 
 - [UBC Arts ISIT Video Tutorials](https://isit.web.arts.ubc.ca/video-tutorial-introduction-to-ubc-cms/)
 
@@ -72,9 +69,15 @@ tool for publishing scientific and technical work in a range of formats and acts
 as a successor to R Markdown. Code in Python, R, Julia, and JavaScript can all
 be represented and rendered along with Pandoc-style Markdown. Interactive
 visualizations can also be embedded on supported formats using R Shiny,
-Observable JS, or Jupyter Widgets. Note: If rendering and exporting HTML files
-in RStudio using Quarto, ensure you also export the quarto_files directory,
-which holds necessary CSS and JavaScript files.
+Observable JS, or Jupyter Widgets.
+
+::: {.callout-note}
+
+If rendering and exporting HTML files in RStudio using Quarto, ensure you also
+export the quarto_files directory, which holds necessary CSS and JavaScript
+files.
+
+:::
 
 - [Quarto Webinars](https://mint.westdri.ca/tools/quarto_webinar.html)
 
@@ -82,21 +85,26 @@ which holds necessary CSS and JavaScript files.
 
 ### R Markdown (R)
 
-Developed by the company behind RStudio, R Markdown provides an authoring
-framework that enables code to be rendered alongside Markdown and published in
-multiple formats. See Quarto for a successor to R Markdown. Note: HTML files
-rendered via R Markdown use inline scripts and CSS, which can create sometimes
-unnecessarily large files, but they ensure that the file displays consistently
-without external files.
+R Markdown provides an authoring framework that enables code to be rendered
+alongside Markdown and published in multiple formats. See Quarto for a successor
+to R Markdown.
+
+::: {.callout-note}
+
+HTML files rendered via R Markdown use inline scripts and CSS, which can create
+sometimes unnecessarily large files, but they ensure that the file displays
+consistently without external files.
+
+:::
 
 - [R Markdown Documentation](https://rmarkdown.rstudio.com/lesson-1.html)
 
 ### Jekyll (Ruby)
 
-One of the most used static site generators. This SSG integrates smoothly with
-GitHub Pages to quickly render websites directly from a GitHub repository. Due
-to its wide adoption, it also includes a wide range of open-source themes that
-can be used to customize the style of a website.
+One of the most widely-used static site generators. This SSG integrates smoothly
+with GitHub Pages to quickly render websites directly from a GitHub repository.
+Due to its wide adoption, it also includes a wide range of open-source themes
+that can be used to customize the style of a website.
 
 - [UBC Library Research Commons - Introduction to Jekyll](https://ubc-library-rc.github.io/intro-jekyll)
 

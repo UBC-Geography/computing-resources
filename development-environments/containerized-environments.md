@@ -24,25 +24,21 @@ to create new container images that include and software you may need.
 - [Jupyter Docker Stacks Documentation](https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html)
 
 Dockerfiles provide instructions for creating your customized container image.
-These files can be easily shared and reused to build your container. The
-following example walks through a basic Dockerfile that builds a new image based
-on the jupyter/minimal-notebook image, which includes everything you need to get
-Jupyter up and running with all the necessities. Review the
+These files can be easily shared and reused to build your container. While
+initially developed around Docker, Dockerfiles are also compatible with other
+container engines like Podman and Apptainer. The following example walks through
+a basic Dockerfile that builds a new image based on the jupyter/minimal-notebook
+image, which includes everything you need to get Jupyter up and running with all
+the necessities. Review the
 ['Selecting an image'](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html)
 when selecting a Jupyter image to build on top of.
 
-Start by creating a new Dockerfile with your preferred text editor.
-
-```bash
-nano Dockerfile
-```
-
-Next, within the Dockerfile, write out the list of commands you would want to
-run to create your development environment. Review the
+Within a Dockerfile, you'll write out the list of commands you would want to run
+to create your development environment. Review the
 [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/) for
 more details.
 
-```Dockerfile
+```Dockerfile {.Dockerfile filename="Dockerfile"}
 # Always start with a FROM instruction that points to an existing image
 FROM docker.io/jupyter/minimal-notebook
 
@@ -66,8 +62,7 @@ RUN mamba install -y \
     fix-permissions "/home/${NB_USER}"
 
 # If any R dependencies aren't included on conda-forge, install them from CRAN.
-RUN R -q -e 'install.packages(c(<CRAN_packages>),
-                                repo="https://mirror.rcg.sfu.ca/mirror/CRAN/")'
+RUN R -q -e 'install.packages(c(<CRAN_packages>),repo="https://mirror.rcg.sfu.ca/mirror/CRAN/")'
 ```
 
 Build your customized container image using the Dockerfile. Replace <image_name>
@@ -105,32 +100,33 @@ images
 [here](https://github.com/rocker-org/rocker-versioned2/blob/master/scripts/install_geospatial.sh).
 
 To build a new image on top of a Rocker image that includes an additional
-selection of packages, create a new Dockerfile with your preferred text editor.
-
-```bash
-nano Dockerfile
-```
-
-Next write out the list of commands you would want to run to create your
-development environment. Review the
+selection of packages, you'll write out the list of commands you would want to
+run to create your development environment. Review the
 [Dockerfile Reference](https://docs.docker.com/engine/reference/builder/) for
 more details.
 
-```Dockerfile
+```Dockerfile {.Dockerfile filename="Dockerfile"}
 # Always start with a FROM instruction that points to an existing image
 FROM docker.io/rocker/geospatial
 
-# Replace <apt_packages> with any system packages that you need to install using APT
+# Replace <apt_packages> with any system packages that you need to install using
+# APT
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends \
     <apt_packages> && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Note: The Rocker images do not include Conda or Mamba, so you will need to check the system requirements for each of your R packages and ensure that any required system software is installed using APT.
+# Note: The Rocker images do not include Conda or Mamba, so you will need to
+# check the system requirements for each of your R packages and ensure that any
+# required system software is installed using APT.
 
-# Rocker images come with a handy helper command, install2.r, to make installing R packages a bit simpler. The following command will only build the image if no errors are encountered, while also skipping any packages that may have already been installed and attempting to run the installation as quickly by using the maximum available CPU cores.
+# Rocker images come with a handy helper command, install2.r, to make installing
+# R packages a bit simpler. The following command will only build the image if
+# no errors are encountered, while also skipping any packages that may have
+# already been installed and attempting to run the installation as quickly by
+# using the maximum available CPU cores.
 RUN install2.r --error --skipinstalled --ncpus -1 \
-    <R_packages> \
+    <r_packages> \
     && rm -rf /tmp/downloaded_packages
 ```
 
@@ -174,7 +170,7 @@ Within your project folder or local repository, create a directory named
 packages you need for development, you can name the image you want to use within
 the devcontainer.json file, like so:
 
-```json
+```json {.json filename='.devcontainer/devcontainer.json'}
 {
   "image": "docker.io/condaforge/mambaforge"
 }
@@ -192,7 +188,7 @@ specify exactly how to create your customized development environment.
 You will need to start by editing the `devcontainer.json` to match the
 following:
 
-```json
+```json {.json filename='.devcontainer/devcontainer.json'}
 {
   "build": {
     "dockerfile": "Dockerfile"
@@ -208,7 +204,7 @@ more details on creating a Dockerfile.
 The following example would start with an Ubuntu base image and install packages
 using APT, Mamba/Conda, and/or R's CRAN.
 
-```Dockerfile
+```Dockerfile {.Dockerfile filename='Dockerfile'}
 FROM docker.io/docker/ubuntu
 
 # Replace <apt_packages> with your APT dependencies

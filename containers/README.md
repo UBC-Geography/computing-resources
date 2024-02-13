@@ -92,6 +92,10 @@ format, but it provides all the necessary tools to complete conversions.
 
 - [Running Apptainer on UBC ARCSockeye](https://confluence.it.ubc.ca/display/UARC/Using+Apptainer+or+Singularity+Containers)
 
+- UBC ARC - Apptainer Workshop 2023 - Videos:
+  [Part 1](https://youtu.be/LE4HTJ0sQ3k?si=BEBNiP2V7y_LjNtO) &
+  [Part 2](https://youtu.be/5P4syyFIV0M?si=AwG5WxgQw5z3Oqp-)
+
 For a few simple examples on using and running Apptainer, see
 [High Performance Computing (HPC)](https://UBC-Geography.github.io/computing-resources/high-performance-computing).
 

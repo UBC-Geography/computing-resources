@@ -8,8 +8,8 @@ for running resource-intensive computations, but while HPC focuses on completing
 a complex set of tasks as quickly as possible with an extraordinarily powerful
 set of resources, cloud computing has been traditionally dedicated to providing
 hardware through virtual machines (VM) of varying specifications over a long
-period of time in order to support continuously run services such as web
-applications and databases.
+period of time in order to support ongoing services such as web applications and
+databases.
 
 ## Digital Research Alliance (DRA)
 
@@ -34,7 +34,7 @@ on the DRA HPC clusters and Persistent VMs. They can provide a powerful solution
 when using software that cannot be ran on the HPC clusters either natively or
 via Apptainer or when running computations that can run for days and/or weeks.
 
-For Geography-related research and instruction, these instances can be
+For geography-related research and instruction, these instances can be
 particularly useful for the following use cases:
 
 - Spinning up a customized JupyterHub instance and/or RStudio server for a
@@ -57,21 +57,21 @@ ongoing services, like web servers. It's important to remember that services
 cannot be ran on the DRA Cloud indefinitely, so ensure you have a plan for your
 VM's end-of-life (EOL) along with a set of clear security procedures before
 creating it. The DRA requires that researchers reassess their cloud services
-annually in April by submitting a form that restate the goals of the project and
-necessary resources for continued use.
+annually in April by submitting a form that restates the goals of the project
+and necessary resources for continued use.
 
-For Geography-related research and instruction, these instances can be
+For geography-related research and instruction, these instances can be
 particularly useful for the following use cases:
 
-- Hosting a PostgresQL database with PostGIS
+- Hosting a PostgreSQL database with PostGIS
 - Running a web service with software like GeoServer, GeoNode, Ushahidi, or QGIS
   server.
 - Developing dynamic digital exhibits or publications with Omeka and/or Scalar.
 
 Again, when working with persistent VMs, consider any implications that may come
 from preserving your work once the VM is no longer available by asking yourself
-whether your work be easily exported, web archived, and/or hosted externally
-with minimal resources and no long-term maintenance?
+whether your work can be easily exported, web archived, and/or hosted externally
+with minimal resources and no long-term maintenance.
 
 #### RAS Resource Limits
 
@@ -82,14 +82,14 @@ with minimal resources and no long-term maintenance?
 
 ## UBC IT
 
-In some cases, the DRA Cloud may not be the best option for a research project,
-in those cases, UBC IT can provide some budget-friendly alternatives. For
+In some cases, the DRA Cloud may not be the best option for a research project.
+In those cases, UBC IT can provide some budget-friendly alternatives. For
 minimal LAMP-stack web applications, like WordPress, Drupal, or Omeka, UBC IT
 provides simple shared hosting solutions, while more resource-intensive
-applications and computation tasks can run on an EduCloud VM. Additionally, UBC
-IT has begun a broker system that can enable resources to be requested from
-large commercial cloud providers like Amazon, Microsoft, and Google with
-additional support.
+applications and computation tasks can run on EduCloud VMs. Additionally, UBC IT
+has begun a broker system that can enable resources to be requested from large
+commercial cloud providers like Amazon, Microsoft, and Google with additional
+support.
 
 - [UBC IT - EduCloud Server Service](https://it.ubc.ca/services/web-servers-storage/educloud-server-service)
 

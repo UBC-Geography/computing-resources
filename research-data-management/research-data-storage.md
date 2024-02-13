@@ -3,13 +3,13 @@ title: Research Data Storage
 ---
 
 This document lists current data storage options available to UBC Geography
-researchers and could be consulted when developing Data Management Plans for new
-research projects. For information and/or consultation about Research Data
-Management and developing a Data Management Plan, check out
+researchers and could be consulted when developing data management plans for new
+research projects. For information and/or consultation about research data
+management and developing a data management plan, check out
 [UBC Library RDM](https://researchdata.library.ubc.ca/) or
-[UBC Advanced Research Computing](https://rdm.ubc.ca/). For questions about
-these data storage options and how best to integrate them with your data
-collection processes, contact
+[UBC Advanced Research Computing](https://rdm.ubc.ca/). For questions about data
+storage options and how best to integrate them with your data collection
+processes, contact
 [UBC Geography IT](https://geog.air.arts.ubc.ca/services/computing-services/).
 
 UBC Library's Research Data Management team, recommends the following:
@@ -56,10 +56,9 @@ drive or installing a secondary disk on your desktop machine.
 'Far copies' are often stored in 'cloud' servers, where the servers are off-site
 from the 'here' and 'near' copies. If you are already using a 'cloud' provider,
 like OneDrive, to store your 'here' and 'near' copies, backup the data to a
-local storage device or another external 'cloud' provider. While 'cloud' storage
-includes a high-level of redundancy with multiple off-site backups already in
-place, backing up your data from 'cloud' storage guarantees additional
-protections from catastrophic failure.
+local storage device. While 'cloud' storage includes a high-level of redundancy
+with multiple off-site backups already in place, backing up your data from
+'cloud' storage guarantees additional protections from catastrophic failure.
 
 If you do not plan on using High Performance Computing to run resource intensive
 computations on your data, need less than 1 TB of storage, and do not anticipate

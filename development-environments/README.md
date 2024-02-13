@@ -12,22 +12,26 @@ only using the specific Python packages that were identified and installed for
 running it. This makes the project easier to reproduce while also reducing
 errors caused by clashing package dependencies.
 
+- UBC ARC - Virtual Environment 2023 - Videos:
+  [Part 1 (virtualenv)](https://youtu.be/fdMNwQu8MKU?si=Fu_JogcK_SxEsBiC) &
+  [Part 2 (conda)](https://youtu.be/BrZ_5rP4b0g?si=GkDWSa9CG5z1uqYx)
+
 - [Getting Started with Conda, Virtual Environments, and Python](https://UBC-Geography.github.io/development-environments/conda-getting-started)
 
 ### Conda
 
 Conda is an extremely powerful tool for both managing environments and packages.
-Using `conda install` provides the ability to install a range of powerful
-packages that aren't available via Python's built-in package manager, Pip.
-Additionally, Conda enables you to install and manage multiple versions of
-Python on a single machine using virtual environments.
+Using `conda install` provides the ability to install a range of packages that
+either aren't available or can't be installed via Python's built-in package
+manager, Pip. Additionally, Conda enables you to install and manage multiple
+versions of Python on a single machine using virtual environments.
+
+- [conda User Guide](https://docs.conda.io/projects/conda/en/stable/user-guide/index.html)
 
 If you need to install Conda on your device, we suggest using the link below to
 install it using the Miniconda installer.
 
 - [Miniconda, a minimal installer for conda](https://docs.conda.io/en/latest/miniconda.html)
-
-- [conda User Guide](https://docs.conda.io/projects/conda/en/stable/user-guide/index.html)
 
 ### Python - venv and virtualenv
 
@@ -82,9 +86,9 @@ You can install and run JupyterLab on your local machine in two separate ways.
 The traditional and most flexible approach is to install JupyterLab as a Python
 package using Pip or Conda and starting it from the Jupyter command line
 interface. This approach uses a locally installed version of Python to start a
-basic server on your machine and then navigates to that server through your
-preferred web browser. For those who may be uncomfortable with installing Python
-and/or using command line interfaces, Project Jupyter has also released a
+basic, local server on your machine and then navigates to that server through
+your preferred web browser. For those who may be uncomfortable with installing
+Python and/or using command line interfaces, Project Jupyter has also released a
 simple-to-use desktop application, named JupyterLab Desktop. This application
 comes packaged with Python and a default set of packages that are frequently
 used in scientific computing.
@@ -99,7 +103,7 @@ used in scientific computing.
 
 The easiest way to get started with creating and editing notebooks is through a
 JupyterHub service, like [UBC LT's Open Jupyter](https://open.jupyter.ubc.ca/)
-or [UBC Syzygy](https://ubc.syzygy.ca/), which enable you to connect to and
+or [UBC Syzygy](https://ubc.syzygy.ca/), which enables you to connect to and
 interact with Jupyter servers without having to install anything on your
 machine. While convenient, these services come with significant drawbacks in
 computing power and will not work well in cases where computations are running
@@ -168,6 +172,8 @@ well-supported extensions, but it can feel less intuitive for some users.
 - [VS Code Documentation](https://code.visualstudio.com/docs)
 
 - [Using Git source control in VSCode](https://code.visualstudio.com/docs/sourcecontrol/overview)
+
+- _[Visual Studio Code Distilled: Evolved Code Editing for Windows, macOS, and Linux](https://go.exlibris.link/Dt8gkVz2)_
 
 #### Helpful Extensions
 
