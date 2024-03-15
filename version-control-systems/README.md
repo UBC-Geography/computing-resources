@@ -26,6 +26,8 @@ platforms, like GitHub and GitLab.
 
 - _[Pro Git](https://git-scm.com/book/en/v2)_
 
+- _[Beginning Git and GitHub: Version Control, Project Management and Teamwork for the New Developer](https://go.exlibris.link/G3VfpGll)_
+
 ### GitHub
 
 GitHub is a popular platform for sharing source code and Jupyter Notebooks as
