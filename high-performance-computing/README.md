@@ -636,6 +636,8 @@ job script from PBS to SLURM.
 
 ## Photogrammetry
 
+- [Photogrammetry on HPC Clusters](https://training.westdri.ca/domains/dh/#photogrammetry)
+
 Photogrammetry software can be incredibly resource intensive, so running it on
 an HPC cluster can save you a lot of time and resources when working with
 extraordinarily large datasets.

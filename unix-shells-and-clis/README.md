@@ -41,6 +41,8 @@ resize, and optimize images files in various formats.
 
 - [ImageMagick Documentation](https://imagemagick.org/script/command-line-tools.php)
 
+- [Command-line image processing with ImageMagick](https://training.westdri.ca/tools/visualization/#imagemagick)
+
 ### FFmpeg
 
 FFmpeg an extremely powerful tool for batch processing both video and audio

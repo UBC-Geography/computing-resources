@@ -134,7 +134,7 @@ Application:
 - Account:
   <https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account>
 
-- RAS (Rapid Access Service -- for fast allocations up to 10 TB):
+- RAS (Rapid Access Service -- for fast allocations up to 40 TB):
   <https://alliancecan.ca/en/services/advanced-research-computing/accessing-resources/rapid-access-service>
 
 - Resource Allocation Competition:
@@ -150,15 +150,17 @@ Application:
 
 Allocation Renewal: Annual
 
+#### HPC Compute Clusters
+
 Locations:
 
-- SFU Burnaby (Cedar)
+- Cedar (SFU Burnaby)
 
-- UW Waterloo (Graham)
+- Graham (UW Waterloo)
 
-- McGill Montreal (Béluga)
+- Béluga (McGill Montreal)
 
-- UT Toronto (Niagra)
+- Niagra (UT Toronto)
 
 Storage Quota:
 
@@ -172,9 +174,13 @@ Storage Quota:
 
 - Maximum Request:
 
-  - Via Rapid Access Service: 10 TB
+  - Via Rapid Access Service (RAS):
 
-  - Via Resource Allocation Competition: None
+    - Project: 40 TB
+
+    - Nearline (Cold storage): 100 TB
+
+  - Via Resource Allocation Competition (RAC): None
 
 Data Transfer and Sharing Services: Globus
 
@@ -183,3 +189,17 @@ Alternative Transfer Options:
 
 Supported Computing Software via ARC Clusters:
 <https://docs.alliancecan.ca/wiki/Available_software>
+
+#### Arbutus Object Storage
+
+- Minimum: 1 TB
+
+- Maximum Request:
+
+  - Via Rapid Access Service (RAS): 10 TB
+
+  - Via Resource Allocation Competition (RAC): None
+
+See
+[Object Storage - Digital Research Alliance (DRA)](https://ubc-geography.github.io/computing-resources/cloud-computing/object-storage.html#digital-research-alliance-dra)
+for more details.
