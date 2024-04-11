@@ -129,6 +129,24 @@ how the engine can be applied within a geography-centered setting.
 
 - [HTerrain Plugin Documentation](https://hterrain-plugin.readthedocs.io/en/latest/)
 
+### Blender
+
+Blender is a widely used piece of free and open source software with a range of
+applications, which include developing and editing 3D models, which can easily
+be exported to the VR development tools listed above.
+
+- _[Blender All-in-One for Dummies](https://learning.oreilly.com/library/view/blender-all-in-one-for/9781394204045/)_
+
+- [Blender Reference Manual](https://docs.blender.org/manual/en/latest/)
+
+#### Relevant Plugins and SDK
+
+- [BlenderGIS](https://github.com/domlysz/BlenderGIS)
+
+### OpenBrush
+
+- [OpenBrush Documentation](https://docs.openbrush.app/)
+
 ### Other Tools
 
 - [DEM.Net Elevation API](https://elevationapi.com/) - Quickly generate 3D

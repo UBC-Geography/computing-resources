@@ -12,7 +12,15 @@ computing.
 
 - _[R for Data Science](https://go.exlibris.link/FW9jGNqj)_
 
+- _[Statistical Analysis with R for Dummies](https://learning.oreilly.com/library/view/statistical-analysis-with/9781394263424/)_
+
 - _[R 4 Data Science Quick Reference](https://go.exlibris.link/PLPKnlK4)_
+
+- _[Data Science Fundamentals with R, Python, and Open Data](https://learning.oreilly.com/library/view/data-science-fundamentals/9781394213245/)_
+
+- [Quick-R](https://www.statmethods.net/)
+
+- [R-bloggers](https://www.r-bloggers.com/)
 
 ## Geospatial Books
 

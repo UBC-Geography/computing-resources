@@ -8,6 +8,8 @@ can be a useful language for a geographer to have on their radar, especially if
 they are interested in creating web maps and/or sharing their research online
 via interactive visualizations.
 
+- _[JavaScript Essentials for Dummies](https://learning.oreilly.com/library/view/javascript-essentials-for/9781394263219/)_
+
 ## Geospatial Libraries/Packages
 
 - [Awesome Frontend GIS](https://github.com/joewdavies/awesome-frontend-gis)

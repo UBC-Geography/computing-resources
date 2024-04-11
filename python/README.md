@@ -20,7 +20,11 @@ your local machine, see
 
 - _[Python Crash Course](https://go.exlibris.link/XmblT6hZ)_
 
+- _[Python All-in-One for Dummies](https://learning.oreilly.com/library/view/python-all-in-one-for/9781394236152/)_
+
 - _[Python Tools for Scientists](https://go.exlibris.link/7MxPJqXz)_
+
+- _[Data Science Fundamentals with R, Python, and Open Data](https://learning.oreilly.com/library/view/data-science-fundamentals/9781394213245/)_
 
 ## Geospatial Books
 

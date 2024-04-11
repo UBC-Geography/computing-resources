@@ -65,8 +65,10 @@ guide.
 Project Jupyter consists of an ecosystem of open-source projects that support
 the creation and distribution of computational notebooks. While Jupyter supports
 computational notebooks with kernels from a wide range of programming languages,
-it specializes in Python followed by R and Julia. Much of the Jupyter ecosystem
-has been written in and/or runs on Python.
+it specializes in Python while also providing strong support for R and Julia.
+Much of the Jupyter ecosystem has been written in and/or runs on Python.
+
+- [Jupyter Tutorial](https://jupyter-tutorial.readthedocs.io/en/latest/index.html)
 
 #### Jupyter Notebooks
 

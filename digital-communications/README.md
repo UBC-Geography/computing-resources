@@ -24,6 +24,10 @@ faculty and students in getting started with using it.
 
 - _[WordPress: The Missing Manual](https://go.exlibris.link/qfbFTbLz)_
 
+- _[WordPress All-in-One for Dummies](https://learning.oreilly.com/library/view/wordpress-all-in-one-for/9781394225385/)_
+
+- _[WordPress Styling with Blocks, Patterns, Templates, and Themes](https://learning.oreilly.com/library/view/wordpress-styling-with/9781804618509/)_
+
 ### UBC Blogs
 
 - [UBC Blogs vs. UBC CMS](https://support.cms.ubc.ca/cms-manual/getting-started/differences-between-ubc-cms-and-ubc-blogs/)

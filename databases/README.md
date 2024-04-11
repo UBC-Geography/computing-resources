@@ -18,6 +18,8 @@ extraordinarily useful skill when working with geospatial data.
 
 - _[Practical SQL](https://go.exlibris.link/KT2RjyVN)_
 
+- _[SQL All-in-One for Dummies](https://learning.oreilly.com/library/view/sql-all-in-one-for/9781394242290/)_
+
 - _[Getting Started with SQL and Databases: Managing and Manipulating Data with SQL](https://go.exlibris.link/8P3M1W2j)_
 
 ## PostgreSQL
