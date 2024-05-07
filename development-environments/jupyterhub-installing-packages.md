@@ -16,6 +16,12 @@ If you need to share a reproducible Jupyter environment or would like to
 automate the creation and management of your kernels, copy the Makefile from
 this [repository](https://github.com/UBC-Geography/jupyter-makefile) into your
 project and follow the instructions found in the repository's README.
+Alternatively, if you want to bootstrap a Jupyter kernel with a range of
+geospatial packages and/or need to share a reproducible environment with others,
+review and clone the
+[jupyter-py-geog-env](https://github.com/UBC-Geography/jupyter-py-geog-env)
+repository or use it as a template to create a new repository with any
+modifications that you may need.
 
 ## Mamba
 

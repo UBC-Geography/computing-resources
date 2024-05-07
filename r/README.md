@@ -10,6 +10,8 @@ computing.
 
 - _[R in Action](https://go.exlibris.link/P6rJdt9g)_
 
+- _[R for the Rest of Us](https://learning.oreilly.com/library/view/r-for-the/9781098182199/)_
+
 - _[R for Data Science](https://go.exlibris.link/FW9jGNqj)_
 
 - _[Statistical Analysis with R for Dummies](https://learning.oreilly.com/library/view/statistical-analysis-with/9781394263424/)_

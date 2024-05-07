@@ -29,6 +29,8 @@ an ArcGIS license at
 
 - [UBC Library Research Commons - Understanding Map Projections](https://ubc-library-rc.github.io/map-projections/)
 
+- _[ArcGIS Pro 3.x Cookbook](https://learning.oreilly.com/library/view/arcgis-pro-3-x/9781837631704/)_
+
 - _[Learning ArcGIS Pro 2](https://go.exlibris.link/GQq35Gf6)_
 
 - _[Computational Methods and GIS Applications in Social Science](https://go.exlibris.link/YM3Mt98G)_
