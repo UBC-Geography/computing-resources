@@ -7,26 +7,20 @@ title: Digital Communications
 
 An open-source content management system that is used to host a wide range of
 websites and web applications. Both UBC Blogs and UBC CMS are built on top of
-this software, so UBC provides a large collection of documentation to help
-faculty and students in getting started with using it.
-
-- [UBC Arts ISIT Video Tutorials](https://isit.web.arts.ubc.ca/video-tutorial-introduction-to-ubc-cms/)
-
-- [IThemes Tutorials](https://ithemes.com/tutorials/)
-
-- [UBC Arts ISIT WordPress Resources](https://isit.arts.ubc.ca/resources/)
+this software. UBC provides a large collection of documentation to help faculty
+and students get started with using it as a tool for scholarly communications.
 
 - [WordPress Clinics at UBC CTLT](https://events.ctlt.ubc.ca/?s=wordpress)
 
 - [WordPress Documentation](https://wordpress.org/documentation/)
 
-- [WordPress 101 -- Video Course](https://learning.oreilly.com/videos/wordpress-101/9781800566415/?sso_link=yes&sso_link_from=univ-british-columbia)
+- [WordPress 101 -- Video Course](https://go.exlibris.link/7mDvM1rZ)
 
 - _[WordPress: The Missing Manual](https://go.exlibris.link/qfbFTbLz)_
 
-- _[WordPress All-in-One for Dummies](https://learning.oreilly.com/library/view/wordpress-all-in-one-for/9781394225385/)_
+- _[WordPress All-in-One for Dummies](https://go.exlibris.link/CH9cfmW0)_
 
-- _[WordPress Styling with Blocks, Patterns, Templates, and Themes](https://learning.oreilly.com/library/view/wordpress-styling-with/9781804618509/)_
+- _[WordPress Styling with Blocks, Patterns, Templates, and Themes](https://go.exlibris.link/D34NjqgH)_
 
 ### UBC Blogs
 
@@ -40,15 +34,17 @@ faculty and students in getting started with using it.
 
 ### UBC CMS
 
+- [UBC CMS](https://cms.ubc.ca/)
+
 - [UBC CMS Manual](https://support.cms.ubc.ca/cms-manual/)
 
 ### Cloud Hosting
 
 - [UBC IT Shared Hosting](https://it.ubc.ca/services/web-servers-storage/shared-web-hosting)
 
-- [Digital Research Alliance - Cloud](https://docs.alliancecan.ca/wiki/Cloud#Preparing_your_request)
+- [Digital Research Alliance - Cloud - Persistent Instances (VMs)](https://ubc-geography.github.io/computing-resources/cloud-computing/#persistent-instances)
 
-- [Reclaim Hosting](https://www.reclaimhosting.com/)
+- [Reclaim Hosting - Reclaim Press](https://reclaim.press/)
 
 ## Static Site Generators (SSG) / Web Publishing
 
@@ -83,7 +79,7 @@ files.
 
 :::
 
-- [Quarto Webinars](https://mint.westdri.ca/tools/quarto_webinar.html)
+- [Quarto Webinars](https://mint.westdri.ca/tools/wb_quarto.html)
 
 - [Quarto Documentation](https://quarto.org/docs/guide/)
 
@@ -105,7 +101,7 @@ consistently without external files.
 
 ### Jekyll (Ruby)
 
-One of the most widely-used static site generators. This SSG integrates smoothly
+One of the most widely used static site generators. This SSG integrates smoothly
 with GitHub Pages to quickly render websites directly from a GitHub repository.
 Due to its wide adoption, it also includes a wide range of open-source themes
 that can be used to customize the style of a website.
@@ -132,7 +128,7 @@ multiple collections or projects. Both are considered web applications as they
 include content management systems that provide an easy-to-use interface for
 developing and managing digital exhibits.
 
-- [UBC Library Research Commons - Building Digital Exhibits with Omeka](https://github.com/ubc-library-rc/intro-omeka)
+- [UBC Library Research Commons - Building Digital Exhibits with Omeka](https://ubc-library-rc.github.io/intro-omeka/)
 
 - [Omeka: A User's Guide: Introduction](https://guides.library.illinois.edu/omeka/intro)
 
