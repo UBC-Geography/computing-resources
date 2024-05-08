@@ -52,7 +52,7 @@ and act as a possible successor.
 
 By far the most popular vector format, Shapefile was developed by ESRI in the
 90's and has continued to be maintained by them. While the format is not fully
-open, it's nevertheless found an extraordinary level of support among GIS and
+open, it has nevertheless found an extraordinary level of support among GIS and
 other geospatial software.
 
 #### [GeoJSON](https://geojson.org/)
@@ -66,7 +66,8 @@ integrates with web mapping libraries, like Leaflet and OpenLayers.
 A relatively new format that has shown significant performance improvements
 compared to the formats listed above. FlatGeobuf currently lacks the backing of
 standardization, but it has found broad support in geospatial packages and
-software. It is also in early stages for proposal as an OGC Community standard.
+software. It is also currently under review as a proposed OGC Community
+Standard.
 
 #### [GeoParquet](https://geoparquet.org/)
 
@@ -82,7 +83,7 @@ intend to propose it for adoption as an OGC standard.
 
 GeoTIFF has become the dominant format for raster data used in GIS and other
 geospatial computing due in large part to its development on open-source
-standards. It's also often the default and recommended format in libraries like
+standards. It is also often the default and recommended format in libraries like
 GDAL and GIS software like QGIS. The format has been further improved thanks to
 the development of Cloud Optimized GeoTIFFs (COG), which enhances the capacity
 of GeoTIFF for cloud computing and access via the web. COG files can be stored
@@ -92,7 +93,7 @@ and the DRA's Arbutus Object Storage.
 Built atop the TIFF file format, GeoTIFFs also support multiple compression
 algorithms that can significantly reduce their overall file size. Understanding
 and using these algorithms effectively can maximize computing resources while
-also mitigating any data loss.
+also mitigating any unnecessary data loss.
 
 ##### Uncompressed vs Lossless vs Lossy
 
@@ -110,7 +111,7 @@ if the compression quality is set to 100.
 
 Lossless compression provides a valuable middle ground between lossy compression
 and using no compression at all. A GeoTIFF that uses lossless compression can
-see varying levels of file size reduction based on the raster data and
+see varying levels of reduction in file size based on the raster data and
 compression algorithm used. Again a single drawback is that encoding and
 decoding a large lossless file can require varying amounts of computing time.
 Encoding files on powerful machines can reduce encoding times while serving
