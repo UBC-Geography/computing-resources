@@ -22,6 +22,7 @@ project:
 
 website:
   title: "UBC Geography Computing Resources"
+  favicon: "favicon.png"
   site-url: "https://ubc-geography.github.io/computing-resources"
   open-graph:
     title: "UBC Geography Computing Resources"
