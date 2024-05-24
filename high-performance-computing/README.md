@@ -695,21 +695,38 @@ you can use the following in a SLURM job script on the HPC cluster:
 # Provide flags as comments in the script. These will be read by SLURM to set option flags
 # Identify your user account
 #SBATCH --account=def-someuser
-# Identify the amount of memory to use per CPU
-#SBATCH --mem-per-cpu=1.5G  # In this case the job will only use one CPU with 1.5 GB of memory, adjust as needed
-#SBATCH --time=1:00:00 # You can use the test runs on your local machine to help you estimate this
+# Identify the amount of CPU cores and memory to allocate the job
+#SBATCH --cpus-per-task=20
+#SBATCH --mem=64G
+#SBATCH --time=5:00:00 # You can use the test runs on your local machine to help you estimate this
 # At the beginning of your job load the Apptainer module
 module load apptainer
 # CPU Only
 apptainer run -C -W $SLURM_TMPDIR -B /project/images:/project/code/images,/scratch:/project odm_latest.sif --project-path /project
-# For a container with GPU support, run:
+# For a container with GPU support add the following to the top of your job script along with the following command
+#SBATCH --gpu-per-node=1
 # apptainer run -C -W $SLURM_TMPDIR -B /project/images:/project/code/images,/scratch:/project --nv odm_gpu.sif --project-path /project
 ```
 
 The command in the above job script may need to be slightly adjusted based on
 the structure of the HPC cluster that you are using with the job script
-parameters being also being modified to account for the overall size of your
-dataset.
+parameters also being modified to account for the overall size of your dataset.
+In general, the above parameters should work well for a dataset of approximately
+1000 images[^1]. You can also review the following table to help estimate the
+amount of memory to allocate your job based on the size of your dataset.
+
+| Number of Images | RAM or RAM + Swap |
+| ---------------- | ----------------- |
+| 40               | 4                 |
+| 250              | 16                |
+| 500              | 32                |
+| 1500             | 64                |
+| 2500             | 128               |
+| 3500             | 192               |
+| 5000             | 256               |
+
+**Source:**
+<https://docs.opendronemap.org/installation/#hardware-recommendations>
 
 Based on best practices, you will want to store your dataset within your project
 folder and bind the directory holding your dataset to a directory within the
@@ -721,3 +738,8 @@ directory.
 Once the job has been completed, you will need to review ODMs output within the
 scratch directory and transfer any relevant files back into your project
 directory before cleaning up the scratch directory.
+
+[^1]:
+    Gbagir, A. G., Ek, K., & Colpaert, A. (2023). OpenDroneMap: Multi-platform
+    performance analysis. _Geographies_, 3(3), 446-458.
+    <https://doi.org/10.3390/geographies3030023>
