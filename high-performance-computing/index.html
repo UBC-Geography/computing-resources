@@ -906,23 +906,70 @@ Note
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Provide flags as comments in the script. These will be read by SLURM to set option flags</span></span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify your user account</span></span>
 <span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --account=def-someuser</span></span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify the amount of memory to use per CPU</span></span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mem-per-cpu=1.5G  # In this case the job will only use one CPU with 1.5 GB of memory, adjust as needed</span></span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=1:00:00 # You can use the test runs on your local machine to help you estimate this</span></span>
-<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="co"># At the beginning of your job load the Apptainer module</span></span>
-<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load apptainer</span>
-<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="co"># CPU Only</span></span>
-<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> run <span class="at">-C</span> <span class="at">-W</span> <span class="va">$SLURM_TMPDIR</span> <span class="at">-B</span> /project/images:/project/code/images,/scratch:/project odm_latest.sif <span class="at">--project-path</span> /project</span>
-<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="co"># For a container with GPU support, run:</span></span>
-<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="co"># apptainer run -C -W $SLURM_TMPDIR -B /project/images:/project/code/images,/scratch:/project --nv odm_gpu.sif --project-path /project</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The command in the above job script may need to be slightly adjusted based on the structure of the HPC cluster that you are using with the job script parameters being also being modified to account for the overall size of your dataset.</p>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify the amount of CPU cores and memory to allocate the job</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --cpus-per-task=20</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mem=64G</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=5:00:00 # You can use the test runs on your local machine to help you estimate this</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="co"># At the beginning of your job load the Apptainer module</span></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load apptainer</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="co"># CPU Only</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> run <span class="at">-C</span> <span class="at">-W</span> <span class="va">$SLURM_TMPDIR</span> <span class="at">-B</span> /project/images:/project/code/images,/scratch:/project odm_latest.sif <span class="at">--project-path</span> /project</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="co"># For a container with GPU support add the following to the top of your job script along with the following command</span></span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --gpu-per-node=1</span></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="co"># apptainer run -C -W $SLURM_TMPDIR -B /project/images:/project/code/images,/scratch:/project --nv odm_gpu.sif --project-path /project</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The command in the above job script may need to be slightly adjusted based on the structure of the HPC cluster that you are using with the job script parameters also being modified to account for the overall size of your dataset. In general, the above parameters should work well for a dataset of approximately 1000 images<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. You can also review the following table to help estimate the amount of memory to allocate your job based on the size of your dataset.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Number of Images</th>
+<th>RAM or RAM + Swap</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>40</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>250</td>
+<td>16</td>
+</tr>
+<tr class="odd">
+<td>500</td>
+<td>32</td>
+</tr>
+<tr class="even">
+<td>1500</td>
+<td>64</td>
+</tr>
+<tr class="odd">
+<td>2500</td>
+<td>128</td>
+</tr>
+<tr class="even">
+<td>3500</td>
+<td>192</td>
+</tr>
+<tr class="odd">
+<td>5000</td>
+<td>256</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Source:</strong> <a href="https://docs.opendronemap.org/installation/#hardware-recommendations" class="uri">https://docs.opendronemap.org/installation/#hardware-recommendations</a></p>
 <p>Based on best practices, you will want to store your dataset within your project folder and bind the directory holding your dataset to a directory within the container with the path ‘/project/code/images’. You will also want to set ODM to output to your scratch directory by binding it to the ODM project directory. Finally, flag ODM to use the bound scratch directory as the project output directory.</p>
 <p>Once the job has been completed, you will need to review ODMs output within the scratch directory and transfer any relevant files back into your project directory before cleaning up the scratch directory.</p>
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Gbagir, A. G., Ek, K., &amp; Colpaert, A. (2023). OpenDroneMap: Multi-platform performance analysis. <em>Geographies</em>, 3(3), 446-458. <a href="https://doi.org/10.3390/geographies3030023" class="uri">https://doi.org/10.3390/geographies3030023</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
