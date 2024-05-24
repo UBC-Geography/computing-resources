@@ -221,7 +221,7 @@ your terminal with conda/mamba.
 3. Load the apptainer module.
 
    ```bash
-   $ load module apptainer
+   $ module load apptainer
    ```
 
 4. Close the terminal and start a new one.
@@ -274,7 +274,7 @@ your terminal with conda/mamba.
 3. Load the apptainer module.
 
    ```bash
-   $ load module apptainer
+   $ module load apptainer
    ```
 
 4. Close the terminal and start a new one.
