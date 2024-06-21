@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -918,7 +918,7 @@ Note
 <span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --gpu-per-node=1</span></span>
 <span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="co"># apptainer run -C -W $SLURM_TMPDIR -B /project/images:/project/code/images,/scratch:/project --nv odm_gpu.sif --project-path /project</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The command in the above job script may need to be slightly adjusted based on the structure of the HPC cluster that you are using with the job script parameters also being modified to account for the overall size of your dataset. In general, the above parameters should work well for a dataset of approximately 1000 images<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. You can also review the following table to help estimate the amount of memory to allocate your job based on the size of your dataset.</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Number of Images</th>

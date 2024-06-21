@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.554">
+<meta name="generator" content="quarto-1.4.555">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -298,7 +332,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#command-line-tools" id="toc-command-line-tools" class="nav-link active" data-scroll-target="#command-line-tools">Command Line Tools</a>
+  <li><a href="#running-mamba-on-git-bash-for-windows" id="toc-running-mamba-on-git-bash-for-windows" class="nav-link active" data-scroll-target="#running-mamba-on-git-bash-for-windows">Running <code>mamba</code> on Git-Bash for Windows</a></li>
+  <li><a href="#command-line-tools" id="toc-command-line-tools" class="nav-link" data-scroll-target="#command-line-tools">Command Line Tools</a>
   <ul class="collapse">
   <li><a href="#gdal" id="toc-gdal" class="nav-link" data-scroll-target="#gdal">GDAL</a></li>
   <li><a href="#imagemagick" id="toc-imagemagick" class="nav-link" data-scroll-target="#imagemagick">ImageMagick</a></li>
@@ -330,27 +365,71 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Having confidence when using a Unix shell, particularly Bash, is crucial when working within an HPC environment. It can also be extraordinarily helpful when setting up development environments, running scripts in Python or R, or using containers and command line tools.</p>
+<p>If you are looking to install Bash, you can find a helpful walkthrough <a href="https://ubc-library-rc.github.io/intro-git/#pre-workshop-setup">here</a>.</p>
+<p>UBC Library Research Commons frequently runs introductory workshops on Bash, which are listed <a href="https://libcal.library.ubc.ca/calendar/?t=g&amp;q=git">here</a>. And the materials for these workshops are available below:</p>
 <ul>
 <li><p><a href="https://ubc-library-rc.github.io/intro-shell/">Introduction to the UNIX Shell</a></p></li>
 <li><p><a href="https://ubc-library-rc.github.io/advanced-shell/">Intermediate UNIX Shell</a></p></li>
-<li><p><a href="https://mint.westdri.ca/bash/">Bash Course and Webinar</a></p></li>
+</ul>
+<p>Additionally, the SFU’s Research Computing Group provides a full-day workshop on Bash during their annual Summer School in early June with some of the materials for that course available below:</p>
+<ul>
+<li><a href="https://mint.westdri.ca/bash/">Bash Course and Webinar</a></li>
+</ul>
+<p>Additional resources:</p>
+<ul>
+<li><p><a href="https://swcarpentry.github.io/shell-novice/">Software Carpentry - The UNIX Shell</a></p></li>
 <li><p><a href="https://confluence.it.ubc.ca/display/UARC/Introduction+to+Linux+and+Using+the+Command+Line+Interface">Intro to Linux and the Bash Shell in HPC Environments</a></p></li>
 <li><p><a href="https://youtu.be/gKz0-y4DXws?si=1zw4pO6GeOosxzfK">UBC ARC - Intro to the Unix Shell - Video</a></p></li>
 <li><p><a href="https://www.youtube.com/watch?v=eLF598YqbFw">Intro to Linux Shell – Video Lecture</a></p></li>
 <li><p><em><a href="https://go.exlibris.link/6FxkGXft">Pro Bash</a></em></p></li>
 </ul>
+<section id="running-mamba-on-git-bash-for-windows" class="level2">
+<h2 class="anchored" data-anchor-id="running-mamba-on-git-bash-for-windows">Running <code>mamba</code> on Git-Bash for Windows</h2>
+<p>When installing <code>mamba</code> via Miniforge with the recommended options, <code>mamba</code> is not included in your PATH by default, so you’ll only be able use it by running Miniforge Prompt from your Start Menu. For most folks that might be just fine, but we recommend adding both the <code>mamba</code> and <code>conda</code> commands to your Git-Bash environment, so you can more easily take advantage of Bash and Git.</p>
+<p>Start by locating the <code>profile.d</code> folder that was installed with Miniforge via the File Explorer. Most likely this would located at: <code>C:\Users\&lt;your_username&gt;\miniforge3\etc</code>. Right click the <code>profile.d</code> folder and select <code>Open Git Bash here</code>. In the Git Bash terminal, run the following commands:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"source '</span><span class="va">${PWD}</span><span class="st">/conda.sh'"</span> <span class="op">&gt;&gt;</span> ~/.bashrc</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"source '</span><span class="va">${PWD}</span><span class="st">/mamba.sh'"</span> <span class="op">&gt;&gt;</span> ~/.bashrc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then restart your Bash session and check that mamba works:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> source ~/.bashrc</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>You should see output telling you the versions of mamba and conda that are installed.</p>
+</section>
 <section id="command-line-tools" class="level2">
 <h2 class="anchored" data-anchor-id="command-line-tools">Command Line Tools</h2>
 <section id="gdal" class="level3">
 <h3 class="anchored" data-anchor-id="gdal">GDAL</h3>
-<p>GDAL is used by a variety of GIS software to read and write geospatial data, and it is one of the most commonly used geospatial libraries. A range of functionalities can be accessed through the library’s CLI, including conversions between a large collection of raster and vector data formats.</p>
+<p>GDAL is used by a variety of GIS software to read and write geospatial data, and it is one of the most commonly used geospatial libraries. A range of functionalities can be accessed through the various CLI tools that accompany it, including conversions between a large collection of raster and vector data formats.</p>
 <ul>
 <li><a href="https://gdal.org/programs/index.html#general">GDAL Documentation</a></li>
 </ul>
+<p>You can install GDAL from the conda-forge repository using <code>conda</code> or <code>mamba</code>, using one of the following commands:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Mamba</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Conda</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba install libgdal <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> conda install <span class="at">-c</span> conda-forge libgdal <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="imagemagick" class="level3">
 <h3 class="anchored" data-anchor-id="imagemagick">ImageMagick</h3>
 <p>When processing large collections of images, ImageMagick is a very popular tool with an extraordinary amount of functionality. It’s commonly used to convert, resize, and optimize images files in various formats.</p>
+<p>If you are using Windows, you find an installer <a href="https://imagemagick.org/script/download.php#windows">here</a>, which will enable you to use ImageMagick from your your preferred shell. Mac OS and Linux users can install ImageMagick from the conda-forge repository using <code>conda</code> or <code>mamba</code>, using one of the following commands:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Mamba</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Conda</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba install imagemagick <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> conda install <span class="at">-c</span> conda-forge imagemagick <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 <ul>
 <li><p><a href="https://imagemagick.org/script/command-line-tools.php">ImageMagick Documentation</a></p></li>
 <li><p><a href="https://training.westdri.ca/tools/visualization/#imagemagick">Command-line image processing with ImageMagick</a></p></li>
@@ -358,7 +437,18 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="ffmpeg" class="level3">
 <h3 class="anchored" data-anchor-id="ffmpeg">FFmpeg</h3>
-<p>FFmpeg an extremely powerful tool for batch processing both video and audio files.</p>
+<p>FFmpeg an extremely powerful tool for batch processing both video and audio files. It can be installed using one of the following commands:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Mamba</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Conda</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba install ffmpeg <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> conda install <span class="at">-c</span> conda-forge ffmpeg <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 <ul>
 <li><p><a href="https://ffmpeg.org/ffmpeg.html">FFmpeg Documentation</a></p></li>
 <li><p><em><a href="https://go.exlibris.link/XSRj7ZcH">Quick Start Guide to FFmpeg</a></em></p></li>

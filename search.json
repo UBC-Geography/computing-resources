@@ -344,7 +344,17 @@
     "href": "unix-shells-and-clis/index.html",
     "title": "Unix Shells & Command Line Interfaces (CLI)",
     "section": "",
-    "text": "Having confidence when using a Unix shell, particularly Bash, is crucial when working within an HPC environment. It can also be extraordinarily helpful when setting up development environments, running scripts in Python or R, or using containers and command line tools.",
+    "text": "Having confidence when using a Unix shell, particularly Bash, is crucial when working within an HPC environment. It can also be extraordinarily helpful when setting up development environments, running scripts in Python or R, or using containers and command line tools.\nIf you are looking to install Bash, you can find a helpful walkthrough here.\nUBC Library Research Commons frequently runs introductory workshops on Bash, which are listed here. And the materials for these workshops are available below:\nAdditionally, the SFU’s Research Computing Group provides a full-day workshop on Bash during their annual Summer School in early June with some of the materials for that course available below:\nAdditional resources:",
+    "crumbs": [
+      "UNIX Shells and CLIs"
+    ]
+  },
+  {
+    "objectID": "unix-shells-and-clis/index.html#running-mamba-on-git-bash-for-windows",
+    "href": "unix-shells-and-clis/index.html#running-mamba-on-git-bash-for-windows",
+    "title": "Unix Shells & Command Line Interfaces (CLI)",
+    "section": "Running mamba on Git-Bash for Windows",
+    "text": "Running mamba on Git-Bash for Windows\nWhen installing mamba via Miniforge with the recommended options, mamba is not included in your PATH by default, so you’ll only be able use it by running Miniforge Prompt from your Start Menu. For most folks that might be just fine, but we recommend adding both the mamba and conda commands to your Git-Bash environment, so you can more easily take advantage of Bash and Git.\nStart by locating the profile.d folder that was installed with Miniforge via the File Explorer. Most likely this would located at: C:\\Users\\&lt;your_username&gt;\\miniforge3\\etc. Right click the profile.d folder and select Open Git Bash here. In the Git Bash terminal, run the following commands:\n$ echo \"source '${PWD}/conda.sh'\" &gt;&gt; ~/.bashrc\n$ echo \"source '${PWD}/mamba.sh'\" &gt;&gt; ~/.bashrc\nThen restart your Bash session and check that mamba works:\n$ source ~/.bashrc\n$ mamba --version\nYou should see output telling you the versions of mamba and conda that are installed.",
     "crumbs": [
       "UNIX Shells and CLIs"
     ]
@@ -354,7 +364,7 @@
     "href": "unix-shells-and-clis/index.html#command-line-tools",
     "title": "Unix Shells & Command Line Interfaces (CLI)",
     "section": "Command Line Tools",
-    "text": "Command Line Tools\n\nGDAL\nGDAL is used by a variety of GIS software to read and write geospatial data, and it is one of the most commonly used geospatial libraries. A range of functionalities can be accessed through the library’s CLI, including conversions between a large collection of raster and vector data formats.\n\nGDAL Documentation\n\n\n\nImageMagick\nWhen processing large collections of images, ImageMagick is a very popular tool with an extraordinary amount of functionality. It’s commonly used to convert, resize, and optimize images files in various formats.\n\nImageMagick Documentation\nCommand-line image processing with ImageMagick\n\n\n\nFFmpeg\nFFmpeg an extremely powerful tool for batch processing both video and audio files.\n\nFFmpeg Documentation\nQuick Start Guide to FFmpeg",
+    "text": "Command Line Tools\n\nGDAL\nGDAL is used by a variety of GIS software to read and write geospatial data, and it is one of the most commonly used geospatial libraries. A range of functionalities can be accessed through the various CLI tools that accompany it, including conversions between a large collection of raster and vector data formats.\n\nGDAL Documentation\n\nYou can install GDAL from the conda-forge repository using conda or mamba, using one of the following commands:\n\nMambaConda\n\n\n$ mamba install libgdal -y\n\n\n$ conda install -c conda-forge libgdal -y\n\n\n\n\n\nImageMagick\nWhen processing large collections of images, ImageMagick is a very popular tool with an extraordinary amount of functionality. It’s commonly used to convert, resize, and optimize images files in various formats.\nIf you are using Windows, you find an installer here, which will enable you to use ImageMagick from your your preferred shell. Mac OS and Linux users can install ImageMagick from the conda-forge repository using conda or mamba, using one of the following commands:\n\nMambaConda\n\n\n$ mamba install imagemagick -y\n\n\n$ conda install -c conda-forge imagemagick -y\n\n\n\n\nImageMagick Documentation\nCommand-line image processing with ImageMagick\n\n\n\nFFmpeg\nFFmpeg an extremely powerful tool for batch processing both video and audio files. It can be installed using one of the following commands:\n\nMambaConda\n\n\n$ mamba install ffmpeg -y\n\n\n$ conda install -c conda-forge ffmpeg -y\n\n\n\n\nFFmpeg Documentation\nQuick Start Guide to FFmpeg",
     "crumbs": [
       "UNIX Shells and CLIs"
     ]
