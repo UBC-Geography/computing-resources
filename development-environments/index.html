@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -300,7 +334,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#virtual-environment-managers" id="toc-virtual-environment-managers" class="nav-link active" data-scroll-target="#virtual-environment-managers">Virtual Environment Managers</a>
   <ul class="collapse">
-  <li><a href="#conda" id="toc-conda" class="nav-link" data-scroll-target="#conda">Conda</a></li>
+  <li><a href="#conda-and-mamba" id="toc-conda-and-mamba" class="nav-link" data-scroll-target="#conda-and-mamba">Conda and Mamba</a></li>
   <li><a href="#python---venv-and-virtualenv" id="toc-python---venv-and-virtualenv" class="nav-link" data-scroll-target="#python---venv-and-virtualenv">Python - venv and virtualenv</a></li>
   <li><a href="#r---renv" id="toc-r---renv" class="nav-link" data-scroll-target="#r---renv">R - renv</a></li>
   </ul></li>
@@ -342,15 +376,16 @@ ul.task-list li input[type="checkbox"] {
 <li><p>UBC ARC - Virtual Environment 2023 - Videos: <a href="https://youtu.be/fdMNwQu8MKU?si=Fu_JogcK_SxEsBiC">Part 1 (virtualenv)</a> &amp; <a href="https://youtu.be/BrZ_5rP4b0g?si=GkDWSa9CG5z1uqYx">Part 2 (conda)</a></p></li>
 <li><p><a href="https://UBC-Geography.github.io/development-environments/conda-getting-started">Getting Started with Conda, Virtual Environments, and Python</a></p></li>
 </ul>
-<section id="conda" class="level3">
-<h3 class="anchored" data-anchor-id="conda">Conda</h3>
-<p>Conda is an extremely powerful tool for both managing environments and packages. Using <code>conda install</code> provides the ability to install a range of packages that either aren’t available or can’t be installed via Python’s built-in package manager, Pip. Additionally, Conda enables you to install and manage multiple versions of Python on a single machine using virtual environments.</p>
+<section id="conda-and-mamba" class="level3">
+<h3 class="anchored" data-anchor-id="conda-and-mamba">Conda and Mamba</h3>
+<p><code>conda</code> and it’s faster alternative, <code>mamba</code>, are extremely powerful tools for both managing virtual environments and packages. Using <code>conda install</code> provides the ability to install a range of packages that either aren’t available or can’t be installed via Python’s built-in package manager, Pip. Additionally, Conda enables you to install and manage multiple versions of Python or a range of other programming languages on a single machine using virtual environments.</p>
 <ul>
-<li><a href="https://docs.conda.io/projects/conda/en/stable/user-guide/index.html">conda User Guide</a></li>
+<li><p><a href="https://docs.conda.io/projects/conda/en/stable/user-guide/index.html">Conda User Guide</a></p></li>
+<li><p><a href="https://mamba.readthedocs.io/en/latest/user_guide/mamba.html">Mamba User Guide</a></p></li>
 </ul>
-<p>If you need to install Conda on your device, we suggest using the link below to install it using the Miniconda installer.</p>
+<p>If you need to install <code>mamba</code> and <code>conda</code> on your device, we suggest using the link below to install it using the Miniforge installer.</p>
 <ul>
-<li><a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda, a minimal installer for conda</a></li>
+<li><a href="https://github.com/conda-forge/miniforge">Miniforge</a></li>
 </ul>
 </section>
 <section id="python---venv-and-virtualenv" class="level3">
@@ -388,12 +423,69 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="jupyterlab" class="level4">
 <h4 class="anchored" data-anchor-id="jupyterlab">JupyterLab</h4>
-<p>You can install and run JupyterLab on your local machine in two separate ways. The traditional and most flexible approach is to install JupyterLab as a Python package using Pip or Conda and starting it from the Jupyter command line interface. This approach uses a locally installed version of Python to start a basic, local server on your machine and then navigates to that server through your preferred web browser. For those who may be uncomfortable with installing Python and/or using command line interfaces, Project Jupyter has also released a simple-to-use desktop application, named JupyterLab Desktop. This application comes packaged with Python and a default set of packages that are frequently used in scientific computing.</p>
+<p>You can install and run JupyterLab on your local machine in two separate ways. The traditional and most flexible approach is to install JupyterLab as a Python package using <code>pip</code>, <code>conda</code>, or <code>mamba</code> and starting it from the Jupyter command line interface. We recommend the latter using the following commands to create a new environment and install Jupyter along with it’s dependencies within that environment.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba create <span class="at">-n</span> jupyter jupyterlab <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then activate the Jupyter environment and start Jupyter Lab.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba activate jupyter</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">jupyter</span><span class="kw">)</span> <span class="ex">$</span> jupyter lab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will fire up a Jupyter server and open the JupyterLab interface directly in your web browser.</p>
 <ul>
-<li><p><a href="https://jupyterlab.readthedocs.io/en/latest/index.html">JupyterLab Documentation</a></p></li>
+<li><a href="https://jupyterlab.readthedocs.io/en/latest/index.html">JupyterLab Documentation</a></li>
+</ul>
+<p>For those who may be uncomfortable with installing Python and/or using command line interfaces, Project Jupyter has also released a simple-to-use desktop application, named JupyterLab Desktop. This application comes packaged with Python and a default set of packages that are frequently used in scientific computing.</p>
+<ul>
 <li><p><a href="https://github.com/jupyterlab/jupyterlab-desktop#installation">JupyterLab Desktop - Installation</a></p></li>
 <li><p><a href="https://github.com/jupyterlab/jupyterlab-desktop/blob/master/user-guide.md">JupyterLab Desktop User Guide</a></p></li>
 </ul>
+</section>
+<section id="jupyter-kernels" class="level4">
+<h4 class="anchored" data-anchor-id="jupyter-kernels">Jupyter Kernels</h4>
+<p>Jupyter uses the term kernel to refer to separate programming languages with their own interactive shells. It’s not uncommon to have multiple projects running in different programming languages. This is where kernels can come in handy as they enable you to have multiple, isolated computing environments available within a single IDE.</p>
+<p>When you installed JupyterLab with <code>mamba</code>, it came with its own preferred version of Python on which it is dependent. This installation of Python is immediately added as your default Jupyter kernel.</p>
+<p>and for R it is <code>r-irkernel</code>. You can find a comprehensive list of packages for various programming languages <a href="https://github.com/jupyter/jupyter/wiki/Jupyter-kernels">here</a>.</p>
+<section id="python" class="level5">
+<h5 class="anchored" data-anchor-id="python">Python</h5>
+<p>You are more than welcome to start installing Python packages into the Jupyter virtual environment to make them available to the default Python kernel and the Jupyter notebooks that are running off that kernel, but we recommend taking the additional step of installing another kernel that runs in a separate environment from Jupyter. Yes, that means that you’ll have at least three different installations of Python running on your machine if you are using and that might feel a bit redundant, but the additional isolation and flexibility will be well worth it as they’ll ensure that you can customize your Jupyter environment with all the extensions you want alongside a Python environment that can run any package you need on whatever Python version you want (only stable and maintained versions please). This comes with the added benefit of being able to export and share your conda environment and ensuring that those you share it with only install the packages that they need to run your code.</p>
+<p>Open a new terminal either in JupyterLab or a shell environment with access to <code>mamba</code>. Then create a new virtual environment with the version of Python that you’d like to install along with <code>ipykernel</code>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba create <span class="at">-n</span> python_env python=3.12 ipykernel <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Next, use <code>ipykernel</code> to install the virtual environment as a Jupyter kernel.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba run <span class="at">-n</span> python_env python <span class="at">-m</span> ipykernel install <span class="at">--user</span> <span class="at">--name</span> python_env <span class="at">--display-name</span> <span class="st">"Python (python_env)"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Launch JupyterLab, if it isn’t already running, and you should see the python_env environment listed as a kernel in the launcher.</p>
+</section>
+<section id="r" class="level5">
+<h5 class="anchored" data-anchor-id="r">R</h5>
+<p>Similar to Python, you have the option of running an R kernel within the same environment as Jupyter or from an entirely separate one. Unfortunately, setting up an R kernel can be a little more complex, so the recommended approach is to run your R kernels alongside Jupyter within their own separate virtual environments. This loses some of the convenience of operating within a single JupyterLab setup or alternatively running within an R-centered IDE, like RStudio, but it comes with the key benefit of enabling your R code to be shared in a larger Jupyter-based ecosystem.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba create <span class="at">-n</span> r_env r-base r-irkernel jupyter <span class="at">-y</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba run <span class="at">-n</span> r_env Rscript <span class="at">-e</span> <span class="st">"IRkernel::installspec(name='r_env',displayname='R (r_env)')"</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba run <span class="at">-n</span> r_env jupyter lab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you are keen to attempt to add an R kernel to an exiting Jupyter environment and don’t mind running into a few issues, you can try the following set of commands.</p>
+<p>Create your R-based conda environment, which will be hosting the kernel, and activate it.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba create <span class="at">-n</span> r_env r-base r-irkernel <span class="at">-y</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba activate r_env</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then from a Bash environment copy the kernelspec directory that is included with the r-irkernel package. This directory holds a default kernel config that is used when installing kernels in Jupyter.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cp <span class="at">-r</span> <span class="va">$CONDA_PREFIX</span>/lib/R/library/IRkernel/kernelspec r_env_kernel</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>First run one <code>sed</code> command on the Jupyter kernel config file that replaces the command that starts the default installation of R with a command that points to the installation of R running in your virtual environment.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Mac OS or Linux</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Be sure to replace <code>&lt;user_name&gt;</code> with your Windows username.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sed <span class="at">-i</span> <span class="st">'s/"R", /"C:\\\\Users\\\\&lt;user_name&gt;\\\\miniforge3\\\\Scripts\\\\mamba.exe", "run", "-n", "r_env", "R", /'</span> r_env_kernel/kernel.json</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sed <span class="at">-i</span> <span class="st">'s/"R", /"mamba", "run", "-n", "r_env", "R", /'</span> r_env_kernel/kernel.json</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>Then update the display name used in the Jupyter launcher to match your environment name.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sed <span class="at">-i</span> <span class="st">'s/"display_name":"R"/"display_name":"R (r_env)"/'</span> r_env_kernel/kernel.json</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Deactivate your environment.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba deactivate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Finally, install the kernel into Jupyter and cleanup by deleting the temporary kernel config directory.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba run <span class="at">-n</span> jupyter jupyter kernelspec install r_env_kernel <span class="at">--user</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> rm <span class="at">-rf</span> r_env_kernel</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>When you start up JupyterLab, the new R kernel should be listed in the launcher.</p>
+</section>
 </section>
 <section id="jupyterhub" class="level4">
 <h4 class="anchored" data-anchor-id="jupyterhub">JupyterHub</h4>
@@ -450,7 +542,9 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="rstudio" class="level3">
 <h3 class="anchored" data-anchor-id="rstudio">RStudio</h3>
-<p>While JupyterLab excels at providing an intuitive environment for creating and editing Python-based computational notebooks, RStudio provides a similarly intuitive environment for working with the R programming language. It provides useful tools for writing R scripts, interacting with the R console, or developing R-based computational notebooks with Quarto or R Markdown.</p>
+<p>While JupyterLab excels at providing an intuitive environment for creating and editing Python-based computational notebooks, RStudio provides a similarly intuitive environment for working with the R programming language. It provides useful tools for writing R scripts, interacting with the R console, or developing R-based computational notebooks with <a href="https://quarto.org/docs/get-started/hello/rstudio.html">Quarto</a> or <a href="https://rmarkdown.rstudio.com/lesson-2.html">RMarkdown</a>.</p>
+<p>You can find installers for multiple operating systems <a href="https://posit.co/download/rstudio-desktop/">here</a>.</p>
+<p>When starting a new R project in RStudio, always checkmark ‘Use renv with this project’. This will ensure that you create an isolated and reproducible environment similar to those that are produced with <code>mamba</code>/<code>conda</code> or Python’s <code>venv</code>.</p>
 <ul>
 <li><a href="https://docs.posit.co/ide/user/ide/get-started/">RStudio UserGuide</a></li>
 </ul>
@@ -484,15 +578,15 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Quarto Extension Overview</a></li>
 </ul>
 </section>
-<section id="python" class="level5">
-<h5 class="anchored" data-anchor-id="python">Python</h5>
+<section id="python-1" class="level5">
+<h5 class="anchored" data-anchor-id="python-1">Python</h5>
 <ul>
 <li><p><a href="https://code.visualstudio.com/docs/languages/python">Python in VS Code Documentation</a></p></li>
 <li><p><a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python Extension Overview</a></p></li>
 </ul>
 </section>
-<section id="r" class="level5">
-<h5 class="anchored" data-anchor-id="r">R</h5>
+<section id="r-1" class="level5">
+<h5 class="anchored" data-anchor-id="r-1">R</h5>
 <ul>
 <li><p><a href="https://code.visualstudio.com/docs/languages/r">R in VS Code Documentation</a></p></li>
 <li><p><a href="https://marketplace.visualstudio.com/items?itemName=REditorSupport.r">R Extension Overview</a></p></li>
