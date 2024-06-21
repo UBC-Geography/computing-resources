@@ -18,20 +18,23 @@ errors caused by clashing package dependencies.
 
 - [Getting Started with Conda, Virtual Environments, and Python](https://UBC-Geography.github.io/development-environments/conda-getting-started)
 
-### Conda
+### Conda and Mamba
 
-Conda is an extremely powerful tool for both managing environments and packages.
-Using `conda install` provides the ability to install a range of packages that
-either aren't available or can't be installed via Python's built-in package
-manager, Pip. Additionally, Conda enables you to install and manage multiple
-versions of Python on a single machine using virtual environments.
+`conda` and it's faster alternative, `mamba`, are extremely powerful tools for
+both managing virtual environments and packages. Using `conda install` provides
+the ability to install a range of packages that either aren't available or can't
+be installed via Python's built-in package manager, Pip. Additionally, Conda
+enables you to install and manage multiple versions of Python or a range of
+other programming languages on a single machine using virtual environments.
 
-- [conda User Guide](https://docs.conda.io/projects/conda/en/stable/user-guide/index.html)
+- [Conda User Guide](https://docs.conda.io/projects/conda/en/stable/user-guide/index.html)
 
-If you need to install Conda on your device, we suggest using the link below to
-install it using the Miniconda installer.
+- [Mamba User Guide](https://mamba.readthedocs.io/en/latest/user_guide/mamba.html)
 
-- [Miniconda, a minimal installer for conda](https://docs.conda.io/en/latest/miniconda.html)
+If you need to install `mamba` and `conda` on your device, we suggest using the
+link below to install it using the Miniforge installer.
+
+- [Miniforge](https://github.com/conda-forge/miniforge)
 
 ### Python - venv and virtualenv
 
@@ -86,20 +89,167 @@ JupyterLab, its more feature-rich successor.
 
 You can install and run JupyterLab on your local machine in two separate ways.
 The traditional and most flexible approach is to install JupyterLab as a Python
-package using Pip or Conda and starting it from the Jupyter command line
-interface. This approach uses a locally installed version of Python to start a
-basic, local server on your machine and then navigates to that server through
-your preferred web browser. For those who may be uncomfortable with installing
-Python and/or using command line interfaces, Project Jupyter has also released a
-simple-to-use desktop application, named JupyterLab Desktop. This application
-comes packaged with Python and a default set of packages that are frequently
-used in scientific computing.
+package using `pip`, `conda`, or `mamba` and starting it from the Jupyter
+command line interface. We recommend the latter using the following commands to
+create a new environment and install Jupyter along with it's dependencies within
+that environment.
+
+```bash
+$ mamba create -n jupyter jupyterlab -y
+```
+
+Then activate the Jupyter environment and start Jupyter Lab.
+
+```bash
+$ mamba activate jupyter
+(jupyter) $ jupyter lab
+```
+
+This will fire up a Jupyter server and open the JupyterLab interface directly in
+your web browser.
 
 - [JupyterLab Documentation](https://jupyterlab.readthedocs.io/en/latest/index.html)
+
+For those who may be uncomfortable with installing Python and/or using command
+line interfaces, Project Jupyter has also released a simple-to-use desktop
+application, named JupyterLab Desktop. This application comes packaged with
+Python and a default set of packages that are frequently used in scientific
+computing.
 
 - [JupyterLab Desktop - Installation](https://github.com/jupyterlab/jupyterlab-desktop#installation)
 
 - [JupyterLab Desktop User Guide](https://github.com/jupyterlab/jupyterlab-desktop/blob/master/user-guide.md)
+
+#### Jupyter Kernels
+
+Jupyter uses the term kernel to refer to separate programming languages with
+their own interactive shells. It's not uncommon to have multiple projects
+running in different programming languages. This is where kernels can come in
+handy as they enable you to have multiple, isolated computing environments
+available within a single IDE.
+
+When you installed JupyterLab with `mamba`, it came with its own preferred
+version of Python on which it is dependent. This installation of Python is
+immediately added as your default Jupyter kernel.
+
+and for R it is `r-irkernel`. You can find a comprehensive list of packages for
+various programming languages
+[here](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels).
+
+##### Python
+
+You are more than welcome to start installing Python packages into the Jupyter
+virtual environment to make them available to the default Python kernel and the
+Jupyter notebooks that are running off that kernel, but we recommend taking the
+additional step of installing another kernel that runs in a separate environment
+from Jupyter. Yes, that means that you'll have at least three different
+installations of Python running on your machine if you are using and that might
+feel a bit redundant, but the additional isolation and flexibility will be well
+worth it as they'll ensure that you can customize your Jupyter environment with
+all the extensions you want alongside a Python environment that can run any
+package you need on whatever Python version you want (only stable and maintained
+versions please). This comes with the added benefit of being able to export and
+share your conda environment and ensuring that those you share it with only
+install the packages that they need to run your code.
+
+Open a new terminal either in JupyterLab or a shell environment with access to
+`mamba`. Then create a new virtual environment with the version of Python that
+you'd like to install along with `ipykernel`.
+
+```bash
+$ mamba create -n python_env python=3.12 ipykernel -y
+```
+
+Next, use `ipykernel` to install the virtual environment as a Jupyter kernel.
+
+```bash
+$ mamba run -n python_env python -m ipykernel install --user --name python_env --display-name "Python (python_env)"
+```
+
+Launch JupyterLab, if it isn't already running, and you should see the
+python_env environment listed as a kernel in the launcher.
+
+##### R
+
+Similar to Python, you have the option of running an R kernel within the same
+environment as Jupyter or from an entirely separate one. Unfortunately, setting
+up an R kernel can be a little more complex, so the recommended approach is to
+run your R kernels alongside Jupyter within their own separate virtual
+environments. This loses some of the convenience of operating within a single
+JupyterLab setup or alternatively running within an R-centered IDE, like
+RStudio, but it comes with the key benefit of enabling your R code to be shared
+in a larger Jupyter-based ecosystem.
+
+```bash
+$ mamba create -n r_env r-base r-irkernel jupyter -y
+$ mamba run -n r_env Rscript -e "IRkernel::installspec(name='r_env',displayname='R (r_env)')"
+$ mamba run -n r_env jupyter lab
+```
+
+If you are keen to attempt to add an R kernel to an exiting Jupyter environment
+and don't mind running into a few issues, you can try the following set of
+commands.
+
+Create your R-based conda environment, which will be hosting the kernel, and
+activate it.
+
+```bash
+$ mamba create -n r_env r-base r-irkernel -y
+$ mamba activate r_env
+```
+
+Then from a Bash environment copy the kernelspec directory that is included with
+the r-irkernel package. This directory holds a default kernel config that is
+used when installing kernels in Jupyter.
+
+```bash
+$ cp -r $CONDA_PREFIX/lib/R/library/IRkernel/kernelspec r_env_kernel
+```
+
+First run one `sed` command on the Jupyter kernel config file that replaces the
+command that starts the default installation of R with a command that points to
+the installation of R running in your virtual environment.
+
+::: {.panel-tabset}
+
+## Windows
+
+Be sure to replace `<user_name>` with your Windows username.
+
+```bash
+$ sed -i 's/"R", /"C:\\\\Users\\\\<user_name>\\\\miniforge3\\\\Scripts\\\\mamba.exe", "run", "-n", "r_env", "R", /' r_env_kernel/kernel.json
+```
+
+## Mac OS or Linux
+
+```bash
+$ sed -i 's/"R", /"mamba", "run", "-n", "r_env", "R", /' r_env_kernel/kernel.json
+```
+
+:::
+
+Then update the display name used in the Jupyter launcher to match your
+environment name.
+
+```bash
+$ sed -i 's/"display_name":"R"/"display_name":"R (r_env)"/' r_env_kernel/kernel.json
+```
+
+Deactivate your environment.
+
+```bash
+$ mamba deactivate
+```
+
+Finally, install the kernel into Jupyter and cleanup by deleting the temporary
+kernel config directory.
+
+```bash
+$ mamba run -n jupyter jupyter kernelspec install r_env_kernel --user
+$ rm -rf r_env_kernel
+```
+
+When you start up JupyterLab, the new R kernel should be listed in the launcher.
 
 #### JupyterHub
 
@@ -157,7 +307,17 @@ While JupyterLab excels at providing an intuitive environment for creating and
 editing Python-based computational notebooks, RStudio provides a similarly
 intuitive environment for working with the R programming language. It provides
 useful tools for writing R scripts, interacting with the R console, or
-developing R-based computational notebooks with Quarto or R Markdown.
+developing R-based computational notebooks with
+[Quarto](https://quarto.org/docs/get-started/hello/rstudio.html) or
+[RMarkdown](https://rmarkdown.rstudio.com/lesson-2.html).
+
+You can find installers for multiple operating systems
+[here](https://posit.co/download/rstudio-desktop/).
+
+When starting a new R project in RStudio, always checkmark 'Use renv with this
+project'. This will ensure that you create an isolated and reproducible
+environment similar to those that are produced with `mamba`/`conda` or Python's
+`venv`.
 
 - [RStudio UserGuide](https://docs.posit.co/ide/user/ide/get-started/)
 

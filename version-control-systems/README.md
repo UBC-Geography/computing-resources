@@ -20,9 +20,22 @@ Git is by far the most popular version control system and comes with a powerful
 command line interface while integrating with code sharing and development
 platforms, like GitHub and GitLab.
 
+UBC Library Research Commons frequently runs introductory workshops on Git and
+GitHub, which are listed
+[here](https://libcal.library.ubc.ca/calendar/?t=g&q=git). And the materials for
+these workshops are available below:
+
 - [UBC Library Research Commons - Introduction to Git and GitHub](https://ubc-library-rc.github.io/intro-git/)
 
+Additionally, the SFU's Research Computing Group provides a full-day workshop on
+Bash during their annual Summer School in early June with some of the materials
+for that course available below:
+
 - [Digital Research Alliance - Git Tutorial and Workshops](https://mint.westdri.ca/git/)
+
+Additional Resources:
+
+- [Software Carpentry - Version Control with Git](https://swcarpentry.github.io/git-novice/)
 
 - _[Pro Git](https://git-scm.com/book/en/v2)_
 

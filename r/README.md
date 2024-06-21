@@ -8,6 +8,17 @@ geography research due in part to the large collection of geospatial packages
 that have been developed with it along with it's broad adoption for scientific
 computing.
 
+The easiest and most recommended approach for getting started with R is to
+download the installer from CRAN:
+
+- [Windows](https://cran.r-project.org/bin/windows/base/)
+
+- [Mac OS](https://cran.r-project.org/bin/macosx/)
+
+- [Linux](https://cran.r-project.org/bin/linux/)
+
+Additional Resources:
+
 - _[R in Action](https://go.exlibris.link/P6rJdt9g)_
 
 - _[R for the Rest of Us](https://learning.oreilly.com/library/view/r-for-the/9781098182199/)_
