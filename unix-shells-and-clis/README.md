@@ -12,7 +12,7 @@ If you are looking to install Bash, you can find a helpful walkthrough
 [here](https://ubc-library-rc.github.io/intro-git/#pre-workshop-setup).
 
 UBC Library Research Commons frequently runs introductory workshops on Bash,
-which are listed [here](https://libcal.library.ubc.ca/calendar/?t=g&q=git). And
+which are listed [here](https://libcal.library.ubc.ca/calendar/?t=g&q=unix). And
 the materials for these workshops are available below:
 
 - [Introduction to the UNIX Shell](https://ubc-library-rc.github.io/intro-shell/)
