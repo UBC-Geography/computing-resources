@@ -17,19 +17,30 @@ download the installer from CRAN:
 
 - [Linux](https://cran.r-project.org/bin/linux/)
 
-Additional Resources:
+The following resources will provide general introductions to R and its
+applications within data science, so any of them can be useful for learning the
+basics of R.
 
-- _[R in Action](https://go.exlibris.link/P6rJdt9g)_
+- _R in Action_ : [UBC Library](https://go.exlibris.link/P6rJdt9g) |
+  [WorldCat](https://search.worldcat.org/title/1325721232)
 
-- _[R for the Rest of Us](https://learning.oreilly.com/library/view/r-for-the/9781098182199/)_
+- _R for the Rest of Us_ : [UBC Library](https://go.exlibris.link/CryW41CM) |
+  [WorldCat](https://search.worldcat.org/title/1431119628)
 
-- _[R for Data Science](https://go.exlibris.link/FW9jGNqj)_
+- _R for Data Science_ : [UBC Library](https://go.exlibris.link/FW9jGNqj) |
+  [WorldCat](https://search.worldcat.org/title/1392138200)
 
-- _[Statistical Analysis with R for Dummies](https://learning.oreilly.com/library/view/statistical-analysis-with/9781394263424/)_
+- _Statistical Analysis with R Essentials for Dummies_ :
+  [UBC Library](https://go.exlibris.link/Stf1fNCy) |
+  [WorldCat](https://search.worldcat.org/title/1430211695)
 
-- _[R 4 Data Science Quick Reference](https://go.exlibris.link/PLPKnlK4)_
+- _R 4 Data Science Quick Reference_ :
+  [UBC Library](https://go.exlibris.link/PLPKnlK4) |
+  [WorldCat](https://search.worldcat.org/title/1349468003)
 
-- _[Data Science Fundamentals with R, Python, and Open Data](https://learning.oreilly.com/library/view/data-science-fundamentals/9781394213245/)_
+- _Data Science Fundamentals with R, Python, and Open Data_ :
+  [UBC Library](https://go.exlibris.link/kz6Z0BfH) |
+  [WorldCat](https://search.worldcat.org/title/1409031863)
 
 - [Quick-R](https://www.statmethods.net/)
 
@@ -39,29 +50,66 @@ Additional Resources:
 
 - _[Geographic Data Science with R: Visualizing and Analyzing Environmental Change](https://doi.org/10.1201/9781003326199)_
 
-- _[Learning R for Geospatial Analysis](https://go.exlibris.link/nMcRqq29)_
+- _Learning R for Geospatial Analysis_ :
+  [UBC Library](https://go.exlibris.link/nMcRqq29) |
+  [WorldCat](https://search.worldcat.org/title/900886812)
 
 - _[Introduction to R for Spatial Data Science](https://rspatial.org/intr/index.html)_
 
 - _[Spatial Data Science with Applications in R](https://r-spatial.org/book/)_
 
-- _[Geocomputation with R](https://resolve.library.ubc.ca/cgi-bin/catsearch?bid=9737992)_
+- _Geocomputation with R_ : [UBC Library](https://go.exlibris.link/hS3B926C) |
+  [WorldCat](https://search.worldcat.org/title/1090540543)
 
-- _[Remote Sensing and Digital Image Processing with R](https://go.exlibris.link/JMr62B9N)_
+- _Remote Sensing and Digital Image Processing with R_ :
+  [UBC Library](https://go.exlibris.link/JMr62B9N) |
+  [WorldCat](https://search.worldcat.org/title/1378724739)
 
-- _[Surveying with Geomatics and R](https://go.exlibris.link/yzsrpMzv)_
+- _Surveying with Geomatics and R_ :
+  [UBC Library](https://go.exlibris.link/yzsrpMzv) |
+  [WorldCat](https://search.worldcat.org/title/1273700848)
 
 ### Extending GIS Software
 
-- _[Hands-On Geospatial Analysis with R and QGIS](https://go.exlibris.link/c835FCNj)_
+- _Hands-On Geospatial Analysis with R and QGIS_ :
+  [UBC Library](https://go.exlibris.link/c835FCNj) |
+  [WorldCat](https://search.worldcat.org/title/1084488168)
 
 ## Geospatial Libraries/Packages
 
+A relatively comprehensive list of packages can be found in the R section of
+[Awesome Geospatial](https://github.com/sacridini/Awesome-Geospatial#R).
+
+Additionally, you can identify packages from the following CRAN task views.
+
+- [CRAN Task View: Analysis of Ecological and Environmental Data](https://cran.r-project.org/web/views/Environmetrics.html)
+
+- [CRAN Task View: Hydrological Data and Modeling](https://cran.r-project.org/web/views/Hydrology.html)
+
 - [CRAN Task View: Analysis of Spatial Data](https://cran.r-project.org/web/views/Spatial.html)
 
-- [Awesome Geospatial - R](https://github.com/sacridini/Awesome-Geospatial#r)
+- [CRAN Task View: Handling and Analyzing Spatio-Temporal Data](https://cran.r-project.org/web/views/SpatioTemporal.html)
 
-## Formatting
+## Interactive Visualizations and Dashboards
+
+Dashboard libraries enable you to create interactive visualizations from either
+Python code or Jupyter Notebooks, which can be hosted on sparsely-resourced
+servers and shared as web applications.
+
+- [Shiny for R - Getting Started](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html)
+
+- [Shiny for R - Leaflet: Interactive Web Maps with R](https://posit.co/blog/leaflet-interactive-web-maps-with-r/)
+
+- _Mastering Shiny_ : [UBC Library](https://go.exlibris.link/BST471rL) |
+  [WorldCat](https://search.worldcat.org/title/1235778006)
+
+- [Dash R User Guide](https://dash.plotly.com/r)
+
+- [Dash - Plotly Maps](https://plotly.com/r/maps/)
+
+## Code Quality Tools
+
+### Formatting
 
 Sometimes writing code can get a bit messy. Formatters, like styler, can
 automatically reformat your code to make it cleaner and easier to read while
@@ -75,7 +123,7 @@ RStudio includes a formatting tool via Code \> Reformat Code
 
 - [styler Documentation](https://styler.r-lib.org/)
 
-## Linting
+### Linting
 
 Using a static analysis tool, or linter, is a common best practice among
 programmers that helps identify mistakes when writing code by ensuring that you
@@ -83,7 +131,7 @@ follow the correct syntax and a guiding set of best practices.
 
 - [lintr Documentation](https://lintr.r-lib.org/)
 
-## Testing Framework
+### Testing Framework
 
 Similar to type checking, unit testing can be a helpful tool when writing large
 and complex scripts or programs. Testing frameworks enable you to define tests
@@ -92,7 +140,7 @@ in a range of practical scenarios.
 
 - [testthat Documentation](https://testthat.r-lib.org/)
 
-## Benchmarking
+### Benchmarking
 
 When writing code, there is often a wide array of ways in which a task can be
 completed. Benchmarking your functions can help you find the most efficient
@@ -101,49 +149,3 @@ programs that will be used on large datasets and/or on high performance
 computers.
 
 - [bench Documentation](https://cran.r-project.org/web/packages/bench/bench.pdf)
-
-## Other Related Libraries/Packages
-
-- [trajectories](https://cran.r-project.org/web/packages/trajectories/trajectories.pdf)
-
-  - [trajectories: Classes and Methods for Trajectory Data](https://cran.r-project.org/web/packages/trajectories/vignettes/article.pdf)
-
-- [xts](https://cran.r-project.org/web/packages/xts/xts.pdf)
-
-  - [xts: Extensible Time Series](https://cran.r-project.org/web/packages/xts/vignettes/xts.pdf)
-
-- [zoo](https://cran.r-project.org/web/packages/zoo/zoo.pdf)
-
-  - [zoo: An S3 Class and Methods for Indexed Totally Ordered Observations](https://cran.r-project.org/web/packages/zoo/vignettes/zoo.pdf)
-
-- [tidygraph](https://cran.r-project.org/web/packages/tidygraph/tidygraph.pdf)
-
-- [proj4](https://cran.r-project.org/web/packages/proj4/proj4.pdf)
-
-- [dpylr](https://dplyr.tidyverse.org/)
-
-  - [Introduction to dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)
-
-  - [dpylr Reference Manual](https://cran.r-project.org/web/packages/dplyr/dplyr.pdf)
-
-- [tidyr](https://tidyr.tidyverse.org/)
-
-  - [tidyr Reference Manual](https://cran.r-project.org/web/packages/tidyr/tidyr.pdf)
-
-- [CAST](https://cran.r-project.org/web/packages/CAST/CAST.pdf)
-
-  - [Introduction to CAST](https://hannameyer.github.io/CAST/articles/cast01-CAST-intro.html)
-
-- [mlr3Spatial](https://cran.r-project.org/web/packages/mlr3spatial/mlr3spatial.pdf)
-
-  - [Spatial Data in the mlr3 Ecosystem](https://mlr-org.com/gallery/technical/2023-02-27-land-cover-classification/)
-
-- [performanceEstimation](https://github.com/ltorgo/performanceEstimation/blob/master/README.md)
-
-  - [performanceEstimation Reference Manual](https://cran.r-project.org/web/packages/performanceEstimation/performanceEstimation.pdf)
-
-- [plotly Reference Manual](https://plotly-r.com/)
-
-  - [Interactive web-based data visualization with R, plotly, and shiny](https://plotly-r.com/)
-
-- [reticulate](https://rstudio.github.io/reticulate/index.html)
