@@ -21,6 +21,10 @@ The following resources will provide general introductions to R and its
 applications within data science, so any of them can be useful for learning the
 basics of R.
 
+- [Software Carpentry - Programming with R](https://swcarpentry.github.io/r-novice-inflammation/)
+
+- [Software Carpentry - R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/)
+
 - _R in Action_ : [UBC Library](https://go.exlibris.link/P6rJdt9g) |
   [WorldCat](https://search.worldcat.org/title/1325721232)
 
