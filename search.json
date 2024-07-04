@@ -184,7 +184,7 @@
     "href": "javascript/index.html",
     "title": "JavaScript",
     "section": "",
-    "text": "While not nearly as useful as Python or R in geospatial computing, JavaScript can be a useful language for a geographer to have on their radar, especially if they are interested in creating web maps and/or sharing their research online via interactive visualizations.",
+    "text": "While JavaScript has fewer applications in geography compared to other languages like Python and R, it remains a useful skill to develop, particularly for creating interactive web maps and web-based visualizations.\nIt’s important to note that JavaScript code can be executed in various and often quite different contexts with the most common being web browsers (front-end or client-side) and runtime engines (back-end or server-side), like Node.js and Deno. Most applications of JavaScript relevant to geographers occurs in the former with the use of libraries, like Leaflet, D3.js, and Observable.\nThe following resources will provide general introductions to JavaScript and its applications within the context of a web browser, so any of them can be useful for learning the basics of JavaScript.",
     "crumbs": [
       "JavaScript"
     ]
@@ -194,47 +194,27 @@
     "href": "javascript/index.html#geospatial-librariespackages",
     "title": "JavaScript",
     "section": "Geospatial Libraries/Packages",
-    "text": "Geospatial Libraries/Packages\n\nAwesome Frontend GIS\n\n\nWeb Mapping\n\nAwesome Geospatial – Web Mapping\n\n\nLeaflet\nThe smallest and most popular of the three major JavaScript web mapping libraries, Leaflet lacks some of the functionalities of comparable libraries, but provides the best options for quickly rendering small to medium datasets. For additional functionality, Leaflet can be extended using a wide array of plugins.\n\nUBC Library Research Commons - Web Mapping with LeafletJS\nLeaflet Tutorials\n\n\n\nOpenLayers\nWhile nearly twice as large as Leaflet, OpenLayers includes additional functionalities and often performs better than Leaflet when working with larger datasets1.\n\nOpenLayers Documentation\n\n\n\nMapbox GL\nAt a size significantly larger than both OpenLayers and Leaflet, Mapbox GL includes a wide range of features when rendering maps and is particularly powerful when rending 3D features. Unlike Leaflet and OpenLayers, Mapbox GL is not free and open-source meaning that it must be paired with Mapbox’s APIs.\n\nMapbox GL JS Guide\n\n\n\nMapLibre GL JS\nMapLibre is a free and open-source fork of Mapbox GL that retains some of the unique functionalities of Mapbox GL while enabling the usage of alternative datasets and APIs.\n\nMapLibre GL JS Documentation\n\n\n\n\nVisualizations\n\nD3 Documentation\nObservable Plot Documentation\nDeck.gl Documentation\n\n\n\nObservable JS\n\nObservable Documentation",
+    "text": "Geospatial Libraries/Packages\nA relatively comprehensive list of libraries that focus on using JavaScript in the web browser can be found below:\n\nAwesome Frontend GIS\n\nAdditionally, you may find a few more libraries along with packages that run in Node.js through the following list:\n\nAwesome Geospatial - JavaScript\n\n\nWeb Mapping\nDeveloping interactive maps that can be shared via the web is one of the most commonly used applications of JavaScript in geography. A few resources and libraries used for developing web maps are listed in the link below, followed by resources associated with the four major web mapping libraries.\n\nAwesome Geospatial – Web Mapping\n\nUBC Library Research Commons frequently provides workshops on web mapping using some of the tools listed below. You can find upcoming workshops here.\n\nLeaflet\nThe smallest and most popular of the four major JavaScript web mapping libraries, Leaflet lacks some of the functionalities of comparable libraries, but provides the best options for quickly rendering small to medium datasets. For additional functionality, Leaflet can be extended using a wide array of plugins.\n\nUBC Library Research Commons - Web Mapping with LeafletJS\nLeaflet Tutorials\n\n\n\nOpenLayers\nWhile nearly twice as large as Leaflet, OpenLayers includes additional functionalities and often performs better than Leaflet when working with larger datasets1.\n\nOpenLayers Documentation\n\n\n\nMapbox GL\nAt a size significantly larger than both OpenLayers and Leaflet, Mapbox GL includes a wide range of features when rendering maps and is particularly powerful when rending 3D features. Unlike Leaflet and OpenLayers, Mapbox GL is not free and open-source meaning that it must be paired with Mapbox’s APIs.\n\nMapbox GL JS Guide\n\n\n\nMapLibre GL JS\nMapLibre is a free and open-source fork of Mapbox GL that retains some of the unique functionalities of Mapbox GL while enabling the usage of alternative datasets and APIs.\n\nMapLibre GL JS Documentation",
     "crumbs": [
       "JavaScript"
     ]
   },
   {
-    "objectID": "javascript/index.html#formatting",
-    "href": "javascript/index.html#formatting",
+    "objectID": "javascript/index.html#interactive-visualizations-and-dashboards",
+    "href": "javascript/index.html#interactive-visualizations-and-dashboards",
     "title": "JavaScript",
-    "section": "Formatting",
-    "text": "Formatting\nSometimes writing code can get a bit messy. Formatters can automatically reformat your code to make it cleaner and easier to read while following a set of standards and best practices.\n\nPrettier Documentation",
+    "section": "Interactive Visualizations and Dashboards",
+    "text": "Interactive Visualizations and Dashboards\nJavaScript excels at creating interactive visualizations, and similar to web mapping, there is a massive number of libraries that can make development easier. Resources for a few of the most popular libraries are listed below.\n\nD3 Documentation\nD3.js in Action : UBC Library | WorldCat\nObservable Plot Documentation\nDeck.gl Documentation\nPlotly - JavaScript\n\n\nObservable JS\nObservable provides an interactive alternative to Jupyter with computational work completed within a user’s browser rather than on a server. Tools like Quarto integrate smoothly with Observable.\n\nObservable Documentation\nQuarto - Observable JS",
     "crumbs": [
       "JavaScript"
     ]
   },
   {
-    "objectID": "javascript/index.html#linting",
-    "href": "javascript/index.html#linting",
+    "objectID": "javascript/index.html#code-quality-tools",
+    "href": "javascript/index.html#code-quality-tools",
     "title": "JavaScript",
-    "section": "Linting",
-    "text": "Linting\nUsing a static analysis tool, or linter, is a common best practice among programmers that helps in identifying and fixings mistakes when writing code by ensuring that you follow the correct syntax and a guiding set of best practices.\n\nESLint Documentation",
-    "crumbs": [
-      "JavaScript"
-    ]
-  },
-  {
-    "objectID": "javascript/index.html#type-checking",
-    "href": "javascript/index.html#type-checking",
-    "title": "JavaScript",
-    "section": "Type Checking",
-    "text": "Type Checking\nLike Python, JavaScript is inherently a dynamically typed language, meaning you the programmer don’t have to worry about the data types of each variable. Static types can be helpful for reducing bugs when writing complex scripts or programs. The primary way to add type checking to JavaScript is to actually write in another programming language, TypeScript, which is a superset of JavaScript. Another method is to use JSDoc, which enables you to annotate your JavaScript code with types. The TypeScript transpiler then uses those comments to check your types and return errors as it finds them.\n\nJSDoc Documentation\nTypeScript Documentation - JSDoc Reference",
-    "crumbs": [
-      "JavaScript"
-    ]
-  },
-  {
-    "objectID": "javascript/index.html#testing-framework",
-    "href": "javascript/index.html#testing-framework",
-    "title": "JavaScript",
-    "section": "Testing Framework",
-    "text": "Testing Framework\nSimilar to type checking, unit testing can be a helpful tool when writing large and complex scripts or programs. Jest enables you to define tests that can run over your functions and ensure they are following expected behavior in a range of practical scenarios.\n\nJest Documentation",
+    "section": "Code Quality Tools",
+    "text": "Code Quality Tools\n\nFormatting\nSometimes writing code can get a bit messy. Formatters can automatically reformat your code to make it cleaner and easier to read while following a set of standards and best practices.\n\nPrettier Documentation\n\n\n\nLinting\nUsing a static analysis tool, or linter, is a common best practice among programmers that helps in identifying and fixings mistakes when writing code by ensuring that you follow the correct syntax and a guiding set of best practices.\n\nESLint Documentation\n\n\n\nType Checking\nLike Python, JavaScript is inherently a dynamically typed language, meaning you the programmer don’t have to worry about the data types of each variable. Static types can be helpful for reducing bugs when writing complex scripts or programs. The primary way to add type checking to JavaScript is to actually write in another programming language, TypeScript, which is a superset of JavaScript. Another method is to use JSDoc, which enables you to annotate your JavaScript code with types. The TypeScript transpiler then uses those comments to check your types and return errors as it finds them.\n\nJSDoc Documentation\nTypeScript Documentation - JSDoc Reference\n\n\n\nTesting Framework\nSimilar to type checking, unit testing can be a helpful tool when writing large and complex scripts or programs. Jest enables you to define tests that can run over your functions and ensure they are following expected behavior in a range of practical scenarios.\n\nJest Documentation",
     "crumbs": [
       "JavaScript"
     ]
