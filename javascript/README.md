@@ -3,24 +3,56 @@ output-file: index.html
 title: JavaScript
 ---
 
-While not nearly as useful as Python or R in geospatial computing, JavaScript
-can be a useful language for a geographer to have on their radar, especially if
-they are interested in creating web maps and/or sharing their research online
-via interactive visualizations.
+While JavaScript has fewer applications in geography compared to other languages
+like Python and R, it remains a useful skill to develop, particularly for
+creating interactive web maps and web-based visualizations.
 
-- _[JavaScript Essentials for Dummies](https://learning.oreilly.com/library/view/javascript-essentials-for/9781394263219/)_
+It's important to note that JavaScript code can be executed in various and often
+quite different contexts with the most common being web browsers (front-end or
+client-side) and runtime engines (back-end or server-side), like Node.js and
+Deno. Most applications of JavaScript relevant to geographers occurs in the
+former with the use of libraries, like Leaflet, D3.js, and Observable.
+
+The following resources will provide general introductions to JavaScript and its
+applications within the context of a web browser, so any of them can be useful
+for learning the basics of JavaScript.
+
+- [MDN Web Docs - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+- _[Eloquent JavaScript](https://eloquentjavascript.net/)_
+
+- _JavaScript Essentials for Dummies_ :
+  [UBC Library](https://learning.oreilly.com/library/view/javascript-essentials-for/9781394263219/)
+  | [WorldCat](https://search.worldcat.org/title/1428261417)
 
 ## Geospatial Libraries/Packages
 
-- [Awesome Frontend GIS](https://github.com/joewdavies/awesome-frontend-gis)
+A relatively comprehensive list of libraries that focus on using JavaScript in
+the web browser can be found below:
+
+- [Awesome Frontend GIS](https://github.com/joewdavies/awesome-frontend-gis?tab=readme-ov-file#-javascript-libraries)
+
+Additionally, you may find a few more libraries along with packages that run in
+Node.js through the following list:
+
+- [Awesome Geospatial - JavaScript](https://github.com/sacridini/Awesome-Geospatial?tab=readme-ov-file#javascript)
 
 ### Web Mapping
 
+Developing interactive maps that can be shared via the web is one of the most
+commonly used applications of JavaScript in geography. A few resources and
+libraries used for developing web maps are listed in the link below, followed by
+resources associated with the four major web mapping libraries.
+
 - [Awesome Geospatial -- Web Mapping](https://github.com/sacridini/Awesome-Geospatial#web-map-development)
+
+UBC Library Research Commons frequently provides workshops on web mapping using
+some of the tools listed below. You can find upcoming workshops
+[here](https://libcal.library.ubc.ca/calendar/?t=g&q=web%20map&cid=-1&cal=-1&ct=33914,34011&inc=0).
 
 #### Leaflet
 
-The smallest and most popular of the three major JavaScript web mapping
+The smallest and most popular of the four major JavaScript web mapping
 libraries, Leaflet lacks some of the functionalities of comparable libraries,
 but provides the best options for quickly rendering small to medium datasets.
 For additional functionality, Leaflet can be extended using a wide array of
@@ -55,19 +87,37 @@ datasets and APIs.
 
 - [MapLibre GL JS Documentation](https://maplibre.org/maplibre-gl-js/docs/)
 
-### Visualizations
+## Interactive Visualizations and Dashboards
+
+JavaScript excels at creating interactive visualizations, and similar to web
+mapping, there is a massive number of libraries that can make development
+easier. Resources for a few of the most popular libraries are listed below.
 
 - [D3 Documentation](https://github.com/d3/d3/wiki)
+
+- _D3.js in Action_ :
+  [UBC Library](https://learning.oreilly.com/library/view/d3-js-in-action/9781633439177/)
+  | [WorldCat](https://search.worldcat.org/title/1050968610)
 
 - [Observable Plot Documentation](https://observablehq.com/plot/getting-started)
 
 - [Deck.gl Documentation](https://deck.gl/docs)
 
+- [Plotly - JavaScript](https://plotly.com/javascript/)
+
 ### Observable JS
+
+Observable provides an interactive alternative to Jupyter with computational
+work completed within a user's browser rather than on a server. Tools like
+Quarto integrate smoothly with Observable.
 
 - [Observable Documentation](https://observablehq.com/@observablehq/documentation?collection=@observablehq/documentation)
 
-## Formatting
+- [Quarto - Observable JS](https://quarto.org/docs/interactive/ojs/)
+
+## Code Quality Tools
+
+### Formatting
 
 Sometimes writing code can get a bit messy. Formatters can automatically
 reformat your code to make it cleaner and easier to read while following a set
@@ -75,7 +125,7 @@ of standards and best practices.
 
 - [Prettier Documentation](https://prettier.io/docs/en/index.html)
 
-## Linting
+### Linting
 
 Using a static analysis tool, or linter, is a common best practice among
 programmers that helps in identifying and fixings mistakes when writing code by
@@ -83,7 +133,7 @@ ensuring that you follow the correct syntax and a guiding set of best practices.
 
 - [ESLint Documentation](https://eslint.org/docs/latest/)
 
-## Type Checking
+### Type Checking
 
 Like Python, JavaScript is inherently a dynamically typed language, meaning you
 the programmer don't have to worry about the data types of each variable. Static
@@ -98,7 +148,7 @@ your types and return errors as it finds them.
 
 - [TypeScript Documentation - JSDoc Reference](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html?)
 
-## Testing Framework
+### Testing Framework
 
 Similar to type checking, unit testing can be a helpful tool when writing large
 and complex scripts or programs. Jest enables you to define tests that can run
