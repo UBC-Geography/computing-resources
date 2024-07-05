@@ -631,31 +631,31 @@
     ]
   },
   {
-    "objectID": "gis-software/index.html#desktop-applications",
-    "href": "gis-software/index.html#desktop-applications",
+    "objectID": "gis-software/index.html#arcgis-pro",
+    "href": "gis-software/index.html#arcgis-pro",
     "title": "GIS Software",
-    "section": "Desktop Applications",
-    "text": "Desktop Applications\nTwo of the most popular GIS desktop applications are ArcGIS Pro and QGIS. While QGIS is free and open-source, ArcGIS Pro is a commercial product, which requires an up-to-date license. UBC faculty and students can find details about attaining an ArcGIS license at UBC Geospatial Resources - Software.\n\nArcGIS Pro\n\nUBC Library Research Commons - Understanding Map Projections\nArcGIS Pro 3.x Cookbook\nLearning ArcGIS Pro 2\nComputational Methods and GIS Applications in Social Science\n\n\n\nQGIS\n\nUBC Library Research Commons - Map Production with QGIS\nUBC Library Research Commons - Network Analysis with QGIS\nQGIS Quick Start Guide\nLearn QGIS\nQGIS: Becoming a GIS Power User",
+    "section": "ArcGIS Pro",
+    "text": "ArcGIS Pro\nDeveloped by Esri, ArcGIS Pro succeeded ArcMap and as the foundation to Esri’s extraordinarily popular ecosystem of GIS software. It is by far the most popular and commonly used commercial GIS desktop application.\nAll UBC Students can access ArcGIS Pro through the UBC Library labs documented in their GIS research guide. Students, who are enrolled in a geography course that requires access to ArcGIS Pro, will also have access to the Geography Computer Labs. Additionally, students may purchase a discounted one-year license for using ArcGIS Pro on their personal computers from the UBC GIS Software page.\nUBC Geography maintains a department license for all ArcGIS software, which is available to all faculty, staff, and researchers.\nArcGIS Pro is developed exclusively around Windows, so running it on a Mac or Linux device requires either the ability to dual boot into a Windows operating system or access to Windows from a virtual environment. Esri provides these instructions for Mac users.\n\nUBC Library Research Commons - Understanding Map Projections\nArcGIS Pro 3.x Cookbook : UBC Library | WorldCat\nLearning ArcGIS Pro 2 : UBC Library | WorldCat\nComputational Methods and GIS Applications in Social Science : UBC Library | WorldCat",
     "crumbs": [
       "GIS Software"
     ]
   },
   {
-    "objectID": "gis-software/index.html#server-applications",
-    "href": "gis-software/index.html#server-applications",
+    "objectID": "gis-software/index.html#qgis",
+    "href": "gis-software/index.html#qgis",
     "title": "GIS Software",
-    "section": "Server Applications",
-    "text": "Server Applications\n\nGeoServer\n\nGeoServer Beginner’s Guide\nExpert GeoServer",
+    "section": "QGIS",
+    "text": "QGIS\nQGIS is a free and open-source GIS desktop application with broad support for Windows, Mac, and Linux operating systems. Its development is supported by the Open Source Geospatial Foundation (OSGeo), which also supports other popular geospatial software, like GDAL, GEOS, GrassGIS, PostGIS, and many others. You can download and install QGIS from their download page or, if you are a UBC Vancouver student, you can access it from one of the labs listed in UBC Library’s GIS Research Guide.\nThe UBC Library Research Commons frequently provides introductory workshops on QGIS for students, faculty, and staff. You can review previous workshop materials below and find upcoming workshops on their calendar.\n\nUBC Library Research Commons - Map Production with QGIS\nUBC Library Research Commons - Network Analysis with QGIS\nQGIS Quick Start Guide : UBC Library | WorldCat\nLearn QGIS : UBC Library | WorldCat\nQGIS: Becoming a GIS Power User : UBC Library | WorldCat",
     "crumbs": [
       "GIS Software"
     ]
   },
   {
-    "objectID": "gis-software/index.html#other-useful-applications",
-    "href": "gis-software/index.html#other-useful-applications",
+    "objectID": "gis-software/index.html#geoserver",
+    "href": "gis-software/index.html#geoserver",
     "title": "GIS Software",
-    "section": "Other Useful Applications",
-    "text": "Other Useful Applications\n\nMapKurator\n\nMapKurator Documentation",
+    "section": "GeoServer",
+    "text": "GeoServer\nGIS servers, like ArcGIS Server, QGIS Server, and GeoServer, enable users to publish and share their maps and geospatial data through web-hosted services. Similar to QGIS, GeoServer has been supported as an OSGeo project. It supports the following standard protocols: Web Feature Service (WFS), Web Map Service (WMS), and Web Coverage Service (WCS) alongside Web Processing Service (WPS) and Web Map Tile Service (WMTS) via added extensions. It also provides the back-end for the geospatial content management system, GeoNode.\nWhile GeoServer can be hosted on a virtual machine through the Alliance Cloud, we strongly recommend that you review and consider deploying cloud-optimized geospatial formats with object storage as an alternative if your use case allows it.\n\nGeoServer Beginner’s Guide : UBC Library | WorldCat\nExpert GeoServer : UBC Library | WorldCat",
     "crumbs": [
       "GIS Software"
     ]
