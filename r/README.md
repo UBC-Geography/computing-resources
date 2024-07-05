@@ -84,6 +84,11 @@ basics of R.
 A relatively comprehensive list of packages can be found in the R section of
 [Awesome Geospatial](https://github.com/sacridini/Awesome-Geospatial#R).
 
+For a closer analysis on some of the most popular R packages for spatial data
+analysis, consider reviewing the following journal article.
+
+- [R Packages for Analyzing Spatial Data: A Comparative Case Study with Areal Data](https://doi.org/10.1111/gean.12319)
+
 Additionally, you can identify packages from the following CRAN task views.
 
 - [CRAN Task View: Analysis of Ecological and Environmental Data](https://cran.r-project.org/web/views/Environmetrics.html)
@@ -96,9 +101,9 @@ Additionally, you can identify packages from the following CRAN task views.
 
 ## Interactive Visualizations and Dashboards
 
-Dashboard libraries enable you to create interactive visualizations from either
-Python code or Jupyter Notebooks, which can be hosted on sparsely-resourced
-servers and shared as web applications.
+Dashboard libraries enable you to create interactive visualizations from your R
+code, which can be hosted on sparsely-resourced servers and shared as web
+applications.
 
 - [Shiny for R - Getting Started](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html)
 
