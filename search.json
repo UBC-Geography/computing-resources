@@ -718,7 +718,7 @@
     "href": "r/index.html#geospatial-librariespackages",
     "title": "R",
     "section": "Geospatial Libraries/Packages",
-    "text": "Geospatial Libraries/Packages\nA relatively comprehensive list of packages can be found in the R section of Awesome Geospatial.\nAdditionally, you can identify packages from the following CRAN task views.\n\nCRAN Task View: Analysis of Ecological and Environmental Data\nCRAN Task View: Hydrological Data and Modeling\nCRAN Task View: Analysis of Spatial Data\nCRAN Task View: Handling and Analyzing Spatio-Temporal Data",
+    "text": "Geospatial Libraries/Packages\nA relatively comprehensive list of packages can be found in the R section of Awesome Geospatial.\nFor a closer analysis on some of the most popular R packages for spatial data analysis, consider reviewing the following journal article.\n\nR Packages for Analyzing Spatial Data: A Comparative Case Study with Areal Data\n\nAdditionally, you can identify packages from the following CRAN task views.\n\nCRAN Task View: Analysis of Ecological and Environmental Data\nCRAN Task View: Hydrological Data and Modeling\nCRAN Task View: Analysis of Spatial Data\nCRAN Task View: Handling and Analyzing Spatio-Temporal Data",
     "crumbs": [
       "R"
     ]
@@ -728,7 +728,7 @@
     "href": "r/index.html#interactive-visualizations-and-dashboards",
     "title": "R",
     "section": "Interactive Visualizations and Dashboards",
-    "text": "Interactive Visualizations and Dashboards\nDashboard libraries enable you to create interactive visualizations from either Python code or Jupyter Notebooks, which can be hosted on sparsely-resourced servers and shared as web applications.\n\nShiny for R - Getting Started\nShiny for R - Leaflet: Interactive Web Maps with R\nMastering Shiny : UBC Library | WorldCat\nDash R User Guide\nDash - Plotly Maps",
+    "text": "Interactive Visualizations and Dashboards\nDashboard libraries enable you to create interactive visualizations from your R code, which can be hosted on sparsely-resourced servers and shared as web applications.\n\nShiny for R - Getting Started\nShiny for R - Leaflet: Interactive Web Maps with R\nMastering Shiny : UBC Library | WorldCat\nDash R User Guide\nDash - Plotly Maps",
     "crumbs": [
       "R"
     ]
