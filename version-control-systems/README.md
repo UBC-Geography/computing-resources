@@ -39,7 +39,9 @@ Additional Resources:
 
 - _[Pro Git](https://git-scm.com/book/en/v2)_
 
-- _[Beginning Git and GitHub: Version Control, Project Management and Teamwork for the New Developer](https://go.exlibris.link/G3VfpGll)_
+- _Beginning Git and GitHub: Version Control, Project Management and Teamwork
+  for the New Developer_ : [UBC Library](https://go.exlibris.link/G3VfpGll) |
+  [WorldCat](https://search.worldcat.org/title/1427243462)
 
 ### GitHub
 

@@ -35,20 +35,21 @@ Additional resources:
 
 - [Intro to Linux Shell -- Video Lecture](https://www.youtube.com/watch?v=eLF598YqbFw)
 
-- _[Pro Bash](https://go.exlibris.link/6FxkGXft)_
+- _Pro Bash_ : [UBC Library](https://go.exlibris.link/6FxkGXft) |
+  [WorldCat](https://search.worldcat.org/title/1409222493)
 
-## Running `mamba` on Git-Bash for Windows
+## Running mamba on Git-Bash for Windows
 
-When installing `mamba` via Miniforge with the recommended options, `mamba` is
-not included in your PATH by default, so you'll only be able use it by running
+When installing mamba via Miniforge with the recommended options, it is not
+included in your PATH by default, so you'll only be able use it by running
 Miniforge Prompt from your Start Menu. For most folks that might be just fine,
 but we recommend adding both the `mamba` and `conda` commands to your Git-Bash
 environment, so you can more easily take advantage of Bash and Git.
 
-Start by locating the `profile.d` folder that was installed with Miniforge via
+Start by locating the 'profile.d' folder that was installed with Miniforge via
 the File Explorer. Most likely this would located at:
-`C:\Users\<your_username>\miniforge3\etc`. Right click the `profile.d` folder
-and select `Open Git Bash here`. In the Git Bash terminal, run the following
+`C:\Users\<your_username>\miniforge3\etc`. Right click the 'profile.d' folder
+and select 'Open Git Bash here'. In the Git Bash terminal, run the following
 commands:
 
 ```bash
@@ -78,8 +79,8 @@ formats.
 
 - [GDAL Documentation](https://gdal.org/programs/index.html#general)
 
-You can install GDAL from the conda-forge repository using `conda` or `mamba`,
-using one of the following commands:
+You can install GDAL from the conda-forge repository using `conda` or `mamba`
+with one of the following commands:
 
 ::: {.panel-tabset}
 
@@ -103,11 +104,11 @@ When processing large collections of images, ImageMagick is a very popular tool
 with an extraordinary amount of functionality. It's commonly used to convert,
 resize, and optimize images files in various formats.
 
-If you are using Windows, you find an installer
+If you are using Windows, you can find an installer
 [here](https://imagemagick.org/script/download.php#windows), which will enable
-you to use ImageMagick from your your preferred shell. Mac OS and Linux users
-can install ImageMagick from the conda-forge repository using `conda` or
-`mamba`, using one of the following commands:
+you to use ImageMagick from your preferred shell. Mac OS and Linux users can
+install ImageMagick from the conda-forge repository using `conda` or `mamba`
+with one of the following commands:
 
 ::: {.panel-tabset}
 
@@ -131,7 +132,7 @@ $ conda install -c conda-forge imagemagick -y
 
 ### FFmpeg
 
-FFmpeg an extremely powerful tool for batch processing both video and audio
+FFmpeg is an extremely powerful tool for batch processing both video and audio
 files. It can be installed using one of the following commands:
 
 ::: {.panel-tabset}
@@ -152,4 +153,5 @@ $ conda install -c conda-forge ffmpeg -y
 
 - [FFmpeg Documentation](https://ffmpeg.org/ffmpeg.html)
 
-- _[Quick Start Guide to FFmpeg](https://go.exlibris.link/XSRj7ZcH)_
+- _Quick Start Guide to FFmpeg_ [UBC Library](https://go.exlibris.link/XSRj7ZcH)
+  | [WorldCat](https://search.worldcat.org/title/1369033645)

@@ -12,7 +12,8 @@ field of geography.
 
 - [Geography and Virtual Reality](https://doi.org/10.1111/gec3.12590)
 
-- _[Virtual Reality Methods](https://go.exlibris.link/xsjXLkBR)_
+- _Virtual Reality Methods_ : [UBC Library](https://go.exlibris.link/xsjXLkBR) |
+  [WorldCat](https://search.worldcat.org/title/1328132145)
 
 - [Using Virtual Reality (VR) for Teaching and Learning in Geography: Fieldwork, Analytical Skills, and Employability](https://doi.org/10.1080/03098265.2021.1901867)
 
@@ -72,7 +73,9 @@ WebXR is a new set of standards that enable VR and AR content to be rendered via
 web browsers. In some browsers, like Firefox and Safari, WebXR is still flagged
 as experimental, but it can be enabled through adjustments in settings.
 
-- _[AR and VR Using the WebXR API: Learn to Create Immersive Content with WebGL, Three.js, and A-Frame](https://go.exlibris.link/xkKTvLbB)_
+- _AR and VR Using the WebXR API: Learn to Create Immersive Content with WebGL,
+  Three.js, and A-Frame_ : [UBC Library](https://go.exlibris.link/xkKTvLbB) |
+  [WorldCat](https://search.worldcat.org/title/1238205512)
 
 Different frameworks have been in development over the past few years to help
 simplify developing VR content with WebXR and its now obsolete predecessor,
@@ -84,7 +87,9 @@ WebVR.
 - [Babylon.js](https://www.babylonjs.com/) A JavaScript-based framework for
   developing web-based VR Content
 
-  - _[Going the Distance with Babylon.js](https://go.exlibris.link/FPW2334K)_
+  - _Going the Distance with Babylon.js_ :
+    [UBC Library](https://go.exlibris.link/FPW2334K) |
+    [WorldCat](https://search.worldcat.org/title/1345460312)
 
 ### Unity
 
@@ -94,9 +99,13 @@ its functionality and cohesively work with GIS software.
 
 - _[A Guide to Capturing and Preparing Photogrammetry for Unity](https://docs.google.com/document/d/1-hlQora-awgVfJmYvbsqz1VY7opF9tYTTObRFYIeStA/preview)_
 
-- _[Unity Development Cookbook](https://go.exlibris.link/Z0s14jy0)_
+- _Unity Development Cookbook_ :
+  [UBC Library](https://go.exlibris.link/Z0s14jy0) |
+  [WorldCat](https://search.worldcat.org/title/1392345620)
 
-- _[Unity Virtual Reality Development with VRTK4](https://go.exlibris.link/RZ4dSxDl)_
+- _Unity Virtual Reality Development with VRTK4_ :
+  [UBC Library](https://go.exlibris.link/RZ4dSxDl) |
+  [WorldCat](https://search.worldcat.org/title/1314795210)
 
 #### Relevant Plugins and SDK
 
@@ -117,11 +126,17 @@ how the engine can be applied within a geography-centered setting.
 
 - [Godot Engine Documentation](https://docs.godotengine.org/en/stable/)
 
-- _[Godot 4 Game Development Projects](https://go.exlibris.link/rQkxd2Bl)_
+- _Godot 4 Game Development Projects_ :
+  [UBC Library](https://go.exlibris.link/rQkxd2Bl) |
+  [WorldCat](https://search.worldcat.org/title/1396235754)
 
-- _[Godot 4 Game Development Cookbook](https://go.exlibris.link/Zh53LNQs)_
+- _Godot 4 Game Development Cookbook_ :
+  [UBC Library](https://go.exlibris.link/Zh53LNQs) |
+  [WorldCat](https://search.worldcat.org/title/1381711076)
 
-- _[Game Development with Blender and Godot](https://go.exlibris.link/mpqzSL4G)_
+- _Game Development with Blender and Godot_ :
+  [UBC Library](https://go.exlibris.link/mpqzSL4G) |
+  [WorldCat](https://search.worldcat.org/title/1344542144)
 
 #### Relevant Plugins and SDK
 
@@ -135,7 +150,9 @@ Blender is a widely used piece of free and open source software with a range of
 applications, which include developing and editing 3D models, which can easily
 be exported to the VR development tools listed above.
 
-- _[Blender All-in-One for Dummies](https://learning.oreilly.com/library/view/blender-all-in-one-for/9781394204045/)_
+- _Blender All-in-One for Dummies_ :
+  [UBC Library](https://go.exlibris.link/cW7HTtpp) |
+  [WorldCat](https://search.worldcat.org/title/1428261122)
 
 - [Blender Reference Manual](https://docs.blender.org/manual/en/latest/)
 

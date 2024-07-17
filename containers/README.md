@@ -110,7 +110,8 @@ prior to running in an HPC environment.
 
 - [Podman Documentation](https://docs.podman.io/en/latest/)
 
-- _[Podman in Action](https://go.exlibris.link/XZMWFsdp)_
+- _Podman in Action_ : [UBC Library](https://go.exlibris.link/XZMWFsdp) |
+  [WorldCat](https://search.worldcat.org/title/1371958299)
 
 ### Docker
 
@@ -124,8 +125,12 @@ and tools that have been built around it.
 
 - [Docker Documentation](https://docs.docker.com/get-started/)
 
-- _[Docker: Up and Running](https://go.exlibris.link/z6bLGnqS)_
+- _Docker: Up and Running_ : [UBC Library](https://go.exlibris.link/z6bLGnqS) |
+  [WorldCat](https://search.worldcat.org/title/1370903040)
 
-- _[Practical Docker with Python](https://go.exlibris.link/V5Yl7J3v)_
+- _Practical Docker with Python_ :
+  [UBC Library](https://go.exlibris.link/V5Yl7J3v) |
+  [WorldCat](https://search.worldcat.org/title/1287132682)
 
-- _[Docker Deep Dive](https://go.exlibris.link/4wT3cjWD)_
+- _Docker Deep Dive_ : [UBC Library](https://go.exlibris.link/4wT3cjWD) |
+  [WorldCat](https://search.worldcat.org/title/1206238897)

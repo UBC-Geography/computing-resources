@@ -18,7 +18,7 @@ Common use cases include:
 - Storing and serving geospatial datasets, particularly those that are
   [cloud-optimized](https://guide.cloudnativegeo.org/)
 
-- Backing up crucial data
+- Backing up and/or storing archival data
 
 - Storing and hosting media assets (images, audio, video, etc.)
 
@@ -120,11 +120,24 @@ protocol type.
 
 ## Commercial Cloud Object Storage Providers
 
+If neither the Alliance Cloud or Chinook provide sufficient features or you plan
+on using a particular cloud computing service that is only available through a
+commercial cloud provider, you can access object storage directly through
+commercial cloud providers.
+
+Contact [UBC ARC](https://arc.ubc.ca/compute-storage/cloud-computing) to get
+details about accessing credits that can mitigate costs associated with using
+the following cloud providers.
+
 - [AWS S3](https://docs.aws.amazon.com/s3/)
 
 - [Google Cloud Storage](https://cloud.google.com/storage/docs/)
 
 - [Microsoft Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/)
+
+If you are working with an organization outside of UBC and/or are unable to
+access credits to help cover the costs of object storage, the following
+providers have generous free tiers and generally lower pricing options.
 
 - [Cloudflare R2](https://developers.cloudflare.com/r2/)
 

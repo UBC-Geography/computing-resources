@@ -24,7 +24,9 @@ across Canada, including one located at Simon Fraser University.
 
 - [Supercomputing Conference - Recorded Sessions](https://www.youtube.com/@SCconferenceseries/playlists)
 
-- _[Parallel and High Performance Computing](https://go.exlibris.link/1VWhVDjZ)_
+- _Parallel and High Performance Computing_ :
+  [UBC Library](https://go.exlibris.link/1VWhVDjZ) |
+  [WorldCat](https://search.worldcat.org/title/1262371463)
 
 ## UBC Advanced Research Computing Sockeye
 

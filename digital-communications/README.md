@@ -6,39 +6,49 @@ title: Digital Communications
 ## WordPress
 
 An open-source content management system that is used to host a wide range of
-websites and web applications. Both UBC Blogs and UBC CMS are built on top of
-this software. UBC provides a large collection of documentation to help faculty
-and students get started with using it as a tool for scholarly communications.
-
-- [WordPress Clinics at UBC CTLT](https://events.ctlt.ubc.ca/?s=wordpress)
-
-- [WordPress Documentation](https://wordpress.org/documentation/)
-
-- [WordPress 101 -- Video Course](https://go.exlibris.link/7mDvM1rZ)
-
-- _[WordPress: The Missing Manual](https://go.exlibris.link/qfbFTbLz)_
-
-- _[WordPress All-in-One for Dummies](https://go.exlibris.link/CH9cfmW0)_
-
-- _[WordPress Styling with Blocks, Patterns, Templates, and Themes](https://go.exlibris.link/D34NjqgH)_
+websites and web applications.
 
 ### UBC Blogs
 
-- [UBC Blogs vs. UBC CMS](https://support.cms.ubc.ca/cms-manual/getting-started/differences-between-ubc-cms-and-ubc-blogs/)
-
-- [UBC Blogs FAQ](https://blogs.ubc.ca/faq/)
+[UBC Blogs](https://blogs.ubc.ca/) is built on top of WordPress. UBC provides a
+large collection of documentation to help faculty and students get started with
+using it as a tool for scholarly communications.
 
 - [UBC Blogs Video Tutorials](https://wiki.ubc.ca/UBC_Blogs_Screencasts)
 
 - [UBC Blogs Instructor Guide](https://lthub.ubc.ca/guides/ubc-blogs-instructor-guide/)
 
-### UBC CMS
+- [UBC Blogs FAQ](https://blogs.ubc.ca/faq/)
 
-- [UBC CMS](https://cms.ubc.ca/)
+- [WordPress Clinics at UBC CTLT](https://events.ctlt.ubc.ca/?s=wordpress)
 
-- [UBC CMS Manual](https://support.cms.ubc.ca/cms-manual/)
+### Additional Resources
 
-### Cloud Hosting
+Having just a basic familiarity with WordPress' user interface, is often enough
+to meet the needs of most use cases. The following resources can provide
+more-in-depth walkthroughs of WordPress' for leveraging its more advanced
+functionalities.
+
+- [WordPress Documentation](https://wordpress.org/documentation/)
+
+- WordPress 101 -- Video Course :
+  [UBC Library](https://go.exlibris.link/7mDvM1rZ)
+
+- _WordPress: The Missing Manual_ :
+  [UBC Library](https://go.exlibris.link/qfbFTbLz) |
+  [WorldCat](https://search.worldcat.org/title/1152988879)
+
+- _WordPress All-in-One for Dummies_ :
+  [UBC Library](https://go.exlibris.link/CH9cfmW0) |
+  [WorldCat](https://search.worldcat.org/title/1420169498)
+
+- _WordPress Styling with Blocks, Patterns, Templates, and Themes_ :
+  [UBC Library](https://go.exlibris.link/D34NjqgH) |
+  [WorldCat](https://search.worldcat.org/title/1424750704)
+
+### Alternative Hosting Options
+
+[Note on UBC CMS](https://cms.ubc.ca/)
 
 - [UBC IT Shared Hosting](https://it.ubc.ca/services/web-servers-storage/shared-web-hosting)
 
