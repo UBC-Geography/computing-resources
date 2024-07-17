@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.53">
+<meta name="generator" content="quarto-1.5.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -332,7 +332,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#running-mamba-on-git-bash-for-windows" id="toc-running-mamba-on-git-bash-for-windows" class="nav-link active" data-scroll-target="#running-mamba-on-git-bash-for-windows">Running <code>mamba</code> on Git-Bash for Windows</a></li>
+  <li><a href="#running-mamba-on-git-bash-for-windows" id="toc-running-mamba-on-git-bash-for-windows" class="nav-link active" data-scroll-target="#running-mamba-on-git-bash-for-windows">Running mamba on Git-Bash for Windows</a></li>
   <li><a href="#command-line-tools" id="toc-command-line-tools" class="nav-link" data-scroll-target="#command-line-tools">Command Line Tools</a>
   <ul class="collapse">
   <li><a href="#gdal" id="toc-gdal" class="nav-link" data-scroll-target="#gdal">GDAL</a></li>
@@ -381,12 +381,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><a href="https://confluence.it.ubc.ca/display/UARC/Introduction+to+Linux+and+Using+the+Command+Line+Interface">Intro to Linux and the Bash Shell in HPC Environments</a></p></li>
 <li><p><a href="https://youtu.be/gKz0-y4DXws?si=1zw4pO6GeOosxzfK">UBC ARC - Intro to the Unix Shell - Video</a></p></li>
 <li><p><a href="https://www.youtube.com/watch?v=eLF598YqbFw">Intro to Linux Shell – Video Lecture</a></p></li>
-<li><p><em><a href="https://go.exlibris.link/6FxkGXft">Pro Bash</a></em></p></li>
+<li><p><em>Pro Bash</em> : <a href="https://go.exlibris.link/6FxkGXft">UBC Library</a> | <a href="https://search.worldcat.org/title/1409222493">WorldCat</a></p></li>
 </ul>
 <section id="running-mamba-on-git-bash-for-windows" class="level2">
-<h2 class="anchored" data-anchor-id="running-mamba-on-git-bash-for-windows">Running <code>mamba</code> on Git-Bash for Windows</h2>
-<p>When installing <code>mamba</code> via Miniforge with the recommended options, <code>mamba</code> is not included in your PATH by default, so you’ll only be able use it by running Miniforge Prompt from your Start Menu. For most folks that might be just fine, but we recommend adding both the <code>mamba</code> and <code>conda</code> commands to your Git-Bash environment, so you can more easily take advantage of Bash and Git.</p>
-<p>Start by locating the <code>profile.d</code> folder that was installed with Miniforge via the File Explorer. Most likely this would located at: <code>C:\Users\&lt;your_username&gt;\miniforge3\etc</code>. Right click the <code>profile.d</code> folder and select <code>Open Git Bash here</code>. In the Git Bash terminal, run the following commands:</p>
+<h2 class="anchored" data-anchor-id="running-mamba-on-git-bash-for-windows">Running mamba on Git-Bash for Windows</h2>
+<p>When installing mamba via Miniforge with the recommended options, it is not included in your PATH by default, so you’ll only be able use it by running Miniforge Prompt from your Start Menu. For most folks that might be just fine, but we recommend adding both the <code>mamba</code> and <code>conda</code> commands to your Git-Bash environment, so you can more easily take advantage of Bash and Git.</p>
+<p>Start by locating the ‘profile.d’ folder that was installed with Miniforge via the File Explorer. Most likely this would located at: <code>C:\Users\&lt;your_username&gt;\miniforge3\etc</code>. Right click the ‘profile.d’ folder and select ‘Open Git Bash here’. In the Git Bash terminal, run the following commands:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"source '</span><span class="va">${PWD}</span><span class="st">/conda.sh'"</span> <span class="op">&gt;&gt;</span> ~/.bashrc</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"source '</span><span class="va">${PWD}</span><span class="st">/mamba.sh'"</span> <span class="op">&gt;&gt;</span> ~/.bashrc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Then restart your Bash session and check that mamba works:</p>
@@ -402,7 +402,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><a href="https://gdal.org/programs/index.html#general">GDAL Documentation</a></li>
 </ul>
-<p>You can install GDAL from the conda-forge repository using <code>conda</code> or <code>mamba</code>, using one of the following commands:</p>
+<p>You can install GDAL from the conda-forge repository using <code>conda</code> or <code>mamba</code> with one of the following commands:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Mamba</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Conda</a></li></ul>
 <div class="tab-content">
@@ -418,7 +418,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="imagemagick" class="level3">
 <h3 class="anchored" data-anchor-id="imagemagick">ImageMagick</h3>
 <p>When processing large collections of images, ImageMagick is a very popular tool with an extraordinary amount of functionality. It’s commonly used to convert, resize, and optimize images files in various formats.</p>
-<p>If you are using Windows, you find an installer <a href="https://imagemagick.org/script/download.php#windows">here</a>, which will enable you to use ImageMagick from your your preferred shell. Mac OS and Linux users can install ImageMagick from the conda-forge repository using <code>conda</code> or <code>mamba</code>, using one of the following commands:</p>
+<p>If you are using Windows, you can find an installer <a href="https://imagemagick.org/script/download.php#windows">here</a>, which will enable you to use ImageMagick from your preferred shell. Mac OS and Linux users can install ImageMagick from the conda-forge repository using <code>conda</code> or <code>mamba</code> with one of the following commands:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Mamba</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Conda</a></li></ul>
 <div class="tab-content">
@@ -437,7 +437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="ffmpeg" class="level3">
 <h3 class="anchored" data-anchor-id="ffmpeg">FFmpeg</h3>
-<p>FFmpeg an extremely powerful tool for batch processing both video and audio files. It can be installed using one of the following commands:</p>
+<p>FFmpeg is an extremely powerful tool for batch processing both video and audio files. It can be installed using one of the following commands:</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Mamba</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Conda</a></li></ul>
 <div class="tab-content">
@@ -451,7 +451,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <ul>
 <li><p><a href="https://ffmpeg.org/ffmpeg.html">FFmpeg Documentation</a></p></li>
-<li><p><em><a href="https://go.exlibris.link/XSRj7ZcH">Quick Start Guide to FFmpeg</a></em></p></li>
+<li><p><em>Quick Start Guide to FFmpeg</em> <a href="https://go.exlibris.link/XSRj7ZcH">UBC Library</a> | <a href="https://search.worldcat.org/title/1369033645">WorldCat</a></p></li>
 </ul>
 
 

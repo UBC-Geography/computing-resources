@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.53">
+<meta name="generator" content="quarto-1.5.54">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -298,12 +298,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#postgresql" id="toc-postgresql" class="nav-link active" data-scroll-target="#postgresql">PostgreSQL</a>
+  <li><a href="#duckdb" id="toc-duckdb" class="nav-link active" data-scroll-target="#duckdb">DuckDB</a></li>
+  <li><a href="#postgresql" id="toc-postgresql" class="nav-link" data-scroll-target="#postgresql">PostgreSQL</a>
   <ul class="collapse">
   <li><a href="#hosting" id="toc-hosting" class="nav-link" data-scroll-target="#hosting">Hosting</a></li>
   <li><a href="#gis-extensions-libraries" id="toc-gis-extensions-libraries" class="nav-link" data-scroll-target="#gis-extensions-libraries">GIS Extensions / Libraries</a></li>
   </ul></li>
-  <li><a href="#mysql" id="toc-mysql" class="nav-link" data-scroll-target="#mysql">MySQL</a>
+  <li><a href="#mysql-and-mariadb" id="toc-mysql-and-mariadb" class="nav-link" data-scroll-target="#mysql-and-mariadb">MySQL and MariaDB</a>
   <ul class="collapse">
   <li><a href="#hosting-1" id="toc-hosting-1" class="nav-link" data-scroll-target="#hosting-1">Hosting</a></li>
   <li><a href="#gis-extensions-libraries-1" id="toc-gis-extensions-libraries-1" class="nav-link" data-scroll-target="#gis-extensions-libraries-1">GIS Extensions / Libraries</a></li>
@@ -333,33 +334,47 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Databases, and particularly spatial databases as piece of GIS software, play a crucial role in storing and accessing geospatial data. Multiple relational database management systems can be extended to support spatial databases, while common geospatial data formats like GeoPackage and Esri’s Geodatabase are self-contained databases.</p>
+<p>Databases, and particularly spatial databases as a piece of GIS software, play a crucial role in storing and accessing geospatial data. Multiple relational database management systems can be extended to support spatial databases, while common geospatial data formats like GeoPackage and Esri’s Geodatabase are self-contained databases.</p>
 <p>Understanding how databases and how to query them efficiently with SQL, is an extraordinarily useful skill when working with geospatial data.</p>
 <ul>
+<li><p><a href="https://swcarpentry.github.io/sql-novice-survey/">Software Carpentry - Databases and SQL</a></p></li>
 <li><p><a href="https://youtu.be/3uHSXXQwJpQ">How to create and access MySQL and PostgreSQL databases on DRI systems - Video</a></p></li>
-<li><p><em><a href="https://go.exlibris.link/N6ybsHyL">Geospatial Analysis with SQL</a></em></p></li>
-<li><p><em><a href="https://go.exlibris.link/KT2RjyVN">Practical SQL</a></em></p></li>
-<li><p><em><a href="https://learning.oreilly.com/library/view/sql-all-in-one-for/9781394242290/">SQL All-in-One for Dummies</a></em></p></li>
-<li><p><em><a href="https://go.exlibris.link/8P3M1W2j">Getting Started with SQL and Databases: Managing and Manipulating Data with SQL</a></em></p></li>
+<li><p><em>Geospatial Analysis with SQL</em> : <a href="https://go.exlibris.link/N6ybsHyL">UBC Library</a> | <a href="https://search.worldcat.org/title/1356796776">WorldCat</a></p></li>
+<li><p><em>Practical SQL</em> : <a href="https://go.exlibris.link/KT2RjyVN">UBC Library</a> | <a href="https://search.worldcat.org/title/1291870871">WorldCat</a></p></li>
+<li><p><em>SQL All-in-One for Dummies</em> : <a href="https://go.exlibris.link/s1CwKGdS">UBC Library</a> | <a href="https://search.worldcat.org/title/1429319351">WorldCat</a></p></li>
+<li><p><em>Getting Started with SQL and Databases: Managing and Manipulating Data with SQL</em> : <a href="https://go.exlibris.link/8P3M1W2j">UBC Library</a> | <a href="https://search.worldcat.org/title/1381743217">WorldCat</a></p></li>
 </ul>
+<section id="duckdb" class="level2">
+<h2 class="anchored" data-anchor-id="duckdb">DuckDB</h2>
+<p>When running memory-intensive workloads, DuckDB is a powerful tool to have on hand. Unlike many other database management systems, which focus on data storage, DuckDB focuses on data analysis, and it includes easy installation methods for Python, R, and JavaScript environments.</p>
+<ul>
+<li><p><em>Getting Started with DuckDB</em> : <a href="https://learning.oreilly.com/library/view/getting-started-with/9781803241005/">UBC Library</a> | <a href="https://search.worldcat.org/title/1436457021">WorldCat</a></p></li>
+<li><p><em>DuckDB: Up and Running</em> : <a href="https://go.exlibris.link/YFbRpYc9">UBC Library</a> | <a href="https://search.worldcat.org/title/1442327944">WorldCat</a></p></li>
+<li><p><a href="https://duckdb.org/docs/">DuckDB Documentation</a></p></li>
+<li><p><a href="https://duckdb.org/docs/extensions/spatial.html">DuckDB - Spatial Extension</a></p></li>
+</ul>
+</section>
 <section id="postgresql" class="level2">
 <h2 class="anchored" data-anchor-id="postgresql">PostgreSQL</h2>
+<p>Due to the PostGIS extension, PostgreSQL is one of the most commonly used database management systems for storing and accessing geospatial data. GIS software, like GeoServer and QGIS, provide tight integrations around PostGIS-enabled databases.</p>
 <ul>
-<li><p><em><a href="https://go.exlibris.link/DPVZ3PFk">Learn PostgreSQL</a></em></p></li>
-<li><p><em><a href="https://go.exlibris.link/Mp0jzFgZ">PostgreSQL Query Optimization</a></em></p></li>
+<li><p><a href="https://docs.qgis.org/3.34/en/docs/training_manual/database_concepts/index.html">QGIS Manual - Database Concepts with PostgreSQL</a></p></li>
+<li><p><em>Learn PostgreSQL</em> : <a href="https://go.exlibris.link/DPVZ3PFk">UBC Library</a> | <a href="https://search.worldcat.org/title/1407633395">WorldCat</a></p></li>
+<li><p><em>PostgreSQL Query Optimization</em> : <a href="https://go.exlibris.link/Mp0jzFgZ">UBC Library</a> | <a href="https://search.worldcat.org/title/1417197322">WorldCat</a></p></li>
 </ul>
 <section id="hosting" class="level3">
 <h3 class="anchored" data-anchor-id="hosting">Hosting</h3>
+<p>While it’s possible to host a PostgreSQL database on your local machine, to take full advantage of a relational database management system, you’ll want to host the database on its own server. The Digital Research Alliance provides free database hosting for researchers based in Canada through their cloud computing services, and alternatively, many commercial cloud computing and software-as-a-service providers include specialized services for hosting databases.</p>
 <section id="alliance" class="level4">
 <h4 class="anchored" data-anchor-id="alliance">Alliance</h4>
 <ul>
-<li><a href="https://docs.alliancecan.ca/wiki/Database_servers#Cedar_PostgreSQL_server">Database Servers – Cedar PostreSQL</a></li>
+<li><a href="https://docs.alliancecan.ca/wiki/Database_servers#Cedar_PostgreSQL_server">Database Servers – Cedar PostgreSQL</a></li>
 </ul>
 </section>
 <section id="cloud-saas-providers" class="level4">
 <h4 class="anchored" data-anchor-id="cloud-saas-providers">Cloud / SaaS Providers</h4>
 <ul>
-<li><p><a href="https://azure.microsoft.com/en-ca/products/postgresql/">MicrosoftAzure</a></p></li>
+<li><p><a href="https://azure.microsoft.com/en-ca/products/postgresql/">Microsoft Azure</a></p></li>
 <li><p><a href="https://aws.amazon.com/rds/postgresql/">AWS</a></p></li>
 <li><p><a href="https://cloud.google.com/sql/docs/postgres">Google Cloud</a></p></li>
 <li><p><a href="https://supabase.com/docs/guides/database">Supabase</a></p></li>
@@ -372,18 +387,21 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p><a href="https://postgis.net/documentation/">PostGIS</a></p>
 <ul>
-<li><p><em><a href="https://go.exlibris.link/cKtRz8Pm">PostGIS in Action</a></em></p></li>
-<li><p><em><a href="https://go.exlibris.link/z6HBlj5t">PostGIS Cookbook</a></em></p></li>
-<li><p><em><a href="https://go.exlibris.link/bCV4PRwJ">Mastering PostGIS</a></em></p></li>
+<li><p><a href="https://postgis.net/workshops/postgis-intro/">Introduction to PostGIS</a></p></li>
+<li><p><em>PostGIS in Action</em> : <a href="https://go.exlibris.link/cKtRz8Pm">UBC Library</a> | <a href="https://search.worldcat.org/title/1339878967">WorldCat</a></p></li>
+<li><p><em>PostGIS Cookbook</em> : <a href="https://go.exlibris.link/z6HBlj5t">UBC Library</a> | <a href="https://search.worldcat.org/title/1105805332">WorldCat</a></p></li>
+<li><p><em>Mastering PostGIS</em> : <a href="https://go.exlibris.link/bCV4PRwJ">UBC Library</a> | <a href="https://search.worldcat.org/title/991530184">WorldCat</a></p></li>
 </ul></li>
 <li><p><a href="https://docs.pgrouting.org/latest/en/pgRouting-introduction.html">pgRouting</a></p></li>
 </ul>
 </section>
 </section>
-<section id="mysql" class="level2">
-<h2 class="anchored" data-anchor-id="mysql">MySQL</h2>
+<section id="mysql-and-mariadb" class="level2">
+<h2 class="anchored" data-anchor-id="mysql-and-mariadb">MySQL and MariaDB</h2>
+<p>While not nearly as a popular in geospatial computing as PostgreSQL, MySQL and its closely-related fork, MariaDB, are extraordinarily popular database management systems, which remains a fundamental building block for many open-source web applications, like WordPress, Drupal, Omeka-S, and Scalar.</p>
 <section id="hosting-1" class="level3">
 <h3 class="anchored" data-anchor-id="hosting-1">Hosting</h3>
+<p>Similar to PostgreSQL, both the Alliance cloud and numerous commercial cloud providers include support for hosting and managing instances of a MySQL server.</p>
 <section id="alliance-1" class="level4">
 <h4 class="anchored" data-anchor-id="alliance-1">Alliance</h4>
 <ul>
