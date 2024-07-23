@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.54">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -386,7 +386,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><a href="https://confluence.it.ubc.ca/display/UARC/Introduction+to+Linux+and+Using+the+Command+Line+Interface">Intro to Linux and the Bash Shell in HPC Environments</a></p></li>
 <li><p><a href="https://www.ualberta.ca/information-services-and-technology/research-computing/bootcamps.html?1=HPC">Research Computing Bootcamp Videos</a></p></li>
 <li><p><a href="https://youtu.be/wRmRnVMjKXM">Geospatial Analysis with HPC Video</a></p></li>
-<li><p><em><a href="https://go.exlibris.link/619Mq3H3">High Performance Computing for Geospatial Applications</a></em></p></li>
+<li><p><em>High Performance Computing for Geospatial Applications</em> : <a href="https://go.exlibris.link/619Mq3H3">UBC Library</a> | <a href="https://search.worldcat.org/title/1178714505">WorldCat</a></p></li>
 <li><p><a href="https://www.youtube.com/@SCconferenceseries/playlists">Supercomputing Conference - Recorded Sessions</a></p></li>
 <li><p><em>Parallel and High Performance Computing</em> : <a href="https://go.exlibris.link/1VWhVDjZ">UBC Library</a> | <a href="https://search.worldcat.org/title/1262371463">WorldCat</a></p></li>
 </ul>
@@ -428,13 +428,14 @@ Note
 </section>
 <section id="qgis" class="level2">
 <h2 class="anchored" data-anchor-id="qgis">QGIS</h2>
-<p>QGIS can run on either UBC Sockeye or Alliance clusters. To interact with QGIS through a graphical user interface, you’ll need to run in it within an interactive job with X11 forwarding enabled. You can find more information on creating graphical interactive jobs on UBC Sockeye <a href="https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-GraphicalInteractive">here</a>, while documentation for Alliance clusters is listed below.</p>
+<p>QGIS can run on either UBC Sockeye or Alliance clusters. To interact with QGIS through a graphical user interface, you’ll need to run it within an interactive job with X11 forwarding enabled. You can find more information on creating graphical interactive jobs on UBC Sockeye <a href="https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-GraphicalInteractive">here</a>, while QGIS-specific documentation for Alliance clusters is listed below.</p>
 <ul>
 <li><a href="https://docs.alliancecan.ca/wiki/QGIS">Alliance Documentation - QGIS</a></li>
 </ul>
 </section>
 <section id="jupyter" class="level2">
 <h2 class="anchored" data-anchor-id="jupyter">Jupyter</h2>
+<p>A handful of Alliance clusters provide access to hardware via a JupyterHub instance. While hardware resources are significantly restricted, using Jupyter can provide an easy method for familiarizing oneself with the software and capabilities of an HPC environment. JupyterHub provides an easy-to-follow form for setting up an interactive job on a given cluster, where your Jupyter server will be running from.</p>
 <ul>
 <li><p><a href="https://docs.alliancecan.ca/wiki/JupyterHub">Alliance Documentation - JupyterHub</a></p></li>
 <li><p><a href="https://youtu.be/Qk3Le5HBxeg?si=IANIgAciBdOLwMQy">Working with Jupyter on Clusters (Alliance) Video</a></p></li>
@@ -484,7 +485,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You can only install packages from Alliance’s maintained set of <a href="https://docs.alliancecan.ca/wiki/Available_Python_wheels">Python wheels</a>. To run JupyterLab with conda or external libraries held on PYPI, you’ll need to run it using an Apptainer container as documented in the alternative approaches below.</p>
+<p>You can only install packages from Alliance’s maintained set of <a href="https://docs.alliancecan.ca/wiki/Available_Python_wheels">Python wheels</a>. To run JupyterLab with conda or external libraries held on PYPI or CRAN, you’ll need to run it using a pre-built Apptainer container as documented in the alternative approaches below.</p>
 </div>
 </div>
 <ul>
@@ -498,9 +499,10 @@ Note
 <h3 class="anchored" data-anchor-id="running-a-jupyter-kernel-from-a-container">Running a Jupyter Kernel from a Container</h3>
 <p>Containers enable you to pre-build customized environments from which you can run software that is not supported on the Alliance clusters, and they can be leveraged to extend the Alliance’s JupyterHub clusters by running them as a custom Jupyter kernels. This can be extraordinarily useful considering Conda is not supported on the cluster.</p>
 <p>Before using this approach, double-check that the software you need is not already available on the cluster either as <a href="https://docs.alliancecan.ca/wiki/Available_software">modules</a> or <a href="https://docs.alliancecan.ca/wiki/Available_Python_wheels">Python wheels</a>. Software installed within a container is going to perform less efficiently than equivalent modules on Alliance, which have been optimized for HPC.</p>
-<section id="creating-the-container-environment-with-mamba-conda" class="level4">
-<h4 class="anchored" data-anchor-id="creating-the-container-environment-with-mamba-conda">Creating the container environment with Mamba (Conda)</h4>
-<p>While this can be done within the Alliance login node, it is highly recommended that the containers are built from another Linux machine and copied onto the cluster. This will ensure the build runs a bit faster and you aren’t competing for resources with other researchers on the login node.</p>
+<section id="creating-the-container-environment-with-micromamba-conda" class="level4">
+<h4 class="anchored" data-anchor-id="creating-the-container-environment-with-micromamba-conda">Creating the container environment with Micromamba (Conda)</h4>
+<p>While this can be done within the Alliance login node, it is highly recommended that the containers are built from another Linux environment and copied onto the cluster. This will ensure that the build runs a bit faster and you aren’t competing for resources with other researchers on the login node.</p>
+<p>Apptainer will only run on Linux, so Windows and MacOS users will need to install a Linux virtual machine either via Windows Subsystem for Linux (WSL) or Lima to create and run Apptainer containers locally. Apptainer includes instructions in their documentation at this <a href="https://apptainer.org/docs/admin/main/installation.html#installation-on-windows-or-mac">link</a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -514,9 +516,8 @@ Note
 <p>Whenever you start a new Jupyter server on the cluster, you’ll need to load the apptainer module again in order for the kernel to run.</p>
 </div>
 </div>
-<p>If you need flexibility in your container, you might be able to create a sandbox environment from your uploaded container and modify the sandbox container from your terminal with conda/mamba.</p>
 <ol type="1">
-<li><p>Ensure Apptainer is installed on the Linux machine</p>
+<li><p>Ensure Apptainer is installed in the Linux environment</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>If Apptainer is not installed, you can use the following steps on Debian or Ubuntu</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt update</span>
@@ -524,54 +525,59 @@ Note
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo add-apt-repository <span class="at">-y</span> ppa:apptainer/ppa</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt update</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt install <span class="at">-y</span> apptainer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Pull the conda-forge/mambaforge Docker container from Docker Hub and build a sandbox container from it. This will enable you to use Mamba, an alternative to Conda that runs more efficiently in environments where resources are limited.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer build <span class="at">--sandbox</span> <span class="op">&lt;</span>container_name<span class="op">&gt;</span>/ docker://condaforge/mambaforge</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Pull the mambaorg/micromamba Docker container from Docker Hub and build a sandbox container from it. This will enable you to use Micromamba, an alternative to Conda and Mamba that runs more efficiently in environments where resources are limited.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer build <span class="at">--sandbox</span> <span class="op">&lt;</span>container_name<span class="op">&gt;</span>/ docker://mambaorg/micromamba:bookworm-slim</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Start a Bash shell within the sandbox container with write privileges.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer shell <span class="at">--shell</span> /bin/bash <span class="at">--writable</span> <span class="op">&lt;</span>container_name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Update Mamba.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> mamba update mamba <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Use Mamba to install the kernel package needed for your preferred programming language (Python: ipykernel; R: r-irkernel) and any other packages you need.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> mamba install <span class="op">&lt;</span>kernel_package<span class="op">&gt;</span> <span class="op">&lt;</span>other_packages<span class="op">&gt;</span> -y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer shell <span class="at">-C</span> <span class="at">--shell</span> /bin/bash <span class="at">--writable</span> <span class="op">&lt;</span>container_name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Update Micromamba.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> micromamba self-update</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Use Micromamba to install the kernel package needed for your preferred programming language (Python: ipykernel; R: r-irkernel) and any other packages you may need.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> micromamba install <span class="at">-y</span> <span class="at">-q</span> <span class="at">-n</span> base <span class="at">-c</span> conda-forge <span class="op">&lt;</span>kernel_package<span class="op">&gt;</span> <span class="op">&lt;</span>other_packages<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Clean up any extra files that are no longer needed</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> micromamba clean <span class="at">--all</span> <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Exit the sandbox container shell</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> exit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> exit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Build your Apptainer container from the sandbox container. Including a time stamp with <code>&lt;container_name&gt;</code> is recommended when building a container as you may want to rebuild the container with updated packages in the future.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer build <span class="op">&lt;</span>container_name<span class="op">&gt;</span>_<span class="op">&lt;</span>timestamp<span class="op">&gt;</span>.sif <span class="op">&lt;</span>container_name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer build <span class="op">&lt;</span>container_name<span class="op">&gt;</span>_<span class="op">&lt;</span>timestamp<span class="op">&gt;</span>.sif <span class="op">&lt;</span>container_name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ol>
+<p>If you need flexibility in your container to add and remove packages, you can create a sandbox environment from your uploaded container and modify the sandbox container while accessing the cluster on a login node.</p>
 </section>
-<section id="installing-a-python-based-container-as-a-kernel" class="level4">
-<h4 class="anchored" data-anchor-id="installing-a-python-based-container-as-a-kernel">Installing a Python-Based Container as a Kernel</h4>
+<section id="installing-a-micromamba-python-based-container-as-a-kernel" class="level4">
+<h4 class="anchored" data-anchor-id="installing-a-micromamba-python-based-container-as-a-kernel">Installing a Micromamba Python-Based Container as a Kernel</h4>
 <ol type="1">
 <li><p>Start a server on the JupyterHub cluster.</p></li>
 <li><p>Start a new terminal.</p></li>
 <li><p>Load the apptainer module.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load apptainer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load apptainer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Close the terminal and start a new one.</p></li>
 <li><p>Install the container as a Python kernel</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> ipykernel install <span class="at">--user</span> <span class="at">--name</span> <span class="op">&lt;</span>container_name<span class="op">&gt;</span> --display-name=<span class="st">"Python (&lt;container_name&gt;)"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> ipykernel install <span class="at">--user</span> <span class="at">--name</span> <span class="op">&lt;</span>container_name<span class="op">&gt;</span> --display-name=<span class="st">"Python (&lt;container_name&gt;)"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>The previous step provided an initial configuration for the kernel, but we will need to slightly modify it to ensure the kernel executes from the container.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano /home/<span class="op">&lt;</span>username<span class="op">&gt;</span>/.local/share/jupyter/kernels/<span class="op">&lt;</span>container_name<span class="op">&gt;</span>/kernel.json</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano /home/<span class="op">&lt;</span>username<span class="op">&gt;</span>/.local/share/jupyter/kernels/<span class="op">&lt;</span>container_name<span class="op">&gt;</span>/kernel.json</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Modify kernel.json file to match the following:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>kernel.json</strong></pre>
 </div>
-<div class="sourceCode" id="cb12" data-filename="kernel.json"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"argv"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"apptainer"</span><span class="ot">,</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"exec"</span><span class="ot">,</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"/home/&lt;username&gt;/&lt;container_name&gt;.sif"</span><span class="ot">,</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"python"</span><span class="ot">,</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"-m"</span><span class="ot">,</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ipykernel_launcher"</span><span class="ot">,</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"-f"</span><span class="ot">,</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"{connection_file}"</span></span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"display_name"</span><span class="fu">:</span> <span class="st">"Python (&lt;container_name&gt;)"</span><span class="fu">,</span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"language"</span><span class="fu">:</span> <span class="st">"python"</span><span class="fu">,</span></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"metadata"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"debugger"</span><span class="fu">:</span> <span class="kw">true</span></span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13" data-filename="kernel.json"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"argv"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"apptainer"</span><span class="ot">,</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"exec"</span><span class="ot">,</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"/home/&lt;username&gt;/&lt;container_name&gt;.sif"</span><span class="ot">,</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"micromamba"</span><span class="ot">,</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"run"</span><span class="ot">,</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"python"</span><span class="ot">,</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"-m"</span><span class="ot">,</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"ipykernel_launcher"</span><span class="ot">,</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"-f"</span><span class="ot">,</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"{connection_file}"</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"display_name"</span><span class="fu">:</span> <span class="st">"Python (&lt;container_name&gt;)"</span><span class="fu">,</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"language"</span><span class="fu">:</span> <span class="st">"python"</span><span class="fu">,</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"metadata"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"debugger"</span><span class="fu">:</span> <span class="kw">true</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 <li><p>Close the terminal and wait a few seconds for the kernel to register in the JupyterLab launcher.</p></li>
 </ol>
@@ -582,36 +588,38 @@ Note
 <li><p>Start a server on the JupyterHub cluster.</p></li>
 <li><p>Start a new terminal.</p></li>
 <li><p>Load the apptainer module.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load apptainer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load apptainer</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Close the terminal and start a new one.</p></li>
 <li><p>Using the <code>nano</code> text editor, create a new directory and file to store the custom Jupyter kernel configuration</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano <span class="op">&lt;</span>container_name<span class="op">&gt;</span>/kernel.json</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano <span class="op">&lt;</span>container_name<span class="op">&gt;</span>/kernel.json</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Within the kernel.json file, enter the following:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>kernel.json</strong></pre>
 </div>
-<div class="sourceCode" id="cb15" data-filename="kernel.json"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"argv"</span><span class="fu">:</span> <span class="ot">[</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"apptainer"</span><span class="ot">,</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"exec"</span><span class="ot">,</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"/home/&lt;username&gt;/&lt;container_name&gt;.sif"</span><span class="ot">,</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"R"</span><span class="ot">,</span></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"--slave"</span><span class="ot">,</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"-e"</span><span class="ot">,</span></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"IRkernel::main()"</span><span class="ot">,</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"--args"</span><span class="ot">,</span></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"{connection_file}"</span></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"display_name"</span><span class="fu">:</span> <span class="st">"R (&lt;container_name&gt;)"</span><span class="fu">,</span></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"language"</span><span class="fu">:</span> <span class="st">"R"</span><span class="fu">,</span></span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"metadata"</span><span class="fu">:</span> <span class="fu">{</span></span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"debugger"</span><span class="fu">:</span> <span class="kw">true</span></span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16" data-filename="kernel.json"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"argv"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"apptainer"</span><span class="ot">,</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"exec"</span><span class="ot">,</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"/home/&lt;username&gt;/&lt;container_name&gt;.sif"</span><span class="ot">,</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"micromamba"</span><span class="ot">,</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"run"</span><span class="ot">,</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"R"</span><span class="ot">,</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"--slave"</span><span class="ot">,</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"-e"</span><span class="ot">,</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"IRkernel::main()"</span><span class="ot">,</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">"--args"</span><span class="ot">,</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">"{connection_file}"</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>  <span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"display_name"</span><span class="fu">:</span> <span class="st">"R (&lt;container_name&gt;)"</span><span class="fu">,</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"language"</span><span class="fu">:</span> <span class="st">"R"</span><span class="fu">,</span></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>  <span class="dt">"metadata"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">"debugger"</span><span class="fu">:</span> <span class="kw">true</span></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 <li><p>Install the container as a custom kernel using the kernel.json file.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> jupyter kernelspec install <span class="op">&lt;</span>container_name<span class="op">&gt;</span> --user</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> jupyter kernelspec install <span class="op">&lt;</span>container_name<span class="op">&gt;</span> --user</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Close the terminal and wait a few seconds for the kernel to register in the JupyterLab launcher.</p></li>
 </ol>
 </section>
@@ -621,7 +629,7 @@ Note
 <h2 class="anchored" data-anchor-id="rstudio-server">RStudio Server</h2>
 <section id="via-jupyterhub" class="level3">
 <h3 class="anchored" data-anchor-id="via-jupyterhub">via JupyterHub</h3>
-<p>The easiest way to start an RStudio session in a HPC environment is to launch it within a JupyterLab session. See the entry above for session limits and documentation on starting a JupyterLab session from a JupyterHub cluster. Once your JupyterLab session is running, select the Software tab in the sidebar and find/load the rstudio-server module. You can then click the RStudio launcher, to open a new RStudio session. While you can install any R library from CRAN, you can’t use tools like conda and can only use software loaded as modules from the Alliance. If you need more flexibility for your RStudio session, setup and run your environment within an Apptainer container as documented below.</p>
+<p>The easiest way to start an RStudio session in a HPC environment is to launch it within a JupyterLab session. See the entry above for session limits and documentation on starting a JupyterLab session from a JupyterHub cluster. Once your JupyterLab session is running, select the Software tab in the sidebar and find/load the rstudio-server module. You can then click the RStudio launcher, to open a new RStudio session. While you can install any R library from CRAN, you can’t use package managers like conda and can only use software loaded as modules from the Alliance. If you need more flexibility for your RStudio session, setup and run your environment within an Apptainer container as documented below.</p>
 </section>
 <section id="via-container" class="level3">
 <h3 class="anchored" data-anchor-id="via-container"><a href="https://confluence.it.ubc.ca/display/UARC/RStudio+with+Apptainer">via Container</a></h3>
@@ -635,7 +643,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>the linked instructions above cover running RStudio Server on the UBC ARC Sockeye cluster using Apptainer, but the instructions should be extremely similar for running on an Alliance cluster as you would just need to convert the job script from PBS to SLURM.</p>
+<p>the linked instructions above cover running RStudio Server on the UBC ARC Sockeye cluster using Apptainer, but the instructions should be extremely similar for running on an Alliance cluster.</p>
 </div>
 </div>
 <ul>
@@ -643,26 +651,27 @@ Note
 <ul>
 <li><p>You can either build your container on a local Linux system and copy the container to the cluster or build it directly on a login node.</p></li>
 <li><p>Example of building an RStudio container on a local Linux (Ubuntu) system</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install Apptainer if not already done so</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt update</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt install <span class="at">-y</span> software-properties-common</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo add-apt-repository <span class="at">-y</span> ppa:apptainer/ppa</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt update</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt install <span class="at">-y</span> apptainer</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a new sandbox container from the Rocker Project RStudio Server Docker container</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer build <span class="at">--sandbox</span> rstudio/ docker://rocker/rstudio</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Run a shell within the sandbox container with write and sudo privileges</span></span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer shell <span class="at">--writable</span> <span class="at">--fakeroot</span> rstudio/</span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Start R and install packages</span></span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> R</span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="ex">R</span> version 4.3.1 <span class="er">(</span><span class="ex">2023-06-16</span><span class="kw">)</span> <span class="ex">--</span> <span class="st">"Beagle Scounts"</span></span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> install.packages<span class="kw">(</span><span class="st">'ggplot2'</span><span class="kw">)</span></span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
-<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> q<span class="kw">()</span></span>
-<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> exit</span>
-<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the sandbox container into a SIF container to be transferred to the HPC cluster</span></span>
-<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer build rstudio.sif rstudio</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install Apptainer if not already done so</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt update</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt install <span class="at">-y</span> software-properties-common</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo add-apt-repository <span class="at">-y</span> ppa:apptainer/ppa</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt update</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt install <span class="at">-y</span> apptainer</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Build a new sandbox container from one of the Rocker Project images</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="co"># The geospatial images includes a range of geospatial packages</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer build <span class="at">--sandbox</span> rstudio/ docker://rocker/geospatial</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Run a shell within the sandbox container with write and sudo privileges</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer shell <span class="at">--writable</span> <span class="at">--fakeroot</span> rstudio/</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Start R and install any additional packages that may be needed</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> R</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="ex">R</span> version 4.4.1 <span class="er">(</span><span class="ex">2024-06-14</span><span class="kw">)</span> <span class="ex">--</span> <span class="st">"Race for Your Life"</span></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> install.packages<span class="kw">(</span><span class="st">'climatol'</span><span class="kw">)</span></span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> q<span class="kw">()</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> exit</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the sandbox container into a SIF container to be transferred to the HPC cluster</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer build rstudio.sif rstudio</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul></li>
 </ul>
 </section>
@@ -671,7 +680,7 @@ Note
 <h2 class="anchored" data-anchor-id="python">Python</h2>
 <ul>
 <li><p><a href="https://docs.alliancecan.ca/wiki/Python">Alliance Documentation - Python</a></p></li>
-<li><p>Supported Versions: 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, and 3.11</p></li>
+<li><p>Supported Versions: 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11 and 3.12</p></li>
 <li><p>Supported Virtual Environment Managers:</p>
 <ul>
 <li><p>UBC ARC Sockeye:</p>
@@ -679,42 +688,21 @@ Note
 <li><p>conda, virtualenv, and venv</p></li>
 <li><p><a href="https://confluence.it.ubc.ca/display/UARC/Using+Virtual+Environments+on+Sockeye">Using Virtual Environments on Sockeye</a></p></li>
 </ul></li>
-<li><p>Alliance: virtualenv or venv. conda is not supported, but it can be run using an Apptainer container. In general, Alliance recommends avoiding conda and Anaconda packages if possible. Go <a href="https://docs.alliancecan.ca/wiki/Anaconda/en">here</a> for more details. See instructions below for creating and running conda from an Apptainer container:</p>
+<li><p>Alliance: virtualenv or venv. conda is not supported, but it can be run using an Apptainer container. In general, Alliance recommends avoiding conda-forge and Anaconda packages if possible. Go <a href="https://docs.alliancecan.ca/wiki/Anaconda/en">here</a> for more details. See instructions below for creating and running micromamba, a lightweight, drop-in replacement for conda, from an Apptainer container:</p>
 <ul>
 <li><p>Creating an Apptainer container with conda and Anaconda packages:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pull the miniconda3 Docker container and create a new sandbox container from it</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer build <span class="at">--sandbox</span> conda/ docker://continuumio/miniconda3</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Run a shell with write access in the sandbox container</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer shell <span class="at">--shell</span> /bin/bash <span class="at">--writable</span> conda</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Update conda</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> conda update conda</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a conda environment and install some conda packages</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> conda create <span class="at">--name</span> <span class="op">&lt;</span>env_name<span class="op">&gt;</span> <span class="op">&lt;</span>package_names<span class="op">&gt;</span></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> exit</span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the sandbox container into a SIF container</span></span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer build conda.sif conda</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pull the micromamba Docker container and create a new sandbox container from it</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer build <span class="at">--sandbox</span> container/ docker://mambaorg/micromamba:bookworm-slim</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Run a shell with write access in the sandbox container</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer shell <span class="at">--writable</span> <span class="at">-C</span> <span class="at">--shell</span> /bin/bash</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Update micromamba</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> micromamba self-update</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Install some packages from conda-forge</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> micromamba install <span class="at">-n</span> base python=3.11 <span class="op">&lt;</span>package_names<span class="op">&gt;</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="ex">Apptainer</span><span class="op">&gt;</span> exit</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the sandbox container into a SIF container</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer build <span class="op">&lt;</span>container_name<span class="op">&gt;</span>_<span class="op">&lt;</span>timestamp<span class="op">&gt;</span>.sif container/</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>SLURM job script for running a Python script within the container created above:</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Include the shebang at the top of the file, to clearly identify that the following script is meant for the Bash Shell</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Provide flags as comments in the script. These will be read by SLURM to set option flags</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify your user account</span></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --account=def-someuser</span></span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify the amount of memory to use per CPU</span></span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mem-per-cpu=1.5G  # In this case the job will only use one CPU with 1.5 GB of memory</span></span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=1:00:00 # And I expect that the job will take a little less than an hour</span></span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="co"># At the beginning of your job load the Apptainer module</span></span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load apptainer</span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Run a Python script using an environment within your conda container</span></span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer run <span class="at">-C</span> <span class="at">-B</span> <span class="op">&lt;</span>directory holding Python script<span class="op">&gt;</span> -W <span class="va">$SLURM_TMPDIR</span> conda.sif conda run <span class="at">-n</span> <span class="op">&lt;</span>env_name<span class="op">&gt;</span> python <span class="op">&lt;</span>script<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-</ul></li>
-</ul></li>
-<li><p>Supported Packages (Alliance): <a href="https://docs.alliancecan.ca/wiki/Available_Python_wheels" class="uri">https://docs.alliancecan.ca/wiki/Available_Python_wheels</a></p>
-<ul>
-<li>Note: include <code>--no-index</code> flag with <code>pip</code> to only install Alliance wheels. The Alliance Python wheels have been specifically compiled and optimized to run as effectively on HPC clusters as possible.</li>
-</ul></li>
-<li><p>Example Job Scripts:</p>
-<ul>
-<li><p>SLURM (Alliance):</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Include the shebang at the top of the file, to clearly identify that the following script is meant for the Bash Shell</span></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Provide flags as comments in the script. These will be read by SLURM to set option flags</span></span>
@@ -723,56 +711,37 @@ Note
 <span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify the amount of memory to use per CPU</span></span>
 <span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mem-per-cpu=1.5G  # In this case the job will only use one CPU with 1.5 GB of memory</span></span>
 <span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=1:00:00 # And I expect that the job will take a little less than an hour</span></span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="co"># At the beginning of your job load any software dependencies needed for your job</span></span>
-<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load python/3.10</span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="co"># If running Python, create and activate a virual environment</span></span>
-<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="ex">virtualenv</span> <span class="at">--no-download</span> <span class="va">$SLURM_TMPDIR</span>/venv</span>
-<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> <span class="va">$SLURM_TMPDIR</span>/venv/bin/activate</span>
-<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Upgrade pip and install Python dependencies using Alliance wheels listed as dependencies in requirements.txt</span></span>
-<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">--no-index</span> <span class="at">--upgrade</span> pip</span>
-<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">--no-index</span> <span class="at">-r</span> requirements.txt</span>
-<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the script</span></span>
-<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> script.py</span>
-<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Deactivate the virtual environment</span></span>
-<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a><span class="ex">deactivate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>PBS (UBC ARC Sockeye with conda):</p>
-<ol type="1">
-<li>Prior to running your job, pre-install conda into your job directory and recreate your virtual environment</li>
-</ol>
-<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.3.1-0-Linux-x86_64.sh</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> bash Miniconda3-py310_23.3.1-0-Linux-x86_64.sh</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Welcome</span> to Miniconda3 py310_23.3.1-0</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> source ~/.bashrc</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> conda env create <span class="at">-n</span> venv <span class="at">-f</span> environment.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ol start="2" type="1">
-<li>Create your PBS job script</li>
-</ol>
-<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Include the shebang at the top of the file, to clearly identify that the following script is meant for the Bash Shell</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Provide flags as comments in the script. These will be read by PBS to set option flags</span></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify the resource required to run the job</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -l walltime=1:00:00,select=1:ncpus=1:mem=1.5gb # In this case, I anticipate that the job will take a little less than an hour and that I will only need to use one cluster node and within that node I will need one CPU core with 1.5 GB of memory dedicated to it</span></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify a name that you can use to identify this job</span></span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -N my_conda_job</span></span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify your project account</span></span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -A proj-name</span></span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Request that the scheduler update you about the status of your job</span></span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -m abe</span></span>
-<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Provide the scheduler an email address to recieve updates</span></span>
-<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="co">#PBS -M your.name@ubc.ca</span></span>
-<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="co">######################################################################################</span></span>
-<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="co"># At the beginning of your job, enter your job directory</span></span>
-<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="va">$PBS_O_WORKDIR</span></span>
-<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Load conda environment</span></span>
-<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.bashrc</span>
-<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Activate conda environment</span></span>
-<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate venv</span>
-<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Add your commands here</span></span>
-<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> script.py</span>
-<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Deactivate environment</span></span>
-<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> deactivate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="co"># At the beginning of your job load the Apptainer module</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load apptainer</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Run a Python script using an environment within your conda container</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer run <span class="at">-C</span> <span class="at">-B</span> <span class="op">&lt;</span>directory holding Python script<span class="op">&gt;</span> -W <span class="va">$SLURM_TMPDIR</span> <span class="op">&lt;</span>container_name<span class="op">&gt;</span>_<span class="op">&lt;</span>timestamp<span class="op">&gt;</span>.sif micromamba run python <span class="op">&lt;</span>script<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul></li>
+</ul></li>
+<li><p>Supported Packages (Alliance): <a href="https://docs.alliancecan.ca/wiki/Available_Python_wheels" class="uri">https://docs.alliancecan.ca/wiki/Available_Python_wheels</a></p>
+<ul>
+<li>Note: include <code>--no-index</code> flag with <code>pip</code> to only install Alliance wheels. The Alliance Python wheels have been specifically compiled and optimized to run as effectively on HPC clusters as possible.</li>
+</ul></li>
+<li><p>Example Job Script:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Include the shebang at the top of the file, to clearly identify that the following script is meant for the Bash Shell</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Provide flags as comments in the script. These will be read by SLURM to set option flags</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify your user account</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --account=def-someuser</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify the amount of memory to use per CPU</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mem-per-cpu=1.5G  # In this case the job will only use one CPU with 1.5 GB of memory</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=1:00:00 # And I expect that the job will take a little less than an hour</span></span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="co"># At the beginning of your job load any software dependencies needed for your job</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load python/3.10</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="co"># If running Python, create and activate a virual environment</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="ex">virtualenv</span> <span class="at">--no-download</span> <span class="va">$SLURM_TMPDIR</span>/venv</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> <span class="va">$SLURM_TMPDIR</span>/venv/bin/activate</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Upgrade pip and install Python dependencies using Alliance wheels listed as dependencies in requirements.txt</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">--no-index</span> <span class="at">--upgrade</span> pip</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">--no-index</span> <span class="at">-r</span> requirements.txt</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the script</span></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> script.py</span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Deactivate the virtual environment</span></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a><span class="ex">deactivate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Interactive Sessions:</p>
 <ul>
 <li><p><a href="https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-Interactive">Sockeye</a></p></li>
@@ -780,23 +749,23 @@ Note
 <ul>
 <li><p>Use the Slurm allocation (<a href="https://docs.alliancecan.ca/wiki/Running_jobs">salloc</a>) command</p></li>
 <li><p>Example command for starting a single core IPython session on Alliance:</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> salloc <span class="at">--time</span><span class="op">=</span>00:15:00</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="ex">salloc:</span> Pending job allocation 1234567</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="ex">salloc:</span> Nodes cdr<span class="op">&lt;</span><span class="co">###&gt; are ready for your job</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load gcc/9.3.0 python/3.10</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> virtualenv <span class="at">--no-download</span> venv</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> source venv/bin/activate</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv</span><span class="kw">)</span> <span class="ex">$</span> python <span class="at">-m</span> pip install <span class="at">--no-index</span> ipython</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv</span><span class="kw">)</span> <span class="ex">$</span> ipython</span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.10.2 ...</span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="ex">In</span> <span class="pp">[</span><span class="ss">1</span><span class="pp">]</span>: <span class="op">&lt;</span>python code<span class="op">&gt;</span></span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a><span class="ex">In</span> <span class="pp">[</span><span class="ss">2</span><span class="pp">]</span>: exit</span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv</span><span class="kw">)</span> <span class="ex">$</span> deactivate</span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> exit</span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a><span class="ex">salloc:</span> Relinquishing job allocation 1234567</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> salloc <span class="at">--time</span><span class="op">=</span>00:15:00</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="ex">salloc:</span> Pending job allocation 1234567</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="ex">salloc:</span> Nodes cdr<span class="op">&lt;</span><span class="co">###&gt; are ready for your job</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load gcc/9.3.0 python/3.10</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> virtualenv <span class="at">--no-download</span> venv</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> source venv/bin/activate</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv</span><span class="kw">)</span> <span class="ex">$</span> python <span class="at">-m</span> pip install <span class="at">--no-index</span> ipython</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv</span><span class="kw">)</span> <span class="ex">$</span> ipython</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="ex">Python</span> 3.10.2 ...</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="ex">In</span> <span class="pp">[</span><span class="ss">1</span><span class="pp">]</span>: <span class="op">&lt;</span>python code<span class="op">&gt;</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="ex">In</span> <span class="pp">[</span><span class="ss">2</span><span class="pp">]</span>: exit</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv</span><span class="kw">)</span> <span class="ex">$</span> deactivate</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> exit</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a><span class="ex">salloc:</span> Relinquishing job allocation 1234567</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -811,15 +780,15 @@ Note
 <h2 class="anchored" data-anchor-id="r">R</h2>
 <ul>
 <li><p><a href="https://docs.alliancecan.ca/wiki/R">Alliance Documentation - R</a></p></li>
-<li><p>Supported Versions: 4.0, 4.1 &amp; 4.2</p></li>
+<li><p>Supported Versions: 4.0, 4.1, 4.2, 4.3, and 4.4</p></li>
 <li><p>Example Job:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --account=def-someuser</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mem-per-cpu=1.5G</span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=1:00:00</span></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co">####################################################</span></span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load gcc/9.3.0 r/4.2.2</span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> script.r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --account=def-someuser</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mem-per-cpu=1.5G</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=1:00:00</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co">####################################################</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load gcc/12.3 r/4.4.0</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> script.r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Interactive Sessions:</p>
 <ul>
 <li><p><a href="https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-Interactive">Sockeye</a></p></li>
@@ -827,19 +796,19 @@ Note
 <ul>
 <li><p>Use the Slurm allocation (<a href="https://docs.alliancecan.ca/wiki/Running_jobs">salloc</a>) command</p></li>
 <li><p>Example command for starting session:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> salloc <span class="at">--time</span><span class="op">=</span>00:15:00</span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="ex">salloc:</span> Pending job allocation 1234567</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="ex">salloc:</span> Nodes cdr<span class="op">&lt;</span><span class="co">###&gt; are ready for your job</span></span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load gcc/9.3.0 r/4.2.2</span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> R</span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="ex">R</span> version 4.2.2 <span class="er">(</span><span class="ex">2022-10-31</span><span class="kw">)</span> <span class="ex">--</span> <span class="st">"Innocent and Trusting"</span></span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="op">&lt;</span>r <span class="ex">code</span> here<span class="op">&gt;</span></span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> q<span class="kw">()</span></span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="ex">Save</span> workspace image<span class="pp">?</span> <span class="pp">[</span><span class="ss">y/n/c</span><span class="pp">]</span>:</span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> exit</span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="ex">salloc:</span> Relinquishing job allocation 1234567</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> salloc <span class="at">--time</span><span class="op">=</span>00:15:00</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="ex">salloc:</span> Pending job allocation 1234567</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="ex">salloc:</span> Nodes cdr<span class="op">&lt;</span><span class="co">###&gt; are ready for your job</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load gcc/12.3 r/4.4.0</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> R</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="ex">R</span> version 4.4.0 <span class="er">(</span><span class="ex">2024-04-24</span><span class="kw">)</span> <span class="ex">--</span> <span class="st">"Puppy Cup"</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> <span class="op">&lt;</span>r <span class="ex">code</span> here<span class="op">&gt;</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> q<span class="kw">()</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="ex">Save</span> workspace image<span class="pp">?</span> <span class="pp">[</span><span class="ss">y/n/c</span><span class="pp">]</span>:</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> exit</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="ex">salloc:</span> Relinquishing job allocation 1234567</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -893,30 +862,30 @@ Note
 <p>To leverage HPC clusters for processing drone images or video into orthophotos, 3D models, point clouds, or elevation models, <a href="https://docs.opendronemap.org/">Open Drone Map (ODM)</a> will likely be your best option.</p>
 <p>ODM is most often distributed within a Docker container, and it can just as easily run within alternative container engines, like Apptainer or Podman. Prior to running ODM on an HPC cluster, it is highly recommended that you take a few test runs on a local machine with a subset of your data. This will give you an opportunity to explore and optimize any option flags to produce the best results for your dataset. You can find information on installing Apptainer <a href="https://apptainer.org/docs/admin/main/installation.html#">here</a>.</p>
 <p>To test ODM on a local machine that has Apptainer installed, make a directory that will be bound to the container for ODM’s input and output. Then nest another directory named ‘images’ with a subset of your data stored within it. The example below uses a directory named ‘odm_test’.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer run <span class="at">-B</span> odm_test:/project/code docker://opendronemap/odm:latest <span class="at">--project-path</span> /project</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer run <span class="at">-B</span> odm_test:/project/code docker://opendronemap/odm:latest <span class="at">--project-path</span> /project</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>After processing your dataset, ODM creates a report at ‘odm_test/odm_report/report.pdf’, which can be used to quickly analyze your results and start calculating a total job time estimate for your HPC job script.</p>
 <p>Once you’ve identified any flags that you want to add to the command, you will need to convert the ODM Docker container into an Apptainer SIF container with the following command on your local machine:</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer build odm_latest.sif docker://opendronemap/odm:latest</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="co"># For a container with GPU support, run:</span></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="co"># apptainer build odm_gpu.sif docker://opendronemap/odm:gpu</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> apptainer build odm_latest.sif docker://opendronemap/odm:latest</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co"># For a container with GPU support, run:</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co"># apptainer build odm_gpu.sif docker://opendronemap/odm:gpu</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Then copy the Apptainer SIF file from your local machine to your HPC home directory and ensure your dataset is stored in a project directory.</p>
 <p>you can use the following in a SLURM job script on the HPC cluster:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Include the shebang at the top of the file, to clearly identify that the following script is meant for the Bash Shell</span></span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Provide flags as comments in the script. These will be read by SLURM to set option flags</span></span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify your user account</span></span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --account=def-someuser</span></span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify the amount of CPU cores and memory to allocate the job</span></span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --cpus-per-task=20</span></span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mem=64G</span></span>
-<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=5:00:00 # You can use the test runs on your local machine to help you estimate this</span></span>
-<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a><span class="co"># At the beginning of your job load the Apptainer module</span></span>
-<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load apptainer</span>
-<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="co"># CPU Only</span></span>
-<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> run <span class="at">-C</span> <span class="at">-W</span> <span class="va">$SLURM_TMPDIR</span> <span class="at">-B</span> /project/images:/project/code/images,/scratch:/project odm_latest.sif <span class="at">--project-path</span> /project</span>
-<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="co"># For a container with GPU support add the following to the top of your job script along with the following command</span></span>
-<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --gpu-per-node=1</span></span>
-<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="co"># apptainer run -C -W $SLURM_TMPDIR -B /project/images:/project/code/images,/scratch:/project --nv odm_gpu.sif --project-path /project</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Include the shebang at the top of the file, to clearly identify that the following script is meant for the Bash Shell</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Provide flags as comments in the script. These will be read by SLURM to set option flags</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify your user account</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --account=def-someuser</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Identify the amount of CPU cores and memory to allocate the job</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --cpus-per-task=20</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mem=64G</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=5:00:00 # You can use the test runs on your local machine to help you estimate this</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a><span class="co"># At the beginning of your job load the Apptainer module</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load apptainer</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a><span class="co"># CPU Only</span></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a><span class="ex">apptainer</span> run <span class="at">-C</span> <span class="at">-W</span> <span class="va">$SLURM_TMPDIR</span> <span class="at">-B</span> /project/images:/project/code/images,/scratch:/project odm_latest.sif <span class="at">--project-path</span> /project</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a><span class="co"># For a container with GPU support add the following to the top of your job script along with the following command</span></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --gpu-per-node=1</span></span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a><span class="co"># apptainer run -C -W $SLURM_TMPDIR -B /project/images:/project/code/images,/scratch:/project --nv odm_gpu.sif --project-path /project</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The command in the above job script may need to be slightly adjusted based on the structure of the HPC cluster that you are using with the job script parameters also being modified to account for the overall size of your dataset. In general, the above parameters should work well for a dataset of approximately 1000 images<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. You can also review the following table to help estimate the amount of memory to allocate your job based on the size of your dataset.</p>
 <table class="caption-top table">
 <thead>
