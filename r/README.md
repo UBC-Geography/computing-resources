@@ -34,6 +34,10 @@ basics of R.
 - _R for Data Science_ : [UBC Library](https://go.exlibris.link/FW9jGNqj) |
   [WorldCat](https://search.worldcat.org/title/1392138200)
 
+- _R-ticulate : A Beginner's Guide to Data Analysis for Natural Scientists_ :
+  [UBC Library](https://learning.oreilly.com/library/view/r-ticulate/9781119717997/)
+  | [WorldCat](https://search.worldcat.org/title/1445866209)
+
 - _Statistical Analysis with R Essentials for Dummies_ :
   [UBC Library](https://go.exlibris.link/Stf1fNCy) |
   [WorldCat](https://search.worldcat.org/title/1430211695)

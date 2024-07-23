@@ -20,7 +20,9 @@ across Canada, including one located at Simon Fraser University.
 
 - [Geospatial Analysis with HPC Video](https://youtu.be/wRmRnVMjKXM)
 
-- _[High Performance Computing for Geospatial Applications](https://go.exlibris.link/619Mq3H3)_
+- _High Performance Computing for Geospatial Applications_ :
+  [UBC Library](https://go.exlibris.link/619Mq3H3) |
+  [WorldCat](https://search.worldcat.org/title/1178714505)
 
 - [Supercomputing Conference - Recorded Sessions](https://www.youtube.com/@SCconferenceseries/playlists)
 
@@ -56,15 +58,22 @@ Additionally, any software that can be installed within an Apptainer container.
 ## QGIS
 
 QGIS can run on either UBC Sockeye or Alliance clusters. To interact with QGIS
-through a graphical user interface, you'll need to run in it within an
-interactive job with X11 forwarding enabled. You can find more information on
-creating graphical interactive jobs on UBC Sockeye
+through a graphical user interface, you'll need to run it within an interactive
+job with X11 forwarding enabled. You can find more information on creating
+graphical interactive jobs on UBC Sockeye
 [here](https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-GraphicalInteractive),
-while documentation for Alliance clusters is listed below.
+while QGIS-specific documentation for Alliance clusters is listed below.
 
 - [Alliance Documentation - QGIS](https://docs.alliancecan.ca/wiki/QGIS)
 
 ## Jupyter
+
+A handful of Alliance clusters provide access to hardware via a JupyterHub
+instance. While hardware resources are significantly restricted, using Jupyter
+can provide an easy method for familiarizing oneself with the software and
+capabilities of an HPC environment. JupyterHub provides an easy-to-follow form
+for setting up an interactive job on a given cluster, where your Jupyter server
+will be running from.
 
 - [Alliance Documentation - JupyterHub](https://docs.alliancecan.ca/wiki/JupyterHub)
 
@@ -110,9 +119,9 @@ for more details.
 
 You can only install packages from Alliance's maintained set of
 [Python wheels](https://docs.alliancecan.ca/wiki/Available_Python_wheels). To
-run JupyterLab with conda or external libraries held on PYPI, you'll need to run
-it using an Apptainer container as documented in the alternative approaches
-below.
+run JupyterLab with conda or external libraries held on PYPI or CRAN, you'll
+need to run it using a pre-built Apptainer container as documented in the
+alternative approaches below.
 
 :::
 
@@ -137,12 +146,18 @@ already available on the cluster either as
 Software installed within a container is going to perform less efficiently than
 equivalent modules on Alliance, which have been optimized for HPC.
 
-#### Creating the container environment with Mamba (Conda)
+#### Creating the container environment with Micromamba (Conda)
 
 While this can be done within the Alliance login node, it is highly recommended
-that the containers are built from another Linux machine and copied onto the
-cluster. This will ensure the build runs a bit faster and you aren't competing
-for resources with other researchers on the login node.
+that the containers are built from another Linux environment and copied onto the
+cluster. This will ensure that the build runs a bit faster and you aren't
+competing for resources with other researchers on the login node.
+
+Apptainer will only run on Linux, so Windows and MacOS users will need to
+install a Linux virtual machine either via Windows Subsystem for Linux (WSL) or
+Lima to create and run Apptainer containers locally. Apptainer includes
+instructions in their documentation at this
+[link](https://apptainer.org/docs/admin/main/installation.html#installation-on-windows-or-mac).
 
 ::: {.callout-note}
 
@@ -151,11 +166,7 @@ apptainer module again in order for the kernel to run.
 
 :::
 
-If you need flexibility in your container, you might be able to create a sandbox
-environment from your uploaded container and modify the sandbox container from
-your terminal with conda/mamba.
-
-1. Ensure Apptainer is installed on the Linux machine
+1. Ensure Apptainer is installed in the Linux environment
 
    ```bash
    $ apptainer --version
@@ -172,41 +183,48 @@ your terminal with conda/mamba.
    $ sudo apt install -y apptainer
    ```
 
-2. Pull the conda-forge/mambaforge Docker container from Docker Hub and build a
-   sandbox container from it. This will enable you to use Mamba, an alternative
-   to Conda that runs more efficiently in environments where resources are
-   limited.
+2. Pull the mambaorg/micromamba Docker container from Docker Hub and build a
+   sandbox container from it. This will enable you to use Micromamba, an
+   alternative to Conda and Mamba that runs more efficiently in environments
+   where resources are limited.
 
    ```bash
-   $ apptainer build --sandbox <container_name>/ docker://condaforge/mambaforge
+   $ apptainer build --sandbox <container_name>/ docker://mambaorg/micromamba:bookworm-slim
    ```
 
 3. Start a Bash shell within the sandbox container with write privileges.
 
    ```bash
-   $ apptainer shell --shell /bin/bash --writable <container_name>
+   $ apptainer shell -C --shell /bin/bash --writable <container_name>
    ```
 
-4. Update Mamba.
+4. Update Micromamba.
 
    ```bash
-   Apptainer> mamba update mamba -y
+   Apptainer> micromamba self-update
    ```
 
-5. Use Mamba to install the kernel package needed for your preferred programming
-   language (Python: ipykernel; R: r-irkernel) and any other packages you need.
+5. Use Micromamba to install the kernel package needed for your preferred
+   programming language (Python: ipykernel; R: r-irkernel) and any other
+   packages you may need.
 
    ```bash
-   Apptainer> mamba install <kernel_package> <other_packages> -y
+   Apptainer> micromamba install -y -q -n base -c conda-forge <kernel_package> <other_packages>
    ```
 
-6. Exit the sandbox container shell
+6. Clean up any extra files that are no longer needed
+
+   ```bash
+   Apptainer> micromamba clean --all -y
+   ```
+
+7. Exit the sandbox container shell
 
    ```bash
    Apptainer> exit
    ```
 
-7. Build your Apptainer container from the sandbox container. Including a time
+8. Build your Apptainer container from the sandbox container. Including a time
    stamp with `<container_name>` is recommended when building a container as you
    may want to rebuild the container with updated packages in the future.
 
@@ -214,7 +232,11 @@ your terminal with conda/mamba.
    $ apptainer build <container_name>_<timestamp>.sif <container_name>
    ```
 
-#### Installing a Python-Based Container as a Kernel
+If you need flexibility in your container to add and remove packages, you can
+create a sandbox environment from your uploaded container and modify the sandbox
+container while accessing the cluster on a login node.
+
+#### Installing a Micromamba Python-Based Container as a Kernel
 
 1. Start a server on the JupyterHub cluster.
 
@@ -250,6 +272,8 @@ your terminal with conda/mamba.
        "apptainer",
        "exec",
        "/home/<username>/<container_name>.sif",
+       "micromamba",
+       "run",
        "python",
        "-m",
        "ipykernel_launcher",
@@ -296,6 +320,8 @@ your terminal with conda/mamba.
        "apptainer",
        "exec",
        "/home/<username>/<container_name>.sif",
+       "micromamba",
+       "run",
        "R",
        "--slave",
        "-e",
@@ -330,9 +356,10 @@ documentation on starting a JupyterLab session from a JupyterHub cluster. Once
 your JupyterLab session is running, select the Software tab in the sidebar and
 find/load the rstudio-server module. You can then click the RStudio launcher, to
 open a new RStudio session. While you can install any R library from CRAN, you
-can't use tools like conda and can only use software loaded as modules from the
-Alliance. If you need more flexibility for your RStudio session, setup and run
-your environment within an Apptainer container as documented below.
+can't use package managers like conda and can only use software loaded as
+modules from the Alliance. If you need more flexibility for your RStudio
+session, setup and run your environment within an Apptainer container as
+documented below.
 
 ### [via Container](https://confluence.it.ubc.ca/display/UARC/RStudio+with+Apptainer)
 
@@ -340,8 +367,7 @@ your environment within an Apptainer container as documented below.
 
 the linked instructions above cover running RStudio Server on the UBC ARC
 Sockeye cluster using Apptainer, but the instructions should be extremely
-similar for running on an Alliance cluster as you would just need to convert the
-job script from PBS to SLURM.
+similar for running on an Alliance cluster.
 
 :::
 
@@ -360,15 +386,16 @@ job script from PBS to SLURM.
     $ sudo add-apt-repository -y ppa:apptainer/ppa
     $ sudo apt update
     $ sudo apt install -y apptainer
-    # Build a new sandbox container from the Rocker Project RStudio Server Docker container
-    $ apptainer build --sandbox rstudio/ docker://rocker/rstudio
+    # Build a new sandbox container from one of the Rocker Project images
+    # The geospatial images includes a range of geospatial packages
+    $ apptainer build --sandbox rstudio/ docker://rocker/geospatial
     # Run a shell within the sandbox container with write and sudo privileges
     $ apptainer shell --writable --fakeroot rstudio/
-    # Start R and install packages
+    # Start R and install any additional packages that may be needed
     Apptainer> R
-    R version 4.3.1 (2023-06-16) -- "Beagle Scounts"
+    R version 4.4.1 (2024-06-14) -- "Race for Your Life"
     ...
-    > install.packages('ggplot2')
+    > install.packages('climatol')
     ...
     > q()
     Apptainer> exit
@@ -380,7 +407,7 @@ job script from PBS to SLURM.
 
 - [Alliance Documentation - Python](https://docs.alliancecan.ca/wiki/Python)
 
-- Supported Versions: 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, and 3.11
+- Supported Versions: 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11 and 3.12
 
 - Supported Virtual Environment Managers:
 
@@ -391,26 +418,26 @@ job script from PBS to SLURM.
     - [Using Virtual Environments on Sockeye](https://confluence.it.ubc.ca/display/UARC/Using+Virtual+Environments+on+Sockeye)
 
   - Alliance: virtualenv or venv. conda is not supported, but it can be run
-    using an Apptainer container. In general, Alliance recommends avoiding conda
-    and Anaconda packages if possible. Go
+    using an Apptainer container. In general, Alliance recommends avoiding
+    conda-forge and Anaconda packages if possible. Go
     [here](https://docs.alliancecan.ca/wiki/Anaconda/en) for more details. See
-    instructions below for creating and running conda from an Apptainer
-    container:
+    instructions below for creating and running micromamba, a lightweight,
+    drop-in replacement for conda, from an Apptainer container:
 
     - Creating an Apptainer container with conda and Anaconda packages:
 
       ```bash
-      # Pull the miniconda3 Docker container and create a new sandbox container from it
-      $ apptainer build --sandbox conda/ docker://continuumio/miniconda3
+      # Pull the micromamba Docker container and create a new sandbox container from it
+      $ apptainer build --sandbox container/ docker://mambaorg/micromamba:bookworm-slim
       # Run a shell with write access in the sandbox container
-      $ apptainer shell --shell /bin/bash --writable conda
-      # Update conda
-      Apptainer> conda update conda
-      # Create a conda environment and install some conda packages
-      Apptainer> conda create --name <env_name> <package_names>
+      $ apptainer shell --writable -C --shell /bin/bash
+      # Update micromamba
+      Apptainer> micromamba self-update
+      # Install some packages from conda-forge
+      Apptainer> micromamba install -n base python=3.11 <package_names>
       Apptainer> exit
       # Convert the sandbox container into a SIF container
-      $ apptainer build conda.sif conda
+      $ apptainer build <container_name>_<timestamp>.sif container/
       ```
 
     - SLURM job script for running a Python script within the container created
@@ -428,7 +455,7 @@ job script from PBS to SLURM.
       # At the beginning of your job load the Apptainer module
       $ module load apptainer
       # Run a Python script using an environment within your conda container
-      $ apptainer run -C -B <directory holding Python script> -W $SLURM_TMPDIR conda.sif conda run -n <env_name> python <script>
+      $ apptainer run -C -B <directory holding Python script> -W $SLURM_TMPDIR <container_name>_<timestamp>.sif micromamba run python <script>
       ```
 
 - Supported Packages (Alliance):
@@ -438,75 +465,30 @@ job script from PBS to SLURM.
     The Alliance Python wheels have been specifically compiled and optimized to
     run as effectively on HPC clusters as possible.
 
-- Example Job Scripts:
+- Example Job Script:
 
-  - SLURM (Alliance):
-
-    ```bash
-    #!/bin/bash
-    # Include the shebang at the top of the file, to clearly identify that the following script is meant for the Bash Shell
-    # Provide flags as comments in the script. These will be read by SLURM to set option flags
-    # Identify your user account
-    #SBATCH --account=def-someuser
-    # Identify the amount of memory to use per CPU
-    #SBATCH --mem-per-cpu=1.5G  # In this case the job will only use one CPU with 1.5 GB of memory
-    #SBATCH --time=1:00:00 # And I expect that the job will take a little less than an hour
-    # At the beginning of your job load any software dependencies needed for your job
-    module load python/3.10
-    # If running Python, create and activate a virual environment
-    virtualenv --no-download $SLURM_TMPDIR/venv
-    source $SLURM_TMPDIR/venv/bin/activate
-    # Upgrade pip and install Python dependencies using Alliance wheels listed as dependencies in requirements.txt
-    python -m pip install --no-index --upgrade pip
-    python -m pip install --no-index -r requirements.txt
-    # Run the script
-    python -m script.py
-    # Deactivate the virtual environment
-    deactivate
-    ```
-
-  - PBS (UBC ARC Sockeye with conda):
-
-    1. Prior to running your job, pre-install conda into your job directory and
-       recreate your virtual environment
-
-    ```bash
-    $ wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
-    $ bash Miniconda3-py310_23.3.1-0-Linux-x86_64.sh
-    Welcome to Miniconda3 py310_23.3.1-0
-    ...
-    $ source ~/.bashrc
-    $ conda env create -n venv -f environment.yml
-    ```
-
-    2. Create your PBS job script
-
-    ```bash
-    #!/bin/bash
-    # Include the shebang at the top of the file, to clearly identify that the following script is meant for the Bash Shell
-    # Provide flags as comments in the script. These will be read by PBS to set option flags
-    # Identify the resource required to run the job
-    #PBS -l walltime=1:00:00,select=1:ncpus=1:mem=1.5gb # In this case, I anticipate that the job will take a little less than an hour and that I will only need to use one cluster node and within that node I will need one CPU core with 1.5 GB of memory dedicated to it
-    # Identify a name that you can use to identify this job
-    #PBS -N my_conda_job
-    # Identify your project account
-    #PBS -A proj-name
-    # Request that the scheduler update you about the status of your job
-    #PBS -m abe
-    # Provide the scheduler an email address to recieve updates
-    #PBS -M your.name@ubc.ca
-    ######################################################################################
-    # At the beginning of your job, enter your job directory
-    cd $PBS_O_WORKDIR
-    # Load conda environment
-    source ~/.bashrc
-    # Activate conda environment
-    conda activate venv
-    # Add your commands here
-    python script.py
-    # Deactivate environment
-    conda deactivate
-    ```
+  ```bash
+  #!/bin/bash
+  # Include the shebang at the top of the file, to clearly identify that the following script is meant for the Bash Shell
+  # Provide flags as comments in the script. These will be read by SLURM to set option flags
+  # Identify your user account
+  #SBATCH --account=def-someuser
+  # Identify the amount of memory to use per CPU
+  #SBATCH --mem-per-cpu=1.5G  # In this case the job will only use one CPU with 1.5 GB of memory
+  #SBATCH --time=1:00:00 # And I expect that the job will take a little less than an hour
+  # At the beginning of your job load any software dependencies needed for your job
+  module load python/3.10
+  # If running Python, create and activate a virual environment
+  virtualenv --no-download $SLURM_TMPDIR/venv
+  source $SLURM_TMPDIR/venv/bin/activate
+  # Upgrade pip and install Python dependencies using Alliance wheels listed as dependencies in requirements.txt
+  python -m pip install --no-index --upgrade pip
+  python -m pip install --no-index -r requirements.txt
+  # Run the script
+  python -m script.py
+  # Deactivate the virtual environment
+  deactivate
+  ```
 
 - Interactive Sessions:
 
@@ -547,7 +529,7 @@ job script from PBS to SLURM.
 
 - [Alliance Documentation - R](https://docs.alliancecan.ca/wiki/R)
 
-- Supported Versions: 4.0, 4.1 & 4.2
+- Supported Versions: 4.0, 4.1, 4.2, 4.3, and 4.4
 
 - Example Job:
 
@@ -557,7 +539,7 @@ job script from PBS to SLURM.
   #SBATCH --mem-per-cpu=1.5G
   #SBATCH --time=1:00:00
   ####################################################
-  module load gcc/9.3.0 r/4.2.2
+  module load gcc/12.3 r/4.4.0
   Rscript script.r
   ```
 
@@ -577,9 +559,9 @@ job script from PBS to SLURM.
       salloc: Pending job allocation 1234567
       ...
       salloc: Nodes cdr<###> are ready for your job
-      $ module load gcc/9.3.0 r/4.2.2
+      $ module load gcc/12.3 r/4.4.0
       $ R
-      R version 4.2.2 (2022-10-31) -- "Innocent and Trusting"
+      R version 4.4.0 (2024-04-24) -- "Puppy Cup"
       ...
       > <r code here>
       > q()
