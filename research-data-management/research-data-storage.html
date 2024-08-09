@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.55">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -293,18 +293,8 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#hpc-options-for-ubc-faculty" id="toc-hpc-options-for-ubc-faculty" class="nav-link active" data-scroll-target="#hpc-options-for-ubc-faculty">HPC Options for UBC Faculty</a>
-  <ul class="collapse">
-  <li><a href="#ubc-chinook" id="toc-ubc-chinook" class="nav-link" data-scroll-target="#ubc-chinook">UBC Chinook</a></li>
-  <li><a href="#digital-research-alliance" id="toc-digital-research-alliance" class="nav-link" data-scroll-target="#digital-research-alliance">Digital Research Alliance</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/research-data-management/research-data-storage.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -328,131 +318,106 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This document lists current data storage options available to UBC Geography researchers and could be consulted when developing data management plans for new research projects. For information and/or consultation about research data management and developing a data management plan, check out <a href="https://researchdata.library.ubc.ca/">UBC Library RDM</a> or <a href="https://rdm.ubc.ca/">UBC Advanced Research Computing</a>. For questions about data storage options and how best to integrate them with your data collection processes, contact <a href="https://geog.air.arts.ubc.ca/services/computing-services/">UBC Geography IT</a>.</p>
+<p>UBC researchers have access to multiple options for their research data. Selecting a storage option can be dependent on the nature of the data itself (privacy and size) along with the location of research collaborators, personal preferences, and processes used for data collection. When developing a <a href="https://rdm.ubc.ca/support-services/data-management-plans">Data Management Plan (DMP)</a>, consider all of these factors when selecting the best options for your research.</p>
+<p>For information and/or consultation about Research Data Management (RDM) and developing a DMP, check out <a href="https://researchdata.library.ubc.ca/">UBC Library RDM</a> or <a href="https://rdm.ubc.ca/">UBC Advanced Research Computing</a>. For initial questions about data storage options and how best to integrate them with your data collection processes, contact <a href="https://geog.air.arts.ubc.ca/services/computing-services/">UBC Geography IT</a>.</p>
 <p>UBC Library’s Research Data Management team, recommends the following:</p>
-<ul>
-<li><p>You should have at least <strong>3</strong> copies of your data</p>
+<blockquote class="blockquote">
+<p>You should have at least <strong>3</strong> copies of your data</p>
 <ul>
 <li><p>The <strong>here</strong> copy, which can be your working copy.</p></li>
 <li><p>The <strong>near</strong> copy, which is a local backup. Perhaps an external hard drive.</p></li>
 <li><p>The <strong>far</strong> copy that is stored off-site and ideally accessible from a computer other than yours.</p></li>
-</ul></li>
-<li><p>The copies should be stored in 2 different locations, like your backup disk and the cloud. Please don’t put two extra copies on the same backup disk!</p></li>
 </ul>
+<p>The copies should be stored in 2 different locations, like your backup disk and the cloud. Please don’t put two extra copies on the same backup disk!</p>
+</blockquote>
 <p>The storage location for each copy of your data will depend on the nature of your project, with specifics determined by how and where data will be collected and/or analyzed.</p>
 <p>The ‘here copy’ can be anywhere that your data is initially collected. Common examples include:</p>
 <ul>
 <li><p>the hard drive on your laptop or workstation,</p></li>
-<li><p>a folder within your UBC OneDrive account,</p></li>
-<li><p>a volume connected to a server,</p></li>
-<li><p>or an S3 storage bucket within a cloud provider.</p></li>
+<li><p>a volume connected to a virtual machine,</p></li>
+<li><p>or an object storage bucket on cloud provider’s infrastructure.</p></li>
 </ul>
 <p>A ‘near copy’ should provide an easy, reliable, and preferably automated process for backing up the data in your ‘here copy.’ Common examples include:</p>
 <ul>
 <li><p>an external hard drive connected to your laptop,</p></li>
 <li><p>a secondary drive/disk within your workstation or desktop,</p></li>
-<li><p>or a cloud storage location that is synchronized with your local drive.</p></li>
+<li><p>a local Network Attached Storage drive located in your office or lab,</p></li>
+<li><p>a UBC provided network attached drive, like <a href="https://it.ubc.ca/services/web-servers-storage/home-drive-storage-service">UBC Home Drive</a> or <a href="https://it.ubc.ca/services/web-servers-storage/home-drive-storage-service">UBC TeamShare</a>,</p></li>
 </ul>
-<p>UBC Geography IT can provide support in selecting and acquiring an external hard drive or installing a secondary disk on your desktop machine.</p>
-<p>‘Far copies’ are often stored in ‘cloud’ servers, where the servers are off-site from the ‘here’ and ‘near’ copies. If you are already using a ‘cloud’ provider, like OneDrive, to store your ‘here’ and ‘near’ copies, backup the data to a local storage device. While ‘cloud’ storage includes a high-level of redundancy with multiple off-site backups already in place, backing up your data from ‘cloud’ storage guarantees additional protections from catastrophic failure.</p>
-<p>If you do not plan on using High Performance Computing to run resource intensive computations on your data, need less than 1 TB of storage, and do not anticipate storing any files above 15 GB, your UBC OneDrive account should be able to cover your needs. If you are using Windows, OneDrive is likely already installed on your device. Mac is also supported with instructions <a href="https://support.microsoft.com/en-us/office/sync-files-with-onedrive-on-macos-d11b9f29-00bb-4172-be39-997da46f913f">here.</a> Use this <a href="https://arc.ubc.ca/microsoft-onedrive-and-teams-research">link</a> to learn more about using OneDrive and other Microsoft cloud services for data storage. You can also view this <a href="https://it.ubc.ca/sites/it.ubc.ca/files/UBC%20Online%20Storage%20Solutions%20-%20Features%20Comparison%20Chart.pdf">document</a> to see a feature comparison of UBC’s online storage solutions.</p>
-<p>If you do plan to run resource intensive computations on your data or plan on storing more than 1 TB of data, consider applying for resource allocations from either UBC Advanced Research Computing or the Digital Research Alliance. Your data can then be stored and easily analyzed using High Performance Computing resources.</p>
-<section id="hpc-options-for-ubc-faculty" class="level2">
-<h2 class="anchored" data-anchor-id="hpc-options-for-ubc-faculty">HPC Options for UBC Faculty</h2>
-<section id="ubc-chinook" class="level3">
-<h3 class="anchored" data-anchor-id="ubc-chinook">UBC Chinook</h3>
-<p>Documentation: <a href="https://confluence.it.ubc.ca/display/UARC/Using+Chinook" class="uri">https://confluence.it.ubc.ca/display/UARC/Using+Chinook</a></p>
-<p>Eligibility:</p>
-<ul>
-<li><p>Minimum: UBC Faculty or UBC Principal Investigator</p></li>
-<li><p>Priority:</p>
-<ul>
-<li><p>New to UBC</p></li>
-<li><p>In first 5 years of career</p></li>
-<li><p>Data must be stored on-site and can’t be accommodated by other resources (e.g.&nbsp;Digital Research Alliance)</p></li>
-</ul></li>
-</ul>
-<p>Application: <a href="https://arc.ubc.ca/apply-chinook" class="uri">https://arc.ubc.ca/apply-chinook</a></p>
-<p>Allocation Renewal: Annual</p>
-<p>Locations:</p>
-<ul>
-<li><p>UBC Vancouver</p></li>
-<li><p>UBC Okanagan</p></li>
-</ul>
-<p>Storage Quota:</p>
-<ul>
-<li><p>Minimum Request: 1 TB</p></li>
-<li><p>Maximum Request: None</p></li>
-</ul>
-<p>File Size Limit: 5 TB</p>
-<p>Data Transfer and Sharing Services: Globus</p>
-<p>Transfer Limits: Set by <a href="https://docs.globus.org/faq/transfer-sharing/#are_there_any_limits_on_using_the_file_transfer_service">Globus</a></p>
-<p>Supported Computing Software for HPC Data Analysis via UBC Sockeye: <a href="https://confluence.it.ubc.ca/display/UARC/Software" class="uri">https://confluence.it.ubc.ca/display/UARC/Software</a></p>
-</section>
-<section id="digital-research-alliance" class="level3">
-<h3 class="anchored" data-anchor-id="digital-research-alliance">Digital Research Alliance</h3>
-<p>Documentation: <a href="https://docs.alliancecan.ca/wiki/Storage_and_file_management" class="uri">https://docs.alliancecan.ca/wiki/Storage_and_file_management</a></p>
-<p>Eligibility: Academic faculty in Canada</p>
-<p>Application:</p>
-<ul>
-<li><p>Account: <a href="https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account" class="uri">https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account</a></p></li>
-<li><p>RAS (Rapid Access Service – for fast allocations up to 40 TB): <a href="https://alliancecan.ca/en/services/advanced-research-computing/accessing-resources/rapid-access-service" class="uri">https://alliancecan.ca/en/services/advanced-research-computing/accessing-resources/rapid-access-service</a></p></li>
-<li><p>Resource Allocation Competition: <a href="https://alliancecan.ca/en/services/advanced-research-computing/accessing-resources/resource-allocation-competition" class="uri">https://alliancecan.ca/en/services/advanced-research-computing/accessing-resources/resource-allocation-competition</a></p>
-<ul>
-<li><p>Submission Start: Late September</p></li>
-<li><p>Submission End: Early November</p></li>
-<li><p>Announcements: Late March</p></li>
-<li><p>Implementation: Early April</p></li>
-</ul></li>
-</ul>
-<p>Allocation Renewal: Annual</p>
-<section id="hpc-compute-clusters" class="level4">
-<h4 class="anchored" data-anchor-id="hpc-compute-clusters">HPC Compute Clusters</h4>
-<p>Locations:</p>
-<ul>
-<li><p>Cedar (SFU Burnaby)</p></li>
-<li><p>Graham (UW Waterloo)</p></li>
-<li><p>Béluga (McGill Montreal)</p></li>
-<li><p>Niagra (UT Toronto)</p></li>
-</ul>
-<p>Storage Quota:</p>
-<ul>
-<li><p>Minimum:</p>
-<ul>
-<li><p>Home: 50 GB per user</p></li>
-<li><p>Project: 1 TB per group</p></li>
-<li><p>Nearline (Cold storage): 2 TB per group</p></li>
-</ul></li>
-<li><p>Maximum Request:</p>
-<ul>
-<li><p>Via Rapid Access Service (RAS):</p>
-<ul>
-<li><p>Project: 40 TB</p></li>
-<li><p>Nearline (Cold storage): 100 TB</p></li>
-</ul></li>
-<li><p>Via Resource Allocation Competition (RAC): None</p></li>
-</ul></li>
-</ul>
-<p>Data Transfer and Sharing Services: Globus</p>
-<p>Alternative Transfer Options: <a href="https://docs.alliancecan.ca/wiki/Transferring_data" class="uri">https://docs.alliancecan.ca/wiki/Transferring_data</a></p>
-<p>Supported Computing Software via ARC Clusters: <a href="https://docs.alliancecan.ca/wiki/Available_software" class="uri">https://docs.alliancecan.ca/wiki/Available_software</a></p>
-</section>
-<section id="arbutus-object-storage" class="level4">
-<h4 class="anchored" data-anchor-id="arbutus-object-storage">Arbutus Object Storage</h4>
-<ul>
-<li><p>Minimum: 1 TB</p></li>
-<li><p>Maximum Request:</p>
-<ul>
-<li><p>Via Rapid Access Service (RAS): 10 TB</p></li>
-<li><p>Via Resource Allocation Competition (RAC): None</p></li>
-</ul></li>
-</ul>
-<p>See <a href="https://ubc-geography.github.io/computing-resources/cloud-computing/object-storage.html#digital-research-alliance-dra">Object Storage - Digital Research Alliance (DRA)</a> for more details.</p>
+<p>UBC Geography IT can provide support in selecting an external hard drive for your laptop or installing a secondary disk on your desktop.</p>
+<p>‘Far copies’ are often stored in ‘cloud’ servers, where the servers are off-site from the ‘here’ and ‘near’ copies. If you are already using a ‘cloud’ provider, like OneDrive, to store your ‘here’ and ‘near’ copies, backup the data to a local storage device. While ‘cloud’ storage includes a high-level of redundancy with multiple off-site backups already in place, backing up your data from ‘cloud’ storage guarantees additional protections from various types of catastrophic failure.</p>
+<table class="table-striped caption-top table">
+<caption>Network, Cloud, and HPC Storage</caption>
+<thead>
+<tr class="header">
+<th>Service</th>
+<th>Storage per User</th>
+<th>Storage per Allocation</th>
+<th>Costs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://it.ubc.ca/services/web-servers-storage/home-drive-storage-service">UBC Home Drive</a></td>
+<td>20-100 GB</td>
+<td></td>
+<td>20 GB free then $0.35/GB/year</td>
+</tr>
+<tr class="even">
+<td><a href="https://it.ubc.ca/services/web-servers-storage/microsoft-onedrive">UBC OneDrive</a></td>
+<td>1 TB</td>
+<td></td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td><a href="https://it.ubc.ca/services/web-servers-storage/home-drive-storage-service">UBC TeamShare</a></td>
+<td></td>
+<td>20 GB or more</td>
+<td>$0.15/GB/year</td>
+</tr>
+<tr class="even">
+<td><a href="https://confluence.it.ubc.ca/display/UARC/About+Sockeye#AboutSockeye-StorageVolumes">ARC Sockeye</a></td>
+<td>50 GB</td>
+<td>5 TB+</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td><a href="https://confluence.it.ubc.ca/display/UARC/About+Chinook">ARC Chinook</a></td>
+<td></td>
+<td>Determined by allocation</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td><a href="https://docs.alliancecan.ca/wiki/Nextcloud">Alliance NextCloud</a></td>
+<td>50 GB</td>
+<td></td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td><a href="https://alliancecan.ca/en/services/advanced-research-computing/national-services/storage">Alliance HPC</a></td>
+<td>50 GB</td>
+<td>1 TB+</td>
+<td>None</td>
+</tr>
+<tr class="even">
+<td><a href="https://docs.alliancecan.ca/wiki/Arbutus_object_storage">Alliance Cloud Arbutus Object</a></td>
+<td></td>
+<td>1 GB+</td>
+<td>None</td>
+</tr>
+<tr class="odd">
+<td><a href="https://docs.alliancecan.ca/wiki/Working_with_volumes">Alliance Cloud Virtual Machine</a></td>
+<td></td>
+<td>20 GB+</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<p>A common and cost-effective setup for researchers that are collecting data on their local machine, includes downloading the OneDrive desktop client, setting up automatic synchronization on any folders that contains research data, connecting a second drive to the machine, and running either daily or weekly backups onto the secondary drive.</p>
+<p>For use cases, where the overall amount of data being collected and analyzed nears or exceeds 1TB, contact Geography IT about setting up a RAID array with your local machine and submitting a request to either UBC ARC or the Digital Research Alliance for an allocation of HPC/object storage.</p>
 
 
-</section>
-</section>
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1024,4 +989,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/research-data-management/research-data-storage.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/research-data-management/research-data-storage.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
