@@ -24,14 +24,15 @@ basics of Python.
 
 - [Software Carpentry - Plotting and Programming in Python](https://swcarpentry.github.io/python-novice-gapminder/)
 
-- _[Python for Geographic Data Analysis](https://pythongis.org/)_
-
 - _Python Crash Course_ : [UBC Library](https://go.exlibris.link/XmblT6hZ) |
   [WorldCat](https://search.worldcat.org/title/1346554335)
 
 - _Python All-in-One for Dummies_ :
   [UBC Library](https://go.exlibris.link/fCvpqT4V) |
   [WorldCat](https://search.worldcat.org/title/1425790830)
+
+- _Modern Python Cookbook_ : [UBC Library](https://go.exlibris.link/MTHqzhWG) |
+  [WorldCat](https://search.worldcat.org/title/1451040599)
 
 - _Python Tools for Scientists_ :
   [UBC Library](https://go.exlibris.link/7MxPJqXz) |
@@ -43,7 +44,11 @@ basics of Python.
 
 ## Geospatial Books
 
+- [Carpentries Incubator - Introduction to Geospatial Raster and Vector Data with Python](https://carpentries-incubator.github.io/geospatial-python/)
+
 - _[Geographic Data Science with Python](https://geographicdata.science/book/intro.html)_
+
+- _[Python for Geographic Data Analysis](https://pythongis.org/)_
 
 - _Learning Geospatial Analysis with Python_ :
   [UBC Library](https://go.exlibris.link/JbW0Xp9n) |
@@ -100,6 +105,9 @@ Many of the packages included in that list provide powerful, easy-to-use
 functionalities around GDAL. If you need to write code that directly interacts
 with GDAL, Python bindings are provided, which can be explored through the
 [GDAL documentation](https://gdal.org/api/python_bindings.html).
+
+You may also find some other helpful packages listed in
+[Python for Data Science - Geodata](https://www.python4data.science/en/latest/data-processing/geodata.html).
 
 ## Interactive Visualizations and Dashboards
 

@@ -38,7 +38,7 @@ Supported Software: <https://confluence.it.ubc.ca/display/UARC/Software>
 
 ::: {.callout-note}
 
-Linux (CentOS) software can be installed along with conda packages or any
+Linux (Rocky Linux) software can be installed along with conda packages or any
 software available within an Apptainer container.
 
 :::

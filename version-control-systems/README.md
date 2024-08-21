@@ -53,6 +53,10 @@ students within a single course or with other UBC collaborators.
 
 - [GitHub Documentation](https://docs.github.com/en)
 
+- _GitHub for Next-Generation Coders_ :
+  [UBC Library](https://learning.oreilly.com/library/view/github-for-next-generation/9781835463048/)
+  | [WorldCat](https://search.worldcat.org/title/1446794123)
+
 - [UBC LT - GitHub Instructor Guide](https://lthub.ubc.ca/guides/github-instructor-guide/)
 
 GitHub Desktop provides a helpful graphical user interface that can help in
