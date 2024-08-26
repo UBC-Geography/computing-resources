@@ -1,0 +1,99 @@
+/*-- scss:defaults --*/
+$link-color: #537334;
+$sidebar-bg: #537334;
+$code-bg: #edf4dc;
+$code-color: #395225;
+$btn-color: rgb(255, 255, 255);
+
+/*-- scss:rules --*/
+#quarto-search-results li.aa-Item[aria-selected="true"] .search-item,
+.aa-DetachedOverlay li.aa-Item[aria-selected="true"] .search-item,
+.aa-DetachedOverlay
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-text-container,
+.aa-DetachedOverlay
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-title-container,
+.aa-DetachedOverlay
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-section,
+.aa-DetachedOverlay
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-text,
+#quarto-search-results
+  li.aa-Item[aria-selected="true"]
+  .search-item.search-result-more,
+#quarto-search-results
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-section,
+#quarto-search-results
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-text,
+#quarto-search-results
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-title-container,
+#quarto-search-results
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-text-container {
+  background-color: #537334;
+}
+
+.nav-tabs .nav-link {
+  color: #5e666c;
+}
+
+.quarto-title-breadcrumbs .breadcrumb li:last-of-type a {
+  color: #5e666c;
+}
+
+.blockquote {
+  color: #4f5760;
+}
+
+caption {
+  color: #4f5760;
+}
+
+.nav-footer {
+  background-color: #d7e8af;
+  color: black;
+}
+
+.nav-footer a {
+  color: black;
+}
+
+.sidebar-navigation .quarto-color-scheme-toggle:not(.alternate) .bi::before {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgba(255, 255, 255, 1)" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/></svg>');
+}
+
+.sidebar-logo {
+  max-width: 100%;
+}
+
+.sidebar-title {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 991.98px) {
+  .breadcrumb {
+    background-color: #395225;
+  }
+  .sidebar.sidebar-navigation > * {
+    padding-top: 0.2em;
+  }
+}
+
+div.sidebar-item-container .active {
+  text-decoration: underline;
+}

@@ -82,7 +82,7 @@ catastrophic failure.
 | [Alliance Cloud Arbutus Object](https://docs.alliancecan.ca/wiki/Arbutus_object_storage)                 |                  | 1 GB+                    | None                          |
 | [Alliance Cloud Virtual Machine](https://docs.alliancecan.ca/wiki/Working_with_volumes)                  |                  | 20 GB+                   | None                          |
 
-: Network, Cloud, and HPC Storage {.striped }
+: Network, Cloud, and HPC Storage {.striped .table}
 
 <br>
 

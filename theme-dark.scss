@@ -1,0 +1,104 @@
+/*-- scss:defaults --*/
+$body-bg: #222222;
+$body-color: #ffffff;
+$link-color: #d7e8af;
+$sidebar-bg: #537334;
+$breadcrumb-bg: #434343;
+$table-striped-bg: #434343;
+$code-bg: #edf4dc;
+$code-color: #395225;
+$code-block-bg: #434343;
+$code-block-color: #ffffff;
+$nav-tabs-link-active-bg: #222222;
+$nav-tabs-link-active-color: #e7e7e7;
+
+/*-- scss:rules --*/
+#quarto-search-results li.aa-Item[aria-selected="true"] .search-item,
+.aa-DetachedOverlay li.aa-Item[aria-selected="true"] .search-item,
+.aa-DetachedOverlay
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-text-container,
+.aa-DetachedOverlay
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-title-container,
+.aa-DetachedOverlay
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-section,
+.aa-DetachedOverlay
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-text,
+#quarto-search-results
+  li.aa-Item[aria-selected="true"]
+  .search-item.search-result-more,
+#quarto-search-results
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-section,
+#quarto-search-results
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-text,
+#quarto-search-results
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-title-container,
+#quarto-search-results
+  li.aa-Item[aria-selected="true"]
+  .search-item
+  .search-result-text-container {
+  background-color: #537334;
+}
+
+.quarto-title-breadcrumbs .breadcrumb li:last-of-type a {
+  color: #d9d9d9;
+}
+
+#quarto-back-to-top {
+  color: #9faebb;
+  box-shadow: 0 0.2rem 0.5rem #9faebb, 0 0 0.05rem #9faebb;
+}
+
+.nav-tabs .nav-link {
+  background-color: #515b44;
+  color: #dfdfdf;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #fff;
+}
+
+.code-with-filename-file pre {
+  color: #fff;
+}
+
+.nav-footer {
+  background-color: #395225;
+  color: #fff;
+}
+
+.nav-footer a {
+  color: #fff;
+}
+
+.sidebar-logo {
+  max-width: 100%;
+}
+
+.sidebar-title {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 991.98px) {
+  .breadcrumb {
+    background-color: #395225;
+  }
+  .sidebar.sidebar-navigation > * {
+    padding-top: 0.2em;
+  }
+}

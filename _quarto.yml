@@ -24,6 +24,9 @@ website:
   title: "UBC Geography Computing Resources"
   favicon: "favicon.png"
   site-url: "https://ubc-geography.github.io/computing-resources"
+  page-footer:
+    center: |
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
   open-graph:
     title: "UBC Geography Computing Resources"
     description:
@@ -33,16 +36,20 @@ website:
     locale: "en_US"
     image: "https://avatars.githubusercontent.com/u/101839150?s=400&u=adcfa46cecc67f714d828dcb66a26a6d1093d8bd&v=4"
     image-alt: UBC Geography logo
-  back-to-top-navigation: true
   repo-url: "https://github.com/UBC-Geography/computing-resources"
   repo-actions:
     - edit
     - issue
   sidebar:
+    logo: "/assets/images/white-logo.png"
+    logo-href: "https://geog.ubc.ca"
+    title: "Computing Resources"
     style: floating
     search: true
     collapse-level: 1
     contents:
+      - text: Home
+        href: "index.html"
       - href: "digital-communications/index.html"
         text: Digital Communications
       - section: Research Data Management
@@ -97,9 +104,10 @@ website:
 format:
   html:
     theme:
-      light: flatly
-      dark: darkly
+      light: [sandstone, theme-light.scss]
+      dark: [sandstone, theme-dark.scss]
     toc: true
+    highlight-style: default
     canonical-url: true
     include-in-header:
       - text:
