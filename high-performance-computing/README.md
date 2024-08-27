@@ -16,6 +16,8 @@ across Canada, including one located at Simon Fraser University.
 
 - [Intro to Linux and the Bash Shell in HPC Environments](https://confluence.it.ubc.ca/display/UARC/Introduction+to+Linux+and+Using+the+Command+Line+Interface)
 
+- [HPC Carpentry - Community Developed Lessons](https://www.hpc-carpentry.org/community-lessons/)
+
 - [Research Computing Bootcamp Videos](https://www.ualberta.ca/information-services-and-technology/research-computing/bootcamps.html?1=HPC)
 
 - [Geospatial Analysis with HPC Video](https://youtu.be/wRmRnVMjKXM)
