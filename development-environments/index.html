@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -430,7 +430,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="jupyterlab" class="level4">
 <h4 class="anchored" data-anchor-id="jupyterlab">JupyterLab</h4>
-<p>You can install and run JupyterLab on your local machine in two separate ways. The traditional and most flexible approach is to install JupyterLab as a Python package using <code>pip</code>, <code>conda</code>, or <code>mamba</code> and starting it from the Jupyter command line interface. We recommend the latter using the following commands to create a new environment and install Jupyter along with it’s dependencies within that environment.</p>
+<p>You can install and run JupyterLab on your local machine in three separate ways. The traditional and most flexible approach is to install JupyterLab as a Python package using <code>pip</code>, <code>conda</code>, or <code>mamba</code> and starting it from the Jupyter command line interface. We recommend the latter using the following commands to create a new environment and install Jupyter along with it’s dependencies within that environment.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba create <span class="at">-n</span> jupyter jupyterlab <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Then activate the Jupyter environment and start Jupyter Lab.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba activate jupyter</span>
@@ -443,6 +443,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><p><a href="https://github.com/jupyterlab/jupyterlab-desktop#installation">JupyterLab Desktop - Installation</a></p></li>
 <li><p><a href="https://github.com/jupyterlab/jupyterlab-desktop/blob/master/user-guide.md">JupyterLab Desktop User Guide</a></p></li>
+</ul>
+<p>Finally, we’ve setup an experimental deployment of JupyterLite, which installs and runs JupyterLab exclusively within your web browser. This is the fastest and easiest method for accessing a local instance of JupyterLab, but it’s also the least stable and lacks many of the same features that would be included in an instance that’s been installed with one of the previously mentioned methods, so it’s best used for quickly testing ideas on the fly.</p>
+<ul>
+<li><a href="https://ubc-geography.github.io/jupyterlite">UBC Geography JupyterLite</a></li>
 </ul>
 </section>
 <section id="jupyter-kernels" class="level4">
