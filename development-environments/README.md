@@ -87,7 +87,7 @@ JupyterLab, its more feature-rich successor.
 
 #### JupyterLab
 
-You can install and run JupyterLab on your local machine in two separate ways.
+You can install and run JupyterLab on your local machine in three separate ways.
 The traditional and most flexible approach is to install JupyterLab as a Python
 package using `pip`, `conda`, or `mamba` and starting it from the Jupyter
 command line interface. We recommend the latter using the following commands to
@@ -119,6 +119,15 @@ computing.
 - [JupyterLab Desktop - Installation](https://github.com/jupyterlab/jupyterlab-desktop#installation)
 
 - [JupyterLab Desktop User Guide](https://github.com/jupyterlab/jupyterlab-desktop/blob/master/user-guide.md)
+
+Finally, we've setup an experimental deployment of JupyterLite, which installs
+and runs JupyterLab exclusively within your web browser. This is the fastest and
+easiest method for accessing a local instance of JupyterLab, but it's also the
+least stable and lacks many of the same features that would be included in an
+instance that's been installed with one of the previously mentioned methods, so
+it's best used for quickly testing ideas on the fly.
+
+- [UBC Geography JupyterLite](https://ubc-geography.github.io/jupyterlite)
 
 #### Jupyter Kernels
 
