@@ -50,6 +50,8 @@ basics of Python.
 
 - _[Python for Geographic Data Analysis](https://pythongis.org/)_
 
+- [Project Pythia](https://projectpythia.org/)
+
 - _Learning Geospatial Analysis with Python_ :
   [UBC Library](https://go.exlibris.link/JbW0Xp9n) |
   [WorldCat](https://search.worldcat.org/title/1412008153)

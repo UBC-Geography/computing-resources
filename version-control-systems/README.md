@@ -43,6 +43,9 @@ Additional Resources:
   for the New Developer_ : [UBC Library](https://go.exlibris.link/G3VfpGll) |
   [WorldCat](https://search.worldcat.org/title/1427243462)
 
+- _Mastering Git_ : [UBC Library](https://go.exlibris.link/zJxLHm6W) |
+  [WorldCat](https://search.worldcat.org/title/1454574509)
+
 ### GitHub
 
 GitHub is a popular platform for sharing source code and Jupyter Notebooks as
