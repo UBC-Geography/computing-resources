@@ -401,6 +401,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="ubc-advanced-research-computing-sockeye" class="level2">
 <h2 class="anchored" data-anchor-id="ubc-advanced-research-computing-sockeye">UBC Advanced Research Computing Sockeye</h2>
 <p>Documentation: <a href="https://confluence.it.ubc.ca/display/UARC/Using+Sockeye" class="uri">https://confluence.it.ubc.ca/display/UARC/Using+Sockeye</a></p>
+<p>Resource Limits:</p>
+<ul>
+<li>Single-Node:
+<ul>
+<li>40 cores (Gold 6230), 754 GB of RAM</li>
+</ul></li>
+<li>Multi-Node (non-blocking):
+<ul>
+<li>CPU-Intensive:
+<ul>
+<li>1,000 cores on 25 nodes, 186 GB of RAM per node</li>
+</ul></li>
+<li>Memory-Intensive:
+<ul>
+<li>320 cores on 8 nodes, 754 GB of RAM per node</li>
+<li>640 cores on 16 nodes, 376 GB of RAM per node</li>
+</ul></li>
+</ul></li>
+</ul>
 <p>Supported Software: <a href="https://confluence.it.ubc.ca/display/UARC/Software" class="uri">https://confluence.it.ubc.ca/display/UARC/Software</a></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -418,7 +437,106 @@ Note
 </section>
 <section id="digital-research-alliance-clusters" class="level2">
 <h2 class="anchored" data-anchor-id="digital-research-alliance-clusters">Digital Research Alliance Clusters</h2>
+<p>Resources held on the Alliance HPC clusters are available for any Canada-based faculty or academic librarian to use. To start submitting jobs to one of the clusters listed below, register for an account with the Alliance using this <a href="https://ccdb.alliancecan.ca/account_application">link</a>. Graduate students and university staff can also register an account and submit jobs through an active sponsorship from a registered faculty member or principal investigator.</p>
+<p>The HPC clusters uses a job scheduler to manage and share resources as efficiently as possible. This means that jobs are not completed on a first-come, first-served basis, rather multiple factors can impact when a job is finally run, which can make it difficult to estimate how long a job will wait in the queue. In general running shorter jobs on fewer resources can significantly reduce wait times, so ensure that you are optimizing your code as much as possible. If you plan on using a cluster extensively (200 core-years or more) and/or need higher prioritization from the scheduler, you should review and submit an application (due at the end of October) to the Alliance’s annual <a href="https://alliancecan.ca/en/services/advanced-research-computing/accessing-resources/resource-allocation-competition/resource-allocation-competition-application-guide">Resource Allocation Competition (RAC)</a>. This additionally enables you to request access to the Niagara cluster and receive larger allocations of storage.</p>
 <p>Documentation: <a href="https://docs.alliancecan.ca/wiki/Getting_started" class="uri">https://docs.alliancecan.ca/wiki/Getting_started</a></p>
+<p>Clusters:</p>
+<ul>
+<li><a href="https://docs.alliancecan.ca/wiki/Cedar">Cedar (SFU)</a>
+<ul>
+<li>Resource Limits:
+<ul>
+<li>Single-Node:
+<ul>
+<li>CPU-Intensive:
+<ul>
+<li>48 cores (Platinum 8160F), 187 GB of RAM</li>
+</ul></li>
+<li>Memory-Intensive:
+<ul>
+<li>40 cores (Gold 5215), 6000 GB of RAM</li>
+</ul></li>
+</ul></li>
+<li>Multi-Node (non-blocking):
+<ul>
+<li>CPU-Intensive:
+<ul>
+<li>1,536 cores on 32 nodes, 187 GB of RAM per node</li>
+</ul></li>
+<li>Memory-Intensive:
+<ul>
+<li>96 cores on 3 nodes, 4,000 GB of RAM per node</li>
+<li>256 cores on 8 nodes, 1,510 GB of RAM per node</li>
+<li>640 cores on 20 nodes, 502 GB of RAM per node</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="https://docs.alliancecan.ca/wiki/Graham">Graham (UW)</a>
+<ul>
+<li>Resource Limits:
+<ul>
+<li>Single-Node:
+<ul>
+<li>64 cores (E7-4850 v4), 3022 GB of RAM</li>
+</ul></li>
+<li>Multi-Node (non-blocking):
+<ul>
+<li>CPU-Intensive:
+<ul>
+<li>1,024 cores on 32 nodes, 125 GB of RAM per node</li>
+</ul></li>
+<li>Memory-Intensive:
+<ul>
+<li>192 cores on 3 nodes, 3,022 GB of RAM per node</li>
+<li>768 cores on 24 nodes, 502 GB of RAM per node</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="https://docs.alliancecan.ca/wiki/Niagara">Niagara (U of T)</a> (RAC-only)
+<ul>
+<li>Resource Limits:
+<ul>
+<li>Single-Node:
+<ul>
+<li>40 cores (Skylake CPU), 202 GB of RAM</li>
+</ul></li>
+<li>Multi-Node (non-blocking):
+<ul>
+<li>17,280 cores on 432 nodes, 202 GB of RAM per node</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="https://docs.alliancecan.ca/wiki/B%C3%A9luga">Béluga (McGill)</a>
+<ul>
+<li>Resource Limits:
+<ul>
+<li>Single-Node:
+<ul>
+<li>40 cores (Gold 6148), 752 GB of RAM</li>
+</ul></li>
+<li>Multi-Node:
+<ul>
+<li>640 cores on 16 nodes, 752 GB of RAM per node</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="https://docs.alliancecan.ca/wiki/Narval">Narval (UQ)</a>
+<ul>
+<li>Resource Limits:
+<ul>
+<li>Single-Node:
+<ul>
+<li>64 cores (Epyc 7502), 4000 GB of RAM</li>
+</ul></li>
+<li>Multi-Node:
+<ul>
+<li>3,584 cores on 56 nodes, 249 GB of RAM per node</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
 <p>Supported Software: <a href="https://docs.alliancecan.ca/wiki/Available_software" class="uri">https://docs.alliancecan.ca/wiki/Available_software</a></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -449,10 +567,55 @@ Note
 <li><p><a href="https://youtu.be/Qk3Le5HBxeg?si=IANIgAciBdOLwMQy">Working with Jupyter on Clusters (Alliance) Video</a></p></li>
 <li><p>Clusters Running JupyterHub (requires an Alliance account):</p>
 <ul>
-<li><p><a href="https://jupyterhub.cedar.computecanada.ca/">Cedar (SFU)</a></p></li>
-<li><p><a href="https://jupyterhub.graham.computecanada.ca/">Graham (UW)</a></p></li>
-<li><p><a href="https://jupyterhub.beluga.computecanada.ca/">Béluga (McGill)</a></p></li>
-<li><p><a href="https://jupyterhub.narval.computecanada.ca/">Narval (UQ)</a></p></li>
+<li><p><a href="https://jupyterhub.cedar.computecanada.ca/">Cedar (SFU)</a></p>
+<ul>
+<li>Resource Limits:
+<ul>
+<li>Time (Session Length): 30 minutes - 5 hours</li>
+<li>CPU Cores: 8</li>
+<li>Memory: 46 GB</li>
+<li>GPUs: 4 x V100L</li>
+</ul></li>
+</ul></li>
+<li><p><a href="https://jupyterhub.graham.computecanada.ca/">Graham (UW)</a></p>
+<ul>
+<li>Resource Limits:
+<ul>
+<li>Time (Session Length): 15 minutes - 24 hours</li>
+<li>CPU-Intensive:
+<ul>
+<li>Cores: 128</li>
+<li>Memory: 2000 GB</li>
+<li>GPUs: 8 x A100</li>
+</ul></li>
+<li>Memory-Intensive:
+<ul>
+<li>Cores: 64</li>
+<li>Memory: 3022 GB</li>
+<li>GPUs: none</li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p><a href="https://jupyterhub.beluga.computecanada.ca/">Béluga (McGill)</a></p>
+<ul>
+<li>Resource Limits:
+<ul>
+<li>Time (Session Length): 1 - 12 hours</li>
+<li>CPU Cores: 10</li>
+<li>Memory: 46 GB</li>
+<li>GPUs: 1 x V100</li>
+</ul></li>
+</ul></li>
+<li><p><a href="https://jupyterhub.narval.computecanada.ca/">Narval (UQ)</a></p>
+<ul>
+<li>Resource Limits:
+<ul>
+<li>Time (Session Length): 1 - 8 hours</li>
+<li>CPU Cores: 16</li>
+<li>Memory: 78 GB</li>
+<li>GPUs: 1 x A100</li>
+</ul></li>
+</ul></li>
 </ul></li>
 <li><p>Supported Kernels (Programming Languages):</p>
 <ul>
@@ -471,18 +634,9 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Other kernels can be supported using Apptainer containers. See <a href="https://ubc-geography.github.io/computing-resources/high-performance-computing/#running-a-jupyter-kernel-from-a-container">Running a Jupyter Kernel from a Container</a> for more details.</p>
+<p>Other kernels can be supported using Apptainer containers.</p>
 </div>
 </div>
-<ul>
-<li><p>Server Resource Options:</p>
-<ul>
-<li><p>Time (Session Length): 30 minutes - 5 hours</p></li>
-<li><p>Number of (CPU) Cores: 1 - 8</p></li>
-<li><p>Memory (Total Session Limit): 1000MB - 63000MB</p></li>
-<li><p>(Optional) GPU Configuration: none - 4 x V100L</p></li>
-</ul></li>
-</ul>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
