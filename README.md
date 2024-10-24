@@ -20,5 +20,24 @@ materials, check out the following resources:
 
 - [The Turing Way - handbook to reproducible, ethical and collaborative data science](https://book.the-turing-way.org/)
 
-If you have recommendations for additions or edits, feel free to create a pull
-request, report an issue, or reach out to kellen.malek@ubc.ca.
+If you are a faculty member within our department, and you are seeking
+information on acquiring local computing hardware, you can can contact the
+Geography IT team for advice and support in procuring, setting up, and
+maintaining laptops and workstations.
+
+For research computing, review
+[cloud computing](https://ubc-geography.github.io/computing-resources/cloud-computing/)
+and
+[High Performance Computing (HPC)](https://ubc-geography.github.io/computing-resources/high-performance-computing/)
+to identify available resources through UBC Advanced Research Computing and the
+Digital Research Alliance.
+
+And for instructional use, our department hosts and manages two
+[computer labs](https://geog.ubc.ca/undergraduate/study-resources/) that are
+specialized to fit the instructional needs of our faculty. Additionally, UBC
+Learning Technology (LT) Hub maintains a
+[JupyterHub instance](https://open.jupyter.ubc.ca) that can be remotely accessed
+via a web browser and is open to all UBC students. Each student is allocated a
+single CPU core, 3 GB of RAM, and 10 TB of storage in an environment where
+programming languages, like Python, R, and Julia are pre-installed to run
+scripts and computational notebooks.
