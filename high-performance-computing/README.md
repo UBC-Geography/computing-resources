@@ -36,6 +36,17 @@ across Canada, including one located at Simon Fraser University.
 
 Documentation: <https://confluence.it.ubc.ca/display/UARC/Using+Sockeye>
 
+Resource Limits:
+
+- Single-Node:
+  - 40 cores (Gold 6230), 754 GB of RAM
+- Multi-Node (non-blocking):
+  - CPU-Intensive:
+    - 1,000 cores on 25 nodes, 186 GB of RAM per node
+  - Memory-Intensive:
+    - 320 cores on 8 nodes, 754 GB of RAM per node
+    - 640 cores on 16 nodes, 376 GB of RAM per node
+
 Supported Software: <https://confluence.it.ubc.ca/display/UARC/Software>
 
 ::: {.callout-note}
@@ -47,7 +58,72 @@ software available within an Apptainer container.
 
 ## Digital Research Alliance Clusters
 
+Resources held on the Alliance HPC clusters are available for any Canada-based
+faculty or academic librarian to use. To start submitting jobs to one of the
+clusters listed below, register for an account with the Alliance using this
+[link](https://ccdb.alliancecan.ca/account_application). Graduate students and
+university staff can also register an account and submit jobs through an active
+sponsorship from a registered faculty member or principal investigator.
+
+The HPC clusters uses a job scheduler to manage and share resources as
+efficiently as possible. This means that jobs are not completed on a first-come,
+first-served basis, rather multiple factors can impact when a job is finally
+run, which can make it difficult to estimate how long a job will wait in the
+queue. In general running shorter jobs on fewer resources can significantly
+reduce wait times, so ensure that you are optimizing your code as much as
+possible. If you plan on using a cluster extensively (200 core-years or more)
+and/or need higher prioritization from the scheduler, you should review and
+submit an application (due at the end of October) to the Alliance's annual
+[Resource Allocation Competition (RAC)](https://alliancecan.ca/en/services/advanced-research-computing/accessing-resources/resource-allocation-competition/resource-allocation-competition-application-guide).
+This additionally enables you to request access to the Niagara cluster and
+receive larger allocations of storage.
+
 Documentation: <https://docs.alliancecan.ca/wiki/Getting_started>
+
+Clusters:
+
+- [Cedar (SFU)](https://docs.alliancecan.ca/wiki/Cedar)
+  - Resource Limits:
+    - Single-Node:
+      - CPU-Intensive:
+        - 48 cores (Platinum 8160F), 187 GB of RAM
+      - Memory-Intensive:
+        - 40 cores (Gold 5215), 6000 GB of RAM
+    - Multi-Node (non-blocking):
+      - CPU-Intensive:
+        - 1,536 cores on 32 nodes, 187 GB of RAM per node
+      - Memory-Intensive:
+        - 96 cores on 3 nodes, 4,000 GB of RAM per node
+        - 256 cores on 8 nodes, 1,510 GB of RAM per node
+        - 640 cores on 20 nodes, 502 GB of RAM per node
+- [Graham (UW)](https://docs.alliancecan.ca/wiki/Graham)
+  - Resource Limits:
+    - Single-Node:
+      - 64 cores (E7-4850 v4), 3022 GB of RAM
+    - Multi-Node (non-blocking):
+      - CPU-Intensive:
+        - 1,024 cores on 32 nodes, 125 GB of RAM per node
+      - Memory-Intensive:
+        - 192 cores on 3 nodes, 3,022 GB of RAM per node
+        - 768 cores on 24 nodes, 502 GB of RAM per node
+- [Niagara (U of T)](https://docs.alliancecan.ca/wiki/Niagara) (RAC-only)
+  - Resource Limits:
+    - Single-Node:
+      - 40 cores (Skylake CPU), 202 GB of RAM
+    - Multi-Node (non-blocking):
+      - 17,280 cores on 432 nodes, 202 GB of RAM per node
+- [Béluga (McGill)](https://docs.alliancecan.ca/wiki/B%C3%A9luga)
+  - Resource Limits:
+    - Single-Node:
+      - 40 cores (Gold 6148), 752 GB of RAM
+    - Multi-Node:
+      - 640 cores on 16 nodes, 752 GB of RAM per node
+- [Narval (UQ)](https://docs.alliancecan.ca/wiki/Narval)
+  - Resource Limits:
+    - Single-Node:
+      - 64 cores (Epyc 7502), 4000 GB of RAM
+    - Multi-Node:
+      - 3,584 cores on 56 nodes, 249 GB of RAM per node
 
 Supported Software: <https://docs.alliancecan.ca/wiki/Available_software>
 
@@ -85,11 +161,39 @@ will be running from.
 
   - [Cedar (SFU)](https://jupyterhub.cedar.computecanada.ca/)
 
+    - Resource Limits:
+      - Time (Session Length): 30 minutes - 5 hours
+      - CPU Cores: 8
+      - Memory: 46 GB
+      - GPUs: 4 x V100L
+
   - [Graham (UW)](https://jupyterhub.graham.computecanada.ca/)
+
+    - Resource Limits:
+      - Time (Session Length): 15 minutes - 24 hours
+      - CPU-Intensive:
+        - Cores: 128
+        - Memory: 2000 GB
+        - GPUs: 8 x A100
+      - Memory-Intensive:
+        - Cores: 64
+        - Memory: 3022 GB
+        - GPUs: none
 
   - [Béluga (McGill)](https://jupyterhub.beluga.computecanada.ca/)
 
+    - Resource Limits:
+      - Time (Session Length): 1 - 12 hours
+      - CPU Cores: 10
+      - Memory: 46 GB
+      - GPUs: 1 x V100
+
   - [Narval (UQ)](https://jupyterhub.narval.computecanada.ca/)
+    - Resource Limits:
+      - Time (Session Length): 1 - 8 hours
+      - CPU Cores: 16
+      - Memory: 78 GB
+      - GPUs: 1 x A100
 
 - Supported Kernels (Programming Languages):
 
@@ -101,21 +205,9 @@ will be running from.
 
 ::: {.callout-note}
 
-Other kernels can be supported using Apptainer containers. See
-[Running a Jupyter Kernel from a Container](https://ubc-geography.github.io/computing-resources/high-performance-computing/#running-a-jupyter-kernel-from-a-container)
-for more details.
+Other kernels can be supported using Apptainer containers.
 
 :::
-
-- Server Resource Options:
-
-  - Time (Session Length): 30 minutes - 5 hours
-
-  - Number of (CPU) Cores: 1 - 8
-
-  - Memory (Total Session Limit): 1000MB - 63000MB
-
-  - (Optional) GPU Configuration: none - 4 x V100L
 
 ::: {.callout-note}
 
