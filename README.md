@@ -26,9 +26,9 @@ Geography IT team for advice and support in procuring, setting up, and
 maintaining laptops and workstations.
 
 For research computing, review
-[cloud computing](https://ubc-geography.github.io/computing-resources/cloud-computing/)
+[Cloud Computing](https://ubc-geography.github.io/computing-resources/cloud-computing/)
 and
-[High Performance Computing (HPC)](https://ubc-geography.github.io/computing-resources/high-performance-computing/)
+[High-Performance Computing (HPC) / High-Throughput Computing (HTC)](https://ubc-geography.github.io/computing-resources/high-performance-computing/)
 to identify available resources through UBC Advanced Research Computing and the
 Digital Research Alliance.
 

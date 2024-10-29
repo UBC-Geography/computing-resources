@@ -89,7 +89,7 @@ website:
           - href: "version-control-systems/jupyterhub-private-repo.html"
             text: Working with Private GitHub Repositories from JupyterHub
       - href: "high-performance-computing/index.html"
-        text: High Performance Computing (HPC)
+        text: High-Performance Computing (HPC) / High-Throughput Computing (HTC)
       - section: Cloud Computing
         contents:
           - href: "cloud-computing/index.html"

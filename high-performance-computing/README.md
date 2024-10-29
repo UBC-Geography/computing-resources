@@ -1,16 +1,17 @@
 ---
 output-file: index.html
-title: High Performance Computing
+title: High-Performance Computing / High-Throughput Computing
 ---
 
-High performance computing can provide a powerful solution when working with
-incredibly large datasets as they allow you and your collaborators to run
-scripts and programs over those datasets without facing limitations in your
-hardware and network speeds. UBC's Advanced Research Computing provides access
-to high performance computing via their Sockeye compute cluster along with
-secure and redundant digital object storage via Chinook. Additionally, the
-Canada-based organization, Digital Research Alliance, provides compute clusters
-across Canada, including one located at Simon Fraser University.
+High-performance computing (HPC) and high-throughput computing (HTC) can provide
+a powerful solution when working with incredibly large datasets as they allow
+you and your collaborators to run scripts and programs over those datasets
+without facing limitations in your hardware and network speeds. UBC's Advanced
+Research Computing provides access to HPC/HTC resources via their Sockeye
+compute cluster along with secure and redundant digital object storage via
+Chinook. Additionally, the Canada-based organization, Digital Research Alliance,
+provides compute clusters across Canada, including one located at Simon Fraser
+University.
 
 - [Introduction to Compute Canada (Alliance) Video](https://www.youtube.com/watch?v=hWkWAaNBILs)
 
@@ -38,9 +39,9 @@ Documentation: <https://confluence.it.ubc.ca/display/UARC/Using+Sockeye>
 
 Resource Limits:
 
-- Single-Node:
+- HTC:
   - 40 cores (Gold 6230), 754 GB of RAM
-- Multi-Node (non-blocking):
+- HPC (non-blocking):
   - CPU-Intensive:
     - 1,000 cores on 25 nodes, 186 GB of RAM per node
   - Memory-Intensive:
@@ -84,12 +85,12 @@ Clusters:
 
 - [Cedar (SFU)](https://docs.alliancecan.ca/wiki/Cedar)
   - Resource Limits:
-    - Single-Node:
+    - HTC:
       - CPU-Intensive:
         - 48 cores (Platinum 8160F), 187 GB of RAM
       - Memory-Intensive:
         - 40 cores (Gold 5215), 6000 GB of RAM
-    - Multi-Node (non-blocking):
+    - HPC (non-blocking):
       - CPU-Intensive:
         - 1,536 cores on 32 nodes, 187 GB of RAM per node
       - Memory-Intensive:
@@ -98,9 +99,9 @@ Clusters:
         - 640 cores on 20 nodes, 502 GB of RAM per node
 - [Graham (UW)](https://docs.alliancecan.ca/wiki/Graham)
   - Resource Limits:
-    - Single-Node:
+    - HTC:
       - 64 cores (E7-4850 v4), 3022 GB of RAM
-    - Multi-Node (non-blocking):
+    - HPC (non-blocking):
       - CPU-Intensive:
         - 1,024 cores on 32 nodes, 125 GB of RAM per node
       - Memory-Intensive:
@@ -108,21 +109,21 @@ Clusters:
         - 768 cores on 24 nodes, 502 GB of RAM per node
 - [Niagara (U of T)](https://docs.alliancecan.ca/wiki/Niagara) (RAC-only)
   - Resource Limits:
-    - Single-Node:
+    - HTC:
       - 40 cores (Skylake CPU), 202 GB of RAM
-    - Multi-Node (non-blocking):
+    - HPC (non-blocking):
       - 17,280 cores on 432 nodes, 202 GB of RAM per node
 - [Béluga (McGill)](https://docs.alliancecan.ca/wiki/B%C3%A9luga)
   - Resource Limits:
-    - Single-Node:
+    - HTC:
       - 40 cores (Gold 6148), 752 GB of RAM
-    - Multi-Node:
+    - HPC (non-blocking):
       - 640 cores on 16 nodes, 752 GB of RAM per node
 - [Narval (UQ)](https://docs.alliancecan.ca/wiki/Narval)
   - Resource Limits:
-    - Single-Node:
+    - HTC:
       - 64 cores (Epyc 7502), 4000 GB of RAM
-    - Multi-Node:
+    - HPC (non-blocking):
       - 3,584 cores on 56 nodes, 249 GB of RAM per node
 
 Supported Software: <https://docs.alliancecan.ca/wiki/Available_software>
@@ -694,11 +695,12 @@ similar for running on an Alliance cluster.
 
 - Rust (Alliance)
 
-## Containers on HPC
+## Containers on HPC / HTC
 
 - Use Cases:
 
-  - Running software that is not already included as an HPC module
+  - Running software that is not already included as a module on a HPC cluster
+    or HTC node
 
   - Building runtime environments from existing projects and easily reproducing
     research
@@ -802,6 +804,8 @@ amount of memory to allocate your job based on the size of your dataset.
 | 2500             | 128               |
 | 3500             | 192               |
 | 5000             | 256               |
+
+: {.table}
 
 **Source:**
 <https://docs.opendronemap.org/installation/#hardware-recommendations>
