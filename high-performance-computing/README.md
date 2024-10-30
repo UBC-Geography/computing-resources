@@ -89,7 +89,7 @@ Clusters:
       - CPU-Intensive:
         - 48 cores (Platinum 8160F), 187 GB of RAM
       - Memory-Intensive:
-        - 40 cores (Gold 5215), 6000 GB of RAM
+        - 40 cores (Gold 5215), 6,000 GB of RAM
     - HPC (non-blocking):
       - CPU-Intensive:
         - 1,536 cores on 32 nodes, 187 GB of RAM per node
@@ -100,7 +100,7 @@ Clusters:
 - [Graham (UW)](https://docs.alliancecan.ca/wiki/Graham)
   - Resource Limits:
     - HTC:
-      - 64 cores (E7-4850 v4), 3022 GB of RAM
+      - 64 cores (E7-4850 v4), 3,022 GB of RAM
     - HPC (non-blocking):
       - CPU-Intensive:
         - 1,024 cores on 32 nodes, 125 GB of RAM per node
@@ -122,7 +122,7 @@ Clusters:
 - [Narval (UQ)](https://docs.alliancecan.ca/wiki/Narval)
   - Resource Limits:
     - HTC:
-      - 64 cores (Epyc 7502), 4000 GB of RAM
+      - 64 cores (Epyc 7502), 4,000 GB of RAM
     - HPC (non-blocking):
       - 3,584 cores on 56 nodes, 249 GB of RAM per node
 
