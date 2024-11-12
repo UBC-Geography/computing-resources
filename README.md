@@ -38,6 +38,6 @@ specialized to fit the instructional needs of our faculty. Additionally, UBC
 Learning Technology (LT) Hub maintains a
 [JupyterHub instance](https://open.jupyter.ubc.ca) that can be remotely accessed
 via a web browser and is open to all UBC students. Each student is allocated a
-single CPU core, 3 GB of RAM, and 10 TB of storage in an environment where
+single CPU core, 3 GB of RAM, and 10 GB of storage in an environment where
 programming languages, like Python, R, and Julia are pre-installed to run
 scripts and computational notebooks.
