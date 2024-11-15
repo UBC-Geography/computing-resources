@@ -42,6 +42,11 @@ basics of Python.
   [UBC Library](https://go.exlibris.link/kz6Z0BfH) |
   [WorldCat](https://search.worldcat.org/title/1409031863)
 
+If you are looking for a more in-depth introduction to Python,
+[UBC Extended Learning](https://extendedlearning.ubc.ca/) provides multiple
+courses that can develop confidence in the language while learning best
+practices for development and maintenance.
+
 ## Geospatial Books
 
 - [Carpentries Incubator - Introduction to Geospatial Raster and Vector Data with Python](https://carpentries-incubator.github.io/geospatial-python/)
@@ -143,6 +148,36 @@ while also making it easier to manage and preserve. The crucial downside to note
 is that user's with poor internet connections and/or limited hardware will
 struggle to run the applications, especially those that include large datasets
 and long, resource-intensive computations.
+
+## Increasing Performance
+
+Compared to other languages, Python isn't considered particularly fast due to
+its focus on ease and speed of development over performance. For many
+geography-based researchers, development workflows first focus on developing
+code that performs accurate analysis and then later improving the code as needed
+to ensure the analysis runs as efficiently as possible in both local and HTC
+environments before finally adapting code to work in an HPC environment if
+needed.
+
+- [Carpentries Incubator - Parallel Programming in Python](https://carpentries-incubator.github.io/lesson-parallel-python/)
+
+- [Working with the Python Dask library](https://youtu.be/uGy5gT2vLdI)
+
+- [GeoPandas-Dask Documentation](https://dask-geopandas.readthedocs.io/en/stable/index.html#)
+
+- _High Performance Python_ : [UBC Library](https://go.exlibris.link/dkXkNWFq) |
+  [WorldCat](https://search.worldcat.org/title/1153835314)
+
+- _Fast Python_ : [UBC Library](https://go.exlibris.link/GpWGg2qJ) |
+  [WorldCat](https://search.worldcat.org/title/1383660035)
+
+- _Advanced Python Programming_ :
+  [UBC Library](https://go.exlibris.link/C1DNnRh4) |
+  [WorldCat](https://search.worldcat.org/title/1306240707)
+
+- [MPI for Python Documentation](https://mpi4py.readthedocs.io/en/stable/index.html)
+
+- [Alliance Documentation - MPI for Python](https://docs.alliancecan.ca/wiki/MPI4py/en)
 
 ## Code Quality Tools
 

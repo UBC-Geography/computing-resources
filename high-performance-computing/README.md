@@ -174,11 +174,11 @@ will be running from.
       - Time (Session Length): 15 minutes - 24 hours
       - CPU-Intensive:
         - Cores: 128
-        - Memory: 2000 GB
+        - Memory: 2,000 GB
         - GPUs: 8 x A100
       - Memory-Intensive:
         - Cores: 64
-        - Memory: 3022 GB
+        - Memory: 3,022 GB
         - GPUs: none
 
   - [Béluga (McGill)](https://jupyterhub.beluga.computecanada.ca/)
@@ -500,6 +500,12 @@ similar for running on an Alliance cluster.
 
 ## Python
 
+Prior to running Python in an HTC/HPC environment, ensure you have optimized
+your code as much as possible. You can find resources relevant to parallelizing
+Python code via system and external libraries, like multiprocessing, Dask, and
+mpi4py, under
+[Python - Increasing Performance](https://ubc-geography.github.io/computing-resources/python/#increasing-performance).
+
 - [Alliance Documentation - Python](https://docs.alliancecan.ca/wiki/Python)
 
 - Supported Versions: 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11 and 3.12
@@ -621,6 +627,12 @@ similar for running on an Alliance cluster.
 - [Working with the Python Dask (Parallelization) Library Video](https://youtu.be/uGy5gT2vLdI)
 
 ## R
+
+Prior to running R in an HTC/HPC environment, ensure you have optimized your
+code as much as possible. You can find resources relevant to parallelizing R
+code via system and external libraries, like parallel, data.table and snowfall,
+under
+[R - Increasing Performance](https://ubc-geography.github.io/computing-resources/r/#increasing-performance).
 
 - [Alliance Documentation - R](https://docs.alliancecan.ca/wiki/R)
 
@@ -800,10 +812,10 @@ amount of memory to allocate your job based on the size of your dataset.
 | 40               | 4                 |
 | 250              | 16                |
 | 500              | 32                |
-| 1500             | 64                |
-| 2500             | 128               |
-| 3500             | 192               |
-| 5000             | 256               |
+| 1,500            | 64                |
+| 2,500            | 128               |
+| 3,500            | 192               |
+| 5,000            | 256               |
 
 : {.table}
 

@@ -120,6 +120,25 @@ applications.
 
 - [Dash - Plotly Maps](https://plotly.com/r/maps/)
 
+## Increasing Performance
+
+Similar to Python, R isn't considered a particularly fast programming language.
+For many geography-based researchers, development workflows first focus on
+developing code that performs accurate analysis and then later improving the
+code as needed to ensure the analysis runs as efficiently as possible in both
+local and HTC environments before finally adapting code to work in an HPC
+environment if needed.
+
+- [Introduction to high-performance research computing in R](https://youtu.be/mxkhOHdN2Hw)
+
+- [High-Performance Computing with R](https://youtu.be/__JIh2uBzg8?si=Kjm_kdhM9sAMxrK3)
+
+- [CRAN Task View: High-Performance and Parallel Computing with R](https://cran.r-project.org/web/views/HighPerformanceComputing.html)
+
+- [fastverse: A Suite of High-Performance Packages for Statistics and Data Manipulation](https://fastverse.github.io/fastverse/index.html)
+
+- [Futureverse: A Unifying Parallelization Framework in R for Everyone](https://www.futureverse.org/)
+
 ## Code Quality Tools
 
 ### Formatting
