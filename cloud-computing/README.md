@@ -46,7 +46,9 @@ particularly useful for the following use cases:
 
 - \# of VMs: 20
 - vCPUs: 80
+  - 16 per VM
 - RAM: 300 GB
+  - 180 GB per VM
 - Storage: 10 TB
 - vGPU: 16 GB of memory on an Nvidia V100
 
@@ -64,8 +66,8 @@ For geography-related research and instruction, these instances can be
 particularly useful for the following use cases:
 
 - Hosting a PostgreSQL database with PostGIS
-- Running a web service with software like GeoServer, GeoNode, Ushahidi, or QGIS
-  server.
+- Running a web service with software like GeoServer, GeoNode, Ushahidi, uMap
+  (OpenStreetMap), or QGIS server.
 - Developing dynamic digital exhibits or publications with Omeka and/or Scalar.
 
 Again, when working with persistent VMs, consider any implications that may come
@@ -77,7 +79,9 @@ with minimal resources and no long-term maintenance.
 
 - \# of VMs: 10
 - vCPUs: 25
+  - 16 per VM
 - RAM: 50 GB
+  - 32 GB per VM
 - Storage: 10 TB
 
 ## UBC IT
