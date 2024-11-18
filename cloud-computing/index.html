@@ -362,8 +362,14 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="ras-resource-limits">RAS Resource Limits</h4>
 <ul>
 <li># of VMs: 20</li>
-<li>vCPUs: 80</li>
-<li>RAM: 300 GB</li>
+<li>vCPUs: 80
+<ul>
+<li>16 per VM</li>
+</ul></li>
+<li>RAM: 300 GB
+<ul>
+<li>180 GB per VM</li>
+</ul></li>
 <li>Storage: 10 TB</li>
 <li>vGPU: 16 GB of memory on an Nvidia V100</li>
 </ul>
@@ -375,7 +381,7 @@ ul.task-list li input[type="checkbox"] {
 <p>For geography-related research and instruction, these instances can be particularly useful for the following use cases:</p>
 <ul>
 <li>Hosting a PostgreSQL database with PostGIS</li>
-<li>Running a web service with software like GeoServer, GeoNode, Ushahidi, or QGIS server.</li>
+<li>Running a web service with software like GeoServer, GeoNode, Ushahidi, uMap (OpenStreetMap), or QGIS server.</li>
 <li>Developing dynamic digital exhibits or publications with Omeka and/or Scalar.</li>
 </ul>
 <p>Again, when working with persistent VMs, consider any implications that may come from preserving your work once the VM is no longer available by asking yourself whether your work can be easily exported, web archived, and/or hosted externally with minimal resources and no long-term maintenance.</p>
@@ -383,8 +389,14 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="ras-resource-limits-1">RAS Resource Limits</h4>
 <ul>
 <li># of VMs: 10</li>
-<li>vCPUs: 25</li>
-<li>RAM: 50 GB</li>
+<li>vCPUs: 25
+<ul>
+<li>16 per VM</li>
+</ul></li>
+<li>RAM: 50 GB
+<ul>
+<li>32 GB per VM</li>
+</ul></li>
 <li>Storage: 10 TB</li>
 </ul>
 </section>
