@@ -145,6 +145,25 @@ while QGIS-specific documentation for Alliance clusters is listed below.
 
 - [Alliance Documentation - QGIS](https://docs.alliancecan.ca/wiki/QGIS)
 
+Alternatively, you can run QGIS from an Alliance cluster and access it directly
+through your browser by using one of the JupyterHub instances noted in the next
+section. Generally, we recommend requesting a Jupyter server on the Graham
+cluster because it provides access to more resources and is largely focused on
+supporting visualization workflows. You should also request at least 2 CPU cores
+and 4 GB of RAM to effectively run QGIS.
+
+Once your Jupyter server has been allocated and started, launch the Desktop
+application from the JupyterLab launcher. This will open a Linux-based desktop
+environment, which is running on your Jupyter server resources, in separate
+browser tab. Next open a terminal in the desktop environment and enter the
+following commands to load and then start QGIS.
+
+```bash
+$ module load gcc
+$ module load qgis
+$ qgis
+```
+
 ## Jupyter
 
 A handful of Alliance clusters provide access to hardware via a JupyterHub
@@ -267,16 +286,18 @@ apptainer module again in order for the kernel to run.
    $ apptainer --version
    ```
 
-   If Apptainer is not installed, you can use the following steps on Debian or
-   Ubuntu
+````
 
-   ```bash
-   $ sudo apt update
-   $ sudo apt install -y software-properties-common
-   $ sudo add-apt-repository -y ppa:apptainer/ppa
-   $ sudo apt update
-   $ sudo apt install -y apptainer
-   ```
+If Apptainer is not installed, you can use the following steps on Debian or
+Ubuntu
+
+```bash
+$ sudo apt update
+$ sudo apt install -y software-properties-common
+$ sudo add-apt-repository -y ppa:apptainer/ppa
+$ sudo apt update
+$ sudo apt install -y apptainer
+```
 
 2. Pull the mambaorg/micromamba Docker container from Docker Hub and build a
    sandbox container from it. This will enable you to use Micromamba, an
@@ -837,3 +858,4 @@ directory before cleaning up the scratch directory.
     Gbagir, A. G., Ek, K., & Colpaert, A. (2023). OpenDroneMap: Multi-platform
     performance analysis. _Geographies_, 3(3), 446-458.
     <https://doi.org/10.3390/geographies3030023>
+````
