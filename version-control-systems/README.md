@@ -138,12 +138,18 @@ QGIS plugin to ensure easy integration.
 
 ### [DataLad](https://www.datalad.org/)
 
-Datalad provides a general-purpose data version control system that supports a
+DataLad provides a general-purpose data version control system that supports a
 broad set of storage options including Microsoft OneDrive, DRA's Arbutus object
 storage (OpenStack Swift), and a range of other S3-compatible object storage
 providers.
 
 - _[Datalad: The Handbook](https://handbook.datalad.org/en/latest/index.html)_
+
+- [WestDRI - Distributed File Storage with git-annex](https://training.westdri.ca/tools/rdm/#distributed-file-storage-with-git-annex)
+
+- [WestDRI - Data Management with DataLad](https://training.westdri.ca/tools/rdm/#data-management-with-datalad)
+
+- [WestDRI - Distributed Datasets with Datalad](https://training.westdri.ca/tools/rdm/#distributed-datasets-with-datalad)
 
 ### [DVC](https://dvc.org/)
 

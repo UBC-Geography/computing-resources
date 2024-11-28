@@ -79,6 +79,8 @@ databases.
 
 - [Database Servers -- Cedar PostgreSQL](https://docs.alliancecan.ca/wiki/Database_servers#Cedar_PostgreSQL_server)
 
+- [WestDRI - How to create and access MySQL and PostgreSQL databases on DRI systems](https://training.westdri.ca/tools/rdm/#how-to-create-and-access-mysql-and-postgresql-databases-on-dri-systems)
+
 #### Cloud / SaaS Providers
 
 - [Microsoft Azure](https://azure.microsoft.com/en-ca/products/postgresql/)

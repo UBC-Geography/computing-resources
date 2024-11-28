@@ -153,8 +153,15 @@ developing and managing digital exhibits.
 ### CollectionBuilder
 
 Lacking a content management system, CollectionBuilder centers the development
-and management of digital exhibits around CSVs and Markdown. Built as a theme
-around a static site generator (Jekyll), CollectionBuilder creates digital
-exhibits as fast and easy-to-preserve websites.
+and management of digital exhibits around CSVs, which can be easily created and
+managed via a spreadsheet editor. Built as a theme around a static site
+generator (Jekyll), CollectionBuilder creates digital exhibits as
+easy-to-preserve websites. Paired with the Alliance's Arbutus Object Storage,
+CollectionBuilder exhibits provide a fast and customizable method for publicly
+sharing a variety of media alongside a rich set of metadata. Additionally,
+CollectionBuilder automatically generates a Leaflet-based web map from any
+provided geospatial metadata.
 
 - [CollectionBuilder Documentation](https://collectionbuilder.github.io/cb-docs/)
+
+- [CollectionBuilder Example - Idaho Queered](https://www.lib.uidaho.edu/queered/)

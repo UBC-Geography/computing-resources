@@ -61,6 +61,10 @@ practices for development and maintenance.
   [UBC Library](https://go.exlibris.link/JbW0Xp9n) |
   [WorldCat](https://search.worldcat.org/title/1412008153)
 
+- _Earth Observation Using Python_ :
+  [UBC Library](https://go.exlibris.link/P8XnGQ1L) |
+  [WorldCat](https://search.worldcat.org/title/1240265984)
+
 - _GIS Algorithms_ : [UBC Library](https://go.exlibris.link/88SQHd9H) |
   [WorldCat](https://search.worldcat.org/title/960087192)
 
@@ -202,6 +206,8 @@ programmers that helps in identifying and fixings mistakes when writing code by
 ensuring that you follow the correct syntax and a guiding set of best practices.
 
 - [flake8 Documentation](https://flake8.pycqa.org/en/latest/)
+
+- [ruff Documentation](https://docs.astral.sh/ruff/)
 
 ### Type Checking
 

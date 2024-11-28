@@ -111,3 +111,99 @@ as an alternative if your use case allows it.
 
 - _Expert GeoServer_ : [UBC Library](https://go.exlibris.link/VZSrV1cw) |
   [WorldCat](https://search.worldcat.org/title/1050170484)
+
+## Web Mapping
+
+Web maps, like OpenStreetMap and Google Maps, provide one of the most effective
+methods for sharing geospatial data, as they enable users to render, view, and
+interact with that data directly through their web browsers either via a laptop,
+desktop, or mobile device without the need to install specialized GIS software.
+
+Examples:
+
+- [Wayfinding at UBC](https://maps.ubc.ca/)
+
+- [City of Vancouver - VanMap](https://maps.vancouver.ca/vanmap-viewer/)
+
+- [Government of BC - BC's Map Hub](https://governmentofbc.maps.arcgis.com/home/gallery.html)
+
+- [bikemaps.org](https://bikemaps.org/)
+-
+- [walkrollmap.org](https://walkrollmap.org/)
+
+There are a large variety of tools that can assist in developing and
+distributing web maps. Prior to selecting a tool, be sure to closely analyze
+your use case and assess whether the tools you are reaching for can best
+addresses it. For particularly unique use cases, it may be necessary to develop
+a web map from the ground up using HTML, CSS, and JavaScript. You can find a few
+resources to assist that work in this site's
+[JavaScript page](https://ubc-geography.github.io/computing-resources/javascript/#web-mapping).
+
+### ArcGIS Online
+
+Industry and government GIS experts, frequently rely on ESRI's ArcGIS Online to
+provide access to their geospatial data via an extraordinarily powerful web
+mapping interface. Similar to ArcGIS Pro, UBC students and researchers can learn
+more about getting access to an ArcGIS Online account on the
+[UBC GIS Software page](https://gis.ubc.ca/software/).
+
+- [ESRI - ArcGIS Online - Resources](https://www.esri.com/en-us/arcgis/products/arcgis-online/resources)
+
+An important item to note when assessing this tool for your use cases is that
+your web map cannot be exported from ArcGIS Online, which means the lifespan of
+your map will be heavily dependent on ESRI's servers and your continued
+subscription to an ArcGIS Online account. If your web map will need to be
+supported and/or preserved well into the future, consider reviewing a few
+alternative options. Additionally, while the extensive number of features
+included in ArcGIS web maps can make them extraordinarily powerful, those same
+features can also make your map quite bloated, so if you are developing a web
+map to serve communities where internet access may be limited, consider working
+with a lighter web mapping tool that can be optimized to load more efficiently.
+
+Alternatives to ArcGIS Online that may fit similar use cases include:
+[Mapbox](https://www.mapbox.com/) and [CARTO](https://carto.com/), which both
+run popular Software as a Service (SaaS) models for developing and hosting web
+maps.
+
+### uMap
+
+Built on OpenStreetMap and open-source software, uMap provides a lighter, but
+less feature-rich alternative to ArcGIS Online. Public instances are available,
+which enable users to create and share their web maps for free. If you hope to
+embed images or other media on your map, checkout the
+[Object Storage page](https://ubc-geography.github.io/computing-resources/cloud-computing/object-storage.html)
+for free/low-cost hosting options.
+
+- [OSM Wiki- uMap](https://wiki.openstreetmap.org/wiki/UMap)
+
+### QGIS2WEB
+
+Distributed as a QGIS plugin, this tool enables users to generate web maps as
+static web sites. HTML, CSS, and JavaScript are exported alongside your data,
+which can then be hosted like any other static website through
+[object storage](https://ubc-geography.github.io/computing-resources/cloud-computing/object-storage.html)
+or providers like GitHub Pages.
+
+- [qgis2web Wiki](https://qgis2web.github.io/qgis2web/)
+
+### GeoNode
+
+As noted earlier, GeoNode provides an open-source content management system atop
+a GeoServer instance, which works well for developing, collaborating, and
+sharing web maps. Unlike ArcGIS Online and uMap, GeoNode is only available via a
+self-hosted instance, so requesting a cloud-based virtual machine would be
+required to setup a server.
+
+- [GeoNode Documentation](https://docs.geonode.org/en/master/)
+
+### Ushahidi
+
+Developed with a specific focus on creating web maps from crowdsourced data,
+Ushahidi provides a friendly user interface for quickly creating and
+distributing forms from which data can be collected and then mapped
+automatically. Ushahidi can either be self-hosted or managed via a SaaS account,
+but registering users should be avoided or discouraged in order to avoid
+collecting any personal identifiable information (PII), which could violate UBC
+policies and BC privacy regulations.
+
+- [Ushahidi User Manual](https://docs.ushahidi.com/platform-user-manual)
