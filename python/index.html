@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,8 +38,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-9c7cfbbf9ea33ced4c28a399e9621cc4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-f4492ed09f19cf23c0d91a1998a33647.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -365,6 +365,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p><em><a href="https://pythongis.org/">Python for Geographic Data Analysis</a></em></p></li>
 <li><p><a href="https://projectpythia.org/">Project Pythia</a></p></li>
 <li><p><em>Learning Geospatial Analysis with Python</em> : <a href="https://go.exlibris.link/JbW0Xp9n">UBC Library</a> | <a href="https://search.worldcat.org/title/1412008153">WorldCat</a></p></li>
+<li><p><em>Earth Observation Using Python</em> : <a href="https://go.exlibris.link/P8XnGQ1L">UBC Library</a> | <a href="https://search.worldcat.org/title/1240265984">WorldCat</a></p></li>
 <li><p><em>GIS Algorithms</em> : <a href="https://go.exlibris.link/88SQHd9H">UBC Library</a> | <a href="https://search.worldcat.org/title/960087192">WorldCat</a></p></li>
 <li><p><em>Python for Geospatial Data Analysis</em> : <a href="https://go.exlibris.link/LtW84CTr">UBC Library</a> | <a href="https://search.worldcat.org/title/1348493378">WorldCat</a></p></li>
 <li><p><em><a href="https://py.geocompx.org/">Geocomputation with Python</a></em></p></li>
@@ -430,7 +431,8 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="linting">Linting</h3>
 <p>Using a static analysis tool, or linter, is a common best practice among programmers that helps in identifying and fixings mistakes when writing code by ensuring that you follow the correct syntax and a guiding set of best practices.</p>
 <ul>
-<li><a href="https://flake8.pycqa.org/en/latest/">flake8 Documentation</a></li>
+<li><p><a href="https://flake8.pycqa.org/en/latest/">flake8 Documentation</a></p></li>
+<li><p><a href="https://docs.astral.sh/ruff/">ruff Documentation</a></p></li>
 </ul>
 </section>
 <section id="type-checking" class="level3">
@@ -678,8 +680,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -790,7 +790,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
