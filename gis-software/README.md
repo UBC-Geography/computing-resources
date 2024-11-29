@@ -128,7 +128,7 @@ Examples:
 - [Government of BC - BC's Map Hub](https://governmentofbc.maps.arcgis.com/home/gallery.html)
 
 - [bikemaps.org](https://bikemaps.org/)
--
+
 - [walkrollmap.org](https://walkrollmap.org/)
 
 There are a large variety of tools that can assist in developing and
