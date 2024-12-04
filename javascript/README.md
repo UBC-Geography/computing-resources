@@ -5,7 +5,8 @@ title: JavaScript
 
 While JavaScript has fewer applications in geography compared to other languages
 like Python and R, it remains a useful skill to develop, particularly for
-creating interactive web maps and web-based visualizations.
+interacting with Google Earth Engine or creating interactive web maps and
+web-based visualizations.
 
 It's important to note that JavaScript code can be executed in various and often
 quite different contexts with the most common being web browsers (front-end or
@@ -36,6 +37,33 @@ Additionally, you may find a few more libraries along with packages that run in
 Node.js through the following list:
 
 - [Awesome Geospatial - JavaScript](https://github.com/sacridini/Awesome-Geospatial?tab=readme-ov-file#javascript)
+
+### Google Earth Engine (GEE)
+
+The code editor that is built into Google Earth Engine acts as a JavaScript
+runtime or playground. Through the code editor, you can write JavaScript scripts
+that interact with the Google Earth Engine API to access and analyze data.
+Computational resources to the GEE Code Editor may be too limited for some
+computational work. In those cases, you can transfer your code to your local
+machine and run it from an environment where Node.js and the
+[GEE API library](https://github.com/google/earthengine-api) are installed. If
+you have Miniforge installed on your machine, you can use the following commands
+to quickly set up an environment using `mamba`.
+
+```bash
+$ mamba create -n nodejs nodejs
+$ mamba activate nodejs
+$ npm install --save @google/earthengine
+```
+
+Then you can following these
+[instructions](https://developers.google.com/earth-engine/guides/npm_install#server-side-authentication-with-a-service-account)
+to setup a service account for your Google Cloud Project and authenticate to the
+API in your JavaScript script.
+
+- [Google Earth Engine Guides](https://developers.google.com/earth-engine/guides)
+
+- _[Cloud-Based Remote Sensing with Google Earth Engine](https://library.oapen.org/handle/20.500.12657/76709)_
 
 ### Web Mapping
 
