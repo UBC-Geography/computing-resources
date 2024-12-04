@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -307,6 +341,7 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#geospatial-librariespackages" id="toc-geospatial-librariespackages" class="nav-link active" data-scroll-target="#geospatial-librariespackages">Geospatial Libraries/Packages</a>
   <ul class="collapse">
+  <li><a href="#google-earth-engine-gee" id="toc-google-earth-engine-gee" class="nav-link" data-scroll-target="#google-earth-engine-gee">Google Earth Engine (GEE)</a></li>
   <li><a href="#web-mapping" id="toc-web-mapping" class="nav-link" data-scroll-target="#web-mapping">Web Mapping</a></li>
   </ul></li>
   <li><a href="#interactive-visualizations-and-dashboards" id="toc-interactive-visualizations-and-dashboards" class="nav-link" data-scroll-target="#interactive-visualizations-and-dashboards">Interactive Visualizations and Dashboards</a>
@@ -345,7 +380,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>While JavaScript has fewer applications in geography compared to other languages like Python and R, it remains a useful skill to develop, particularly for creating interactive web maps and web-based visualizations.</p>
+<p>While JavaScript has fewer applications in geography compared to other languages like Python and R, it remains a useful skill to develop, particularly for interacting with Google Earth Engine or creating interactive web maps and web-based visualizations.</p>
 <p>It’s important to note that JavaScript code can be executed in various and often quite different contexts with the most common being web browsers (front-end or client-side) and runtime engines (back-end or server-side), like Node.js and Deno. Most applications of JavaScript relevant to geographers occurs in the former with the use of libraries, like Leaflet, D3.js, and Observable.</p>
 <p>The following resources will provide general introductions to JavaScript and its applications within the context of a web browser, so any of them can be useful for learning the basics of JavaScript.</p>
 <ul>
@@ -363,6 +398,18 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><a href="https://github.com/sacridini/Awesome-Geospatial?tab=readme-ov-file#javascript">Awesome Geospatial - JavaScript</a></li>
 </ul>
+<section id="google-earth-engine-gee" class="level3">
+<h3 class="anchored" data-anchor-id="google-earth-engine-gee">Google Earth Engine (GEE)</h3>
+<p>The code editor that is built into Google Earth Engine acts as a JavaScript runtime or playground. Through the code editor, you can write JavaScript scripts that interact with the Google Earth Engine API to access and analyze data. Computational resources to the GEE Code Editor may be too limited for some computational work. In those cases, you can transfer your code to your local machine and run it from an environment where Node.js and the <a href="https://github.com/google/earthengine-api">GEE API library</a> are installed. If you have Miniforge installed on your machine, you can use the following commands to quickly set up an environment using <code>mamba</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba create <span class="at">-n</span> nodejs nodejs</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba activate nodejs</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> npm install <span class="at">--save</span> @google/earthengine</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then you can following these <a href="https://developers.google.com/earth-engine/guides/npm_install#server-side-authentication-with-a-service-account">instructions</a> to setup a service account for your Google Cloud Project and authenticate to the API in your JavaScript script.</p>
+<ul>
+<li><p><a href="https://developers.google.com/earth-engine/guides">Google Earth Engine Guides</a></p></li>
+<li><p><em><a href="https://library.oapen.org/handle/20.500.12657/76709">Cloud-Based Remote Sensing with Google Earth Engine</a></em></p></li>
+</ul>
+</section>
 <section id="web-mapping" class="level3">
 <h3 class="anchored" data-anchor-id="web-mapping">Web Mapping</h3>
 <p>Developing interactive maps that can be shared via the web is one of the most commonly used applications of JavaScript in geography. A few resources and libraries used for developing web maps are listed in the link below, followed by resources associated with the four major web mapping libraries.</p>
