@@ -369,7 +369,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="using-fine-grained-personal-access-tokens" class="level2">
 <h2 class="anchored" data-anchor-id="using-fine-grained-personal-access-tokens">Using Fine-Grained Personal Access Tokens</h2>
 <p>This is the recommended method for cloning and pushing commits to a private GitHub repository while working within a JupyterHub server. A fine-grained personal access token, acts as a password for your account and provides a limited set of functionality when working with your GitHub repositories.</p>
-<p>You can have multiple personal access tokens associated with your GitHub account with various levels of access to your account and specific repositories associated with it. You can generate tokens from within the <a href="https://github.com/settings/tokens?type=beta">developer settings</a> of your personal account.</p>
+<p>You can have multiple personal access tokens associated with your GitHub account with various levels of access to your account and specific repositories associated with it. You can generate tokens from within the <a href="https://github.com/settings/tokens?type=beta" target="_blank">developer settings</a> of your personal account.</p>
 <p>When creating a new token, ensure that you provided it with the minimum privileges necessary to interact with your private repositories via JupyterHub. This includes setting a short expiration date for the token and restricting the token to only work with a specific repository.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -411,7 +411,7 @@ Important
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">Enter</span> same passphrase again:</span>
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> identification has been saved in /home/jovyan/.ssh/id_rsa</span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">Your</span> public key has been saved in /home/jovyan/.ssh/id_rsa.pub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>To use your new SSH key, add a public key to your GitHub personal account from the <a href="https://github.com/settings/ssh/new">SSH Key Settings page</a> by copying the contents of /home/jovyan/.ssh/id_rsa.pub into the key field.</p>
+<p>To use your new SSH key, add a public key to your GitHub personal account from the <a href="https://github.com/settings/ssh/new" target="_blank">SSH Key Settings page</a> by copying the contents of /home/jovyan/.ssh/id_rsa.pub into the key field.</p>
 <p>From JupyterHub, you’ll then be able to clone and push changes to all of your private repositories within GitHub using the SSH protocol.</p>
 
 

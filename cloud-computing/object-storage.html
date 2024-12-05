@@ -380,7 +380,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Cloud-based object storage can fluently handle file uploads when working with extraordinarily large files while reducing opportunities for data loss by providing an extremely high level of redundancy and durability. Once files are stored in an object storage bucket/container, they can be made publicly available without needing to setup and configure a web server.</p>
 <p>Common use cases include:</p>
 <ul>
-<li><p>Storing and serving geospatial datasets, particularly those that are <a href="https://guide.cloudnativegeo.org/">cloud-optimized</a></p></li>
+<li><p>Storing and serving geospatial datasets, particularly those that are <a href="https://guide.cloudnativegeo.org/" target="_blank">cloud-optimized</a></p></li>
 <li><p>Backing up and/or storing archival data</p></li>
 <li><p>Storing and hosting media assets (images, audio, video, etc.)</p></li>
 <li><p>Hosting static websites</p></li>
@@ -389,22 +389,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="s3-compatible-clients">S3-Compatible Clients</h2>
 <p>Most cloud-based object storage providers support Amazon’s S3 API meaning that they can be accessed and managed via an S3-compatible client. If you are using multiple cloud storage providers, these are helpful tool to get familiar with.</p>
 <ul>
-<li><p><a href="https://cyberduck.io/">Cyberduck</a></p></li>
-<li><p><a href="https://rclone.org/">Rclone</a></p></li>
+<li><p><a href="https://cyberduck.io/" target="_blank">Cyberduck</a></p></li>
+<li><p><a href="https://rclone.org/" target="_blank">Rclone</a></p></li>
 </ul>
 </section>
 <section id="ubc-arc-chinook" class="level2">
 <h2 class="anchored" data-anchor-id="ubc-arc-chinook">UBC ARC Chinook</h2>
 <p>UBC faculty members can access object storage via UBC ARC’s Chinook platform. Overall storage capacity is determined by allocation awards while individual files stored on the platform can be up to 5 TB. While Globus remains the recommended tool for managing object storage on Chinook, an S3 API can be enabled upon request thus giving you the ability to use the noted S3 clients above.</p>
-<p>For more details about Chinook, see: <a href="https://ubc-geography.github.io/computing-resources/research-data-management/research-data-storage.html#ubc-chinook">Research Data Storage</a></p>
+<p>For more details about Chinook, see: <a href="https://ubc-geography.github.io/computing-resources/research-data-management/research-data-storage.html#ubc-chinook" target="_blank">Research Data Storage</a></p>
 </section>
 <section id="digital-research-alliance-dra" class="level2">
 <h2 class="anchored" data-anchor-id="digital-research-alliance-dra">Digital Research Alliance (DRA)</h2>
-<p>Faculty across Canada can also access up to 10 TB of object storage via DRA Cloud’s Arbutus data centre (University of Victoria) by submitting a <a href="https://docs.google.com/forms/d/e/1FAIpQLSeU_BoRk5cEz3AvVLf3e9yZJq-OvcFCQ-mg7p4AWXmUkd5rTw/viewform">Rapid Access Service (RAS) request</a>. If those limits are not sufficient, additional resources can be requested through the annual Resource Allocation Competition (RAC) with applications due between late September and early November. Upon approval, RAC resources are granted the following April.</p>
+<p>Faculty across Canada can also access up to 10 TB of object storage via DRA Cloud’s Arbutus data centre (University of Victoria) by submitting a <a href="https://docs.google.com/forms/d/e/1FAIpQLSeU_BoRk5cEz3AvVLf3e9yZJq-OvcFCQ-mg7p4AWXmUkd5rTw/viewform" target="_blank">Rapid Access Service (RAS) request</a>. If those limits are not sufficient, additional resources can be requested through the annual Resource Allocation Competition (RAC) with applications due between late September and early November. Upon approval, RAC resources are granted the following April.</p>
 <ul>
-<li><a href="https://docs.alliancecan.ca/wiki/Arbutus_object_storage">DRA - Arbutus Object Storage</a></li>
+<li><a href="https://docs.alliancecan.ca/wiki/Arbutus_object_storage" target="_blank">DRA - Arbutus Object Storage</a></li>
 </ul>
-<p>Projects allocated on the Arbutus cloud are administered through an OpenStack dashboard, which provides limited functionality for managing object storage. If you need more flexibility, you’ll want to install one of the S3-compatible clients listed above or alternatively an OpenStack Swift <a href="https://cyberduck.io/openstack/">connector</a> or client.</p>
+<p>Projects allocated on the Arbutus cloud are administered through an OpenStack dashboard, which provides limited functionality for managing object storage. If you need more flexibility, you’ll want to install one of the S3-compatible clients listed above or alternatively an OpenStack Swift <a href="https://cyberduck.io/openstack/" target="_blank">connector</a> or client.</p>
 <section id="openstack-swift-client" class="level3">
 <h3 class="anchored" data-anchor-id="openstack-swift-client"><a href="https://docs.openstack.org/python-swiftclient/latest/cli/index.html">OpenStack Swift Client</a></h3>
 <p>OpenStack provides an official client for Swift services that can be installed and ran via Python. This tool is not recommended for Windows environments as it should be ran from a Bash shell.</p>
@@ -444,16 +444,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="commercial-cloud-object-storage-providers" class="level2">
 <h2 class="anchored" data-anchor-id="commercial-cloud-object-storage-providers">Commercial Cloud Object Storage Providers</h2>
 <p>If neither the Alliance Cloud or Chinook provide sufficient features or you plan on using a particular cloud computing service that is only available through a commercial cloud provider, you can access object storage directly through commercial cloud providers.</p>
-<p>Contact <a href="https://arc.ubc.ca/compute-storage/cloud-computing">UBC ARC</a> to get details about accessing credits that can mitigate costs associated with using the following cloud providers.</p>
+<p>Contact <a href="https://arc.ubc.ca/compute-storage/cloud-computing" target="_blank">UBC ARC</a> to get details about accessing credits that can mitigate costs associated with using the following cloud providers.</p>
 <ul>
-<li><p><a href="https://docs.aws.amazon.com/s3/">AWS S3</a></p></li>
-<li><p><a href="https://cloud.google.com/storage/docs/">Google Cloud Storage</a></p></li>
-<li><p><a href="https://learn.microsoft.com/en-us/azure/storage/blobs/">Microsoft Azure Blob Storage</a></p></li>
+<li><p><a href="https://docs.aws.amazon.com/s3/" target="_blank">AWS S3</a></p></li>
+<li><p><a href="https://cloud.google.com/storage/docs/" target="_blank">Google Cloud Storage</a></p></li>
+<li><p><a href="https://learn.microsoft.com/en-us/azure/storage/blobs/" target="_blank">Microsoft Azure Blob Storage</a></p></li>
 </ul>
 <p>If you are working with an organization outside of UBC and/or are unable to access credits to help cover the costs of object storage, the following providers have generous free tiers and generally lower pricing options.</p>
 <ul>
-<li><p><a href="https://developers.cloudflare.com/r2/">Cloudflare R2</a></p></li>
-<li><p><a href="https://www.backblaze.com/docs/cloud-storage">Backblaze B2</a></p></li>
+<li><p><a href="https://developers.cloudflare.com/r2/" target="_blank">Cloudflare R2</a></p></li>
+<li><p><a href="https://www.backblaze.com/docs/cloud-storage" target="_blank">Backblaze B2</a></p></li>
 </ul>
 
 

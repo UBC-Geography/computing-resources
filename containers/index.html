@@ -342,34 +342,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Similar to virtual machines, containers are a form of virtualization that package software and the multiple dependencies required to run that software into a single, distributable environment. That container can then be run on any system that is running the appropriate engine (Docker, Podman, etc.). They are often lighter and more agile than virtual machines but can include increased security risks if not deployed correctly. In general, virtual environments managed using tools like Conda as discussed in <a href="https://UBC-Geography.github.io/computing-resources/development-environments/conda-getting-started">‘Getting started with Conda, Virtual Environments, and Python’</a> should provide sufficient isolation for most geospatial computing cases without the need to familiarize oneself with container technologies, but containers can be a helpful tool in cases when neither virtual environments or virtual machines are feasible.</p>
-<p>For examples on leveraging containers to run highly-customized development environments with Jupyter, RStudio, or VS Code, see <a href="https://UBC-Geography.github.io/computing-resources/development-environments/containerized-environments">Using Containers for Development Environments</a>.</p>
+<p>Similar to virtual machines, containers are a form of virtualization that package software and the multiple dependencies required to run that software into a single, distributable environment. That container can then be run on any system that is running the appropriate engine (Docker, Podman, etc.). They are often lighter and more agile than virtual machines but can include increased security risks if not deployed correctly. In general, virtual environments managed using tools like Conda as discussed in <a href="https://UBC-Geography.github.io/computing-resources/development-environments/conda-getting-started" target="_blank">‘Getting started with Conda, Virtual Environments, and Python’</a> should provide sufficient isolation for most geospatial computing cases without the need to familiarize oneself with container technologies, but containers can be a helpful tool in cases when neither virtual environments or virtual machines are feasible.</p>
+<p>For examples on leveraging containers to run highly-customized development environments with Jupyter, RStudio, or VS Code, see <a href="https://UBC-Geography.github.io/computing-resources/development-environments/containerized-environments" target="_blank">Using Containers for Development Environments</a>.</p>
 <p>It is important to note that most containers can only run in Linux environments. Each of the container systems listed below include tools and steps for setting up simple, Linux environments from which containers can be ran on either Windows or Mac machines.</p>
 <p>Additionally, a large majority of container images are built with a simplified Linux distribution (often Ubuntu) as their base image. While some images have been built with Windows Server as their base image, it is important to note that these images cannot and likely never will run a desktop environment and/or graphical user interface (GUI).</p>
 <section id="container-images" class="level2">
 <h2 class="anchored" data-anchor-id="container-images">Container Images</h2>
-<p>There are many open container registries, where you can find publicly shared container images. <a href="https://hub.docker.com">Docker Hub</a> is one of the most popular options and can be a useful tool when searching for images. In general, you should be careful when selecting images and be sure to select images that are well-maintained. If you need a very minimal environment with Conda/Mamba, Conda-forge’s <a href="https://hub.docker.com/r/condaforge/mambaforge">mambaforge</a> image can be a good place to start as you’ll be able to install packages with <a href="https://manpages.debian.org/bookworm/apt/apt-get.8.en.html">APT</a> or <a href="https://mamba.readthedocs.io/en/latest/index.html">Mamba</a>.</p>
+<p>There are many open container registries, where you can find publicly shared container images. <a href="https://hub.docker.com" target="_blank">Docker Hub</a> is one of the most popular options and can be a useful tool when searching for images. In general, you should be careful when selecting images and be sure to select images that are well-maintained. If you need a very minimal environment with Conda/Mamba, Conda-forge’s <a href="https://hub.docker.com/r/condaforge/mambaforge" target="_blank">mambaforge</a> image can be a good place to start as you’ll be able to install packages with <a href="https://manpages.debian.org/bookworm/apt/apt-get.8.en.html" target="_blank">APT</a> or <a href="https://mamba.readthedocs.io/en/latest/index.html" target="_blank">Mamba</a>.</p>
 <section id="python" class="level3">
 <h3 class="anchored" data-anchor-id="python">Python</h3>
 <ul>
-<li><p><a href="https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-minimal-notebook">Jupyter - Minimal Notebook</a>: A Jupyter server running JupyterLab and a Python kernel. No geospatial packages are included in this environment, but it is an excellent base image for creating customized Jupyter environments.</p></li>
-<li><p><a href="https://darribas.org/gds_env/stacks/gds_py/">GDS_ENV - GDS_PY</a>: Built on top of Jupyter - Minimal Notebook, this image includes a large selection of Python geospatial packages.</p></li>
+<li><p><a href="https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-minimal-notebook" target="_blank">Jupyter - Minimal Notebook</a>: A Jupyter server running JupyterLab and a Python kernel. No geospatial packages are included in this environment, but it is an excellent base image for creating customized Jupyter environments.</p></li>
+<li><p><a href="https://darribas.org/gds_env/stacks/gds_py/" target="_blank">GDS_ENV - GDS_PY</a>: Built on top of Jupyter - Minimal Notebook, this image includes a large selection of Python geospatial packages.</p></li>
 </ul>
 </section>
 <section id="r" class="level3">
 <h3 class="anchored" data-anchor-id="r">R</h3>
 <ul>
-<li><p><a href="https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-r-notebook">Jupyter - R Notebook</a>: Similarly built from Jupyter - Minimal Notebook, this image includes an R kernel and a few R packages. Custom R environments with a preference towards JupyterLab should use this as their base image.</p></li>
-<li><p><a href="https://darribas.org/gds_env/stacks/gds/">GDS_ENV - GDS</a>: Built on top of GDS_ENV - GDS_PY, this image includes an R kernel and a wide selection of R geospatial packages.</p></li>
-<li><p><a href="https://rocker-project.org/images/versioned/rstudio.html">Rocker - Geospatial</a>: Swapping JupyterLab for RStudio, this container image includes a range of R packages with a heavy focus on geospatial research.</p></li>
+<li><p><a href="https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-r-notebook" target="_blank">Jupyter - R Notebook</a>: Similarly built from Jupyter - Minimal Notebook, this image includes an R kernel and a few R packages. Custom R environments with a preference towards JupyterLab should use this as their base image.</p></li>
+<li><p><a href="https://darribas.org/gds_env/stacks/gds/" target="_blank">GDS_ENV - GDS</a>: Built on top of GDS_ENV - GDS_PY, this image includes an R kernel and a wide selection of R geospatial packages.</p></li>
+<li><p><a href="https://rocker-project.org/images/versioned/rstudio.html" target="_blank">Rocker - Geospatial</a>: Swapping JupyterLab for RStudio, this container image includes a range of R packages with a heavy focus on geospatial research.</p></li>
 </ul>
 </section>
 <section id="others" class="level3">
 <h3 class="anchored" data-anchor-id="others">Others</h3>
 <ul>
-<li><p><a href="https://github.com/postgis/docker-postgis">PostGIS</a></p></li>
-<li><p><a href="https://docs.geoserver.org/latest/en/user/installation/docker.html">GeoServer</a></p></li>
-<li><p><a href="https://docs.qgis.org/latest/en/docs/server_manual/containerized_deployment.html">QGIS Server</a></p></li>
+<li><p><a href="https://github.com/postgis/docker-postgis" target="_blank">PostGIS</a></p></li>
+<li><p><a href="https://docs.geoserver.org/latest/en/user/installation/docker.html" target="_blank">GeoServer</a></p></li>
+<li><p><a href="https://docs.qgis.org/latest/en/docs/server_manual/containerized_deployment.html" target="_blank">QGIS Server</a></p></li>
 </ul>
 </section>
 </section>
@@ -379,30 +379,30 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="apptainer-formerly-singularity">Apptainer (formerly Singularity)</h3>
 <p>Developed specifically for academic and high performance computing, Apptainer avoids some of the security pitfalls of other engines, like Docker, at the expense of certain functionalities. Apptainer can only run a specific container format, but it provides all the necessary tools to complete conversions.</p>
 <ul>
-<li><p><a href="https://apptainer.org/docs/user/main/">Apptainer Documentation</a></p></li>
-<li><p><a href="https://docs.alliancecan.ca/wiki/Apptainer">Running Apptainer on an Alliance cluster</a></p></li>
-<li><p><a href="https://confluence.it.ubc.ca/display/UARC/Using+Apptainer+or+Singularity+Containers">Running Apptainer on UBC ARCSockeye</a></p></li>
-<li><p>UBC ARC - Apptainer Workshop 2023 - Videos: <a href="https://youtu.be/LE4HTJ0sQ3k?si=BEBNiP2V7y_LjNtO">Part 1</a> &amp; <a href="https://youtu.be/5P4syyFIV0M?si=AwG5WxgQw5z3Oqp-">Part 2</a></p></li>
+<li><p><a href="https://apptainer.org/docs/user/main/" target="_blank">Apptainer Documentation</a></p></li>
+<li><p><a href="https://docs.alliancecan.ca/wiki/Apptainer" target="_blank">Running Apptainer on an Alliance cluster</a></p></li>
+<li><p><a href="https://confluence.it.ubc.ca/display/UARC/Using+Apptainer+or+Singularity+Containers" target="_blank">Running Apptainer on UBC ARCSockeye</a></p></li>
+<li><p>UBC ARC - Apptainer Workshop 2023 - Videos: <a href="https://youtu.be/LE4HTJ0sQ3k?si=BEBNiP2V7y_LjNtO" target="_blank">Part 1</a> &amp; <a href="https://youtu.be/5P4syyFIV0M?si=AwG5WxgQw5z3Oqp-" target="_blank">Part 2</a></p></li>
 </ul>
-<p>For a few simple examples on using and running Apptainer, see <a href="https://UBC-Geography.github.io/computing-resources/high-performance-computing">High Performance Computing (HPC)</a>.</p>
+<p>For a few simple examples on using and running Apptainer, see <a href="https://UBC-Geography.github.io/computing-resources/high-performance-computing" target="_blank">High Performance Computing (HPC)</a>.</p>
 </section>
 <section id="podman" class="level3">
 <h3 class="anchored" data-anchor-id="podman">Podman</h3>
 <p>Similar to Apptainer, Podman avoids some of the security pitfalls found in Docker, but unlike Apptainer, Podman provides a more general-purpose container engine. When developing containers, Podman can provide a more flexible and feature-rich set of tooling compared to Apptainer. A common workflow may include building containers with Podman and then converting them to Apptainer containers prior to running in an HPC environment.</p>
 <ul>
-<li><p><a href="https://docs.podman.io/en/latest/">Podman Documentation</a></p></li>
-<li><p><em>Podman in Action</em> : <a href="https://go.exlibris.link/XZMWFsdp">UBC Library</a> | <a href="https://search.worldcat.org/title/1371958299">WorldCat</a></p></li>
+<li><p><a href="https://docs.podman.io/en/latest/" target="_blank">Podman Documentation</a></p></li>
+<li><p><em>Podman in Action</em> : <a href="https://go.exlibris.link/XZMWFsdp" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1371958299" target="_blank">WorldCat</a></p></li>
 </ul>
 </section>
 <section id="docker" class="level3">
 <h3 class="anchored" data-anchor-id="docker">Docker</h3>
 <p>Docker is by far the most popular container system, so similar to Podman, it can provide a helpful tool for developing and running containers on your local machine. If you are still new to managing and running containers, Docker can be a good system to get started with because of the large collection of resources and tools that have been built around it.</p>
 <ul>
-<li><p><a href="https://ubc-library-rc.github.io/intro-docker">UBC Library Research Commons - Introduction to Docker</a></p></li>
-<li><p><a href="https://docs.docker.com/get-started/">Docker Documentation</a></p></li>
-<li><p><em>Docker: Up and Running</em> : <a href="https://go.exlibris.link/z6bLGnqS">UBC Library</a> | <a href="https://search.worldcat.org/title/1370903040">WorldCat</a></p></li>
-<li><p><em>Practical Docker with Python</em> : <a href="https://go.exlibris.link/V5Yl7J3v">UBC Library</a> | <a href="https://search.worldcat.org/title/1287132682">WorldCat</a></p></li>
-<li><p><em>Docker Deep Dive</em> : <a href="https://go.exlibris.link/4wT3cjWD">UBC Library</a> | <a href="https://search.worldcat.org/title/1206238897">WorldCat</a></p></li>
+<li><p><a href="https://ubc-library-rc.github.io/intro-docker" target="_blank">UBC Library Research Commons - Introduction to Docker</a></p></li>
+<li><p><a href="https://docs.docker.com/get-started/" target="_blank">Docker Documentation</a></p></li>
+<li><p><em>Docker: Up and Running</em> : <a href="https://go.exlibris.link/z6bLGnqS" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1370903040" target="_blank">WorldCat</a></p></li>
+<li><p><em>Practical Docker with Python</em> : <a href="https://go.exlibris.link/V5Yl7J3v" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1287132682" target="_blank">WorldCat</a></p></li>
+<li><p><em>Docker Deep Dive</em> : <a href="https://go.exlibris.link/4wT3cjWD" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1206238897" target="_blank">WorldCat</a></p></li>
 </ul>
 
 
