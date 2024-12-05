@@ -13,10 +13,11 @@ running it. This makes the project easier to reproduce while also reducing
 errors caused by clashing package dependencies.
 
 - UBC ARC - Virtual Environment 2023 - Videos:
-  [Part 1 (virtualenv)](https://youtu.be/fdMNwQu8MKU?si=Fu_JogcK_SxEsBiC) &
-  [Part 2 (conda)](https://youtu.be/BrZ_5rP4b0g?si=GkDWSa9CG5z1uqYx)
+  [Part 1 (virtualenv)](https://youtu.be/fdMNwQu8MKU?si=Fu_JogcK_SxEsBiC){target="\_blank"}
+  &
+  [Part 2 (conda)](https://youtu.be/BrZ_5rP4b0g?si=GkDWSa9CG5z1uqYx){target="\_blank"}
 
-- [Getting Started with Conda, Virtual Environments, and Python](https://UBC-Geography.github.io/development-environments/conda-getting-started)
+- [Getting Started with Conda, Virtual Environments, and Python](https://UBC-Geography.github.io/development-environments/conda-getting-started){target="\_blank"}
 
 ### Conda and Mamba
 
@@ -27,14 +28,14 @@ be installed via Python's built-in package manager, Pip. Additionally, Conda
 enables you to install and manage multiple versions of Python or a range of
 other programming languages on a single machine using virtual environments.
 
-- [Conda User Guide](https://docs.conda.io/projects/conda/en/stable/user-guide/index.html)
+- [Conda User Guide](https://docs.conda.io/projects/conda/en/stable/user-guide/index.html){target="\_blank"}
 
-- [Mamba User Guide](https://mamba.readthedocs.io/en/latest/user_guide/mamba.html)
+- [Mamba User Guide](https://mamba.readthedocs.io/en/latest/user_guide/mamba.html){target="\_blank"}
 
 If you need to install `mamba` and `conda` on your device, we suggest using the
 link below to install it using the Miniforge installer.
 
-- [Miniforge](https://github.com/conda-forge/miniforge)
+- [Miniforge](https://github.com/conda-forge/miniforge){target="\_blank"}
 
 ### Python - venv and virtualenv
 
@@ -46,9 +47,9 @@ lack the same level of functionality as conda, but they can be helpful tools for
 those who are still getting comfortable with Python or don't need conda's added
 functionalities.
 
-- [venv Documentation](https://docs.python.org/3/library/venv.html)
+- [venv Documentation](https://docs.python.org/3/library/venv.html){target="\_blank"}
 
-- [virtualenv Documentation](https://virtualenv.pypa.io/en/latest/)
+- [virtualenv Documentation](https://virtualenv.pypa.io/en/latest/){target="\_blank"}
 
 ### R - renv
 
@@ -57,9 +58,9 @@ R-based virtual environment manager, packrat. renv has been developed by the
 same team behind RStudio and it's usage is recommended within the RStudio user
 guide.
 
-- [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html)
+- [Introduction to renv](https://rstudio.github.io/renv/articles/renv.html){target="\_blank"}
 
-- [RStudio User Guide - renv](https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html)
+- [RStudio User Guide - renv](https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html){target="\_blank"}
 
 ## Integrated Development Environments (IDE)
 
@@ -71,7 +72,7 @@ computational notebooks with kernels from a wide range of programming languages,
 it specializes in Python while also providing strong support for R and Julia.
 Much of the Jupyter ecosystem has been written in and/or runs on Python.
 
-- [Jupyter Tutorial](https://jupyter-tutorial.readthedocs.io/en/latest/index.html)
+- [Jupyter Tutorial](https://jupyter-tutorial.readthedocs.io/en/latest/index.html){target="\_blank"}
 
 #### Jupyter Notebooks
 
@@ -81,9 +82,9 @@ to author and edit them. In recent years, the Project Jupyter team has slowly
 encouraged users to migrate from the classic Jupyter Notebook interface to
 JupyterLab, its more feature-rich successor.
 
-- [Jupyter Notebook (File) Format Documentation](https://nbformat.readthedocs.io/en/latest/index.html)
+- [Jupyter Notebook (File) Format Documentation](https://nbformat.readthedocs.io/en/latest/index.html){target="\_blank"}
 
-- [Jupyter Notebook (User Interface) Documentation](https://jupyter-notebook.readthedocs.io/en/latest/index.html)
+- [Jupyter Notebook (User Interface) Documentation](https://jupyter-notebook.readthedocs.io/en/latest/index.html){target="\_blank"}
 
 #### JupyterLab
 
@@ -108,7 +109,7 @@ $ mamba activate jupyter
 This will fire up a Jupyter server and open the JupyterLab interface directly in
 your web browser.
 
-- [JupyterLab Documentation](https://jupyterlab.readthedocs.io/en/latest/index.html)
+- [JupyterLab Documentation](https://jupyterlab.readthedocs.io/en/latest/index.html){target="\_blank"}
 
 For those who may be uncomfortable with installing Python and/or using command
 line interfaces, Project Jupyter has also released a simple-to-use desktop
@@ -116,9 +117,9 @@ application, named JupyterLab Desktop. This application comes packaged with
 Python and a default set of packages that are frequently used in scientific
 computing.
 
-- [JupyterLab Desktop - Installation](https://github.com/jupyterlab/jupyterlab-desktop#installation)
+- [JupyterLab Desktop - Installation](https://github.com/jupyterlab/jupyterlab-desktop#installation){target="\_blank"}
 
-- [JupyterLab Desktop User Guide](https://github.com/jupyterlab/jupyterlab-desktop/blob/master/user-guide.md)
+- [JupyterLab Desktop User Guide](https://github.com/jupyterlab/jupyterlab-desktop/blob/master/user-guide.md){target="\_blank"}
 
 Finally, we've setup an experimental deployment of JupyterLite, which installs
 and runs JupyterLab exclusively within your web browser. This is the fastest and
@@ -127,7 +128,7 @@ least stable and lacks many of the same features that would be included in an
 instance that's been installed with one of the previously mentioned methods, so
 it's best used for quickly testing ideas on the fly.
 
-- [UBC Geography JupyterLite](https://ubc-geography.github.io/jupyterlite)
+- [UBC Geography JupyterLite](https://ubc-geography.github.io/jupyterlite){target="\_blank"}
 
 #### Jupyter Kernels
 
@@ -143,7 +144,7 @@ immediately added as your default Jupyter kernel.
 
 and for R it is `r-irkernel`. You can find a comprehensive list of packages for
 various programming languages
-[here](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels).
+[here](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels){target="\_blank"}.
 
 ##### Python
 
@@ -263,52 +264,53 @@ When you start up JupyterLab, the new R kernel should be listed in the launcher.
 #### JupyterHub
 
 The easiest way to get started with creating and editing notebooks is through a
-JupyterHub service, like [UBC LT's Open Jupyter](https://open.jupyter.ubc.ca/)
-or [UBC Syzygy](https://ubc.syzygy.ca/), which enables you to connect to and
-interact with Jupyter servers without having to install anything on your
-machine. While convenient, these services come with significant drawbacks in
-computing power and will not work well in cases where computations are running
-on large datasets.
+JupyterHub service, like
+[UBC LT's Open Jupyter](https://open.jupyter.ubc.ca/){target="\_blank"} or
+[UBC Syzygy](https://ubc.syzygy.ca/){target="\_blank"}, which enables you to
+connect to and interact with Jupyter servers without having to install anything
+on your machine. While convenient, these services come with significant
+drawbacks in computing power and will not work well in cases where computations
+are running on large datasets.
 
-- [UBC LT - JupyterHub Instructor Guide](https://lthub.ubc.ca/guides/jupyterhub-instructor-guide/)
+- [UBC LT - JupyterHub Instructor Guide](https://lthub.ubc.ca/guides/jupyterhub-instructor-guide/){target="\_blank"}
 
-- [Introduction to Syzygy - Getting Started](https://intro.syzygy.ca/getting-started/)
+- [Introduction to Syzygy - Getting Started](https://intro.syzygy.ca/getting-started/){target="\_blank"}
 
 #### Helpful Extensions
 
 ##### Rendering
 
-- [GeoJSON Extension](https://github.com/jupyterlab/jupyter-renderers/tree/master/packages/geojson-extension#jupyterlab-geojson)
+- [GeoJSON Extension](https://github.com/jupyterlab/jupyter-renderers/tree/master/packages/geojson-extension#jupyterlab-geojson){target="\_blank"}
 
 ##### Git & GitHub
 
-- [Git Extension](https://github.com/jupyterlab/jupyterlab-git)
+- [Git Extension](https://github.com/jupyterlab/jupyterlab-git){target="\_blank"}
 
-- [GitHub Extension](https://github.com/jupyterlab/jupyterlab-github#jupyterlab-github)
+- [GitHub Extension](https://github.com/jupyterlab/jupyterlab-github#jupyterlab-github){target="\_blank"}
 
-- [Git and Jupyter Notebooks: The Ultimate Guide](https://www.reviewnb.com/git-jupyter-notebook-ultimate-guide)
+- [Git and Jupyter Notebooks: The Ultimate Guide](https://www.reviewnb.com/git-jupyter-notebook-ultimate-guide){target="\_blank"}
 
 ##### Linting, Formatting, and Benchmarking
 
-- [Language Server Protocol Extension](https://github.com/krassowski/jupyterlab-lsp#installation)
+- [Language Server Protocol Extension](https://github.com/krassowski/jupyterlab-lsp#installation){target="\_blank"}
 
-- [Code Formatter Extension](https://jupyterlab-code-formatter.readthedocs.io/)
+- [Code Formatter Extension](https://jupyterlab-code-formatter.readthedocs.io/){target="\_blank"}
 
-- [Execution Time Extension](https://github.com/deshaw/jupyterlab-execute-time#jupyterlab-execute-time)
+- [Execution Time Extension](https://github.com/deshaw/jupyterlab-execute-time#jupyterlab-execute-time){target="\_blank"}
 
-- [System Monitor Extension](https://github.com/jtpio/jupyterlab-system-monitor#jupyterlab-system-monitor)
+- [System Monitor Extension](https://github.com/jtpio/jupyterlab-system-monitor#jupyterlab-system-monitor){target="\_blank"}
 
 ##### Spellchecking
 
-- [Spellchecker Extension](https://github.com/jupyterlab-contrib/spellchecker#jupyterlab-spellchecker)
+- [Spellchecker Extension](https://github.com/jupyterlab-contrib/spellchecker#jupyterlab-spellchecker){target="\_blank"}
 
 ##### AI
 
-- [Generative AI Extension](https://github.com/jupyterlab/jupyter-ai)
+- [Generative AI Extension](https://github.com/jupyterlab/jupyter-ai){target="\_blank"}
 
 #### Geospatial Libraries
 
-- [ipyleaflet Documentation](https://ipyleaflet.readthedocs.io/en/latest/index.html)
+- [ipyleaflet Documentation](https://ipyleaflet.readthedocs.io/en/latest/index.html){target="\_blank"}
 
 ### RStudio
 
@@ -317,18 +319,18 @@ editing Python-based computational notebooks, RStudio provides a similarly
 intuitive environment for working with the R programming language. It provides
 useful tools for writing R scripts, interacting with the R console, or
 developing R-based computational notebooks with
-[Quarto](https://quarto.org/docs/get-started/hello/rstudio.html) or
-[RMarkdown](https://rmarkdown.rstudio.com/lesson-2.html).
+[Quarto](https://quarto.org/docs/get-started/hello/rstudio.html){target="\_blank"}
+or [RMarkdown](https://rmarkdown.rstudio.com/lesson-2.html){target="\_blank"}.
 
 You can find installers for multiple operating systems
-[here](https://posit.co/download/rstudio-desktop/).
+[here](https://posit.co/download/rstudio-desktop/){target="\_blank"}.
 
 When starting a new R project in RStudio, always checkmark 'Use renv with this
 project'. This will ensure that you create an isolated and reproducible
 environment similar to those that are produced with `mamba`/`conda` or Python's
 `venv`.
 
-- [RStudio UserGuide](https://docs.posit.co/ide/user/ide/get-started/)
+- [RStudio UserGuide](https://docs.posit.co/ide/user/ide/get-started/){target="\_blank"}
 
 ### Visual Studio Code
 
@@ -338,36 +340,36 @@ in Python, JavaScript, Julia, and a broad range of other programming languages.
 VS Code is also capable of running computational notebooks through
 well-supported extensions, but it can feel less intuitive for some users.
 
-- [UBC Library Research Commons - VS Code Overview in Setting Up a Dev Environment](https://ubc-library-rc.github.io/intro-development-environment/content/02-1.VSCode.html)
+- [UBC Library Research Commons - VS Code Overview in Setting Up a Dev Environment](https://ubc-library-rc.github.io/intro-development-environment/content/02-1.VSCode.html){target="\_blank"}
 
-- [VS Code Documentation](https://code.visualstudio.com/docs)
+- [VS Code Documentation](https://code.visualstudio.com/docs){target="\_blank"}
 
-- [Using Git source control in VSCode](https://code.visualstudio.com/docs/sourcecontrol/overview)
+- [Using Git source control in VSCode](https://code.visualstudio.com/docs/sourcecontrol/overview){target="\_blank"}
 
-- _[Visual Studio Code Distilled: Evolved Code Editing for Windows, macOS, and Linux](https://go.exlibris.link/Dt8gkVz2)_
+- _[Visual Studio Code Distilled: Evolved Code Editing for Windows, macOS, and Linux](https://go.exlibris.link/Dt8gkVz2){target="\_blank"}_
 
 #### Helpful Extensions
 
 ##### Remote Development
 
-- [Remote Development Extension Overview](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)
+- [Remote Development Extension Overview](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack){target="\_blank"}
 
 ##### Jupyter
 
-- [Jupyter Extension Overview](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)
+- [Jupyter Extension Overview](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter){target="\_blank"}
 
 ##### Quarto
 
-- [Quarto Extension Overview](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
+- [Quarto Extension Overview](https://marketplace.visualstudio.com/items?itemName=quarto.quarto){target="\_blank"}
 
 ##### Python
 
-- [Python in VS Code Documentation](https://code.visualstudio.com/docs/languages/python)
+- [Python in VS Code Documentation](https://code.visualstudio.com/docs/languages/python){target="\_blank"}
 
-- [Python Extension Overview](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [Python Extension Overview](https://marketplace.visualstudio.com/items?itemName=ms-python.python){target="\_blank"}
 
 ##### R
 
-- [R in VS Code Documentation](https://code.visualstudio.com/docs/languages/r)
+- [R in VS Code Documentation](https://code.visualstudio.com/docs/languages/r){target="\_blank"}
 
-- [R Extension Overview](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r)
+- [R Extension Overview](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r){target="\_blank"}

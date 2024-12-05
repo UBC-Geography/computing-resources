@@ -10,17 +10,17 @@ websites and web applications.
 
 ### UBC Blogs
 
-[UBC Blogs](https://blogs.ubc.ca/) is built on top of WordPress. UBC provides a
-large collection of documentation to help faculty and students get started with
-using it as a tool for scholarly communications.
+[UBC Blogs](https://blogs.ubc.ca/){target="\_blank"} is built on top of
+WordPress. UBC provides a large collection of documentation to help faculty and
+students get started with using it as a tool for scholarly communications.
 
-- [UBC Blogs Video Tutorials](https://wiki.ubc.ca/UBC_Blogs_Screencasts)
+- [UBC Blogs Video Tutorials](https://wiki.ubc.ca/UBC_Blogs_Screencasts){target="\_blank"}
 
-- [UBC Blogs Instructor Guide](https://lthub.ubc.ca/guides/ubc-blogs-instructor-guide/)
+- [UBC Blogs Instructor Guide](https://lthub.ubc.ca/guides/ubc-blogs-instructor-guide/){target="\_blank"}
 
-- [UBC Blogs FAQ](https://blogs.ubc.ca/faq/)
+- [UBC Blogs FAQ](https://blogs.ubc.ca/faq/){target="\_blank"}
 
-- [WordPress Clinics at UBC CTLT](https://events.ctlt.ubc.ca/?s=wordpress)
+- [WordPress Clinics at UBC CTLT](https://events.ctlt.ubc.ca/?s=wordpress){target="\_blank"}
 
 ### Additional Resources
 
@@ -29,32 +29,32 @@ to meet the needs of most use cases. The following resources can provide
 more-in-depth walkthroughs of WordPress' for leveraging its more advanced
 functionalities.
 
-- [WordPress Documentation](https://wordpress.org/documentation/)
+- [WordPress Documentation](https://wordpress.org/documentation/){target="\_blank"}
 
 - WordPress 101 -- Video Course :
-  [UBC Library](https://go.exlibris.link/7mDvM1rZ)
+  [UBC Library](https://go.exlibris.link/7mDvM1rZ){target="\_blank"}
 
 - _WordPress: The Missing Manual_ :
-  [UBC Library](https://go.exlibris.link/qfbFTbLz) |
-  [WorldCat](https://search.worldcat.org/title/1152988879)
+  [UBC Library](https://go.exlibris.link/qfbFTbLz){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1152988879){target="\_blank"}
 
 - _WordPress All-in-One for Dummies_ :
-  [UBC Library](https://go.exlibris.link/CH9cfmW0) |
-  [WorldCat](https://search.worldcat.org/title/1420169498)
+  [UBC Library](https://go.exlibris.link/CH9cfmW0){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1420169498){target="\_blank"}
 
 - _WordPress Styling with Blocks, Patterns, Templates, and Themes_ :
-  [UBC Library](https://go.exlibris.link/D34NjqgH) |
-  [WorldCat](https://search.worldcat.org/title/1424750704)
+  [UBC Library](https://go.exlibris.link/D34NjqgH){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1424750704){target="\_blank"}
 
 ### Alternative Hosting Options
 
-[Note on UBC CMS](https://cms.ubc.ca/)
+[Note on UBC CMS](https://cms.ubc.ca/){target="\_blank"}
 
-- [UBC IT Shared Hosting](https://it.ubc.ca/services/web-servers-storage/shared-web-hosting)
+- [UBC IT Shared Hosting](https://it.ubc.ca/services/web-servers-storage/shared-web-hosting){target="\_blank"}
 
-- [Digital Research Alliance - Cloud - Persistent Instances (VMs)](https://ubc-geography.github.io/computing-resources/cloud-computing/#persistent-instances)
+- [Digital Research Alliance - Cloud - Persistent Instances (VMs)](https://ubc-geography.github.io/computing-resources/cloud-computing/#persistent-instances){target="\_blank"}
 
-- [Reclaim Hosting - Reclaim Press](https://reclaim.press/)
+- [Reclaim Hosting - Reclaim Press](https://reclaim.press/){target="\_blank"}
 
 ## Static Site Generators (SSG) / Web Publishing
 
@@ -68,9 +68,10 @@ develop a more customized look and feel to a website.
 
 Statically generated sites can be hosted nearly anywhere on the web, including:
 
-- [Digital Research Alliance - Cloud / Arbutus Object Storage](https://docs.alliancecan.ca/wiki/Arbutus_object_storage)
+- [Digital Research Alliance - Cloud / Arbutus Object Storage](https://docs.alliancecan.ca/wiki/Arbutus_object_storage){target="\_blank"}
 
-- [GitHub Pages](https://docs.github.com/en/pages) - 1 GB Limit
+- [GitHub Pages](https://docs.github.com/en/pages){target="\_blank"} - 1 GB
+  Limit
 
 ### Quarto
 
@@ -89,9 +90,9 @@ files.
 
 :::
 
-- [Quarto Webinars](https://mint.westdri.ca/tools/wb_quarto.html)
+- [Quarto Webinars](https://mint.westdri.ca/tools/wb_quarto.html){target="\_blank"}
 
-- [Quarto Documentation](https://quarto.org/docs/guide/)
+- [Quarto Documentation](https://quarto.org/docs/guide/){target="\_blank"}
 
 ### R Markdown (R)
 
@@ -107,7 +108,7 @@ consistently without external files.
 
 :::
 
-- [R Markdown Documentation](https://rmarkdown.rstudio.com/lesson-1.html)
+- [R Markdown Documentation](https://rmarkdown.rstudio.com/lesson-1.html){target="\_blank"}
 
 ### Jekyll (Ruby)
 
@@ -116,11 +117,11 @@ with GitHub Pages to quickly render websites directly from a GitHub repository.
 Due to its wide adoption, it also includes a wide range of open-source themes
 that can be used to customize the style of a website.
 
-- [UBC Library Research Commons - Introduction to Jekyll](https://ubc-library-rc.github.io/intro-jekyll)
+- [UBC Library Research Commons - Introduction to Jekyll](https://ubc-library-rc.github.io/intro-jekyll){target="\_blank"}
 
-- [UBC Library Research Commons - Intermediate Jekyll](https://ubc-library-rc.github.io/intermediate-Jekyll/)
+- [UBC Library Research Commons - Intermediate Jekyll](https://ubc-library-rc.github.io/intermediate-Jekyll/){target="\_blank"}
 
-- [UBC Library Research Commons - Building a project website with Jekyll and GitHub Pages](https://ubc-library-rc.github.io/intro-project-sites/)
+- [UBC Library Research Commons - Building a project website with Jekyll and GitHub Pages](https://ubc-library-rc.github.io/intro-project-sites/){target="\_blank"}
 
 ## Digital Exhibit Tools
 
@@ -128,7 +129,7 @@ Storing and presenting digital assets, like images, audio, and video files, can
 be easily managed via content management systems and static site generators that
 specialize in digital exhibits.
 
-- [UBC Library Research Commons - Survey of Digital Exhibit Tools](https://ubc-library-rc.github.io/digital-exhibits-survey/)
+- [UBC Library Research Commons - Survey of Digital Exhibit Tools](https://ubc-library-rc.github.io/digital-exhibits-survey/){target="\_blank"}
 
 ### Omeka Classic & Omeka-S
 
@@ -138,17 +139,17 @@ multiple collections or projects. Both are considered web applications as they
 include content management systems that provide an easy-to-use interface for
 developing and managing digital exhibits.
 
-- [UBC Library Research Commons - Building Digital Exhibits with Omeka](https://ubc-library-rc.github.io/intro-omeka/)
+- [UBC Library Research Commons - Building Digital Exhibits with Omeka](https://ubc-library-rc.github.io/intro-omeka/){target="\_blank"}
 
-- [Omeka: A User's Guide: Introduction](https://guides.library.illinois.edu/omeka/intro)
+- [Omeka: A User's Guide: Introduction](https://guides.library.illinois.edu/omeka/intro){target="\_blank"}
 
 #### Cloud Hosting
 
-- [UBC IT Shared Hosting](https://it.ubc.ca/services/web-servers-storage/shared-web-hosting)
+- [UBC IT Shared Hosting](https://it.ubc.ca/services/web-servers-storage/shared-web-hosting){target="\_blank"}
 
-- [Omeka Classic Documentation](https://omeka.org/classic/docs/)
+- [Omeka Classic Documentation](https://omeka.org/classic/docs/){target="\_blank"}
 
-- [Omeka-S Documentation](https://omeka.org/s/docs/user-manual/)
+- [Omeka-S Documentation](https://omeka.org/s/docs/user-manual/){target="\_blank"}
 
 ### CollectionBuilder
 
@@ -162,6 +163,6 @@ sharing a variety of media alongside a rich set of metadata. Additionally,
 CollectionBuilder automatically generates a Leaflet-based web map from any
 provided geospatial metadata.
 
-- [CollectionBuilder Documentation](https://collectionbuilder.github.io/cb-docs/)
+- [CollectionBuilder Documentation](https://collectionbuilder.github.io/cb-docs/){target="\_blank"}
 
-- [CollectionBuilder Example - Idaho Queered](https://www.lib.uidaho.edu/queered/)
+- [CollectionBuilder Example - Idaho Queered](https://www.lib.uidaho.edu/queered/){target="\_blank"}

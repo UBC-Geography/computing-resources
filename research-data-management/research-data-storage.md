@@ -7,16 +7,16 @@ UBC researchers have access to multiple options for their research data.
 Selecting a storage option can be dependent on the nature of the data itself
 (privacy and size) along with the location of research collaborators, personal
 preferences, and processes used for data collection. When developing a
-[Data Management Plan (DMP)](https://rdm.ubc.ca/support-services/data-management-plans),
+[Data Management Plan (DMP)](https://rdm.ubc.ca/support-services/data-management-plans){target="\_blank"},
 consider all of these factors when selecting the best options for your research.
 
 For information and/or consultation about Research Data Management (RDM) and
 developing a DMP, check out
-[UBC Library RDM](https://researchdata.library.ubc.ca/) or
-[UBC Advanced Research Computing](https://rdm.ubc.ca/). For initial questions
-about data storage options and how best to integrate them with your data
-collection processes, contact
-[UBC Geography IT](https://geog.air.arts.ubc.ca/services/computing-services/).
+[UBC Library RDM](https://researchdata.library.ubc.ca/){target="\_blank"} or
+[UBC Advanced Research Computing](https://rdm.ubc.ca/){target="\_blank"}. For
+initial questions about data storage options and how best to integrate them with
+your data collection processes, contact
+[UBC Geography IT](https://geog.air.arts.ubc.ca/services/computing-services/){target="\_blank"}.
 
 UBC Library's Research Data Management team, recommends the following:
 
@@ -55,9 +55,9 @@ for backing up the data in your 'here copy.' Common examples include:
 - a local Network Attached Storage drive located in your office or lab,
 
 - a UBC provided network attached drive, like
-  [UBC Home Drive](https://it.ubc.ca/services/web-servers-storage/home-drive-storage-service)
+  [UBC Home Drive](https://it.ubc.ca/services/web-servers-storage/home-drive-storage-service){target="\_blank"}
   or
-  [UBC TeamShare](https://it.ubc.ca/services/web-servers-storage/home-drive-storage-service),
+  [UBC TeamShare](https://it.ubc.ca/services/web-servers-storage/home-drive-storage-service){target="\_blank"},
 
 UBC Geography IT can provide support in selecting an external hard drive for
 your laptop or installing a secondary disk on your desktop.
@@ -70,17 +70,17 @@ with multiple off-site backups already in place, backing up your data from
 'cloud' storage guarantees additional protections from various types of
 catastrophic failure.
 
-| Service                                                                                                  | Storage per User | Storage per Allocation   | Costs                         |
-| -------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------ | ----------------------------- |
-| [UBC Home Drive](https://it.ubc.ca/services/web-servers-storage/home-drive-storage-service)              | 20-100 GB        |                          | 20 GB free then $0.35/GB/year |
-| [UBC OneDrive](https://it.ubc.ca/services/web-servers-storage/microsoft-onedrive)                        | 1 TB             |                          | None                          |
-| [UBC TeamShare](https://it.ubc.ca/services/web-servers-storage/home-drive-storage-service)               |                  | 20 GB or more            | $0.15/GB/year                 |
-| [ARC Sockeye](https://confluence.it.ubc.ca/display/UARC/About+Sockeye#AboutSockeye-StorageVolumes)       | 50 GB            | 5 TB+                    | None                          |
-| [ARC Chinook](https://confluence.it.ubc.ca/display/UARC/About+Chinook)                                   |                  | Determined by allocation | None                          |
-| [Alliance NextCloud](https://docs.alliancecan.ca/wiki/Nextcloud)                                         | 50 GB            |                          | None                          |
-| [Alliance HPC](https://alliancecan.ca/en/services/advanced-research-computing/national-services/storage) | 50 GB            | 1 TB+                    | None                          |
-| [Alliance Cloud Arbutus Object](https://docs.alliancecan.ca/wiki/Arbutus_object_storage)                 |                  | 1 GB+                    | None                          |
-| [Alliance Cloud Virtual Machine](https://docs.alliancecan.ca/wiki/Working_with_volumes)                  |                  | 20 GB+                   | None                          |
+| Service                                                                                                                    | Storage per User | Storage per Allocation   | Costs                         |
+| -------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------ | ----------------------------- |
+| [UBC Home Drive](https://it.ubc.ca/services/web-servers-storage/home-drive-storage-service){target="\_blank"}              | 20-100 GB        |                          | 20 GB free then $0.35/GB/year |
+| [UBC OneDrive](https://it.ubc.ca/services/web-servers-storage/microsoft-onedrive){target="\_blank"}                        | 1 TB             |                          | None                          |
+| [UBC TeamShare](https://it.ubc.ca/services/web-servers-storage/home-drive-storage-service){target="\_blank"}               |                  | 20 GB or more            | $0.15/GB/year                 |
+| [ARC Sockeye](https://confluence.it.ubc.ca/display/UARC/About+Sockeye#AboutSockeye-StorageVolumes){target="\_blank"}       | 50 GB            | 5 TB+                    | None                          |
+| [ARC Chinook](https://confluence.it.ubc.ca/display/UARC/About+Chinook){target="\_blank"}                                   |                  | Determined by allocation | None                          |
+| [Alliance NextCloud](https://docs.alliancecan.ca/wiki/Nextcloud){target="\_blank"}                                         | 50 GB            |                          | None                          |
+| [Alliance HPC](https://alliancecan.ca/en/services/advanced-research-computing/national-services/storage){target="\_blank"} | 50 GB            | 1 TB+                    | None                          |
+| [Alliance Cloud Arbutus Object](https://docs.alliancecan.ca/wiki/Arbutus_object_storage){target="\_blank"}                 |                  | 1 GB+                    | None                          |
+| [Alliance Cloud Virtual Machine](https://docs.alliancecan.ca/wiki/Working_with_volumes){target="\_blank"}                  |                  | 20 GB+                   | None                          |
 
 : Network, Cloud, and HPC Storage {.striped .table}
 

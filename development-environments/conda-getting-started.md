@@ -18,10 +18,10 @@ with a range of other languages and software packages.
 
 Just as there is with Python, there are multiple ways to install `mamba` and
 `conda`. For Windows, we recommend using the latest
-[Miniforge3 installer](https://github.com/conda-forge/miniforge?tab=readme-ov-file#miniforge3)
+[Miniforge3 installer](https://github.com/conda-forge/miniforge?tab=readme-ov-file#miniforge3){target="\_blank"}
 and sticking with the recommended options. Mac OS and Linux users can copy and
 run the commands listed
-[here](https://github.com/conda-forge/miniforge?tab=readme-ov-file#unix-like-platforms-mac-os--linux)
+[here](https://github.com/conda-forge/miniforge?tab=readme-ov-file#unix-like-platforms-mac-os--linux){target="\_blank"}
 within their terminal applications.
 
 If you've installed `mamba` on Windows and stuck with the recommended options in
@@ -30,12 +30,12 @@ from the Miniforge Prompt application that was included in the installation
 process. Use this application rather than Command Prompt or PowerShell. If you
 want to pair `mamba` with a more functional shell environment, we've included
 instructions for using `mamba` with a Bash shell on Windows in
-[UNIX Shells and CLIs](https://ubc-geography.github.io/computing-resources/unix-shells-and-clis/#running-mamba-on-git-bash-for-windows).
+[UNIX Shells and CLIs](https://ubc-geography.github.io/computing-resources/unix-shells-and-clis/#running-mamba-on-git-bash-for-windows){target="\_blank"}.
 For Mac OS and Linux users, the install script adds `mamba` to the PATH variable
 thus making it available from a terminal application running a Bash shell.
 
 Once you have `mamba` installed on your machine, follow along with
-['Getting Started With Conda'](https://conda.io/projects/conda/en/stable/user-guide/getting-started.html)
+['Getting Started With Conda'](https://conda.io/projects/conda/en/stable/user-guide/getting-started.html){target="\_blank"}
 to familiarize yourself with some of basic functionalities of `mamba`/`conda`.
 As a reminder, Miniforge includes both tools, and they can be used
 interchangeably, so use whichever one makes sense to you.
@@ -51,7 +51,7 @@ to `mamba`. Before getting started with using `mamba` and Python, it's important
 to have an understanding of virtual environments and how `mamba` works with them
 to install software and packages onto your machine. If you followed along with
 the
-[Managing Environments](https://conda.io/projects/conda/en/stable/user-guide/getting-started.html)
+[Managing Environments](https://conda.io/projects/conda/en/stable/user-guide/getting-started.html){target="\_blank"}
 section of 'Getting Started With Conda', then you got a very basic introduction
 to creating and using virtual environments.
 

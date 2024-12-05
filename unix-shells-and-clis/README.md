@@ -9,34 +9,36 @@ setting up development environments, running scripts in Python or R, or using
 containers and command line tools.
 
 If you are looking to install Bash, you can find a helpful walkthrough
-[here](https://ubc-library-rc.github.io/intro-git/#pre-workshop-setup).
+[here](https://ubc-library-rc.github.io/intro-git/#pre-workshop-setup){target="\_blank"}.
 
 UBC Library Research Commons frequently runs introductory workshops on Bash,
-which are listed [here](https://libcal.library.ubc.ca/calendar/?t=g&q=unix). And
-the materials for these workshops are available below:
+which are listed
+[here](https://libcal.library.ubc.ca/calendar/?t=g&q=unix){target="\_blank"}.
+And the materials for these workshops are available below:
 
-- [Introduction to the UNIX Shell](https://ubc-library-rc.github.io/intro-shell/)
+- [Introduction to the UNIX Shell](https://ubc-library-rc.github.io/intro-shell/){target="\_blank"}
 
-- [Intermediate UNIX Shell](https://ubc-library-rc.github.io/advanced-shell/)
+- [Intermediate UNIX Shell](https://ubc-library-rc.github.io/advanced-shell/){target="\_blank"}
 
 Additionally, the SFU's Research Computing Group provides a full-day workshop on
 Bash during their annual Summer School in early June with some of the materials
 for that course available below:
 
-- [Bash Course and Webinar](https://mint.westdri.ca/bash/)
+- [Bash Course and Webinar](https://mint.westdri.ca/bash/){target="\_blank"}
 
 Additional resources:
 
-- [Software Carpentry - The UNIX Shell](https://swcarpentry.github.io/shell-novice/)
+- [Software Carpentry - The UNIX Shell](https://swcarpentry.github.io/shell-novice/){target="\_blank"}
 
-- [Intro to Linux and the Bash Shell in HPC Environments](https://confluence.it.ubc.ca/display/UARC/Introduction+to+Linux+and+Using+the+Command+Line+Interface)
+- [Intro to Linux and the Bash Shell in HPC Environments](https://confluence.it.ubc.ca/display/UARC/Introduction+to+Linux+and+Using+the+Command+Line+Interface){target="\_blank"}
 
-- [UBC ARC - Intro to the Unix Shell - Video](https://youtu.be/gKz0-y4DXws?si=1zw4pO6GeOosxzfK)
+- [UBC ARC - Intro to the Unix Shell - Video](https://youtu.be/gKz0-y4DXws?si=1zw4pO6GeOosxzfK){target="\_blank"}
 
-- [Intro to Linux Shell -- Video Lecture](https://www.youtube.com/watch?v=eLF598YqbFw)
+- [Intro to Linux Shell -- Video Lecture](https://www.youtube.com/watch?v=eLF598YqbFw){target="\_blank"}
 
-- _Pro Bash_ : [UBC Library](https://go.exlibris.link/6FxkGXft) |
-  [WorldCat](https://search.worldcat.org/title/1409222493)
+- _Pro Bash_ :
+  [UBC Library](https://go.exlibris.link/6FxkGXft){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1409222493){target="\_blank"}
 
 ## Running mamba on Git-Bash for Windows
 
@@ -77,7 +79,7 @@ functionalities can be accessed through the various CLI tools that accompany it,
 including conversions between a large collection of raster and vector data
 formats.
 
-- [GDAL Documentation](https://gdal.org/programs/index.html#general)
+- [GDAL Documentation](https://gdal.org/programs/index.html#general){target="\_blank"}
 
 You can install GDAL from the conda-forge repository using `conda` or `mamba`
 with one of the following commands:
@@ -105,10 +107,10 @@ with an extraordinary amount of functionality. It's commonly used to convert,
 resize, and optimize images files in various formats.
 
 If you are using Windows, you can find an installer
-[here](https://imagemagick.org/script/download.php#windows), which will enable
-you to use ImageMagick from your preferred shell. Mac OS and Linux users can
-install ImageMagick from the conda-forge repository using `conda` or `mamba`
-with one of the following commands:
+[here](https://imagemagick.org/script/download.php#windows){target="\_blank"},
+which will enable you to use ImageMagick from your preferred shell. Mac OS and
+Linux users can install ImageMagick from the conda-forge repository using
+`conda` or `mamba` with one of the following commands:
 
 ::: {.panel-tabset}
 
@@ -126,9 +128,9 @@ $ conda install -c conda-forge imagemagick -y
 
 :::
 
-- [ImageMagick Documentation](https://imagemagick.org/script/command-line-tools.php)
+- [ImageMagick Documentation](https://imagemagick.org/script/command-line-tools.php){target="\_blank"}
 
-- [Command-line image processing with ImageMagick](https://training.westdri.ca/tools/visualization/#imagemagick)
+- [Command-line image processing with ImageMagick](https://training.westdri.ca/tools/visualization/#imagemagick){target="\_blank"}
 
 ### FFmpeg
 
@@ -151,7 +153,8 @@ $ conda install -c conda-forge ffmpeg -y
 
 :::
 
-- [FFmpeg Documentation](https://ffmpeg.org/ffmpeg.html)
+- [FFmpeg Documentation](https://ffmpeg.org/ffmpeg.html){target="\_blank"}
 
-- _Quick Start Guide to FFmpeg_ [UBC Library](https://go.exlibris.link/XSRj7ZcH)
-  | [WorldCat](https://search.worldcat.org/title/1369033645)
+- _Quick Start Guide to FFmpeg_
+  [UBC Library](https://go.exlibris.link/XSRj7ZcH){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1369033645){target="\_blank"}

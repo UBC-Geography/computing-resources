@@ -13,29 +13,30 @@ Chinook. Additionally, the Canada-based organization, Digital Research Alliance,
 provides compute clusters across Canada, including one located at Simon Fraser
 University.
 
-- [Introduction to Compute Canada (Alliance) Video](https://www.youtube.com/watch?v=hWkWAaNBILs)
+- [Introduction to Compute Canada (Alliance) Video](https://www.youtube.com/watch?v=hWkWAaNBILs){target="\_blank"}
 
-- [Intro to Linux and the Bash Shell in HPC Environments](https://confluence.it.ubc.ca/display/UARC/Introduction+to+Linux+and+Using+the+Command+Line+Interface)
+- [Intro to Linux and the Bash Shell in HPC Environments](https://confluence.it.ubc.ca/display/UARC/Introduction+to+Linux+and+Using+the+Command+Line+Interface){target="\_blank"}
 
-- [HPC Carpentry - Community Developed Lessons](https://www.hpc-carpentry.org/community-lessons/)
+- [HPC Carpentry - Community Developed Lessons](https://www.hpc-carpentry.org/community-lessons/){target="\_blank"}
 
-- [Research Computing Bootcamp Videos](https://www.ualberta.ca/information-services-and-technology/research-computing/bootcamps.html?1=HPC)
+- [Research Computing Bootcamp Videos](https://www.ualberta.ca/information-services-and-technology/research-computing/bootcamps.html?1=HPC){target="\_blank"}
 
-- [Geospatial Analysis with HPC Video](https://youtu.be/wRmRnVMjKXM)
+- [Geospatial Analysis with HPC Video](https://youtu.be/wRmRnVMjKXM){target="\_blank"}
 
 - _High Performance Computing for Geospatial Applications_ :
-  [UBC Library](https://go.exlibris.link/619Mq3H3) |
-  [WorldCat](https://search.worldcat.org/title/1178714505)
+  [UBC Library](https://go.exlibris.link/619Mq3H3){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1178714505){target="\_blank"}
 
-- [Supercomputing Conference - Recorded Sessions](https://www.youtube.com/@SCconferenceseries/playlists)
+- [Supercomputing Conference - Recorded Sessions](https://www.youtube.com/@SCconferenceseries/playlists){target="\_blank"}
 
 - _Parallel and High Performance Computing_ :
-  [UBC Library](https://go.exlibris.link/1VWhVDjZ) |
-  [WorldCat](https://search.worldcat.org/title/1262371463)
+  [UBC Library](https://go.exlibris.link/1VWhVDjZ){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1262371463){target="\_blank"}
 
 ## UBC Advanced Research Computing Sockeye
 
-Documentation: <https://confluence.it.ubc.ca/display/UARC/Using+Sockeye>
+Documentation:
+<https://confluence.it.ubc.ca/display/UARC/Using+Sockeye>{target="\_blank"}
 
 Resource Limits:
 
@@ -48,7 +49,8 @@ Resource Limits:
     - 320 cores on 8 nodes, 754 GB of RAM per node
     - 640 cores on 16 nodes, 376 GB of RAM per node
 
-Supported Software: <https://confluence.it.ubc.ca/display/UARC/Software>
+Supported Software:
+<https://confluence.it.ubc.ca/display/UARC/Software>{target="\_blank"}
 
 ::: {.callout-note}
 
@@ -62,9 +64,10 @@ software available within an Apptainer container.
 Resources held on the Alliance HPC clusters are available for any Canada-based
 faculty or academic librarian to use. To start submitting jobs to one of the
 clusters listed below, register for an account with the Alliance using this
-[link](https://ccdb.alliancecan.ca/account_application). Graduate students and
-university staff can also register an account and submit jobs through an active
-sponsorship from a registered faculty member or principal investigator.
+[link](https://ccdb.alliancecan.ca/account_application){target="\_blank"}.
+Graduate students and university staff can also register an account and submit
+jobs through an active sponsorship from a registered faculty member or principal
+investigator.
 
 The HPC clusters uses a job scheduler to manage and share resources as
 efficiently as possible. This means that jobs are not completed on a first-come,
@@ -75,15 +78,16 @@ reduce wait times, so ensure that you are optimizing your code as much as
 possible. If you plan on using a cluster extensively (200 core-years or more)
 and/or need higher prioritization from the scheduler, you should review and
 submit an application (due at the end of October) to the Alliance's annual
-[Resource Allocation Competition (RAC)](https://alliancecan.ca/en/services/advanced-research-computing/accessing-resources/resource-allocation-competition/resource-allocation-competition-application-guide).
+[Resource Allocation Competition (RAC)](https://alliancecan.ca/en/services/advanced-research-computing/accessing-resources/resource-allocation-competition/resource-allocation-competition-application-guide){target="\_blank"}.
 This additionally enables you to request access to the Niagara cluster and
 receive larger allocations of storage.
 
-Documentation: <https://docs.alliancecan.ca/wiki/Getting_started>
+Documentation:
+<https://docs.alliancecan.ca/wiki/Getting_started>{target="\_blank"}
 
 Clusters:
 
-- [Cedar (SFU)](https://docs.alliancecan.ca/wiki/Cedar)
+- [Cedar (SFU)](https://docs.alliancecan.ca/wiki/Cedar){target="\_blank"}
   - Resource Limits:
     - HTC:
       - CPU-Intensive:
@@ -97,7 +101,7 @@ Clusters:
         - 96 cores on 3 nodes, 4,000 GB of RAM per node
         - 256 cores on 8 nodes, 1,510 GB of RAM per node
         - 640 cores on 20 nodes, 502 GB of RAM per node
-- [Graham (UW)](https://docs.alliancecan.ca/wiki/Graham)
+- [Graham (UW)](https://docs.alliancecan.ca/wiki/Graham){target="\_blank"}
   - Resource Limits:
     - HTC:
       - 64 cores (E7-4850 v4), 3,022 GB of RAM
@@ -107,26 +111,28 @@ Clusters:
       - Memory-Intensive:
         - 192 cores on 3 nodes, 3,022 GB of RAM per node
         - 768 cores on 24 nodes, 502 GB of RAM per node
-- [Niagara (U of T)](https://docs.alliancecan.ca/wiki/Niagara) (RAC-only)
+- [Niagara (U of T)](https://docs.alliancecan.ca/wiki/Niagara){target="\_blank"}
+  (RAC-only)
   - Resource Limits:
     - HTC:
       - 40 cores (Skylake CPU), 202 GB of RAM
     - HPC (non-blocking):
       - 17,280 cores on 432 nodes, 202 GB of RAM per node
-- [Béluga (McGill)](https://docs.alliancecan.ca/wiki/B%C3%A9luga)
+- [Béluga (McGill)](https://docs.alliancecan.ca/wiki/B%C3%A9luga){target="\_blank"}
   - Resource Limits:
     - HTC:
       - 40 cores (Gold 6148), 752 GB of RAM
     - HPC (non-blocking):
       - 640 cores on 16 nodes, 752 GB of RAM per node
-- [Narval (UQ)](https://docs.alliancecan.ca/wiki/Narval)
+- [Narval (UQ)](https://docs.alliancecan.ca/wiki/Narval){target="\_blank"}
   - Resource Limits:
     - HTC:
       - 64 cores (Epyc 7502), 4,000 GB of RAM
     - HPC (non-blocking):
       - 3,584 cores on 56 nodes, 249 GB of RAM per node
 
-Supported Software: <https://docs.alliancecan.ca/wiki/Available_software>
+Supported Software:
+<https://docs.alliancecan.ca/wiki/Available_software>{target="\_blank"}
 
 ::: {.callout-note}
 
@@ -140,10 +146,10 @@ QGIS can run on either UBC Sockeye or Alliance clusters. To interact with QGIS
 through a graphical user interface, you'll need to run it within an interactive
 job with X11 forwarding enabled. You can find more information on creating
 graphical interactive jobs on UBC Sockeye
-[here](https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-GraphicalInteractive),
+[here](https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-GraphicalInteractive){target="\_blank"},
 while QGIS-specific documentation for Alliance clusters is listed below.
 
-- [Alliance Documentation - QGIS](https://docs.alliancecan.ca/wiki/QGIS)
+- [Alliance Documentation - QGIS](https://docs.alliancecan.ca/wiki/QGIS){target="\_blank"}
 
 Alternatively, you can run QGIS from an Alliance cluster and access it directly
 through your browser by using one of the JupyterHub instances noted in the next
@@ -173,13 +179,13 @@ capabilities of an HPC environment. JupyterHub provides an easy-to-follow form
 for setting up an interactive job on a given cluster, where your Jupyter server
 will be running from.
 
-- [Alliance Documentation - JupyterHub](https://docs.alliancecan.ca/wiki/JupyterHub)
+- [Alliance Documentation - JupyterHub](https://docs.alliancecan.ca/wiki/JupyterHub){target="\_blank"}
 
-- [Working with Jupyter on Clusters (Alliance) Video](https://youtu.be/Qk3Le5HBxeg?si=IANIgAciBdOLwMQy)
+- [Working with Jupyter on Clusters (Alliance) Video](https://youtu.be/Qk3Le5HBxeg?si=IANIgAciBdOLwMQy){target="\_blank"}
 
 - Clusters Running JupyterHub (requires an Alliance account):
 
-  - [Cedar (SFU)](https://jupyterhub.cedar.computecanada.ca/)
+  - [Cedar (SFU)](https://jupyterhub.cedar.computecanada.ca/){target="\_blank"}
 
     - Resource Limits:
       - Time (Session Length): 30 minutes - 5 hours
@@ -187,7 +193,7 @@ will be running from.
       - Memory: 46 GB
       - GPUs: 4 x V100L
 
-  - [Graham (UW)](https://jupyterhub.graham.computecanada.ca/)
+  - [Graham (UW)](https://jupyterhub.graham.computecanada.ca/){target="\_blank"}
 
     - Resource Limits:
       - Time (Session Length): 15 minutes - 24 hours
@@ -200,7 +206,7 @@ will be running from.
         - Memory: 3,022 GB
         - GPUs: none
 
-  - [Béluga (McGill)](https://jupyterhub.beluga.computecanada.ca/)
+  - [Béluga (McGill)](https://jupyterhub.beluga.computecanada.ca/){target="\_blank"}
 
     - Resource Limits:
       - Time (Session Length): 1 - 12 hours
@@ -208,7 +214,7 @@ will be running from.
       - Memory: 46 GB
       - GPUs: 1 x V100
 
-  - [Narval (UQ)](https://jupyterhub.narval.computecanada.ca/)
+  - [Narval (UQ)](https://jupyterhub.narval.computecanada.ca/){target="\_blank"}
     - Resource Limits:
       - Time (Session Length): 1 - 8 hours
       - CPU Cores: 16
@@ -232,8 +238,8 @@ Other kernels can be supported using Apptainer containers.
 ::: {.callout-note}
 
 You can only install packages from Alliance's maintained set of
-[Python wheels](https://docs.alliancecan.ca/wiki/Available_Python_wheels). To
-run JupyterLab with conda or external libraries held on PYPI or CRAN, you'll
+[Python wheels](https://docs.alliancecan.ca/wiki/Available_Python_wheels){target="\_blank"}.
+To run JupyterLab with conda or external libraries held on PYPI or CRAN, you'll
 need to run it using a pre-built Apptainer container as documented in the
 alternative approaches below.
 
@@ -241,9 +247,9 @@ alternative approaches below.
 
 - Alternatives Approaches for Running JupyterLab:
 
-  - [Alliance - Instructions for running JupyterLab via a virtual environment](https://docs.alliancecan.ca/wiki/Advanced_Jupyter_configuration)
+  - [Alliance - Instructions for running JupyterLab via a virtual environment](https://docs.alliancecan.ca/wiki/Advanced_Jupyter_configuration){target="\_blank"}
 
-  - [UBC ARC Sockeye - Instructions for running JupyterLab via an Apptainer container](https://confluence.it.ubc.ca/display/UARC/Jupyter+Notebooks+with+Singularity)
+  - [UBC ARC Sockeye - Instructions for running JupyterLab via an Apptainer container](https://confluence.it.ubc.ca/display/UARC/Jupyter+Notebooks+with+Singularity){target="\_blank"}
 
 ### Running a Jupyter Kernel from a Container
 
@@ -255,8 +261,9 @@ not supported on the cluster.
 
 Before using this approach, double-check that the software you need is not
 already available on the cluster either as
-[modules](https://docs.alliancecan.ca/wiki/Available_software) or
-[Python wheels](https://docs.alliancecan.ca/wiki/Available_Python_wheels).
+[modules](https://docs.alliancecan.ca/wiki/Available_software){target="\_blank"}
+or
+[Python wheels](https://docs.alliancecan.ca/wiki/Available_Python_wheels){target="\_blank"}.
 Software installed within a container is going to perform less efficiently than
 equivalent modules on Alliance, which have been optimized for HPC.
 
@@ -271,7 +278,7 @@ Apptainer will only run on Linux, so Windows and MacOS users will need to
 install a Linux virtual machine either via Windows Subsystem for Linux (WSL) or
 Lima to create and run Apptainer containers locally. Apptainer includes
 instructions in their documentation at this
-[link](https://apptainer.org/docs/admin/main/installation.html#installation-on-windows-or-mac).
+[link](https://apptainer.org/docs/admin/main/installation.html#installation-on-windows-or-mac){target="\_blank"}.
 
 ::: {.callout-note}
 
@@ -477,7 +484,7 @@ modules from the Alliance. If you need more flexibility for your RStudio
 session, setup and run your environment within an Apptainer container as
 documented below.
 
-### [via Container](https://confluence.it.ubc.ca/display/UARC/RStudio+with+Apptainer)
+### [via Container](https://confluence.it.ubc.ca/display/UARC/RStudio+with+Apptainer){target="\_blank"}
 
 ::: {.callout-note}
 
@@ -525,9 +532,9 @@ Prior to running Python in an HTC/HPC environment, ensure you have optimized
 your code as much as possible. You can find resources relevant to parallelizing
 Python code via system and external libraries, like multiprocessing, Dask, and
 mpi4py, under
-[Python - Increasing Performance](https://ubc-geography.github.io/computing-resources/python/#increasing-performance).
+[Python - Increasing Performance](https://ubc-geography.github.io/computing-resources/python/#increasing-performance){target="\_blank"}.
 
-- [Alliance Documentation - Python](https://docs.alliancecan.ca/wiki/Python)
+- [Alliance Documentation - Python](https://docs.alliancecan.ca/wiki/Python){target="\_blank"}
 
 - Supported Versions: 2.7, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11 and 3.12
 
@@ -537,12 +544,12 @@ mpi4py, under
 
     - conda, virtualenv, and venv
 
-    - [Using Virtual Environments on Sockeye](https://confluence.it.ubc.ca/display/UARC/Using+Virtual+Environments+on+Sockeye)
+    - [Using Virtual Environments on Sockeye](https://confluence.it.ubc.ca/display/UARC/Using+Virtual+Environments+on+Sockeye){target="\_blank"}
 
   - Alliance: virtualenv or venv. conda is not supported, but it can be run
     using an Apptainer container. In general, Alliance recommends avoiding
     conda-forge and Anaconda packages if possible. Go
-    [here](https://docs.alliancecan.ca/wiki/Anaconda/en) for more details. See
+    [here](https://docs.alliancecan.ca/wiki/Anaconda/en){target="\_blank"} for more details. See
     instructions below for creating and running micromamba, a lightweight,
     drop-in replacement for conda, from an Apptainer container:
 
@@ -581,7 +588,7 @@ mpi4py, under
       ```
 
 - Supported Packages (Alliance):
-  <https://docs.alliancecan.ca/wiki/Available_Python_wheels>
+  <https://docs.alliancecan.ca/wiki/Available_Python_wheels>{target="\_blank"}
 
   - Note: include `--no-index` flag with `pip` to only install Alliance wheels.
     The Alliance Python wheels have been specifically compiled and optimized to
@@ -614,12 +621,12 @@ mpi4py, under
 
 - Interactive Sessions:
 
-  - [Sockeye](https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-Interactive)
+  - [Sockeye](https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-Interactive){target="\_blank"}
 
   - Alliance
 
     - Use the Slurm allocation
-      ([salloc](https://docs.alliancecan.ca/wiki/Running_jobs)) command
+      ([salloc](https://docs.alliancecan.ca/wiki/Running_jobs){target="\_blank"}) command
 
     - Example command for starting a single core IPython session on Alliance:
 
@@ -645,7 +652,7 @@ mpi4py, under
 
 ### Other Resources
 
-- [Working with the Python Dask (Parallelization) Library Video](https://youtu.be/uGy5gT2vLdI)
+- [Working with the Python Dask (Parallelization) Library Video](https://youtu.be/uGy5gT2vLdI){target="\_blank"}
 
 ## R
 
@@ -653,9 +660,9 @@ Prior to running R in an HTC/HPC environment, ensure you have optimized your
 code as much as possible. You can find resources relevant to parallelizing R
 code via system and external libraries, like parallel, data.table and snowfall,
 under
-[R - Increasing Performance](https://ubc-geography.github.io/computing-resources/r/#increasing-performance).
+[R - Increasing Performance](https://ubc-geography.github.io/computing-resources/r/#increasing-performance){target="\_blank"}.
 
-- [Alliance Documentation - R](https://docs.alliancecan.ca/wiki/R)
+- [Alliance Documentation - R](https://docs.alliancecan.ca/wiki/R){target="\_blank"}
 
 - Supported Versions: 4.0, 4.1, 4.2, 4.3, and 4.4
 
@@ -673,12 +680,12 @@ under
 
 - Interactive Sessions:
 
-  - [Sockeye](https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-Interactive)
+  - [Sockeye](https://confluence.it.ubc.ca/display/UARC/Running+Jobs#RunningJobs-Interactive){target="\_blank"}
 
   - Alliance
 
     - Use the Slurm allocation
-      ([salloc](https://docs.alliancecan.ca/wiki/Running_jobs)) command
+      ([salloc](https://docs.alliancecan.ca/wiki/Running_jobs){target="\_blank"}) command
 
     - Example command for starting session:
 
@@ -700,9 +707,9 @@ under
 
 ### Other Resources:
 
-- [Introduction to HPC in R Webinar](https://mint.westdri.ca/r/intro_hpc.html)
+- [Introduction to HPC in R Webinar](https://mint.westdri.ca/r/intro_hpc.html){target="\_blank"}
 
-- [High-performance R Tutorial](https://mint.westdri.ca/r/run_r_hpc.html)
+- [High-performance R Tutorial](https://mint.westdri.ca/r/run_r_hpc.html){target="\_blank"}
 
 ## Other Supported Languages
 
@@ -740,16 +747,16 @@ under
 
 - Documentation
 
-  - [Alliance](https://docs.alliancecan.ca/wiki/Apptainer)
+  - [Alliance](https://docs.alliancecan.ca/wiki/Apptainer){target="\_blank"}
 
-  - [Sockeye](https://confluence.it.ubc.ca/display/UARC/Using+Apptainer+or+Singularity+Containers)
+  - [Sockeye](https://confluence.it.ubc.ca/display/UARC/Using+Apptainer+or+Singularity+Containers){target="\_blank"}
 
 - Documentation for HPC Container Platform -
-  [Apptainer](https://apptainer.org/docs/user/main/)
+  [Apptainer](https://apptainer.org/docs/user/main/){target="\_blank"}
 
 ## Photogrammetry
 
-- [Photogrammetry on HPC Clusters](https://training.westdri.ca/domains/dh/#photogrammetry)
+- [Photogrammetry on HPC Clusters](https://training.westdri.ca/domains/dh/#photogrammetry){target="\_blank"}
 
 Photogrammetry software can be incredibly resource intensive, so running it on
 an HPC cluster can save you a lot of time and resources when working with
@@ -763,7 +770,7 @@ clusters.
 
 To leverage HPC clusters for processing drone images or video into orthophotos,
 3D models, point clouds, or elevation models,
-[Open Drone Map (ODM)](https://docs.opendronemap.org/) will likely be your best
+[Open Drone Map (ODM)](https://docs.opendronemap.org/){target="\_blank"} will likely be your best
 option.
 
 ODM is most often distributed within a Docker container, and it can just as
@@ -772,7 +779,7 @@ to running ODM on an HPC cluster, it is highly recommended that you take a few
 test runs on a local machine with a subset of your data. This will give you an
 opportunity to explore and optimize any option flags to produce the best results
 for your dataset. You can find information on installing Apptainer
-[here](https://apptainer.org/docs/admin/main/installation.html#).
+[here](https://apptainer.org/docs/admin/main/installation.html#){target="\_blank"}.
 
 To test ODM on a local machine that has Apptainer installed, make a directory
 that will be bound to the container for ODM's input and output. Then nest
@@ -841,7 +848,7 @@ amount of memory to allocate your job based on the size of your dataset.
 : {.table}
 
 **Source:**
-<https://docs.opendronemap.org/installation/#hardware-recommendations>
+<https://docs.opendronemap.org/installation/#hardware-recommendations>{target="\_blank"}
 
 Based on best practices, you will want to store your dataset within your project
 folder and bind the directory holding your dataset to a directory within the
@@ -857,5 +864,5 @@ directory before cleaning up the scratch directory.
 [^1]:
     Gbagir, A. G., Ek, K., & Colpaert, A. (2023). OpenDroneMap: Multi-platform
     performance analysis. _Geographies_, 3(3), 446-458.
-    <https://doi.org/10.3390/geographies3030023>
+    <https://doi.org/10.3390/geographies3030023>{target="\_blank"}
 ````

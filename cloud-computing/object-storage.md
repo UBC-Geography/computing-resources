@@ -16,7 +16,7 @@ available without needing to setup and configure a web server.
 Common use cases include:
 
 - Storing and serving geospatial datasets, particularly those that are
-  [cloud-optimized](https://guide.cloudnativegeo.org/)
+  [cloud-optimized](https://guide.cloudnativegeo.org/){target="\_blank"}
 
 - Backing up and/or storing archival data
 
@@ -30,9 +30,9 @@ Most cloud-based object storage providers support Amazon's S3 API meaning that
 they can be accessed and managed via an S3-compatible client. If you are using
 multiple cloud storage providers, these are helpful tool to get familiar with.
 
-- [Cyberduck](https://cyberduck.io/)
+- [Cyberduck](https://cyberduck.io/){target="\_blank"}
 
-- [Rclone](https://rclone.org/)
+- [Rclone](https://rclone.org/){target="\_blank"}
 
 ## UBC ARC Chinook
 
@@ -44,25 +44,25 @@ enabled upon request thus giving you the ability to use the noted S3 clients
 above.
 
 For more details about Chinook, see:
-[Research Data Storage](https://ubc-geography.github.io/computing-resources/research-data-management/research-data-storage.html#ubc-chinook)
+[Research Data Storage](https://ubc-geography.github.io/computing-resources/research-data-management/research-data-storage.html#ubc-chinook){target="\_blank"}
 
 ## Digital Research Alliance (DRA)
 
 Faculty across Canada can also access up to 10 TB of object storage via DRA
 Cloud's Arbutus data centre (University of Victoria) by submitting a
-[Rapid Access Service (RAS) request](https://docs.google.com/forms/d/e/1FAIpQLSeU_BoRk5cEz3AvVLf3e9yZJq-OvcFCQ-mg7p4AWXmUkd5rTw/viewform).
+[Rapid Access Service (RAS) request](https://docs.google.com/forms/d/e/1FAIpQLSeU_BoRk5cEz3AvVLf3e9yZJq-OvcFCQ-mg7p4AWXmUkd5rTw/viewform){target="\_blank"}.
 If those limits are not sufficient, additional resources can be requested
 through the annual Resource Allocation Competition (RAC) with applications due
 between late September and early November. Upon approval, RAC resources are
 granted the following April.
 
-- [DRA - Arbutus Object Storage](https://docs.alliancecan.ca/wiki/Arbutus_object_storage)
+- [DRA - Arbutus Object Storage](https://docs.alliancecan.ca/wiki/Arbutus_object_storage){target="\_blank"}
 
 Projects allocated on the Arbutus cloud are administered through an OpenStack
 dashboard, which provides limited functionality for managing object storage. If
 you need more flexibility, you'll want to install one of the S3-compatible
 clients listed above or alternatively an OpenStack Swift
-[connector](https://cyberduck.io/openstack/) or client.
+[connector](https://cyberduck.io/openstack/){target="\_blank"} or client.
 
 ### [OpenStack Swift Client](https://docs.openstack.org/python-swiftclient/latest/cli/index.html)
 
@@ -125,20 +125,21 @@ on using a particular cloud computing service that is only available through a
 commercial cloud provider, you can access object storage directly through
 commercial cloud providers.
 
-Contact [UBC ARC](https://arc.ubc.ca/compute-storage/cloud-computing) to get
-details about accessing credits that can mitigate costs associated with using
-the following cloud providers.
+Contact
+[UBC ARC](https://arc.ubc.ca/compute-storage/cloud-computing){target="\_blank"}
+to get details about accessing credits that can mitigate costs associated with
+using the following cloud providers.
 
-- [AWS S3](https://docs.aws.amazon.com/s3/)
+- [AWS S3](https://docs.aws.amazon.com/s3/){target="\_blank"}
 
-- [Google Cloud Storage](https://cloud.google.com/storage/docs/)
+- [Google Cloud Storage](https://cloud.google.com/storage/docs/){target="\_blank"}
 
-- [Microsoft Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/)
+- [Microsoft Azure Blob Storage](https://learn.microsoft.com/en-us/azure/storage/blobs/){target="\_blank"}
 
 If you are working with an organization outside of UBC and/or are unable to
 access credits to help cover the costs of object storage, the following
 providers have generous free tiers and generally lower pricing options.
 
-- [Cloudflare R2](https://developers.cloudflare.com/r2/)
+- [Cloudflare R2](https://developers.cloudflare.com/r2/){target="\_blank"}
 
-- [Backblaze B2](https://www.backblaze.com/docs/cloud-storage)
+- [Backblaze B2](https://www.backblaze.com/docs/cloud-storage){target="\_blank"}

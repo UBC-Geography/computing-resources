@@ -14,12 +14,13 @@ customized kernels within a JupyterHub environment.
 
 If you need to share a reproducible Jupyter environment or would like to
 automate the creation and management of your kernels, copy the Makefile from
-this [repository](https://github.com/UBC-Geography/jupyter-makefile) into your
-project and follow the instructions found in the repository's README.
+this
+[repository](https://github.com/UBC-Geography/jupyter-makefile){target="\_blank"}
+into your project and follow the instructions found in the repository's README.
 Alternatively, if you want to bootstrap a Jupyter kernel with a range of
 geospatial packages and/or need to share a reproducible environment with others,
 review and clone the
-[jupyter-py-geog-env](https://github.com/UBC-Geography/jupyter-py-geog-env)
+[jupyter-py-geog-env](https://github.com/UBC-Geography/jupyter-py-geog-env){target="\_blank"}
 repository or use it as a template to create a new repository with any
 modifications that you may need.
 
@@ -29,8 +30,8 @@ If you are simply running into issues with installing packages via Conda, try
 using Mamba instead. Mamba is a fast and lightweight alternative to Conda that
 is already included in JupyterHub's default environment. It runs more
 efficiently in computing environments with fewer resources, such as
-[UBC LT's Jupyter Open](https://open.jupyter.ubc.ca/) or
-[UBC Syzygy](https://ubc.syzygy.ca/).
+[UBC LT's Jupyter Open](https://open.jupyter.ubc.ca/){target="\_blank"} or
+[UBC Syzygy](https://ubc.syzygy.ca/){target="\_blank"}.
 
 ## Virtual Environments
 

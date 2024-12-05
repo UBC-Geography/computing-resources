@@ -12,8 +12,8 @@ limited set of functionality when working with your GitHub repositories.
 You can have multiple personal access tokens associated with your GitHub account
 with various levels of access to your account and specific repositories
 associated with it. You can generate tokens from within the
-[developer settings](https://github.com/settings/tokens?type=beta) of your
-personal account.
+[developer settings](https://github.com/settings/tokens?type=beta){target="\_blank"}
+of your personal account.
 
 When creating a new token, ensure that you provided it with the minimum
 privileges necessary to interact with your private repositories via JupyterHub.
@@ -65,8 +65,9 @@ Your public key has been saved in /home/jovyan/.ssh/id_rsa.pub
 ```
 
 To use your new SSH key, add a public key to your GitHub personal account from
-the [SSH Key Settings page](https://github.com/settings/ssh/new) by copying the
-contents of /home/jovyan/.ssh/id_rsa.pub into the key field.
+the
+[SSH Key Settings page](https://github.com/settings/ssh/new){target="\_blank"}
+by copying the contents of /home/jovyan/.ssh/id_rsa.pub into the key field.
 
 From JupyterHub, you'll then be able to clone and push changes to all of your
 private repositories within GitHub using the SSH protocol.

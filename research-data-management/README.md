@@ -3,13 +3,13 @@ output-file: index.html
 title: Research Data Management
 ---
 
-- [UBC Library Research Commons - Research Data Management](https://ubc-library-rc.github.io/rdm/)
+- [UBC Library Research Commons - Research Data Management](https://ubc-library-rc.github.io/rdm/){target="\_blank"}
 
-- [Research Data Management Video -- Part 1](https://www.youtube.com/watch?v=TxYlHMieXAM)
+- [Research Data Management Video -- Part 1](https://www.youtube.com/watch?v=TxYlHMieXAM){target="\_blank"}
 
-- [Research Data Management Video -- Part 2](https://www.youtube.com/watch?v=q5eXXps1o04)
+- [Research Data Management Video -- Part 2](https://www.youtube.com/watch?v=q5eXXps1o04){target="\_blank"}
 
-- _[Research Data Management in the Canadian Context: A Guide for Practitioners and Learners](https://ecampusontario.pressbooks.pub/canadardm/)_
+- _[Research Data Management in the Canadian Context: A Guide for Practitioners and Learners](https://ecampusontario.pressbooks.pub/canadardm/){target="\_blank"}_
 
 ## Recommended GIS and Geospatial File Formats
 
@@ -23,45 +23,45 @@ preservation, and performance.
 
 Relevant resources:
 
-- [Open Geospatial Consortium Standards](https://www.ogc.org/standard/sfs/)
+- [Open Geospatial Consortium Standards](https://www.ogc.org/standard/sfs/){target="\_blank"}
 
-- [Library of Congress - Preservation - Recommended Formats Statement - GIS, Geospatial and Non-GIS Cartographic](https://www.loc.gov/preservation/resources/rfs/geo-carto.html)
+- [Library of Congress - Preservation - Recommended Formats Statement - GIS, Geospatial and Non-GIS Cartographic](https://www.loc.gov/preservation/resources/rfs/geo-carto.html){target="\_blank"}
 
-- [GDAL Vector Drivers](https://gdal.org/drivers/vector/index.html)
+- [GDAL Vector Drivers](https://gdal.org/drivers/vector/index.html){target="\_blank"}
 
-- [GDAL Raster Drivers](https://gdal.org/drivers/raster/index.html)
+- [GDAL Raster Drivers](https://gdal.org/drivers/raster/index.html){target="\_blank"}
 
-- [ArcGIS - Best Practices - Imagery Formats and Performance](https://doc.arcgis.com/en/imagery/workflows/best-practices/imagery-formats-and-performance.htm)
+- [ArcGIS - Best Practices - Imagery Formats and Performance](https://doc.arcgis.com/en/imagery/workflows/best-practices/imagery-formats-and-performance.htm){target="\_blank"}
 
 ### Vector
 
-#### [OGC GeoPackage](https://www.geopackage.org/)
+#### [OGC GeoPackage](https://www.geopackage.org/){target="\_blank"}
 
 Developed and maintained as an OGC standard, GeoPackage has become a broadly
 supported format for storing and transferring GIS data. In addition to vector
 data, it can also store raster data. This is the recommended and default format
 for vector data in QGIS.
 
-#### [ESRI File Geodatabase (FileGDB)](https://pro.arcgis.com/en/pro-app/latest/help/data/geodatabases/manage-file-gdb/file-geodatabases.htm)
+#### [ESRI File Geodatabase (FileGDB)](https://pro.arcgis.com/en/pro-app/latest/help/data/geodatabases/manage-file-gdb/file-geodatabases.htm){target="\_blank"}
 
 Created by ESRI, the File Geodatabase format has been developed as an
 alternative to Shapefile with the intention to overcome some of its shortcomings
 and act as a possible successor.
 
-#### [ESRI Shapefile](https://pro.arcgis.com/en/pro-app/latest/help/data/shapefiles/working-with-shapefiles-in-arcgis-pro.htm)
+#### [ESRI Shapefile](https://pro.arcgis.com/en/pro-app/latest/help/data/shapefiles/working-with-shapefiles-in-arcgis-pro.htm){target="\_blank"}
 
 By far the most popular vector format, Shapefile was developed by ESRI in the
 90's and has continued to be maintained by them. While the format is not fully
 open, it has nevertheless found an extraordinary level of support among GIS and
 other geospatial software.
 
-#### [GeoJSON](https://geojson.org/)
+#### [GeoJSON](https://geojson.org/){target="\_blank"}
 
 GeoJSON provides a lightweight format that can be easily read and written via
 JavaScript. This format is particularly well-suited for web mapping and easily
 integrates with web mapping libraries, like Leaflet and OpenLayers.
 
-#### [FlatGeobuf](https://flatgeobuf.org/)
+#### [FlatGeobuf](https://flatgeobuf.org/){target="\_blank"}
 
 A relatively new format that has shown significant performance improvements
 compared to the formats listed above. FlatGeobuf currently lacks the backing of
@@ -69,7 +69,7 @@ standardization, but it has found broad support in geospatial packages and
 software. It is also currently under review as a proposed OGC Community
 Standard.
 
-#### [GeoParquet](https://geoparquet.org/)
+#### [GeoParquet](https://geoparquet.org/){target="\_blank"}
 
 Similar to FlatGeobuf, GeoParquet has recently seen a stable release with
 significant performance improvements compared to GeoPackage and Shapefile, and
@@ -79,7 +79,7 @@ intend to propose it for adoption as an OGC standard.
 
 ### Raster
 
-#### [GeoTIFF](https://www.ogc.org/standard/geotiff/) and [Cloud Optimized GeoTIFF (COG)](https://www.cogeo.org/)
+#### [GeoTIFF](https://www.ogc.org/standard/geotiff/){target="\_blank"} and [Cloud Optimized GeoTIFF (COG)](https://www.cogeo.org/){target="\_blank"}
 
 GeoTIFF has become the dominant format for raster data used in GIS and other
 geospatial computing due in large part to its development on open-source
@@ -120,39 +120,39 @@ portions of the file will be downloaded and decoded by end users.
 
 The Translate tool found in the GDAL library is the most commonly used tool for
 creating GeoTIFFs and COGs, and it supports a broad set of
-[compression algorithms](https://gdal.org/drivers/raster/cog.html#general-creation-options).
+[compression algorithms](https://gdal.org/drivers/raster/cog.html#general-creation-options){target="\_blank"}.
 The following algorithms are important to note:
 
-- [LZW](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch) - This
-  is a lossless algorithm with broad support, and it's the current default used
-  by GDAL. While it can be relatively fast, this algorithm is not optimized for
-  raster data, so reductions in file size may be minimal. Nevertheless, when in
-  doubt, this is the algorithm to choose.
+- [LZW](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch){target="\_blank"} -
+  This is a lossless algorithm with broad support, and it's the current default
+  used by GDAL. While it can be relatively fast, this algorithm is not optimized
+  for raster data, so reductions in file size may be minimal. Nevertheless, when
+  in doubt, this is the algorithm to choose.
 
-- [LERC](https://esri.github.io/lerc/) - Developed and maintained by Esri, this
-  algorithm has been optimized for raster data and can support either lossy or
-  lossless compression. While lacking the level of support provided by LZW or
-  JPEG, this algorithm is relatively fast and provides a valuable middle ground
-  between the two.
+- [LERC](https://esri.github.io/lerc/){target="\_blank"} - Developed and
+  maintained by Esri, this algorithm has been optimized for raster data and can
+  support either lossy or lossless compression. While lacking the level of
+  support provided by LZW or JPEG, this algorithm is relatively fast and
+  provides a valuable middle ground between the two.
 
-- [JPEG](https://jpeg.org/jpeg/) - Well supported and backed by solid,
-  open-source standards, this has been the defacto lossy algorithm for raster
-  data over the past 30 years. This a solid choice if you are looking to display
-  a raster on the web and require broad support across web browsers and other
-  software.
+- [JPEG](https://jpeg.org/jpeg/){target="\_blank"} - Well supported and backed
+  by solid, open-source standards, this has been the defacto lossy algorithm for
+  raster data over the past 30 years. This a solid choice if you are looking to
+  display a raster on the web and require broad support across web browsers and
+  other software.
 
-- [WEBP](https://developers.google.com/speed/webp/) - While it is well supported
-  by modern web browsers, this algorithm is not developed on open-source
-  standards. It supports both lossy and lossless compression. It also provides
-  improved compression ratios over JPEG and currently provides the best option
-  for displaying a raster on the web, but it lacks broader support in other
-  software and will likely be replaced by JXL in the future.
+- [WEBP](https://developers.google.com/speed/webp/){target="\_blank"} - While it
+  is well supported by modern web browsers, this algorithm is not developed on
+  open-source standards. It supports both lossy and lossless compression. It
+  also provides improved compression ratios over JPEG and currently provides the
+  best option for displaying a raster on the web, but it lacks broader support
+  in other software and will likely be replaced by JXL in the future.
 
-- [JXL](https://jpeg.org/jpegxl/index.html) - This is still a relatively new
-  standard that has been developed as a successor to JPEG and JPEG2000. Similar
-  to LERC and WEBP, it supports both lossy and lossless compression, but it is
-  capable of reaching significantly better compression ratios at the expense of
-  slower encoding and decoding times. It also has yet to reach similar levels of
-  support as JPEG or LZW and not all distributions of GDAL include the necessary
-  library to use this algorithm, but it is well worth monitoring in the future
-  as its support grows.
+- [JXL](https://jpeg.org/jpegxl/index.html){target="\_blank"} - This is still a
+  relatively new standard that has been developed as a successor to JPEG and
+  JPEG2000. Similar to LERC and WEBP, it supports both lossy and lossless
+  compression, but it is capable of reaching significantly better compression
+  ratios at the expense of slower encoding and decoding times. It also has yet
+  to reach similar levels of support as JPEG or LZW and not all distributions of
+  GDAL include the necessary library to use this algorithm, but it is well worth
+  monitoring in the future as its support grows.

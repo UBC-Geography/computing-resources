@@ -12,24 +12,25 @@ self-contained databases.
 Understanding how databases and how to query them efficiently with SQL, is an
 extraordinarily useful skill when working with geospatial data.
 
-- [Software Carpentry - Databases and SQL](https://swcarpentry.github.io/sql-novice-survey/)
+- [Software Carpentry - Databases and SQL](https://swcarpentry.github.io/sql-novice-survey/){target="\_blank"}
 
-- [How to create and access MySQL and PostgreSQL databases on DRI systems - Video](https://youtu.be/3uHSXXQwJpQ)
+- [How to create and access MySQL and PostgreSQL databases on DRI systems - Video](https://youtu.be/3uHSXXQwJpQ){target="\_blank"}
 
 - _Geospatial Analysis with SQL_ :
-  [UBC Library](https://go.exlibris.link/N6ybsHyL) |
-  [WorldCat](https://search.worldcat.org/title/1356796776)
+  [UBC Library](https://go.exlibris.link/N6ybsHyL){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1356796776){target="\_blank"}
 
-- _Practical SQL_ : [UBC Library](https://go.exlibris.link/KT2RjyVN) |
-  [WorldCat](https://search.worldcat.org/title/1291870871)
+- _Practical SQL_ :
+  [UBC Library](https://go.exlibris.link/KT2RjyVN){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1291870871){target="\_blank"}
 
 - _SQL All-in-One for Dummies_ :
-  [UBC Library](https://go.exlibris.link/s1CwKGdS) |
-  [WorldCat](https://search.worldcat.org/title/1429319351)
+  [UBC Library](https://go.exlibris.link/s1CwKGdS){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1429319351){target="\_blank"}
 
 - _Getting Started with SQL and Databases: Managing and Manipulating Data with
-  SQL_ : [UBC Library](https://go.exlibris.link/8P3M1W2j) |
-  [WorldCat](https://search.worldcat.org/title/1381743217)
+  SQL_ : [UBC Library](https://go.exlibris.link/8P3M1W2j){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1381743217){target="\_blank"}
 
 ## DuckDB
 
@@ -39,15 +40,16 @@ storage, DuckDB focuses on data analysis, and it includes easy installation
 methods for Python, R, and JavaScript environments.
 
 - _Getting Started with DuckDB_ :
-  [UBC Library](https://learning.oreilly.com/library/view/getting-started-with/9781803241005/)
-  | [WorldCat](https://search.worldcat.org/title/1436457021)
+  [UBC Library](https://learning.oreilly.com/library/view/getting-started-with/9781803241005/){target="\_blank"}
+  | [WorldCat](https://search.worldcat.org/title/1436457021){target="\_blank"}
 
-- _DuckDB: Up and Running_ : [UBC Library](https://go.exlibris.link/YFbRpYc9) |
-  [WorldCat](https://search.worldcat.org/title/1442327944)
+- _DuckDB: Up and Running_ :
+  [UBC Library](https://go.exlibris.link/YFbRpYc9){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1442327944){target="\_blank"}
 
-- [DuckDB Documentation](https://duckdb.org/docs/)
+- [DuckDB Documentation](https://duckdb.org/docs/){target="\_blank"}
 
-- [DuckDB - Spatial Extension](https://duckdb.org/docs/extensions/spatial.html)
+- [DuckDB - Spatial Extension](https://duckdb.org/docs/extensions/spatial.html){target="\_blank"}
 
 ## PostgreSQL
 
@@ -56,14 +58,15 @@ database management systems for storing and accessing geospatial data. GIS
 software, like GeoServer and QGIS, provide tight integrations around
 PostGIS-enabled databases.
 
-- [QGIS Manual - Database Concepts with PostgreSQL](https://docs.qgis.org/3.34/en/docs/training_manual/database_concepts/index.html)
+- [QGIS Manual - Database Concepts with PostgreSQL](https://docs.qgis.org/3.34/en/docs/training_manual/database_concepts/index.html){target="\_blank"}
 
-- _Learn PostgreSQL_ : [UBC Library](https://go.exlibris.link/DPVZ3PFk) |
-  [WorldCat](https://search.worldcat.org/title/1407633395)
+- _Learn PostgreSQL_ :
+  [UBC Library](https://go.exlibris.link/DPVZ3PFk){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1407633395){target="\_blank"}
 
 - _PostgreSQL Query Optimization_ :
-  [UBC Library](https://go.exlibris.link/Mp0jzFgZ) |
-  [WorldCat](https://search.worldcat.org/title/1417197322)
+  [UBC Library](https://go.exlibris.link/Mp0jzFgZ){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1417197322){target="\_blank"}
 
 ### Hosting
 
@@ -77,38 +80,41 @@ databases.
 
 #### Alliance
 
-- [Database Servers -- Cedar PostgreSQL](https://docs.alliancecan.ca/wiki/Database_servers#Cedar_PostgreSQL_server)
+- [Database Servers -- Cedar PostgreSQL](https://docs.alliancecan.ca/wiki/Database_servers#Cedar_PostgreSQL_server){target="\_blank"}
 
-- [WestDRI - How to create and access MySQL and PostgreSQL databases on DRI systems](https://training.westdri.ca/tools/rdm/#how-to-create-and-access-mysql-and-postgresql-databases-on-dri-systems)
+- [WestDRI - How to create and access MySQL and PostgreSQL databases on DRI systems](https://training.westdri.ca/tools/rdm/#how-to-create-and-access-mysql-and-postgresql-databases-on-dri-systems){target="\_blank"}
 
 #### Cloud / SaaS Providers
 
-- [Microsoft Azure](https://azure.microsoft.com/en-ca/products/postgresql/)
+- [Microsoft Azure](https://azure.microsoft.com/en-ca/products/postgresql/){target="\_blank"}
 
-- [AWS](https://aws.amazon.com/rds/postgresql/)
+- [AWS](https://aws.amazon.com/rds/postgresql/){target="\_blank"}
 
-- [Google Cloud](https://cloud.google.com/sql/docs/postgres)
+- [Google Cloud](https://cloud.google.com/sql/docs/postgres){target="\_blank"}
 
-- [Supabase](https://supabase.com/docs/guides/database)
+- [Supabase](https://supabase.com/docs/guides/database){target="\_blank"}
 
-- [Railway](https://docs.railway.app/databases/postgresql)
+- [Railway](https://docs.railway.app/databases/postgresql){target="\_blank"}
 
 ### GIS Extensions / Libraries
 
-- [PostGIS](https://postgis.net/documentation/)
+- [PostGIS](https://postgis.net/documentation/){target="\_blank"}
 
-  - [Introduction to PostGIS](https://postgis.net/workshops/postgis-intro/)
+  - [Introduction to PostGIS](https://postgis.net/workshops/postgis-intro/){target="\_blank"}
 
-  - _PostGIS in Action_ : [UBC Library](https://go.exlibris.link/cKtRz8Pm) |
-    [WorldCat](https://search.worldcat.org/title/1339878967)
+  - _PostGIS in Action_ :
+    [UBC Library](https://go.exlibris.link/cKtRz8Pm){target="\_blank"} |
+    [WorldCat](https://search.worldcat.org/title/1339878967){target="\_blank"}
 
-  - _PostGIS Cookbook_ : [UBC Library](https://go.exlibris.link/z6HBlj5t) |
-    [WorldCat](https://search.worldcat.org/title/1105805332)
+  - _PostGIS Cookbook_ :
+    [UBC Library](https://go.exlibris.link/z6HBlj5t){target="\_blank"} |
+    [WorldCat](https://search.worldcat.org/title/1105805332){target="\_blank"}
 
-  - _Mastering PostGIS_ : [UBC Library](https://go.exlibris.link/bCV4PRwJ) |
-    [WorldCat](https://search.worldcat.org/title/991530184)
+  - _Mastering PostGIS_ :
+    [UBC Library](https://go.exlibris.link/bCV4PRwJ){target="\_blank"} |
+    [WorldCat](https://search.worldcat.org/title/991530184){target="\_blank"}
 
-- [pgRouting](https://docs.pgrouting.org/latest/en/pgRouting-introduction.html)
+- [pgRouting](https://docs.pgrouting.org/latest/en/pgRouting-introduction.html){target="\_blank"}
 
 ## MySQL and MariaDB
 
@@ -124,20 +130,20 @@ providers include support for hosting and managing instances of a MySQL server.
 
 #### Alliance
 
-- [Database Servers -- Cedar MySQL](https://docs.alliancecan.ca/wiki/Database_servers#Cedar_MySQL_server)
+- [Database Servers -- Cedar MySQL](https://docs.alliancecan.ca/wiki/Database_servers#Cedar_MySQL_server){target="\_blank"}
 
 #### Cloud / SaaS Providers
 
-- [Microsoft Azure](https://azure.microsoft.com/en-ca/products/mysql/)
+- [Microsoft Azure](https://azure.microsoft.com/en-ca/products/mysql/){target="\_blank"}
 
-- [AWS](https://aws.amazon.com/rds/mysql/)
+- [AWS](https://aws.amazon.com/rds/mysql/){target="\_blank"}
 
-- [Google Cloud](https://cloud.google.com/sql/docs/mysql)
+- [Google Cloud](https://cloud.google.com/sql/docs/mysql){target="\_blank"}
 
-- [PlanetScale](https://planetscale.com/docs)
+- [PlanetScale](https://planetscale.com/docs){target="\_blank"}
 
-- [Railway](https://docs.railway.app/databases/mysql)
+- [Railway](https://docs.railway.app/databases/mysql){target="\_blank"}
 
 ### GIS Extensions / Libraries
 
-- [MySQL Spatial](https://dev.mysql.com/doc/refman/8.0/en/spatial-analysis-functions.html)
+- [MySQL Spatial](https://dev.mysql.com/doc/refman/8.0/en/spatial-analysis-functions.html){target="\_blank"}

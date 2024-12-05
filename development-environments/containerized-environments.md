@@ -11,9 +11,9 @@ machine.
 
 For more information about containers and a few of the container engines
 available, see
-[Containers](https://UBC-Geography.github.io/computing-resources/containers). To
-build and run containers on your local machine, you'll need to have one of these
-engines installed.
+[Containers](https://UBC-Geography.github.io/computing-resources/containers){target="\_blank"}.
+To build and run containers on your local machine, you'll need to have one of
+these engines installed.
 
 ## JupyterLab
 
@@ -21,7 +21,7 @@ The Jupyter team maintains a core set of container images that can be pulled and
 used for your own development environment. These images can also be built upon
 to create new container images that include and software you may need.
 
-- [Jupyter Docker Stacks Documentation](https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html)
+- [Jupyter Docker Stacks Documentation](https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html){target="\_blank"}
 
 Dockerfiles provide instructions for creating your customized container image.
 These files can be easily shared and reused to build your container. While
@@ -30,13 +30,13 @@ container engines like Podman and Apptainer. The following example walks through
 a basic Dockerfile that builds a new image based on the jupyter/minimal-notebook
 image, which includes everything you need to get Jupyter up and running with all
 the necessities. Review the
-['Selecting an image'](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html)
+['Selecting an image'](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html){target="\_blank"}
 when selecting a Jupyter image to build on top of.
 
 Within a Dockerfile, you'll write out the list of commands you would want to run
 to create your development environment. Review the
-[Dockerfile Reference](https://docs.docker.com/engine/reference/builder/) for
-more details.
+[Dockerfile Reference](https://docs.docker.com/engine/reference/builder/){target="\_blank"}
+for more details.
 
 ```Dockerfile {.Dockerfile filename="Dockerfile"}
 # Always start with a FROM instruction that points to an existing image
@@ -83,7 +83,7 @@ Follow the link provided by Jupyter in your terminal. You may need to substitute
 
 If you prefer using Podman over Docker to run containers, you can find some
 additional details
-[here](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html#using-the-podman-cli)
+[here](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/running.html#using-the-podman-cli){target="\_blank"}
 for running a Jupyter container in rootless mode.
 
 ## RStudio
@@ -91,19 +91,19 @@ for running a Jupyter container in rootless mode.
 The Rocker Project provides a very useful set of container images that are
 R/RStudio-based equivalents to the Jupyter Docker Stack.
 
-- [The Rocker Images](https://rocker-project.org/images/)
+- [The Rocker Images](https://rocker-project.org/images/){target="\_blank"}
 
 Both the `rocker/geospatial` and `rocker/ml-verse` (geospatial with CUDA
 support) images are particularly worth noting as they include a wide array of
 geospatial packages. You can find a list of geospatial packages installed in the
 images
-[here](https://github.com/rocker-org/rocker-versioned2/blob/master/scripts/install_geospatial.sh).
+[here](https://github.com/rocker-org/rocker-versioned2/blob/master/scripts/install_geospatial.sh){target="\_blank"}.
 
 To build a new image on top of a Rocker image that includes an additional
 selection of packages, you'll write out the list of commands you would want to
 run to create your development environment. Review the
-[Dockerfile Reference](https://docs.docker.com/engine/reference/builder/) for
-more details.
+[Dockerfile Reference](https://docs.docker.com/engine/reference/builder/){target="\_blank"}
+for more details.
 
 ```Dockerfile {.Dockerfile filename="Dockerfile"}
 # Always start with a FROM instruction that points to an existing image
@@ -154,10 +154,10 @@ instructions as above, but sign into RStudio with `root` as the username.
 ## VS Code
 
 Using a development container with VS Code can be easily managed using the
-[Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+[Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers){target="\_blank"}
 extension. You can also find more information on setting up and using
 development containers
-[here](https://code.visualstudio.com/docs/devcontainers/containers).
+[here](https://code.visualstudio.com/docs/devcontainers/containers){target="\_blank"}.
 
 Prior to using development containers, again consider whether a
 Conda/Mamba-based virtual environment would just as adequately meet your needs
@@ -198,8 +198,8 @@ following:
 
 Then you will need to create your `Dockerfile` within the `.devcontainer`
 directory. Review the
-[Dockerfile Reference](https://docs.docker.com/engine/reference/builder/) for
-more details on creating a Dockerfile.
+[Dockerfile Reference](https://docs.docker.com/engine/reference/builder/){target="\_blank"}
+for more details on creating a Dockerfile.
 
 The following example would start with an Ubuntu base image and install packages
 using APT, Mamba/Conda, and/or R's CRAN.

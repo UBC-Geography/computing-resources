@@ -15,14 +15,15 @@ databases.
 
 Canada-based faculty and librarians with DRA accounts can create a VMs at any
 time of the year by submitting a
-[Rapid Access Service (RAS) request](https://docs.google.com/forms/d/e/1FAIpQLSeU_BoRk5cEz3AvVLf3e9yZJq-OvcFCQ-mg7p4AWXmUkd5rTw/viewform).
+[Rapid Access Service (RAS) request](https://docs.google.com/forms/d/e/1FAIpQLSeU_BoRk5cEz3AvVLf3e9yZJq-OvcFCQ-mg7p4AWXmUkd5rTw/viewform){target="\_blank"}.
 If the RAS resource limits noted below and in more detail
-[here](https://docs.alliancecan.ca/wiki/Cloud_RAS_Allocations) are not
-sufficient, additional resources can be requested through the annual Resource
-Allocation Competition (RAC) with applications due between late September and
-early November. Upon approval, RAC resources are granted the following April.
+[here](https://docs.alliancecan.ca/wiki/Cloud_RAS_Allocations){target="\_blank"}
+are not sufficient, additional resources can be requested through the annual
+Resource Allocation Competition (RAC) with applications due between late
+September and early November. Upon approval, RAC resources are granted the
+following April.
 
-- [DRA - Cloud](https://docs.alliancecan.ca/wiki/Cloud)
+- [DRA - Cloud](https://docs.alliancecan.ca/wiki/Cloud){target="\_blank"}
 
 The DRA Cloud provides access two different types of VMs with different use
 cases in mind, which are listed below.
@@ -95,9 +96,9 @@ has begun a broker system that can enable resources to be requested from large
 commercial cloud providers like Amazon, Microsoft, and Google with additional
 support.
 
-- [UBC IT - EduCloud Server Service](https://it.ubc.ca/services/web-servers-storage/educloud-server-service)
+- [UBC IT - EduCloud Server Service](https://it.ubc.ca/services/web-servers-storage/educloud-server-service){target="\_blank"}
 
-- [UBC IT - Hybrid Cloud Service](https://it.ubc.ca/services/web-servers-storage/hybrid-cloud-service)
+- [UBC IT - Hybrid Cloud Service](https://it.ubc.ca/services/web-servers-storage/hybrid-cloud-service){target="\_blank"}
 
 ## Commercial Cloud Computing Providers
 
@@ -113,26 +114,27 @@ commercial providers.
 ### Amazon Web Services (AWS)
 
 To further support researchers in using allocated credits on AWS, UBC ARC
-provides access to [RONIN](https://ronin.cloud/), a web application that can
-simplify and increase the accessibility of clouding computing services.
+provides access to [RONIN](https://ronin.cloud/){target="\_blank"}, a web
+application that can simplify and increase the accessibility of clouding
+computing services.
 
-- [UBC ARC RONIN](https://arc.ubc.ca/cloud-computing/arc-cloud-platform-ubc-arc-ronin)
+- [UBC ARC RONIN](https://arc.ubc.ca/cloud-computing/arc-cloud-platform-ubc-arc-ronin){target="\_blank"}
 
-- _[Geospatial Data Analytics on AWS](https://go.exlibris.link/g9MMmFL8)_
+- _[Geospatial Data Analytics on AWS](https://go.exlibris.link/g9MMmFL8){target="\_blank"}_
 
-- [AWS - Geospatial ML with Amazon SageMaker](https://aws.amazon.com/sagemaker/geospatial/)
+- [AWS - Geospatial ML with Amazon SageMaker](https://aws.amazon.com/sagemaker/geospatial/){target="\_blank"}
 
 ### Microsoft Azure
 
 Azure integrates smoothly with Esri software, making it a strong option for
 research that is heavily dependent on ArcGIS.
 
-- [Azure Maps](https://azure.microsoft.com/en-us/products/azure-map)
+- [Azure Maps](https://azure.microsoft.com/en-us/products/azure-map){target="\_blank"}
 
-- [Azure - Geospatial Data Processing and Analytics](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/data/geospatial-data-processing-analytics-azure)
+- [Azure - Geospatial Data Processing and Analytics](https://learn.microsoft.com/en-us/azure/architecture/example-scenario/data/geospatial-data-processing-analytics-azure){target="\_blank"}
 
-- [Azure - End-To-End Geospatial Storage, Analysis, and Visualization](https://learn.microsoft.com/en-us/azure/orbital/geospatial-reference-architecture)
+- [Azure - End-To-End Geospatial Storage, Analysis, and Visualization](https://learn.microsoft.com/en-us/azure/orbital/geospatial-reference-architecture){target="\_blank"}
 
 ### Google Cloud Platform (GCP)
 
-- [Google Cloud - Geospatial Analytics](https://cloud.google.com/solutions/geospatial)
+- [Google Cloud - Geospatial Analytics](https://cloud.google.com/solutions/geospatial){target="\_blank"}
