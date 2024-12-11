@@ -52,8 +52,8 @@ for Mac users.
 - [UBC Library Research Commons - Understanding Map Projections](https://ubc-library-rc.github.io/map-projections/){target="\_blank"}
 
 - _ArcGIS Pro 3.x Cookbook_ :
-  [UBC Library](https://learning.oreilly.com/library/view/arcgis-pro-3-x/9781837631704/){target="\_blank"}
-  | [WorldCat](https://search.worldcat.org/title/1433677619){target="\_blank"}
+  [UBC Library](https://go.exlibris.link/DDP9g1WW){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1433677619){target="\_blank"}
 
 - _Learning ArcGIS Pro 2_ :
   [UBC Library](https://go.exlibris.link/GQq35Gf6){target="\_blank"} |

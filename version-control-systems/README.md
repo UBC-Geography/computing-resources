@@ -59,8 +59,8 @@ students within a single course or with other UBC collaborators.
 - [GitHub Documentation](https://docs.github.com/en){target="\_blank"}
 
 - _GitHub for Next-Generation Coders_ :
-  [UBC Library](https://learning.oreilly.com/library/view/github-for-next-generation/9781835463048/){target="\_blank"}
-  | [WorldCat](https://search.worldcat.org/title/1446794123){target="\_blank"}
+  [UBC Library](https://go.exlibris.link/CLVkVZyK){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1446794123){target="\_blank"}
 
 - [UBC LT - GitHub Instructor Guide](https://lthub.ubc.ca/guides/github-instructor-guide/){target="\_blank"}
 

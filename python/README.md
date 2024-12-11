@@ -44,6 +44,10 @@ basics of Python.
   [UBC Library](https://go.exlibris.link/kz6Z0BfH){target="\_blank"} |
   [WorldCat](https://search.worldcat.org/title/1409031863){target="\_blank"}
 
+- _Data Visualization in R and Python_ :
+  [UBC Library](https://learning.oreilly.com/library/view/data-visualization-in/9781394289486/){target="\_blank"}
+  | [WorldCat](https://search.worldcat.org/title/1474198974){target="\_blank"}
+
 If you are looking for a more in-depth introduction to Python,
 [UBC Extended Learning](https://extendedlearning.ubc.ca/){target="\_blank"}
 provides multiple courses that can develop confidence in the language while

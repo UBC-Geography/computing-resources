@@ -23,8 +23,8 @@ for learning the basics of JavaScript.
 - _[Eloquent JavaScript](https://eloquentjavascript.net/){target="\_blank"}_
 
 - _JavaScript Essentials for Dummies_ :
-  [UBC Library](https://learning.oreilly.com/library/view/javascript-essentials-for/9781394263219/){target="\_blank"}
-  | [WorldCat](https://search.worldcat.org/title/1428261417){target="\_blank"}
+  [UBC Library](https://go.exlibris.link/7wF76Svs){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1428261417){target="\_blank"}
 
 ## Geospatial Libraries/Packages
 
@@ -124,8 +124,8 @@ easier. Resources for a few of the most popular libraries are listed below.
 - [D3 Documentation](https://github.com/d3/d3/wiki){target="\_blank"}
 
 - _D3.js in Action_ :
-  [UBC Library](https://learning.oreilly.com/library/view/d3-js-in-action/9781633439177/){target="\_blank"}
-  | [WorldCat](https://search.worldcat.org/title/1050968610){target="\_blank"}
+  [UBC Library](https://go.exlibris.link/W5W94dQC){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1050968610){target="\_blank"}
 
 - [Observable Plot Documentation](https://observablehq.com/plot/getting-started){target="\_blank"}
 

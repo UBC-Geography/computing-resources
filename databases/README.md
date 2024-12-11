@@ -40,8 +40,8 @@ storage, DuckDB focuses on data analysis, and it includes easy installation
 methods for Python, R, and JavaScript environments.
 
 - _Getting Started with DuckDB_ :
-  [UBC Library](https://learning.oreilly.com/library/view/getting-started-with/9781803241005/){target="\_blank"}
-  | [WorldCat](https://search.worldcat.org/title/1436457021){target="\_blank"}
+  [UBC Library](https://go.exlibris.link/M0l5WQw5){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1436457021){target="\_blank"}
 
 - _DuckDB: Up and Running_ :
   [UBC Library](https://go.exlibris.link/YFbRpYc9){target="\_blank"} |

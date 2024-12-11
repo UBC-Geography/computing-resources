@@ -11,6 +11,8 @@ hardware through virtual machines (VM) of varying specifications over a long
 period of time in order to support ongoing services such as web applications and
 databases.
 
+- [DRA & UBC ARC - Introduction to the Alliance Cloud](https://youtu.be/93q79glfzz0?si=LQFxFBGP5vpDyXxV){target="\_blank"}
+
 ## Digital Research Alliance (DRA)
 
 Canada-based faculty and librarians with DRA accounts can create a VMs at any

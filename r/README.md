@@ -38,8 +38,8 @@ basics of R.
   [WorldCat](https://search.worldcat.org/title/1392138200){target="\_blank"}
 
 - _R-ticulate : A Beginner's Guide to Data Analysis for Natural Scientists_ :
-  [UBC Library](https://learning.oreilly.com/library/view/r-ticulate/9781119717997/){target="\_blank"}
-  | [WorldCat](https://search.worldcat.org/title/1445866209){target="\_blank"}
+  [UBC Library](https://go.exlibris.link/BTKFxJ9H){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1445866209){target="\_blank"}
 
 - _Statistical Analysis with R Essentials for Dummies_ :
   [UBC Library](https://go.exlibris.link/Stf1fNCy){target="\_blank"} |
@@ -52,6 +52,10 @@ basics of R.
 - _Data Science Fundamentals with R, Python, and Open Data_ :
   [UBC Library](https://go.exlibris.link/kz6Z0BfH){target="\_blank"} |
   [WorldCat](https://search.worldcat.org/title/1409031863){target="\_blank"}
+
+- _Data Visualization in R and Python_ :
+  [UBC Library](https://learning.oreilly.com/library/view/data-visualization-in/9781394289486/){target="\_blank"}
+  | [WorldCat](https://search.worldcat.org/title/1474198974){target="\_blank"}
 
 - [Quick-R](https://www.statmethods.net/){target="\_blank"}
 
