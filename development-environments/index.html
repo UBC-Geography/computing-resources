@@ -339,13 +339,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#virtual-environment-managers" id="toc-virtual-environment-managers" class="nav-link active" data-scroll-target="#virtual-environment-managers">Virtual Environment Managers</a>
+  <li><a href="#coding-playgrounds" id="toc-coding-playgrounds" class="nav-link active" data-scroll-target="#coding-playgrounds">Coding Playgrounds</a>
+  <ul class="collapse">
+  <li><a href="#jupyterhub" id="toc-jupyterhub" class="nav-link" data-scroll-target="#jupyterhub">JupyterHub</a></li>
+  <li><a href="#jupyterlite" id="toc-jupyterlite" class="nav-link" data-scroll-target="#jupyterlite">JupyterLite</a></li>
+  <li><a href="#google-earth-engine" id="toc-google-earth-engine" class="nav-link" data-scroll-target="#google-earth-engine">Google Earth Engine</a></li>
+  <li><a href="#glitch" id="toc-glitch" class="nav-link" data-scroll-target="#glitch">Glitch</a></li>
+  </ul></li>
+  <li><a href="#virtual-environment-managers" id="toc-virtual-environment-managers" class="nav-link" data-scroll-target="#virtual-environment-managers">Virtual Environment Managers</a>
   <ul class="collapse">
   <li><a href="#conda-and-mamba" id="toc-conda-and-mamba" class="nav-link" data-scroll-target="#conda-and-mamba">Conda and Mamba</a></li>
   <li><a href="#python---venv-and-virtualenv" id="toc-python---venv-and-virtualenv" class="nav-link" data-scroll-target="#python---venv-and-virtualenv">Python - venv and virtualenv</a></li>
   <li><a href="#r---renv" id="toc-r---renv" class="nav-link" data-scroll-target="#r---renv">R - renv</a></li>
   </ul></li>
-  <li><a href="#integrated-development-environments-ide" id="toc-integrated-development-environments-ide" class="nav-link" data-scroll-target="#integrated-development-environments-ide">Integrated Development Environments (IDE)</a>
+  <li><a href="#integrated-development-environments-ide-and-code-editors" id="toc-integrated-development-environments-ide-and-code-editors" class="nav-link" data-scroll-target="#integrated-development-environments-ide-and-code-editors">Integrated Development Environments (IDE) and Code Editors</a>
   <ul class="collapse">
   <li><a href="#jupyter" id="toc-jupyter" class="nav-link" data-scroll-target="#jupyter">Jupyter</a></li>
   <li><a href="#rstudio" id="toc-rstudio" class="nav-link" data-scroll-target="#rstudio">RStudio</a></li>
@@ -376,6 +383,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<p>A development environment can often encompass both a code editor or integrated development environment (IDE) and the software necessary to compile and/or run code for debugging and testing purposes. Setting up a development environment is usually an important first step when getting started with a new programming language.</p>
+<p>Most geographers rely on programming languages that are interpreted rather than compiled. Meaning they have to install software that includes a runtime environment that can run their code along with any open-source packages that their code depends on. Packager managers and virtual environment managers or tools that provide a combination of both, like <code>mamba</code>, are extremely important for easing the process of setting up a development environment and ensuring that code can be shared with reproducible results.</p>
+<section id="coding-playgrounds" class="level2">
+<h2 class="anchored" data-anchor-id="coding-playgrounds">Coding Playgrounds</h2>
+<p>Coding playgrounds are often used for instruction as well for testing code ideas on the fly. They essentially provide access to a pre-built development environment that runs a code editor or IDE in the user’s web browser while feeding code to a runtime environment that’s been installed on an isolated allotment of computing resources on a remote server.</p>
+<section id="jupyterhub" class="level3">
+<h3 class="anchored" data-anchor-id="jupyterhub">JupyterHub</h3>
+<p>The easiest way for a UBC faculty and student to access a development environment is through a JupyterHub service, like <a href="https://open.jupyter.ubc.ca/" target="_blank">UBC LT’s Open Jupyter</a> or <a href="https://ubc.syzygy.ca/" target="_blank">UBC Syzygy</a>. Both playgrounds enable users to connect to and interact with Jupyter-based computational notebooks without having to install anything on their own machines. While convenient, these services come with significant drawbacks in computing power and will not work well in cases where computations are running on large datasets.</p>
+<ul>
+<li><p><a href="https://lthub.ubc.ca/guides/jupyterhub-instructor-guide/" target="_blank">UBC LT - JupyterHub Instructor Guide</a></p></li>
+<li><p><a href="https://intro.syzygy.ca/getting-started/" target="_blank">Introduction to Syzygy - Getting Started</a></p></li>
+</ul>
+<p>Supported Programming Languages in UBC Open Jupyter:</p>
+<ul>
+<li>Python</li>
+<li>C++</li>
+<li>JavaScript / TypeScript</li>
+<li>Julia</li>
+<li>R</li>
+</ul>
+<p>UBC LT provides access to a large collection of software within their JupyterHub instance, Open Jupyter, but many core geospatial packages are not currently installed in the environment. Review <a href="https://ubc-geography.github.io/computing-resources/development-environments/jupyterhub-installing-packages.html" target="_blank">JupyterHub - Installing Packages</a> for instructions on setting up alternative Jupyter kernels and installing additional packages.</p>
+</section>
+<section id="jupyterlite" class="level3">
+<h3 class="anchored" data-anchor-id="jupyterlite">JupyterLite</h3>
+<p>As an experimental alternative to JupyterHub, JupyterLite similarly runs JupyterLab, but rather than allocate resources on a remote server, JupyterLite leverages WebAssembly (WASM) to install runtime environments and various packages directly in the user’s web browser alongside JupyterLab.</p>
+<p>UBC Geography has setup an experimental deployment of JupyterLite. This is the fastest and easiest method for accessing a local instance of JupyterLab, but it’s also the least stable and lacks many of the same features that would be included in an instance that’s either running on JupyterHub or has been installed locally via <code>pip</code> or <code>mamba</code>, so it’s best used in more limited use cases.</p>
+<ul>
+<li><a href="https://ubc-geography.github.io/jupyterlite" target="_blank">UBC Geography JupyterLite</a></li>
+</ul>
+</section>
+<section id="google-earth-engine" class="level3">
+<h3 class="anchored" data-anchor-id="google-earth-engine">Google Earth Engine</h3>
+<p>Providing a code editor, a basic JavaScript runtime environment, and access to a massive collection of remote sensing data via a well-documented API, Google Earth Engine is a highly-specialized coding playground for running complex analysis on the GEE datasets. To get started, researchers, instructors, and students will need a Google account and a noncommercial Google Cloud Project, which can be setup <a href="https://code.earthengine.google.com/register">here</a>. <a href="https://ubc-geography.github.io/computing-resources/javascript/#google-earth-engine-gee">JavaScript - GEE</a> provides resources for getting started with GEE through the code editor and API.</p>
+</section>
+<section id="glitch" class="level3">
+<h3 class="anchored" data-anchor-id="glitch">Glitch</h3>
+<p>Similar to Google Earth Engine, Glitch provides a JavaScript-based coding playground, but focuses on web development rather than remote sensing. It can provide a quick way of setting up either a static website or a very basic web application. For geographers, Glitch is particularly useful for developing <a href="https://ubc-geography.github.io/computing-resources/javascript/#web-mapping">web maps</a> and <a href="https://ubc-geography.github.io/computing-resources/xr/#webxr">WebXR</a> content. Glitch also provides a useful feature that enables users ‘remix’ each others projects by using another project as a template for new one.</p>
+<p><a href="https://help.glitch.com/hc/en-us">Glitch - Help Articles</a></p>
+<p><a href="https://glitch.com/~starter-leaflet">Glitch Example - Starter Leaflet</a></p>
+</section>
+</section>
 <section id="virtual-environment-managers" class="level2">
 <h2 class="anchored" data-anchor-id="virtual-environment-managers">Virtual Environment Managers</h2>
 <p>Virtual environments are an important tool for isolating multiple Python projects on a single machine, and their use is highly recommended when starting new projects. By isolating your projects, you can ensure that each project is only using the specific Python packages that were identified and installed for running it. This makes the project easier to reproduce while also reducing errors caused by clashing package dependencies.</p>
@@ -412,8 +460,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="integrated-development-environments-ide" class="level2">
-<h2 class="anchored" data-anchor-id="integrated-development-environments-ide">Integrated Development Environments (IDE)</h2>
+<section id="integrated-development-environments-ide-and-code-editors" class="level2">
+<h2 class="anchored" data-anchor-id="integrated-development-environments-ide-and-code-editors">Integrated Development Environments (IDE) and Code Editors</h2>
 <section id="jupyter" class="level3">
 <h3 class="anchored" data-anchor-id="jupyter">Jupyter</h3>
 <p>Project Jupyter consists of an ecosystem of open-source projects that support the creation and distribution of computational notebooks. While Jupyter supports computational notebooks with kernels from a wide range of programming languages, it specializes in Python while also providing strong support for R and Julia. Much of the Jupyter ecosystem has been written in and/or runs on Python.</p>
@@ -443,10 +491,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><p><a href="https://github.com/jupyterlab/jupyterlab-desktop#installation" target="_blank">JupyterLab Desktop - Installation</a></p></li>
 <li><p><a href="https://github.com/jupyterlab/jupyterlab-desktop/blob/master/user-guide.md" target="_blank">JupyterLab Desktop User Guide</a></p></li>
-</ul>
-<p>Finally, we’ve setup an experimental deployment of JupyterLite, which installs and runs JupyterLab exclusively within your web browser. This is the fastest and easiest method for accessing a local instance of JupyterLab, but it’s also the least stable and lacks many of the same features that would be included in an instance that’s been installed with one of the previously mentioned methods, so it’s best used for quickly testing ideas on the fly.</p>
-<ul>
-<li><a href="https://ubc-geography.github.io/jupyterlite" target="_blank">UBC Geography JupyterLite</a></li>
 </ul>
 </section>
 <section id="jupyter-kernels" class="level4">
@@ -497,14 +541,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> rm <span class="at">-rf</span> r_env_kernel</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>When you start up JupyterLab, the new R kernel should be listed in the launcher.</p>
 </section>
-</section>
-<section id="jupyterhub" class="level4">
-<h4 class="anchored" data-anchor-id="jupyterhub">JupyterHub</h4>
-<p>The easiest way to get started with creating and editing notebooks is through a JupyterHub service, like <a href="https://open.jupyter.ubc.ca/" target="_blank">UBC LT’s Open Jupyter</a> or <a href="https://ubc.syzygy.ca/" target="_blank">UBC Syzygy</a>, which enables you to connect to and interact with Jupyter servers without having to install anything on your machine. While convenient, these services come with significant drawbacks in computing power and will not work well in cases where computations are running on large datasets.</p>
-<ul>
-<li><p><a href="https://lthub.ubc.ca/guides/jupyterhub-instructor-guide/" target="_blank">UBC LT - JupyterHub Instructor Guide</a></p></li>
-<li><p><a href="https://intro.syzygy.ca/getting-started/" target="_blank">Introduction to Syzygy - Getting Started</a></p></li>
-</ul>
 </section>
 <section id="helpful-extensions" class="level4">
 <h4 class="anchored" data-anchor-id="helpful-extensions">Helpful Extensions</h4>
