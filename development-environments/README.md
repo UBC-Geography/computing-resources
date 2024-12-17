@@ -3,6 +3,100 @@ output-file: index.html
 title: Development Environments
 ---
 
+A development environment can often encompass both a code editor or integrated
+development environment (IDE) and the software necessary to compile and/or run
+code for debugging and testing purposes. Setting up a development environment is
+usually an important first step when getting started with a new programming
+language.
+
+Most geographers rely on programming languages that are interpreted rather than
+compiled. Meaning they have to install software that includes a runtime
+environment that can run their code along with any open-source packages that
+their code depends on. Packager managers and virtual environment managers or
+tools that provide a combination of both, like `mamba`, are extremely important
+for easing the process of setting up a development environment and ensuring that
+code can be shared with reproducible results.
+
+## Coding Playgrounds
+
+Coding playgrounds are often used for instruction as well for testing code ideas
+on the fly. They essentially provide access to a pre-built development
+environment that runs a code editor or IDE in the user's web browser while
+feeding code to a runtime environment that's been installed on an isolated
+allotment of computing resources on a remote server.
+
+### JupyterHub
+
+The easiest way for a UBC faculty and student to access a development
+environment is through a JupyterHub service, like
+[UBC LT's Open Jupyter](https://open.jupyter.ubc.ca/){target="\_blank"} or
+[UBC Syzygy](https://ubc.syzygy.ca/){target="\_blank"}. Both playgrounds enable
+users to connect to and interact with Jupyter-based computational notebooks
+without having to install anything on their own machines. While convenient,
+these services come with significant drawbacks in computing power and will not
+work well in cases where computations are running on large datasets.
+
+- [UBC LT - JupyterHub Instructor Guide](https://lthub.ubc.ca/guides/jupyterhub-instructor-guide/){target="\_blank"}
+
+- [Introduction to Syzygy - Getting Started](https://intro.syzygy.ca/getting-started/){target="\_blank"}
+
+Supported Programming Languages in UBC Open Jupyter:
+
+- Python
+- C++
+- JavaScript / TypeScript
+- Julia
+- R
+
+UBC LT provides access to a large collection of software within their JupyterHub
+instance, Open Jupyter, but many core geospatial packages are not currently
+installed in the environment. Review
+[JupyterHub - Installing Packages](https://ubc-geography.github.io/computing-resources/development-environments/jupyterhub-installing-packages.html){target="\_blank"}
+for instructions on setting up alternative Jupyter kernels and installing
+additional packages.
+
+### JupyterLite
+
+As an experimental alternative to JupyterHub, JupyterLite similarly runs
+JupyterLab, but rather than allocate resources on a remote server, JupyterLite
+leverages WebAssembly (WASM) to install runtime environments and various
+packages directly in the user's web browser alongside JupyterLab.
+
+UBC Geography has setup an experimental deployment of JupyterLite. This is the
+fastest and easiest method for accessing a local instance of JupyterLab, but
+it's also the least stable and lacks many of the same features that would be
+included in an instance that's either running on JupyterHub or has been
+installed locally via `pip` or `mamba`, so it's best used in more limited use
+cases.
+
+- [UBC Geography JupyterLite](https://ubc-geography.github.io/jupyterlite){target="\_blank"}
+
+### Google Earth Engine
+
+Providing a code editor, a basic JavaScript runtime environment, and access to a
+massive collection of remote sensing data via a well-documented API, Google
+Earth Engine is a highly-specialized coding playground for running complex
+analysis on the GEE datasets. To get started, researchers, instructors, and
+students will need a Google account and a noncommercial Google Cloud Project,
+which can be setup [here](https://code.earthengine.google.com/register).
+[JavaScript - GEE](https://ubc-geography.github.io/computing-resources/javascript/#google-earth-engine-gee)
+provides resources for getting started with GEE through the code editor and API.
+
+### Glitch
+
+Similar to Google Earth Engine, Glitch provides a JavaScript-based coding
+playground, but focuses on web development rather than remote sensing. It can
+provide a quick way of setting up either a static website or a very basic web
+application. For geographers, Glitch is particularly useful for developing
+[web maps](https://ubc-geography.github.io/computing-resources/javascript/#web-mapping)
+and [WebXR](https://ubc-geography.github.io/computing-resources/xr/#webxr)
+content. Glitch also provides a useful feature that enables users 'remix' each
+others projects by using another project as a template for new one.
+
+[Glitch - Help Articles](https://help.glitch.com/hc/en-us)
+
+[Glitch Example - Starter Leaflet](https://glitch.com/~starter-leaflet)
+
 ## Virtual Environment Managers
 
 Virtual environments are an important tool for isolating multiple Python
@@ -62,7 +156,7 @@ guide.
 
 - [RStudio User Guide - renv](https://docs.posit.co/ide/user/ide/guide/environments/r/renv.html){target="\_blank"}
 
-## Integrated Development Environments (IDE)
+## Integrated Development Environments (IDE) and Code Editors
 
 ### Jupyter
 
@@ -120,15 +214,6 @@ computing.
 - [JupyterLab Desktop - Installation](https://github.com/jupyterlab/jupyterlab-desktop#installation){target="\_blank"}
 
 - [JupyterLab Desktop User Guide](https://github.com/jupyterlab/jupyterlab-desktop/blob/master/user-guide.md){target="\_blank"}
-
-Finally, we've setup an experimental deployment of JupyterLite, which installs
-and runs JupyterLab exclusively within your web browser. This is the fastest and
-easiest method for accessing a local instance of JupyterLab, but it's also the
-least stable and lacks many of the same features that would be included in an
-instance that's been installed with one of the previously mentioned methods, so
-it's best used for quickly testing ideas on the fly.
-
-- [UBC Geography JupyterLite](https://ubc-geography.github.io/jupyterlite){target="\_blank"}
 
 #### Jupyter Kernels
 
@@ -260,21 +345,6 @@ $ rm -rf r_env_kernel
 ```
 
 When you start up JupyterLab, the new R kernel should be listed in the launcher.
-
-#### JupyterHub
-
-The easiest way to get started with creating and editing notebooks is through a
-JupyterHub service, like
-[UBC LT's Open Jupyter](https://open.jupyter.ubc.ca/){target="\_blank"} or
-[UBC Syzygy](https://ubc.syzygy.ca/){target="\_blank"}, which enables you to
-connect to and interact with Jupyter servers without having to install anything
-on your machine. While convenient, these services come with significant
-drawbacks in computing power and will not work well in cases where computations
-are running on large datasets.
-
-- [UBC LT - JupyterHub Instructor Guide](https://lthub.ubc.ca/guides/jupyterhub-instructor-guide/){target="\_blank"}
-
-- [Introduction to Syzygy - Getting Started](https://intro.syzygy.ca/getting-started/){target="\_blank"}
 
 #### Helpful Extensions
 
