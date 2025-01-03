@@ -72,8 +72,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-9c7cfbbf9ea33ced4c28a399e9621cc4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-f4492ed09f19cf23c0d91a1998a33647.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6c10169711920efe41f3a581cf3bf1a8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-f04443f3b32e0157bcaafdff0e4ac870.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -390,20 +390,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Coding playgrounds are often used for instruction as well for testing code ideas on the fly. They essentially provide access to a pre-built development environment that runs a code editor or IDE in the user’s web browser while feeding code to a runtime environment that’s been installed on an isolated allotment of computing resources on a remote server.</p>
 <section id="jupyterhub" class="level3">
 <h3 class="anchored" data-anchor-id="jupyterhub">JupyterHub</h3>
-<p>The easiest way for a UBC faculty and student to access a development environment is through a JupyterHub service, like <a href="https://open.jupyter.ubc.ca/" target="_blank">UBC LT’s Open Jupyter</a> or <a href="https://ubc.syzygy.ca/" target="_blank">UBC Syzygy</a>. Both playgrounds enable users to connect to and interact with Jupyter-based computational notebooks without having to install anything on their own machines. While convenient, these services come with significant drawbacks in computing power and will not work well in cases where computations are running on large datasets.</p>
+<p>The easiest way for a UBC faculty and student to access a development environment is through a JupyterHub service, like <a href="https://open.jupyter.ubc.ca/" target="_blank">UBC LT’s Open Jupyter</a> or <a href="https://ubc.syzygy.ca/" target="_blank">UBC Syzygy</a>. Both playgrounds enable users to connect to and interact with Jupyter-based computational notebooks without having to install anything on their own machines. While convenient, these services come with significant drawbacks in computing power and will not work well in cases where computations are running on large datasets. For more intensive computational work either run <a href="https://ubc-geography.github.io/computing-resources/development-environments/#jupyterlab">JupyterLab</a> on your local machine or access a <a href="https://ubc-geography.github.io/computing-resources/high-performance-computing/#jupyter" target="_blank">JupyterHub instance running on one of the Alliance’s HPC clusters</a>.</p>
+<section id="ubc-open-jupyter" class="level4">
+<h4 class="anchored" data-anchor-id="ubc-open-jupyter">UBC Open Jupyter</h4>
 <ul>
-<li><p><a href="https://lthub.ubc.ca/guides/jupyterhub-instructor-guide/" target="_blank">UBC LT - JupyterHub Instructor Guide</a></p></li>
-<li><p><a href="https://intro.syzygy.ca/getting-started/" target="_blank">Introduction to Syzygy - Getting Started</a></p></li>
+<li><a href="https://lthub.ubc.ca/guides/jupyterhub-instructor-guide/" target="_blank">UBC LT - JupyterHub Instructor Guide</a></li>
 </ul>
-<p>Supported Programming Languages in UBC Open Jupyter:</p>
+<p>Resources Per User:</p>
 <ul>
-<li>Python</li>
-<li>C++</li>
-<li>JavaScript / TypeScript</li>
-<li>Julia</li>
-<li>R</li>
+<li>1 CPU</li>
+<li>2.5 GB RAM</li>
+<li>10 GB Storage</li>
+</ul>
+<p>Supported Software:</p>
+<ul>
+<li>Python 3.11.10</li>
+<li>R 4.3.3</li>
+<li>Julia 1.11.1</li>
+<li>An assortment of pre-installed Python and R packages</li>
 </ul>
 <p>UBC LT provides access to a large collection of software within their JupyterHub instance, Open Jupyter, but many core geospatial packages are not currently installed in the environment. Review <a href="https://ubc-geography.github.io/computing-resources/development-environments/jupyterhub-installing-packages.html" target="_blank">JupyterHub - Installing Packages</a> for instructions on setting up alternative Jupyter kernels and installing additional packages.</p>
+</section>
+<section id="ubc-syzygy" class="level4">
+<h4 class="anchored" data-anchor-id="ubc-syzygy">UBC Syzygy</h4>
+<ul>
+<li><a href="https://intro.syzygy.ca/first-steps/" target="_blank">Introduction to Syzygy - First Steps</a></li>
+</ul>
+<p>Resources Per User:</p>
+<ul>
+<li>0.5 CPU</li>
+<li>2 GB RAM</li>
+<li>1 GB Storage</li>
+</ul>
+<p>Supported Software:</p>
+<ul>
+<li>Python 3.12.8</li>
+<li>R 4.4.1</li>
+<li>GDAL 3.9.1</li>
+<li>PROJ 9.4.1</li>
+<li>GEOS 3.12.1</li>
+<li>An assortment of pre-installed Python and R packages</li>
+</ul>
+</section>
 </section>
 <section id="jupyterlite" class="level3">
 <h3 class="anchored" data-anchor-id="jupyterlite">JupyterLite</h3>
