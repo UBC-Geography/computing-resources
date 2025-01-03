@@ -34,19 +34,28 @@ environment is through a JupyterHub service, like
 users to connect to and interact with Jupyter-based computational notebooks
 without having to install anything on their own machines. While convenient,
 these services come with significant drawbacks in computing power and will not
-work well in cases where computations are running on large datasets.
+work well in cases where computations are running on large datasets. For more
+intensive computational work either run
+[JupyterLab](https://ubc-geography.github.io/computing-resources/development-environments/#jupyterlab)
+on your local machine or access a
+[JupyterHub instance running on one of the Alliance's HPC clusters](https://ubc-geography.github.io/computing-resources/high-performance-computing/#jupyter){target="\_blank"}.
+
+#### UBC Open Jupyter
 
 - [UBC LT - JupyterHub Instructor Guide](https://lthub.ubc.ca/guides/jupyterhub-instructor-guide/){target="\_blank"}
 
-- [Introduction to Syzygy - Getting Started](https://intro.syzygy.ca/getting-started/){target="\_blank"}
+Resources Per User:
 
-Supported Programming Languages in UBC Open Jupyter:
+- 1 CPU
+- 2.5 GB RAM
+- 10 GB Storage
 
-- Python
-- C++
-- JavaScript / TypeScript
-- Julia
-- R
+Supported Software:
+
+- Python 3.11.10
+- R 4.3.3
+- Julia 1.11.1
+- An assortment of pre-installed Python and R packages
 
 UBC LT provides access to a large collection of software within their JupyterHub
 instance, Open Jupyter, but many core geospatial packages are not currently
@@ -54,6 +63,25 @@ installed in the environment. Review
 [JupyterHub - Installing Packages](https://ubc-geography.github.io/computing-resources/development-environments/jupyterhub-installing-packages.html){target="\_blank"}
 for instructions on setting up alternative Jupyter kernels and installing
 additional packages.
+
+#### UBC Syzygy
+
+- [Introduction to Syzygy - First Steps](https://intro.syzygy.ca/first-steps/){target="\_blank"}
+
+Resources Per User:
+
+- 0.5 CPU
+- 2 GB RAM
+- 1 GB Storage
+
+Supported Software:
+
+- Python 3.12.8
+- R 4.4.1
+- GDAL 3.9.1
+- PROJ 9.4.1
+- GEOS 3.12.1
+- An assortment of pre-installed Python and R packages
 
 ### JupyterLite
 
