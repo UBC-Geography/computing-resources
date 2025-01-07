@@ -293,8 +293,6 @@ apptainer module again in order for the kernel to run.
    $ apptainer --version
    ```
 
-````
-
 If Apptainer is not installed, you can use the following steps on Debian or
 Ubuntu
 
@@ -549,9 +547,9 @@ mpi4py, under
   - Alliance: virtualenv or venv. conda is not supported, but it can be run
     using an Apptainer container. In general, Alliance recommends avoiding
     conda-forge and Anaconda packages if possible. Go
-    [here](https://docs.alliancecan.ca/wiki/Anaconda/en){target="\_blank"} for more details. See
-    instructions below for creating and running micromamba, a lightweight,
-    drop-in replacement for conda, from an Apptainer container:
+    [here](https://docs.alliancecan.ca/wiki/Anaconda/en){target="\_blank"} for
+    more details. See instructions below for creating and running micromamba, a
+    lightweight, drop-in replacement for conda, from an Apptainer container:
 
     - Creating an Apptainer container with conda and Anaconda packages:
 
@@ -626,7 +624,8 @@ mpi4py, under
   - Alliance
 
     - Use the Slurm allocation
-      ([salloc](https://docs.alliancecan.ca/wiki/Running_jobs){target="\_blank"}) command
+      ([salloc](https://docs.alliancecan.ca/wiki/Running_jobs){target="\_blank"})
+      command
 
     - Example command for starting a single core IPython session on Alliance:
 
@@ -685,7 +684,8 @@ under
   - Alliance
 
     - Use the Slurm allocation
-      ([salloc](https://docs.alliancecan.ca/wiki/Running_jobs){target="\_blank"}) command
+      ([salloc](https://docs.alliancecan.ca/wiki/Running_jobs){target="\_blank"})
+      command
 
     - Example command for starting session:
 
@@ -770,8 +770,8 @@ clusters.
 
 To leverage HPC clusters for processing drone images or video into orthophotos,
 3D models, point clouds, or elevation models,
-[Open Drone Map (ODM)](https://docs.opendronemap.org/){target="\_blank"} will likely be your best
-option.
+[Open Drone Map (ODM)](https://docs.opendronemap.org/){target="\_blank"} will
+likely be your best option.
 
 ODM is most often distributed within a Docker container, and it can just as
 easily run within alternative container engines, like Apptainer or Podman. Prior
@@ -865,4 +865,3 @@ directory before cleaning up the scratch directory.
     Gbagir, A. G., Ek, K., & Colpaert, A. (2023). OpenDroneMap: Multi-platform
     performance analysis. _Geographies_, 3(3), 446-458.
     <https://doi.org/10.3390/geographies3030023>{target="\_blank"}
-````
