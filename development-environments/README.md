@@ -31,11 +31,11 @@ The easiest way for a UBC faculty and student to access a development
 environment is through a JupyterHub service, like
 [UBC LT's Open Jupyter](https://open.jupyter.ubc.ca/){target="\_blank"} or
 [UBC Syzygy](https://ubc.syzygy.ca/){target="\_blank"}. Both playgrounds enable
-users to connect to and interact with Jupyter-based computational notebooks
-without having to install anything on their own machines. While convenient,
-these services come with significant drawbacks in computing power and will not
-work well in cases where computations are running on large datasets. For more
-intensive computational work either run
+users to connect to and interact with Jupyter Notebooks without having to
+install anything on their own machines. While convenient, these services come
+with significant drawbacks in computing power and will not work well in cases
+where computations are running on large datasets. For more intensive
+computational work either run
 [JupyterLab](https://ubc-geography.github.io/computing-resources/development-environments/#jupyterlab)
 on your local machine or access a
 [JupyterHub instance running on one of the Alliance's HPC clusters](https://ubc-geography.github.io/computing-resources/high-performance-computing/#jupyter){target="\_blank"}.
@@ -134,6 +134,11 @@ only using the specific Python packages that were identified and installed for
 running it. This makes the project easier to reproduce while also reducing
 errors caused by clashing package dependencies.
 
+For a very helpful introduction to virtual environments, check out the
+[Environments Tutorial](https://eoas-ubc.github.io/tut-conda_environs.html){target="\_blank"}
+from the
+[Opensource Computing for Earth Science Education (OCESE) Project](https://eoas-ubc.github.io/index.html){target="\_blank"}.
+
 - UBC ARC - Virtual Environment 2023 - Videos:
   [Part 1 (virtualenv)](https://youtu.be/fdMNwQu8MKU?si=Fu_JogcK_SxEsBiC){target="\_blank"}
   &
@@ -194,15 +199,21 @@ computational notebooks with kernels from a wide range of programming languages,
 it specializes in Python while also providing strong support for R and Julia.
 Much of the Jupyter ecosystem has been written in and/or runs on Python.
 
-- [Jupyter Tutorial](https://jupyter-tutorial.readthedocs.io/en/latest/index.html){target="\_blank"}
+For those just getting started with Jupyter, UBC's COMET Project has developed a
+great
+[tutorial](https://comet.arts.ubc.ca/docs/1_Getting_Started/getting_started_intro_to_jupyter/getting_started_intro_to_jupyter.html){target="\_blank"}
+on creating and editing computational notebooks through JupyterLab.
+
+For an in-depth walkthrough of the entire Project Jupyter ecosystem, review the
+[Jupyter Tutorial](https://jupyter-tutorial.readthedocs.io/en/latest/index.html){target="\_blank"}.
 
 #### Jupyter Notebooks
 
 The term Jupyter Notebooks is used interchangeably to refer to the Jupyter
-Notebook file format and the user interface that has most commonly been to used
-to author and edit them. In recent years, the Project Jupyter team has slowly
-encouraged users to migrate from the classic Jupyter Notebook interface to
-JupyterLab, its more feature-rich successor.
+Notebook file format for computational notebooks and the user interface that has
+most commonly been to used to author and edit them. In recent years, the Project
+Jupyter team has slowly encouraged users to migrate from the classic Jupyter
+Notebook interface to JupyterLab, its more feature-rich successor.
 
 - [Jupyter Notebook (File) Format Documentation](https://nbformat.readthedocs.io/en/latest/index.html){target="\_blank"}
 

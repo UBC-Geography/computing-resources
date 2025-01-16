@@ -21,6 +21,8 @@ The following resources will provide general introductions to R and its
 applications within data science, so any of them can be useful for learning the
 basics of R.
 
+- [UBC COMET Project - Introduction to R](https://comet.arts.ubc.ca/docs/1_Getting_Started/getting_started_intro_to_r/getting_started_intro_to_r.html){target="\_blank"}
+
 - [Software Carpentry - Programming with R](https://swcarpentry.github.io/r-novice-inflammation/){target="\_blank"}
 
 - [Software Carpentry - R for Reproducible Scientific Analysis](https://swcarpentry.github.io/r-novice-gapminder/){target="\_blank"}

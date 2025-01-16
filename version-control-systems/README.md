@@ -10,6 +10,8 @@ helpful when collaborating with other researchers or developers as it enables
 changes to be tracked coherently and new code to be explored separately from a
 stable, main codebase.
 
+- [Opensource Computing for Earth Science Education (OCESE) Project - Introduction to Version Control and Git](https://eoas-ubc.github.io/tut-git-intro.html){target="\_blank"}
+
 - [The Turing Way - Version Control](https://the-turing-way.netlify.app/reproducible-research/vcs){target="\_blank"}
 
 ## Code

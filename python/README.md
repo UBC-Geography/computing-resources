@@ -20,6 +20,8 @@ The following resources will provide general introductions to Python and its
 applications within data science, so any of them can be useful for learning the
 basics of Python.
 
+- [Opensource Computing for Earth Science Education (OCESE) Project - Getting Started with Python and Jupyter](https://eoas-ubc.github.io/python-startup.html){target="\_blank"}
+
 - [Software Carpentry - Programming with Python](https://swcarpentry.github.io/python-novice-inflammation/){target="\_blank"}
 
 - [Software Carpentry - Plotting and Programming in Python](https://swcarpentry.github.io/python-novice-gapminder/){target="\_blank"}
@@ -136,6 +138,8 @@ Python code or Jupyter Notebooks, which can be hosted on sparsely-resourced
 servers and shared as web applications. You can find information about some of
 the most popular libraries at
 [PyViz - Dashboarding tools](https://pyviz.org/dashboarding/){target="\_blank"}.
+
+- [Opensource Computing for Earth Science Education (OCESE) Project - Developing Dashboards](https://eoas-ubc.github.io/dashboards-howto.html){target="\_blank"}
 
 Resources for developing interactive maps via a dashboarding library are listed
 below:

@@ -8,7 +8,15 @@ working within an HPC environment. It can also be extraordinarily helpful when
 setting up development environments, running scripts in Python or R, or using
 containers and command line tools.
 
-If you are looking to install Bash, you can find a helpful walkthrough
+Via their
+[Opensource Computing for Earth Science Education (OCESE) Project](https://eoas-ubc.github.io/index.html){target="\_blank"},
+UBC's Department of Earth, Ocean and Atmospheric Science has compiled an
+excellent and concise tutorial for both Bash and its Windows equivalent,
+Powershell, on the
+[Command Line & Shells page](https://eoas-ubc.github.io/tut-commandline.html){target="\_blank"}.
+
+If you are a Windows user looking to install Bash, you can find a helpful
+walkthrough
 [here](https://ubc-library-rc.github.io/intro-git/#pre-workshop-setup){target="\_blank"}.
 
 UBC Library Research Commons frequently runs introductory workshops on Bash,
