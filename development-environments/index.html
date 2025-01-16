@@ -390,7 +390,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Coding playgrounds are often used for instruction as well for testing code ideas on the fly. They essentially provide access to a pre-built development environment that runs a code editor or IDE in the user’s web browser while feeding code to a runtime environment that’s been installed on an isolated allotment of computing resources on a remote server.</p>
 <section id="jupyterhub" class="level3">
 <h3 class="anchored" data-anchor-id="jupyterhub">JupyterHub</h3>
-<p>The easiest way for a UBC faculty and student to access a development environment is through a JupyterHub service, like <a href="https://open.jupyter.ubc.ca/" target="_blank">UBC LT’s Open Jupyter</a> or <a href="https://ubc.syzygy.ca/" target="_blank">UBC Syzygy</a>. Both playgrounds enable users to connect to and interact with Jupyter-based computational notebooks without having to install anything on their own machines. While convenient, these services come with significant drawbacks in computing power and will not work well in cases where computations are running on large datasets. For more intensive computational work either run <a href="https://ubc-geography.github.io/computing-resources/development-environments/#jupyterlab">JupyterLab</a> on your local machine or access a <a href="https://ubc-geography.github.io/computing-resources/high-performance-computing/#jupyter" target="_blank">JupyterHub instance running on one of the Alliance’s HPC clusters</a>.</p>
+<p>The easiest way for a UBC faculty and student to access a development environment is through a JupyterHub service, like <a href="https://open.jupyter.ubc.ca/" target="_blank">UBC LT’s Open Jupyter</a> or <a href="https://ubc.syzygy.ca/" target="_blank">UBC Syzygy</a>. Both playgrounds enable users to connect to and interact with Jupyter Notebooks without having to install anything on their own machines. While convenient, these services come with significant drawbacks in computing power and will not work well in cases where computations are running on large datasets. For more intensive computational work either run <a href="https://ubc-geography.github.io/computing-resources/development-environments/#jupyterlab">JupyterLab</a> on your local machine or access a <a href="https://ubc-geography.github.io/computing-resources/high-performance-computing/#jupyter" target="_blank">JupyterHub instance running on one of the Alliance’s HPC clusters</a>.</p>
 <section id="ubc-open-jupyter" class="level4">
 <h4 class="anchored" data-anchor-id="ubc-open-jupyter">UBC Open Jupyter</h4>
 <ul>
@@ -455,6 +455,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="virtual-environment-managers" class="level2">
 <h2 class="anchored" data-anchor-id="virtual-environment-managers">Virtual Environment Managers</h2>
 <p>Virtual environments are an important tool for isolating multiple Python projects on a single machine, and their use is highly recommended when starting new projects. By isolating your projects, you can ensure that each project is only using the specific Python packages that were identified and installed for running it. This makes the project easier to reproduce while also reducing errors caused by clashing package dependencies.</p>
+<p>For a very helpful introduction to virtual environments, check out the <a href="https://eoas-ubc.github.io/tut-conda_environs.html" target="_blank">Environments Tutorial</a> from the <a href="https://eoas-ubc.github.io/index.html" target="_blank">Opensource Computing for Earth Science Education (OCESE) Project</a>.</p>
 <ul>
 <li><p>UBC ARC - Virtual Environment 2023 - Videos: <a href="https://youtu.be/fdMNwQu8MKU?si=Fu_JogcK_SxEsBiC" target="_blank">Part 1 (virtualenv)</a> &amp; <a href="https://youtu.be/BrZ_5rP4b0g?si=GkDWSa9CG5z1uqYx" target="_blank">Part 2 (conda)</a></p></li>
 <li><p><a href="https://UBC-Geography.github.io/development-environments/conda-getting-started" target="_blank">Getting Started with Conda, Virtual Environments, and Python</a></p></li>
@@ -493,12 +494,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="jupyter" class="level3">
 <h3 class="anchored" data-anchor-id="jupyter">Jupyter</h3>
 <p>Project Jupyter consists of an ecosystem of open-source projects that support the creation and distribution of computational notebooks. While Jupyter supports computational notebooks with kernels from a wide range of programming languages, it specializes in Python while also providing strong support for R and Julia. Much of the Jupyter ecosystem has been written in and/or runs on Python.</p>
-<ul>
-<li><a href="https://jupyter-tutorial.readthedocs.io/en/latest/index.html" target="_blank">Jupyter Tutorial</a></li>
-</ul>
+<p>For those just getting started with Jupyter, UBC’s COMET Project has developed a great <a href="https://comet.arts.ubc.ca/docs/1_Getting_Started/getting_started_intro_to_jupyter/getting_started_intro_to_jupyter.html" target="_blank">tutorial</a> on creating and editing computational notebooks through JupyterLab.</p>
+<p>For an in-depth walkthrough of the entire Project Jupyter ecosystem, review the <a href="https://jupyter-tutorial.readthedocs.io/en/latest/index.html" target="_blank">Jupyter Tutorial</a>.</p>
 <section id="jupyter-notebooks" class="level4">
 <h4 class="anchored" data-anchor-id="jupyter-notebooks">Jupyter Notebooks</h4>
-<p>The term Jupyter Notebooks is used interchangeably to refer to the Jupyter Notebook file format and the user interface that has most commonly been to used to author and edit them. In recent years, the Project Jupyter team has slowly encouraged users to migrate from the classic Jupyter Notebook interface to JupyterLab, its more feature-rich successor.</p>
+<p>The term Jupyter Notebooks is used interchangeably to refer to the Jupyter Notebook file format for computational notebooks and the user interface that has most commonly been to used to author and edit them. In recent years, the Project Jupyter team has slowly encouraged users to migrate from the classic Jupyter Notebook interface to JupyterLab, its more feature-rich successor.</p>
 <ul>
 <li><p><a href="https://nbformat.readthedocs.io/en/latest/index.html" target="_blank">Jupyter Notebook (File) Format Documentation</a></p></li>
 <li><p><a href="https://jupyter-notebook.readthedocs.io/en/latest/index.html" target="_blank">Jupyter Notebook (User Interface) Documentation</a></p></li>
