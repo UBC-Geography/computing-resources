@@ -78,6 +78,27 @@ UBC Library Research Commons frequently provides workshops on web mapping using
 some of the tools listed below. You can find upcoming workshops
 [here](https://libcal.library.ubc.ca/calendar/?t=g&q=web%20map&cid=-1&cal=-1&ct=33914,34011&inc=0){target="\_blank"}.
 
+All web maps include at least one basemap, which helps contextualize the
+geospatial data layered on top of it. While
+[other web mapping tools](https://ubc-geography.github.io/computing-resources/gis-software/#web-mapping){target="\_blank"}
+often provide a set of basemaps for the user to from, when setting up a web map
+using JavaScript, you'll need to identify and load a basemap from a basemap
+provider's map tile server. One of the most popular providers is OpenStreetMap,
+which provides a freely accessible map tile server with a very lenient
+[Tile Usage Policy](https://operations.osmfoundation.org/policies/tiles/){target="\_blank"}.
+Alternatively basemaps can be self-hosted using software, like
+[OpenFreeMap](https://github.com/hyperknot/openfreemap){target="\_blank"} on an
+[Alliance Cloud VM](https://ubc-geography.github.io/computing-resources/cloud-computing/#digital-research-alliance-dra){target="\_blank"},
+or through file formats like
+[PMTiles](https://github.com/protomaps/PMTiles){target="\_blank"} on the
+Alliance's
+[Arbutus Object Storage](https://ubc-geography.github.io/computing-resources/cloud-computing/object-storage.html){target="\_blank"}.
+
+When selecting a basemap, it's important to compare whether your tiles should be
+built using raster or vector data. Maptiler provides a great
+[overview of the differences between raster and vector map tiles](https://documentation.maptiler.com/hc/en-us/articles/4411234458385-Raster-vs-Vector-Map-Tiles-What-is-the-Difference-Between-the-Two-Data-Types){target="\_blank"}
+within the context of web mapping.
+
 #### Leaflet
 
 The smallest and most popular of the four major JavaScript web mapping
@@ -85,6 +106,17 @@ libraries, Leaflet lacks some of the functionalities of comparable libraries,
 but provides the best options for quickly rendering small to medium datasets.
 For additional functionality, Leaflet can be extended using a wide array of
 [plugins](https://leafletjs.com/plugins.html){target="\_blank"}.
+
+::: {.callout-note}
+
+While either raster tiles or PMTiles can work extraordinarily well as Leaflet
+basemaps, vector tiles that rely on the Mapbox Vector Tile specification are
+currently only supported in Leaflet by loading MapLibre GL, an alternative web
+map library as listed below, and another package that binds them. If you plan on
+using Mapbox Vector Tiles for your basemap, it may be more efficient to rely on
+either OpenLayers with the `ol-mapbox-style` plugin or MapLibre GL.
+
+:::
 
 - [UBC Library Research Commons - Web Mapping with LeafletJS](https://ubc-library-rc.github.io/gis-intro-leaflet/){target="\_blank"}
 
