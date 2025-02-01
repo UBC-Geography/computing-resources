@@ -96,6 +96,8 @@ website:
             text: Overview
           - href: "cloud-computing/object-storage.html"
             text: Object Storage
+          - href: "cloud-computing/deploying-a-dashboard.html"
+            text: Deploying a Dashboard
       - href: "containers/index.html"
         text: Containers
       - href: "xr/index.html"
