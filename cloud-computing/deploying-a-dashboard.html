@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Python – UBC Geography Computing Resources</title>
+<title>Deploying a Dashboard – UBC Geography Computing Resources</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -76,10 +110,10 @@ ul.task-list li input[type="checkbox"] {
 <meta property="og:site_name" content="UBC Geography Computing Resources">
 <meta property="og:image:alt" content="UBC Geography logo">
 <meta property="og:locale" content="en_US">
-<link rel="canonical" href="https://ubc-geography.github.io/computing-resources/python/index.html">
+<link rel="canonical" href="https://ubc-geography.github.io/computing-resources/cloud-computing/deploying-a-dashboard.html">
 </head>
 
-<body class="floating">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -88,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../python/index.html">Python</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cloud-computing/index.html">Cloud Computing</a></li><li class="breadcrumb-item"><a href="../cloud-computing/deploying-a-dashboard.html">Deploying a Dashboard</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -203,7 +237,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../python/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../python/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Python</span></a>
   </div>
 </li>
@@ -262,13 +296,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Cloud Computing</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cloud-computing/index.html" class="sidebar-item-text sidebar-link">
@@ -283,7 +317,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../cloud-computing/deploying-a-dashboard.html" class="sidebar-item-text sidebar-link">
+  <a href="../cloud-computing/deploying-a-dashboard.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Deploying a Dashboard</span></a>
   </div>
 </li>
@@ -306,34 +340,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#geospatial-books" id="toc-geospatial-books" class="nav-link active" data-scroll-target="#geospatial-books">Geospatial Books</a>
-  <ul class="collapse">
-  <li><a href="#extending-gis-software" id="toc-extending-gis-software" class="nav-link" data-scroll-target="#extending-gis-software">Extending GIS Software</a></li>
-  </ul></li>
-  <li><a href="#geospatial-librariespackages" id="toc-geospatial-librariespackages" class="nav-link" data-scroll-target="#geospatial-librariespackages">Geospatial Libraries/Packages</a></li>
-  <li><a href="#interactive-visualizations-and-dashboards" id="toc-interactive-visualizations-and-dashboards" class="nav-link" data-scroll-target="#interactive-visualizations-and-dashboards">Interactive Visualizations and Dashboards</a></li>
-  <li><a href="#increasing-performance" id="toc-increasing-performance" class="nav-link" data-scroll-target="#increasing-performance">Increasing Performance</a></li>
-  <li><a href="#code-quality-tools" id="toc-code-quality-tools" class="nav-link" data-scroll-target="#code-quality-tools">Code Quality Tools</a>
-  <ul class="collapse">
-  <li><a href="#formatting" id="toc-formatting" class="nav-link" data-scroll-target="#formatting">Formatting</a></li>
-  <li><a href="#linting" id="toc-linting" class="nav-link" data-scroll-target="#linting">Linting</a></li>
-  <li><a href="#type-checking" id="toc-type-checking" class="nav-link" data-scroll-target="#type-checking">Type Checking</a></li>
-  <li><a href="#testing-framework" id="toc-testing-framework" class="nav-link" data-scroll-target="#testing-framework">Testing Framework</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/python/README.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cloud-computing/index.html">Cloud Computing</a></li><li class="breadcrumb-item"><a href="../cloud-computing/deploying-a-dashboard.html">Deploying a Dashboard</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Python</h1>
+<h1 class="title">Deploying a Dashboard</h1>
 </div>
 
 
@@ -350,119 +365,69 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Python is one of the most popular programming languages in the world. Its low learning curve paired with a massive ecosystem has made it a powerful tool for geospatial computing. GIS software like QGIS and ArcGIS, provide the ability to extend their functionality through Python, while many programming libraries that have been created to efficiently perform geospatial computing tasks have been either written in Python, released as Python packages, and/or include application programming interfaces (APIs) that coherently communicate with Python code.</p>
-<p>If you need recommendations for installing and getting started with Python on your local machine, see <a href="https://ubc-geography.github.io/computing-resources/development-environments/conda-getting-started.html" target="_blank">Getting Started with Conda, Virtual Environments, and Python</a>.</p>
-<p>The following resources will provide general introductions to Python and its applications within data science, so any of them can be useful for learning the basics of Python.</p>
+<p>This page provides a tutorial on how to deploy an interactive dashboard to an Alliance Cloud virtual machine (VM) using a Jupyter notebook and the Jupyter project, Voilà.</p>
+<p>Adapted from the <a href="https://voila.readthedocs.io/en/stable/deploy.html#running-voila-on-a-private-server">Voilà Deployment Guide</a> with some opinions.</p>
+<p>Requirements:</p>
 <ul>
-<li><p><a href="https://eoas-ubc.github.io/python-startup.html" target="_blank">Opensource Computing for Earth Science Education (OCESE) Project - Getting Started with Python and Jupyter</a></p></li>
-<li><p><a href="https://swcarpentry.github.io/python-novice-inflammation/" target="_blank">Software Carpentry - Programming with Python</a></p></li>
-<li><p><a href="https://swcarpentry.github.io/python-novice-gapminder/" target="_blank">Software Carpentry - Plotting and Programming in Python</a></p></li>
-<li><p><em>Python Crash Course</em> : <a href="https://go.exlibris.link/XmblT6hZ" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1346554335" target="_blank">WorldCat</a></p></li>
-<li><p><em>Python All-in-One for Dummies</em> : <a href="https://go.exlibris.link/fCvpqT4V" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1425790830" target="_blank">WorldCat</a></p></li>
-<li><p><em>Modern Python Cookbook</em> : <a href="https://go.exlibris.link/MTHqzhWG" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1451040599" target="_blank">WorldCat</a></p></li>
-<li><p><em>Python Tools for Scientists</em> : <a href="https://go.exlibris.link/7MxPJqXz" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1347226857" target="_blank">WorldCat</a></p></li>
-<li><p><em>Data Science Fundamentals with R, Python, and Open Data</em> : <a href="https://go.exlibris.link/kz6Z0BfH" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1409031863" target="_blank">WorldCat</a></p></li>
-<li><p><em>Data Visualization in R and Python</em> : <a href="https://learning.oreilly.com/library/view/data-visualization-in/9781394289486/" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1474198974" target="_blank">WorldCat</a></p></li>
+<li>An interactive Jupyter notebook</li>
+<li>Status as faculty or a librarian with an institution that holds eligibility for CFI grants</li>
+<li>Working knowledge of UNIX/Linux</li>
+<li>Domain name</li>
 </ul>
-<p>If you are looking for a more in-depth introduction to Python, <a href="https://extendedlearning.ubc.ca/" target="_blank">UBC Extended Learning</a> provides multiple courses that can develop confidence in the language while learning best practices for development and maintenance.</p>
-<section id="geospatial-books" class="level2">
-<h2 class="anchored" data-anchor-id="geospatial-books">Geospatial Books</h2>
+<ol type="1">
+<li><p>Canada-based faculty can access cloud computing resources through the Alliance Cloud. The best-suited resource for interactive dashboards is a <a href="https://ubc-geography.github.io/computing-resources/cloud-computing/#persistent-instances">persistent virtual machine</a>, which acts as a virtual private server. <a href="https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account">Create an account</a> with Alliance (if you haven’t already done so) and submit a <a href="https://docs.google.com/forms/d/e/1FAIpQLSeU_BoRk5cEz3AvVLf3e9yZJq-OvcFCQ-mg7p4AWXmUkd5rTw/viewform">Rapid Access Service request (RAS)</a> with the number of resources that you anticipate using. The following resource recommendations should accommodate a very simple dashboard, but you should request more if your dashboard will be running resource-intensive computations on large datasets.</p>
 <ul>
-<li><p><a href="https://carpentries-incubator.github.io/geospatial-python/" target="_blank">Carpentries Incubator - Introduction to Geospatial Raster and Vector Data with Python</a></p></li>
-<li><p><em><a href="https://geographicdata.science/book/intro.html" target="_blank">Geographic Data Science with Python</a></em></p></li>
-<li><p><em><a href="https://pythongis.org/" target="_blank">Python for Geographic Data Analysis</a></em></p></li>
-<li><p><a href="https://projectpythia.org/" target="_blank">Project Pythia</a></p></li>
-<li><p><em>Learning Geospatial Analysis with Python</em> : <a href="https://go.exlibris.link/JbW0Xp9n" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1412008153" target="_blank">WorldCat</a></p></li>
-<li><p><em>Earth Observation Using Python</em> : <a href="https://go.exlibris.link/P8XnGQ1L" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1240265984" target="_blank">WorldCat</a></p></li>
-<li><p><em>GIS Algorithms</em> : <a href="https://go.exlibris.link/88SQHd9H" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/960087192" target="_blank">WorldCat</a></p></li>
-<li><p><em>Python for Geospatial Data Analysis</em> : <a href="https://go.exlibris.link/LtW84CTr" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1348493378" target="_blank">WorldCat</a></p></li>
-<li><p><em><a href="https://py.geocompx.org/" target="_blank">Geocomputation with Python</a></em></p></li>
-<li><p><em>Applied Geospatial Data Science with Python</em> : <a href="https://go.exlibris.link/6dc1QZpC" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1369508190" target="_blank">WorldCat</a></p></li>
-<li><p><em>Mastering Geospatial Analysis with Python</em> : <a href="https://go.exlibris.link/xvlQ7PxR" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1038802233" target="_blank">WorldCat</a></p></li>
-<li><p><em>Machine Learning on Geographical Data Using Python</em> : <a href="https://go.exlibris.link/BVwZzHLb" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1336986830" target="_blank">WorldCat</a></p></li>
-</ul>
-<section id="extending-gis-software" class="level3">
-<h3 class="anchored" data-anchor-id="extending-gis-software">Extending GIS Software</h3>
-<ul>
-<li><p><em>A Geographer’s Guide to Computing Fundamentals: Python in ArcGIS Pro</em> : <a href="https://go.exlibris.link/ldtg8mDF" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1349563332" target="_blank">WorldCat</a></p></li>
-<li><p><em>Python for ArcGIS Pro</em> : <a href="https://go.exlibris.link/M4qHpt5M" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1313386247" target="_blank">WorldCat</a></p></li>
-<li><p><em>Advanced Python Scripting for ArcGIS Pro</em> : <a href="https://go.exlibris.link/BdWmpYFT" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1194955062" target="_blank">WorldCat</a></p></li>
-<li><p><em>Mastering Geospatial Development with QGIS 3</em> : <a href="https://go.exlibris.link/gsFBlwzR" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1091368567" target="_blank">WorldCat</a></p></li>
-<li><p><em>QGIS Python Programming Cookbook</em> : <a href="https://go.exlibris.link/M6kWzbVK" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/983204812" target="_blank">WorldCat</a></p></li>
-</ul>
-</section>
-</section>
-<section id="geospatial-librariespackages" class="level2">
-<h2 class="anchored" data-anchor-id="geospatial-librariespackages">Geospatial Libraries/Packages</h2>
-<p>A relatively comprehensive list of packages can be found in the Python section of <a href="https://github.com/sacridini/Awesome-Geospatial#python" target="_blank">Awesome Geospatial</a>.</p>
-<p>Many of the packages included in that list provide powerful, easy-to-use functionalities around GDAL. If you need to write code that directly interacts with GDAL, Python bindings are provided, which can be explored through the <a href="https://gdal.org/api/python_bindings.html" target="_blank">GDAL documentation</a>.</p>
-<p>You may also find some other helpful packages listed in <a href="https://www.python4data.science/en/latest/data-processing/geodata.html" target="_blank">Python for Data Science - Geodata</a>.</p>
-</section>
-<section id="interactive-visualizations-and-dashboards" class="level2">
-<h2 class="anchored" data-anchor-id="interactive-visualizations-and-dashboards">Interactive Visualizations and Dashboards</h2>
-<p>Dashboard libraries enable you to create interactive visualizations from either Python code or Jupyter Notebooks, which can be hosted on sparsely-resourced servers and shared as web applications. You can find information about some of the most popular libraries at <a href="https://pyviz.org/dashboarding/" target="_blank">PyViz - Dashboarding tools</a>.</p>
-<ul>
-<li><a href="https://eoas-ubc.github.io/dashboards-howto.html" target="_blank">Opensource Computing for Earth Science Education (OCESE) Project - Developing Dashboards</a></li>
-</ul>
-<p>Resources for developing interactive maps via a dashboarding library are listed below:</p>
-<ul>
-<li><p><a href="https://ipyleaflet.readthedocs.io/en/latest/index.html" target="_blank">Voilà &amp; Voici - ipyleaflet</a></p></li>
-<li><p><a href="https://shiny.posit.co/py/components/outputs/map-ipyleaflet/index.html" target="_blank">Shiny for Python - ipyleaflet</a></p></li>
-<li><p><a href="https://docs.kanaries.net/topics/Streamlit/streamlit-map" target="_blank">Displaying Interactive Maps in Streamlit</a></p></li>
-<li><p><a href="https://plotly.com/python/maps/" target="_blank">Dash - Plotly Maps</a></p></li>
-<li><p><a href="https://panel.holoviz.org/gallery/windturbines.html" target="_blank">Panel - Windturbine example</a> &amp; <a href="https://hvplot.holoviz.org/user_guide/Geographic_Data.html" target="_blank">hvPlot - Geographic data</a></p></li>
-</ul>
-<p>Alternatively, libraries like <a href="https://voici.readthedocs.io/en/latest/" target="_blank">Voici</a> can similarly convert notebooks to interactive applications, but rather than running the Python code on a server, Voici shifts computation off of the server and into a user’s web browser using WebAssembly (WASM) and a static webpage. This makes hosting the application virtually free via services like GitHub Pages while also making it easier to manage and preserve. The crucial downside to note is that user’s with poor internet connections and/or limited hardware will struggle to run the applications, especially those that include large datasets and long, resource-intensive computations.</p>
-</section>
-<section id="increasing-performance" class="level2">
-<h2 class="anchored" data-anchor-id="increasing-performance">Increasing Performance</h2>
-<p>Compared to other languages, Python isn’t considered particularly fast due to its focus on ease and speed of development over performance. For many geography-based researchers, development workflows first focus on developing code that performs accurate analysis and then later improving the code as needed to ensure the analysis runs as efficiently as possible in both local and HTC environments before finally adapting code to work in an HPC environment if needed.</p>
-<ul>
-<li><p><a href="https://carpentries-incubator.github.io/lesson-parallel-python/" target="_blank">Carpentries Incubator - Parallel Programming in Python</a></p></li>
-<li><p><a href="https://youtu.be/uGy5gT2vLdI" target="_blank">Working with the Python Dask library</a></p></li>
-<li><p><a href="https://dask-geopandas.readthedocs.io/en/stable/index.html#" target="_blank">GeoPandas-Dask Documentation</a></p></li>
-<li><p><em>High Performance Python</em> : <a href="https://go.exlibris.link/dkXkNWFq" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1153835314" target="_blank">WorldCat</a></p></li>
-<li><p><em>Fast Python</em> : <a href="https://go.exlibris.link/GpWGg2qJ" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1383660035" target="_blank">WorldCat</a></p></li>
-<li><p><em>Advanced Python Programming</em> : <a href="https://go.exlibris.link/C1DNnRh4" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1306240707" target="_blank">WorldCat</a></p></li>
-<li><p><a href="https://mpi4py.readthedocs.io/en/stable/index.html" target="_blank">MPI for Python Documentation</a></p></li>
-<li><p><a href="https://docs.alliancecan.ca/wiki/MPI4py/en" target="_blank">Alliance Documentation - MPI for Python</a></p></li>
-</ul>
-</section>
-<section id="code-quality-tools" class="level2">
-<h2 class="anchored" data-anchor-id="code-quality-tools">Code Quality Tools</h2>
-<p>Each of the tools listed below can be easily integrated with most development environments and set up to run automatically. When working with Jupyter Notebooks, we strongly encourage you to install <a href="https://nbqa.readthedocs.io/en/latest/index.html" target="_blank">nbqa</a> alongside these tools in order to ensure code quality within your notebooks.</p>
-<section id="formatting" class="level3">
-<h3 class="anchored" data-anchor-id="formatting">Formatting</h3>
-<p>Sometimes writing code can get a bit messy. Formatters, like black, can automatically reformat your code to make it cleaner and easier to read while following a set of standards and best practices.</p>
-<ul>
-<li><a href="https://black.readthedocs.io/en/stable/" target="_blank">black Documentation</a></li>
-</ul>
-</section>
-<section id="linting" class="level3">
-<h3 class="anchored" data-anchor-id="linting">Linting</h3>
-<p>Using a static analysis tool, or linter, is a common best practice among programmers that helps in identifying and fixings mistakes when writing code by ensuring that you follow the correct syntax and a guiding set of best practices.</p>
-<ul>
-<li><p><a href="https://flake8.pycqa.org/en/latest/" target="_blank">flake8 Documentation</a></p></li>
-<li><p><a href="https://docs.astral.sh/ruff/" target="_blank">ruff Documentation</a></p></li>
-</ul>
-</section>
-<section id="type-checking" class="level3">
-<h3 class="anchored" data-anchor-id="type-checking">Type Checking</h3>
-<p>While Python is inherently a dynamically typed language, meaning you the programmer don’t have to worry about the data types of each variable, static types can be helpful for reducing bugs when writing complex scripts or programs. Mypy enables programmers to annotate types into their code and returns a helpful error when those types aren’t explicitly followed.</p>
-<ul>
-<li><a href="https://mypy.readthedocs.io/en/stable/" target="_blank">mypy Documentation</a></li>
-</ul>
-</section>
-<section id="testing-framework" class="level3">
-<h3 class="anchored" data-anchor-id="testing-framework">Testing Framework</h3>
-<p>Similar to type checking, unit testing can be a helpful tool when writing large and complex scripts or programs. Testing frameworks, like pytest, which is included in Python’s standard library, enable you to define tests that can run over your functions and ensure they are following expected behavior in a range of practical scenarios.</p>
-<ul>
-<li><a href="https://docs.pytest.org/en/7.3.x/" target="_blank">pytest Documentation</a></li>
-</ul>
+<li>vCPU: 1</li>
+<li>Instances: 1</li>
+<li>Volumes: 1</li>
+<li>Volume snapshots: 0</li>
+<li>RAM: 1.5</li>
+<li>Floating IPs: 1</li>
+<li>Persistent storage: 20</li>
+<li>Object storage: 0</li>
+<li>Shared filesystem storage: 0</li>
+</ul></li>
+<li><p>Once your request has been approved, the Alliance Cloud team will provide you with access to an OpenStack dashboard, where you’ll be able to manage your allocated cloud resources. Follow the Alliance’s <a href="https://docs.alliancecan.ca/wiki/Cloud_Quick_Start">Cloud Quick Start</a> guide to set up an SSH key pair (if you haven’t already generated one) and launch a persistent virtual machine. We recommend using the Debian image as your boot source. You should also review <a href="https://docs.alliancecan.ca/wiki/Security_considerations_when_running_a_VM">security considerations with running a VM</a>.</p></li>
+<li><p>You should now have SSH access to your virtual machine. If the Jupyter notebook that you are using for your dashboard is stored in a GitHub repository, you can clone it to your VM. Otherwise you can use <code>scp</code> to copy the notebook along with a requirements.txt or environment.yml file from your local machine to the VM.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt install git</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git clone <span class="op">&lt;</span>your repo URL<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>While Voila can be installed via Python and <code>pip</code>, we recommend installing it using <code>mamba</code> and running it from a <code>conda</code> environment. This will improve the reproducibility of your dashboard while also making it easier to maintain by providing more flexibility around Python and other software dependencies.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> curl <span class="at">-L</span> <span class="at">-O</span> <span class="st">"https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-</span><span class="va">$(</span><span class="fu">uname</span><span class="va">)</span><span class="st">-</span><span class="va">$(</span><span class="fu">uname</span> <span class="at">-m</span><span class="va">)</span><span class="st">.sh"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> bash Miniforge3-<span class="va">$(</span><span class="fu">uname</span><span class="va">)</span>-<span class="va">$(</span><span class="fu">uname</span> <span class="at">-m</span><span class="va">)</span>.sh</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba activate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>If you’ve included an <code>environment.yml</code> or <code>requirements.txt</code> file alongside your notebook, use it to install any dependencies. Also install <code>voila</code> and <code>ipykernel</code> if needed.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba env create <span class="at">-n</span> <span class="op">&lt;</span>project_name<span class="op">&gt;</span> -f environment.yml</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba install <span class="at">-n</span> <span class="op">&lt;</span>project_name<span class="op">&gt;</span> voila ipykernel</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>To ensure that <code>voila</code> starts running whenever your VM reboots, you’ll need to create and enable a new <code>systemd</code> service. Use the following command to create the service config file.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo nano /usr/lib/systemd/system/voila.service</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Then use the following text as a template for your service:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>[Unit]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Description=Voila</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>[Service]</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>Type=simple</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>PIDFile=/run/voila.pid</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>ExecStart=mamba run -n &lt;project_name&gt; voila --no-browser voila/notebooks/&lt;notebook_file&gt;</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>User=debian</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>WorkingDirectory=/home/debian/</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>Restart=always</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>RestartSec=10</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>[Install]</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>WantedBy=multi-user.target</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Next enable and start the service with the following commands:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo systemctl enable voila.service</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo systemctl start voila.service</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>By default, Voilà starts running from port 8866. Rather than opening this port from your virtual machine’s network firewall through OpenStack Security Groups, we strongly recommend taking the additional step to setup a reverse proxy with a domain name, which will provide your dashboard with better performance and security.</p>
+<p>Apache, nginx, and Caddy are all popular options for reverse proxies. We’ll use Caddy in this guide because it’s the easiest one to setup.</p>
+<p>Through your domain name registrar, create a DNS A record that points your domain name or subdomain to your VM’s floating IP address. Then you’ll need to open up the standard HTTP/HTTPS ports (80 and 443) on your VM’s network firewall through the OpenStack Security Groups. To do this, create a new security group and add both the HTTP and HTTPS rules to it. Navigate to the virtual machine’s interfaces tab and add the new HTTP/HTTPS security group to it alongside the default security group.</p>
+<p>Finally, run the following commands in your virtual machine to install Caddy and start running it as a reverse proxy to Voilà.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo apt install caddy</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sudo <span class="at">-E</span> caddy reverse-proxy <span class="at">--from</span> <span class="op">&lt;</span>your_domain_name<span class="op">&gt;</span> --to :8866</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Navigate to your dashboard to see it in action!</p></li>
+</ol>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1034,7 +999,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/python/README.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/cloud-computing/deploying-a-dashboard.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
