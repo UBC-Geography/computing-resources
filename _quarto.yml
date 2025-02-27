@@ -98,6 +98,8 @@ website:
             text: Object Storage
           - href: "cloud-computing/deploying-a-dashboard.html"
             text: Deploying a Dashboard
+          - href: "cloud-computing/deploying-omeka-classic.html"
+            text: Deploying Omeka Classic
       - href: "containers/index.html"
         text: Containers
       - href: "xr/index.html"
