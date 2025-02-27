@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Unix Shells &amp; Command Line Interfaces (CLI) – UBC Geography Computing Resources</title>
+<title>Deploying Omeka Classic – UBC Geography Computing Resources</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,257 +110,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta property="og:site_name" content="UBC Geography Computing Resources">
 <meta property="og:image:alt" content="UBC Geography logo">
 <meta property="og:locale" content="en_US">
-<link rel="canonical" href="https://ubc-geography.github.io/computing-resources/unix-shells-and-clis/index.html">
+<link rel="canonical" href="https://ubc-geography.github.io/computing-resources/cloud-computing/deploying-omeka-classic.html">
 </head>
 
-<body class="floating">
+<body>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../unix-shells-and-clis/index.html">UNIX Shells and CLIs</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
-</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="https://geog.ubc.ca" class="sidebar-logo-link">
-      <img src="../assets/images/white-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">Computing Resources</a> 
-        <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Home</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../digital-communications/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Digital Communications</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
- <span class="menu-text">Research Data Management</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../research-data-management/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Overview</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../research-data-management/research-data-storage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Research Data Storage</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../gis-software/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">GIS Software</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../unix-shells-and-clis/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">UNIX Shells and CLIs</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">Development Environments</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../development-environments/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Overview</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../development-environments/conda-getting-started.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Conda - Getting Started</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../development-environments/jupyterhub-installing-packages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">JupyterHub - Installing Packages</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../development-environments/containerized-environments.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Containerized Environments</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../python/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Python</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../r/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../javascript/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">JavaScript</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../julia/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Julia</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../databases/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Databases</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
- <span class="menu-text">Version Control Systems</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../version-control-systems/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Overview</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../version-control-systems/jupyterhub-private-repo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Working with Private GitHub Repositories from JupyterHub</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../high-performance-computing/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">High-Performance Computing (HPC) / High-Throughput Computing (HTC)</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
- <span class="menu-text">Cloud Computing</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../cloud-computing/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Overview</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../cloud-computing/object-storage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Object Storage</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../cloud-computing/deploying-a-dashboard.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Deploying a Dashboard</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../containers/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Containers</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../xr/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">XR - Virtual Reality / Augmented Reality</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#running-mamba-on-git-bash-for-windows" id="toc-running-mamba-on-git-bash-for-windows" class="nav-link active" data-scroll-target="#running-mamba-on-git-bash-for-windows">Running mamba on Git-Bash for Windows</a></li>
-  <li><a href="#command-line-tools" id="toc-command-line-tools" class="nav-link" data-scroll-target="#command-line-tools">Command Line Tools</a>
-  <ul class="collapse">
-  <li><a href="#gdal" id="toc-gdal" class="nav-link" data-scroll-target="#gdal">GDAL</a></li>
-  <li><a href="#imagemagick" id="toc-imagemagick" class="nav-link" data-scroll-target="#imagemagick">ImageMagick</a></li>
-  <li><a href="#ffmpeg" id="toc-ffmpeg" class="nav-link" data-scroll-target="#ffmpeg">FFmpeg</a></li>
-  </ul></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#plugins-optional" id="toc-plugins-optional" class="nav-link" data-scroll-target="#plugins-optional">Plugins (Optional)</a></li>
+  <li><a href="#object-storage-optional" id="toc-object-storage-optional" class="nav-link" data-scroll-target="#object-storage-optional">Object Storage (Optional)</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/unix-shells-and-clis/README.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/cloud-computing/deploying-omeka-classic.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Unix Shells &amp; Command Line Interfaces (CLI)</h1>
+<h1 class="title">Deploying Omeka Classic</h1>
 </div>
 
 
@@ -377,99 +153,158 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>Having confidence when using a Unix shell, particularly Bash, is crucial when working within an HPC environment. It can also be extraordinarily helpful when setting up development environments, running scripts in Python or R, or using containers and command line tools.</p>
-<p>Via their <a href="https://eoas-ubc.github.io/index.html" target="_blank">Opensource Computing for Earth Science Education (OCESE) Project</a>, UBC’s Department of Earth, Ocean and Atmospheric Science has compiled an excellent and concise tutorial for both Bash and its Windows equivalent, Powershell, on the <a href="https://eoas-ubc.github.io/tut-commandline.html" target="_blank">Command Line &amp; Shells page</a>.</p>
-<p>If you are a Windows user looking to install Bash, you can find a helpful walkthrough <a href="https://ubc-library-rc.github.io/intro-git/#pre-workshop-setup" target="_blank">here</a>.</p>
-<p>UBC Library Research Commons frequently runs introductory workshops on Bash, which are listed <a href="https://libcal.library.ubc.ca/calendar/?t=g&amp;q=unix" target="_blank">here</a>. And the materials for these workshops are available below:</p>
+<p>Omeka Classic is a free and open-source content management system that focuses on supporting the development, curation, and sharing of digital exhibits. Researchers with access to an Omeka Classic instance can upload digital media files alongside a rich set of metadata that can help contextualize and highlight relationships among different collection items.</p>
+<p>This page provides a tutorial on how to deploy an Omeka Classic instance to an Alliance Cloud virtual machine (VM) with the option to store media files in an Arbutus Object Storage container (bucket). The deployment process is relatively technical and has the following requirements:</p>
 <ul>
-<li><p><a href="https://ubc-library-rc.github.io/intro-shell/" target="_blank">Introduction to the UNIX Shell</a></p></li>
-<li><p><a href="https://ubc-library-rc.github.io/advanced-shell/" target="_blank">Intermediate UNIX Shell</a></p></li>
+<li>Status as faculty or a librarian with an institution that holds eligibility for CFI grants</li>
+<li>Working knowledge of UNIX/Linux</li>
+<li>A domain name</li>
 </ul>
-<p>Additionally, the SFU’s Research Computing Group provides a full-day workshop on Bash during their annual Summer School in early June with some of the materials for that course available below:</p>
+<p>For alternative options that require less technical knowledge, both <a href="https://www.omeka.net/">Omeka.net</a> and <a href="https://www.reclaimhosting.com">Reclaim Hosting</a> provide affordable shared hosting with Omeka either already installed or installable through an easy one-click process.</p>
+<p>Before setting up an Omeka Classic instance, it can be helpful to review the Omeka Manual’s <a href="https://omeka.org/classic/docs/GettingStarted/Site_Planning_Tips/">Site Planning Tips</a>. This will help you ensure your instance meets the needs of your project while also identifying which features to pull into your instance through added plugins.</p>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<ol type="1">
+<li><p>Canada-based faculty can access cloud computing resources through the Alliance Cloud. The best-suited resource for running an ongoing service is a <a href="https://ubc-geography.github.io/computing-resources/cloud-computing/#persistent-instances">persistent virtual machine</a>, which acts as a virtual private server. <a href="https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account">Create an account</a> with Alliance (if you haven’t already done so) and submit a <a href="https://docs.google.com/forms/d/e/1FAIpQLSeU_BoRk5cEz3AvVLf3e9yZJq-OvcFCQ-mg7p4AWXmUkd5rTw/viewform">Rapid Access Service request (RAS)</a> with the number of resources that you anticipate using. The following resource recommendations should accommodate the needs of most Omeka Classic instances, but you should request more if you anticipate heavy traffic or higher storage needs.</p>
 <ul>
-<li><a href="https://mint.westdri.ca/bash/" target="_blank">Bash Course and Webinar</a></li>
-</ul>
-<p>Additional resources:</p>
-<ul>
-<li><p><a href="https://swcarpentry.github.io/shell-novice/" target="_blank">Software Carpentry - The UNIX Shell</a></p></li>
-<li><p><a href="https://confluence.it.ubc.ca/display/UARC/Introduction+to+Linux+and+Using+the+Command+Line+Interface" target="_blank">Intro to Linux and the Bash Shell in HPC Environments</a></p></li>
-<li><p><a href="https://youtu.be/gKz0-y4DXws?si=1zw4pO6GeOosxzfK" target="_blank">UBC ARC - Intro to the Unix Shell - Video</a></p></li>
-<li><p><a href="https://www.youtube.com/watch?v=eLF598YqbFw" target="_blank">Intro to Linux Shell – Video Lecture</a></p></li>
-<li><p><em>Pro Bash</em> : <a href="https://go.exlibris.link/6FxkGXft" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1409222493" target="_blank">WorldCat</a></p></li>
-</ul>
-<section id="running-mamba-on-git-bash-for-windows" class="level2">
-<h2 class="anchored" data-anchor-id="running-mamba-on-git-bash-for-windows">Running mamba on Git-Bash for Windows</h2>
-<p>When installing mamba via Miniforge with the recommended options, it is not included in your PATH by default, so you’ll only be able use it by running Miniforge Prompt from your Start Menu. For most folks that might be just fine, but we recommend adding both the <code>mamba</code> and <code>conda</code> commands to your Git-Bash environment, so you can more easily take advantage of Bash and Git.</p>
-<p>Start by locating the ‘profile.d’ folder that was installed with Miniforge via the File Explorer. Most likely this would located at: <code>C:\Users\&lt;your_username&gt;\miniforge3\etc</code>. Right click the ‘profile.d’ folder and select ‘Open Git Bash here’. In the Git Bash terminal, run the following commands:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"source '</span><span class="va">${PWD}</span><span class="st">/conda.sh'"</span> <span class="op">&gt;&gt;</span> ~/.bashrc</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="st">"source '</span><span class="va">${PWD}</span><span class="st">/mamba.sh'"</span> <span class="op">&gt;&gt;</span> ~/.bashrc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Then restart your Bash session and check that mamba works:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> source ~/.bashrc</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>You should see output telling you the versions of mamba and conda that are installed.</p>
+<li>vCPU: 1</li>
+<li>Instances: 1</li>
+<li>Volumes: 1</li>
+<li>Volume snapshots: 0</li>
+<li>RAM: 1.5</li>
+<li>Floating IPs: 1</li>
+<li>Persistent storage: 20</li>
+<li>Object storage: 0</li>
+<li>Shared filesystem storage: 0</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The recommendations above provides 20 GB of storage in total to your VM. You can anticipate that about 2.5 GB will be reserved for the Linux OS, leaving you with 17.5 GB of storage for media assets. Omeka instances often require a significant amount of storage, particularly when hosting large, high-quality video files. Adjust your request for persistent storage as needed. If you plan on using more than 50 GB of storage, consider including object storage in your request and using that for as your media storage location. Details about integrating object storage with an Omeka instance are noted <a href="https://ubc-geography.github.io/cloud-computing/deploying-omeka-classic.html#object-storage-optional">below</a>.</p>
+</div>
+</div>
+<ol start="2" type="1">
+<li><p>Once your request has been approved, the Alliance Cloud team will provide you with access to an OpenStack dashboard, where you’ll be able to manage your allocated cloud resources. Follow the Alliance’s <a href="https://docs.alliancecan.ca/wiki/Cloud_Quick_Start">Cloud Quick Start</a> guide to set up an SSH key pair (if you haven’t already generated one) and launch a persistent virtual machine. We recommend using the Debian image as your boot source. You should also review <a href="https://docs.alliancecan.ca/wiki/Security_considerations_when_running_a_VM">security considerations with running a VM</a>.</p></li>
+<li><p>You should now have SSH access to your virtual machine, and you can start installing Omeka’s system dependencies, which includes MariaDB, Apache2, PHP, and ImageMagick, with the following command. We’ll also include Unzip, which will be used to extract the Omeka source code after downloading it from the developer’s releases page.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install mariadb-server libapache2-mod-php php-mysql php-xml imagemagick unzip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Next we’ll want to lock down MariaDB to improve its security by running the following command and running through the prompts that appear.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mysql_secure_installation</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Now that the MariaDB installation has been secured, you can start setting up Omeka’s database. Remember to replace <code>&lt;password&gt;</code> with a secure password.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mysql</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> CREATE <span class="ex">USER</span> <span class="st">'omeka'</span>@<span class="st">'localhost'</span> IDENTIFIED BY <span class="st">'&lt;password&gt;'</span><span class="kw">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> CREATE <span class="ex">DATABASE</span> omeka CHARACTER SET utf8 COLLATE utf8_unicode_ci<span class="kw">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> GRANT <span class="ex">ALL</span> PRIVILEGES ON omeka.<span class="pp">*</span> TO <span class="st">'omeka'</span>@<span class="st">'localhost'</span><span class="kw">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> exit<span class="kw">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>With the system dependices installed and a secure database created, we can now download the Omeka source code from GitHub and extract it from the zip archive.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/omeka/Omeka/releases/download/v3.1.2/omeka-3.1.2.zip</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> omeka-3.1.2.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Ensure Omeka can access its database by modifying the db.ini config file to include the database name and user info. Again, replace <code>&lt;password&gt;</code> with the same password you provided in step 5.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> omeka-3.1.2/db.ini</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>~/omeka-3.1.2/db.ini</strong></pre>
+</div>
+<div class="sourceCode" id="cb6" data-filename="~/omeka-3.1.2/db.ini"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">[database]</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">host</span>        = <span class="st">"localhost"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">username</span>    = <span class="st">"omeka"</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="ex">password</span>    = <span class="st">"&lt;password&gt;"</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="ex">dbname</span>      = <span class="st">"omeka"</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>Omeka relies on an Apache web server to render and serve pages, so we’ll move Omeka’s source code into Apache’s default root directory and update the permissions on the source code files. This will enable Apache to read and execute Omeka’s PHP code.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mv omeka-3.1.2 /var/www/omeka</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chown <span class="at">-R</span> www-data:www-data /var/www/omeka/files</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chmod <span class="at">-R</span> 755 /var/www/omeka/files</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>We’ll then need to configure Apache, so it starts correctly serving files from the Omeka directory.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/apache2/sites-available/000-default.conf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>/etc/apache2/sites-available/000-default.conf</strong></pre>
+</div>
+<div class="sourceCode" id="cb9" data-filename="/etc/apache2/sites-available/000-default.conf"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">DocumentRoot</span> /var/www/omeka</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Directory <span class="st">"/var/www/omeka"</span> <span class="op">&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">AllowOverride</span> All</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>/Directory<span class="op">&gt;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> a2enmod rewrite</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl restart apache2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Through your domain name registrar, create a DNS A record that points your domain name or subdomain to your VM’s floating IP address. Then you’ll need to open up the standard HTTP/HTTPS ports (80 and 443) on your VM’s network firewall through the OpenStack Security Groups. To do this, create a new security group and add both the HTTP and HTTPS rules to it. Navigate to the virtual machine’s interfaces tab and add the new HTTP/HTTPS security group to it alongside the default security group.</p></li>
+<li><p>Omeka should now be available through HTTP, but to ensure visitors can access it securely, a certificate will need to be acquired to enable HTTPS. Certbot is a great tool that can automate much of the process for you, and step-by-step instructions can be found <a href="https://certbot.eff.org/instructions?ws=apache&amp;os=pip">here</a>.</p></li>
+<li><p>Finally, access Omeka through your provided domain name and finalize the installation process by creating your user account. You now have a running Omeka instance can start uploading and describing your materials.</p></li>
+</ol>
 </section>
-<section id="command-line-tools" class="level2">
-<h2 class="anchored" data-anchor-id="command-line-tools">Command Line Tools</h2>
-<section id="gdal" class="level3">
-<h3 class="anchored" data-anchor-id="gdal">GDAL</h3>
-<p>GDAL is used by a variety of GIS software to read and write geospatial data, and it is one of the most commonly used geospatial libraries. A range of functionalities can be accessed through the various CLI tools that accompany it, including conversions between a large collection of raster and vector data formats.</p>
+<section id="plugins-optional" class="level2">
+<h2 class="anchored" data-anchor-id="plugins-optional">Plugins (Optional)</h2>
+<p>Omeka provides the following plugins, which can be easily installed from the Admin Plugins pages.</p>
 <ul>
-<li><a href="https://gdal.org/programs/index.html#general" target="_blank">GDAL Documentation</a></li>
+<li>COinS</li>
+<li>Exhibit Builder</li>
+<li>Simple Pages</li>
 </ul>
-<p>You can install GDAL from the conda-forge repository using <code>conda</code> or <code>mamba</code> with one of the following commands:</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Mamba</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Conda</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba install libgdal <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> conda install <span class="at">-c</span> conda-forge libgdal <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
+<p>Omeka also provides a comprehensive <a href="https://omeka.org/classic/plugins/">listing of additional plugins</a> along with instructions on adding new plugins to your Omeka instance in the <a href="https://omeka.org/classic/plugins/">Omeka Classic Manual</a>.</p>
+<p>For many geographers, the Geolocation plugin will be a very helpful one to add, so we’ve included instruction for installing it below:</p>
+<ol type="1">
+<li><p>Connect to your Omeka VM using SSH.</p></li>
+<li><p>Download the Geolocation plugin source code.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/omeka/plugin-Geolocation/releases/download/v3.2.3/Geolocation-3.2.3.zip</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">unzip</span> Geolocation-3.2.3.zip</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Move the Geolocation source code to Omeka’s plugin directory</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mv Geolocation /var/www/omeka/plugins</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Open the Omeka Admin Plugins page in your web browser and install the Geolocation plugin. Once the installation is finished you should see a new map tab listed when uploading and describing new items.</p></li>
+</ol>
 </section>
-<section id="imagemagick" class="level3">
-<h3 class="anchored" data-anchor-id="imagemagick">ImageMagick</h3>
-<p>When processing large collections of images, ImageMagick is a very popular tool with an extraordinary amount of functionality. It’s commonly used to convert, resize, and optimize images files in various formats.</p>
-<p>If you are using Windows, you can find an installer <a href="https://imagemagick.org/script/download.php#windows" target="_blank">here</a>, which will enable you to use ImageMagick from your preferred shell. Mac OS and Linux users can install ImageMagick from the conda-forge repository using <code>conda</code> or <code>mamba</code> with one of the following commands:</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Mamba</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Conda</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba install imagemagick <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> conda install <span class="at">-c</span> conda-forge imagemagick <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
+<section id="object-storage-optional" class="level2">
+<h2 class="anchored" data-anchor-id="object-storage-optional">Object Storage (Optional)</h2>
+<p>Object storage, like AWS S3, is often cheaper and easier to request in larger quantities than the traditional persistent storage assigned to a shared hosting account or cloud VM. Reclaim Hosting provides a very helpful piece of documentation on <a href="https://support.reclaimhosting.com/hc/en-us/articles/1500005621161-Setting-up-S3-storage-with-Omeka-Classic">integrating AWS S3 with an Omeka Classic instance</a> running on their shared hosting services. This section adapts that documentation with a focus on using the Alliance Cloud’s Arbutus Object Storage and includes the following requirements:</p>
 <ul>
-<li><p><a href="https://imagemagick.org/script/command-line-tools.php" target="_blank">ImageMagick Documentation</a></p></li>
-<li><p><a href="https://training.westdri.ca/tools/visualization/#imagemagick" target="_blank">Command-line image processing with ImageMagick</a></p></li>
+<li>A Unix or Unix-like shell</li>
+<li>Python and pip</li>
 </ul>
-</section>
-<section id="ffmpeg" class="level3">
-<h3 class="anchored" data-anchor-id="ffmpeg">FFmpeg</h3>
-<p>FFmpeg is an extremely powerful tool for batch processing both video and audio files. It can be installed using one of the following commands:</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Mamba</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Conda</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba install ffmpeg <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>As note earlier, you’ll need to modify your RAS request to include an allocation for object storage. Once that request has been approved, you’ll be granted access to the Arbutus OpenStack dashboard, where you’ll be able to start creating object storage containers, also known as buckets. We have brief instruction on how to do so <a href="https://ubc-geography.github.io/computing-resources/cloud-computing/object-storage.html#digital-research-alliance-dra">here</a>. Note that you’ll need ensure your object storage container is public to ensure uploaded files are available to anonymous users.</p>
+<p>To connect your Omeka instance to an Arbutus Object Storage container, you’ll need to generate an access key and a secret key using an OpenStack command line tool. These credentials will then be used in your Omeka config file to authenticate your instance to Arbutus Object Storage.</p>
+<ol type="1">
+<li><p>Before you can start using the OpenStack command line tool, you’ll need to have access to a Unix or Unix-like shell, like BASH. MacOS and Linux users will already have this through their terminal applications while Windows users will need to install it, with the most recommended approach being Git BASH, which is included with <a href="https://gitforwindows.org/">Git for Windows</a>.</p></li>
+<li><p>Next you’ll download a shell script from the Arbutus OpenStack dashboard, called an OpenStack RC File, which can be found by opening the dropdown under your username in the upper right-hand corner of the OpenStack dashboard. And use the following command to run the OpenStack RC File, which will be used to authenticate the command line tool to manage your allocated resources.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> <span class="op">&lt;</span>project-name<span class="op">&gt;</span>-openrc.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>The OpenStack command line tool is distributed as a Python package, so you can install it using Python’s package manager, <code>pip</code>. The following commands use <code>mamba</code> to install the tool into a virtual environment. You can learn more about <code>mamba</code> and virtual environments <a href="https://ubc-geography.github.io/computing-resources/development-environments/conda-getting-started.html">here</a>.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mamba</span> create <span class="at">-n</span> openstack</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="ex">mamba</span> activate openstack</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">openstack</span><span class="kw">)</span> <span class="ex">python</span> <span class="at">-m</span> pip install python-openstackclient</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>With the OpenStack command line tool installed, you can now generate a new set of credentials that can then be used to authenticate your Omeka instance with your Arbutus project.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">openstack</span><span class="kw">)</span> <span class="ex">openstack</span> ec2 credentials create</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>When the credentials are generated, values will be provided for both an access key and a secret key. These are the equivalent of a username and password for your Alliance project, so record them and keep them secure.</p></li>
+<li><p>Finally, you’ll need to modify one of Omeka’s config files to direct your instance to start using object storage by providing your access key, secret key, and the name of your container. Additionally, you’ll need to update the adapter and endpoint using the values listed below.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nano</span> /var/www/omeka/application/config/config.ini</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>/var/www/omeka/application/config/config.ini</strong></pre>
 </div>
-<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> conda install <span class="at">-c</span> conda-forge ffmpeg <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-<ul>
-<li><p><a href="https://ffmpeg.org/ffmpeg.html" target="_blank">FFmpeg Documentation</a></p></li>
-<li><p><em>Quick Start Guide to FFmpeg</em> <a href="https://go.exlibris.link/XSRj7ZcH" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1369033645" target="_blank">WorldCat</a></p></li>
-</ul>
+<div class="sourceCode" id="cb17" data-filename="/var/www/omeka/application/config/config.ini"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="kw">;</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="ex">storage.adapter</span> = <span class="st">"Omeka_Storage_Adapter_ZendS3"</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="ex">storage.adapterOptions.accessKeyId</span> = <span class="op">&lt;</span>access key<span class="op">&gt;</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="ex">storage.adapterOptions.secretAccessKey</span> = <span class="op">&lt;</span>secret key<span class="op">&gt;</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="ex">storage.adapterOptions.bucket</span> = <span class="op">&lt;</span>container name<span class="op">&gt;</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="kw">;</span> <span class="ex">storage.adapterOptions.expiration</span> = 10 <span class="kw">;</span> <span class="ex">URL</span> expiration time <span class="er">(in</span> <span class="ex">minutes</span><span class="kw">)</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="ex">storage.adapterOptions.endpoint</span> = https://object-arbutus.cloud.computecanada.ca</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="ex">storage.adapterOptions.forceSSL</span> = 1 <span class="kw">;</span> <span class="ex">Boolean</span> value <span class="er">(</span><span class="ex">optional</span><span class="kw">)</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+</ol>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -1042,7 +877,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/unix-shells-and-clis/README.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/cloud-computing/deploying-omeka-classic.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
