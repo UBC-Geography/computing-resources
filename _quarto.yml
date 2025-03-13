@@ -100,6 +100,8 @@ website:
             text: Deploying a Dashboard
           - href: "cloud-computing/deploying-omeka-classic.html"
             text: Deploying Omeka Classic
+          - href: "cloud-computing/deploying-umap.html"
+            text: Deploying uMap
       - href: "containers/index.html"
         text: Containers
       - href: "xr/index.html"
