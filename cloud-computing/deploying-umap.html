@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Getting Started with Conda, Virtual Environments, and Python – UBC Geography Computing Resources</title>
+<title>Deploying uMap – UBC Geography Computing Resources</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,7 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta property="og:site_name" content="UBC Geography Computing Resources">
 <meta property="og:image:alt" content="UBC Geography logo">
 <meta property="og:locale" content="en_US">
-<link rel="canonical" href="https://ubc-geography.github.io/computing-resources/development-environments/conda-getting-started.html">
+<link rel="canonical" href="https://ubc-geography.github.io/computing-resources/cloud-computing/deploying-umap.html">
 </head>
 
 <body class="nav-sidebar floating">
@@ -122,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../development-environments/index.html">Development Environments</a></li><li class="breadcrumb-item"><a href="../development-environments/conda-getting-started.html">Conda - Getting Started</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cloud-computing/index.html">Cloud Computing</a></li><li class="breadcrumb-item"><a href="../cloud-computing/deploying-umap.html">Deploying uMap</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -202,13 +202,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Development Environments</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../development-environments/index.html" class="sidebar-item-text sidebar-link">
@@ -217,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../development-environments/conda-getting-started.html" class="sidebar-item-text sidebar-link active">
+  <a href="../development-environments/conda-getting-started.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Conda - Getting Started</span></a>
   </div>
 </li>
@@ -296,13 +296,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Cloud Computing</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../cloud-computing/index.html" class="sidebar-item-text sidebar-link">
@@ -329,7 +329,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../cloud-computing/deploying-umap.html" class="sidebar-item-text sidebar-link">
+  <a href="../cloud-computing/deploying-umap.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Deploying uMap</span></a>
   </div>
 </li>
@@ -357,18 +357,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#conda-and-mamba" id="toc-conda-and-mamba" class="nav-link active" data-scroll-target="#conda-and-mamba"><code>conda</code> and <code>mamba</code></a></li>
-  <li><a href="#virtual-environments" id="toc-virtual-environments" class="nav-link" data-scroll-target="#virtual-environments">Virtual Environments</a></li>
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
+  <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#tips-and-tricks" id="toc-tips-and-tricks" class="nav-link" data-scroll-target="#tips-and-tricks">Tips and Tricks</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/development-environments/conda-getting-started.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/cloud-computing/deploying-umap.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../development-environments/index.html">Development Environments</a></li><li class="breadcrumb-item"><a href="../development-environments/conda-getting-started.html">Conda - Getting Started</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../cloud-computing/index.html">Cloud Computing</a></li><li class="breadcrumb-item"><a href="../cloud-computing/deploying-umap.html">Deploying uMap</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Getting Started with Conda, Virtual Environments, and Python</h1>
+<h1 class="title">Deploying uMap</h1>
 </div>
 
 
@@ -385,75 +384,221 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>There are many different ways to install and start using Python on your personal device, and no one way is the correct way. How one installs Python often simply comes down to personal preference. In general, we recommend using a tool called <code>mamba</code>, which has been developed as a faster alternative to the popular package manager, <code>conda</code>, and a lighter alternative to the larger Python distribution that it’s associated with, Anaconda. When performing geospatial computing, you’ll likely be working with multiple projects that depend on not only Python but other languages too, like R, Julia, or JavaScript. You may also find that you projects can’t always run on the same exact version of Python. <code>conda</code> and <code>mamba</code> enable you to easily install and run multiple versions of Python along with a range of other languages and software packages.</p>
-<section id="conda-and-mamba" class="level2">
-<h2 class="anchored" data-anchor-id="conda-and-mamba"><code>conda</code> and <code>mamba</code></h2>
-<p>Just as there is with Python, there are multiple ways to install <code>mamba</code> and <code>conda</code>. For Windows, we recommend using the latest <a href="https://github.com/conda-forge/miniforge?tab=readme-ov-file#miniforge3" target="_blank">Miniforge3 installer</a> and sticking with the recommended options. Mac OS and Linux users can copy and run the commands listed <a href="https://github.com/conda-forge/miniforge?tab=readme-ov-file#unix-like-platforms-mac-os--linux" target="_blank">here</a> within their terminal applications.</p>
-<p>If you’ve installed <code>mamba</code> on Windows and stuck with the recommended options in the Miniforge installer, the <code>mamba</code> and <code>conda</code> commands will only be available from the Miniforge Prompt application that was included in the installation process. Use this application rather than Command Prompt or PowerShell. If you want to pair <code>mamba</code> with a more functional shell environment, we’ve included instructions for using <code>mamba</code> with a Bash shell on Windows in <a href="https://ubc-geography.github.io/computing-resources/unix-shells-and-clis/#running-mamba-on-git-bash-for-windows" target="_blank">UNIX Shells and CLIs</a>. For Mac OS and Linux users, the install script adds <code>mamba</code> to the PATH variable thus making it available from a terminal application running a Bash shell.</p>
-<p>Once you have <code>mamba</code> installed on your machine, follow along with <a href="https://conda.io/projects/conda/en/stable/user-guide/getting-started.html" target="_blank">‘Getting Started With Conda’</a> to familiarize yourself with some of basic functionalities of <code>mamba</code>/<code>conda</code>. As a reminder, Miniforge includes both tools, and they can be used interchangeably, so use whichever one makes sense to you.</p>
+<p><a href="https://umap-project.org/" target="_blank">uMap</a> is an <a href="https://www.openstreetmap.org/about" target="_blank">OpenStreetMap (OSM)</a> project that provides a free and open-source web mapping tool. Researchers with a access to a uMap instance can quickly create, manage, and share web maps with their own data using a comprehensive set of editing tools or via imported data from OSM or a local GeoJSON file.</p>
+<p>This page provides a tutorial on how to deploy a uMap instance to an Alliance Cloud virtual machine (VM), and it’s been adapted from the <a href="https://docs.umap-project.org/en/stable/" target="_blank">uMap Documentation</a>. The deployment process is relatively technical and has the following requirements:</p>
+<ul>
+<li>Status as faculty or a librarian with an institution that holds eligibility for CFI grants</li>
+<li>Working knowledge of UNIX/Linux</li>
+<li>A domain name</li>
+</ul>
+<p>Hosting a uMap instance on an Alliance Cloud VM provides additional flexibility and more control to ensure stability, but multiple open uMap instances are available and provide users the ability to freely register and create maps on a hosted service. OSM’s Wiki provides a listing of instances <a href="https://wiki.openstreetmap.org/wiki/UMap#Instances" target="_blank">here</a> with <a href="https://umap.openstreetmap.fr/en/" target="_blank">https://umap.openstreetmap.fr/en/</a> being the most popular option.</p>
+<section id="installation" class="level2">
+<h2 class="anchored" data-anchor-id="installation">Installation</h2>
+<ol type="1">
+<li><p>Canada-based faculty can access cloud computing resources through the Alliance Cloud. The best-suited resource for running an ongoing service is a <a href="https://ubc-geography.github.io/computing-resources/cloud-computing/#persistent-instances" target="_blank">persistent virtual machine</a>, which acts as a virtual private server. <a href="https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account" target="_blank">Create an account</a> with Alliance (if you haven’t already done so) and submit a <a href="https://docs.google.com/forms/d/e/1FAIpQLSeU_BoRk5cEz3AvVLf3e9yZJq-OvcFCQ-mg7p4AWXmUkd5rTw/viewform" target="_blank">Rapid Access Service request (RAS)</a> with the number of resources that you anticipate using. The following resource recommendations should accommodate the needs of most uMap instances, but you should request more if you anticipate heavy traffic or higher storage needs.</p>
+<ul>
+<li>vCPU: 1</li>
+<li>Instances: 1</li>
+<li>Volumes: 1</li>
+<li>Volume snapshots: 0</li>
+<li>RAM: 1.5</li>
+<li>Floating IPs: 1</li>
+<li>Persistent storage: 20</li>
+<li>Object storage: 0</li>
+<li>Shared filesystem storage: 0</li>
+</ul></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The recommendations above provides 20 GB of storage in total to your VM. You can anticipate that about 2.5 GB will be reserved for the Linux OS, leaving you with 17.5 GB of storage for uMap’s static assets and user developed data layers. Adjust your request for persistent storage as needed. If you plan on using more than 50 GB of storage, consider including <a href="https://ubc-geography.github.io/computing-resources/cloud-computing/object-storage.html" target="_blank">object storage</a> in your request and using that for as your data storage location. See <a href="https://docs.umap-project.org/en/stable/config/storage/" target="_blank">uMap’s documentation</a> for more details.</p>
+</div>
+</div>
+<ol type="1">
+<li><p>Once your request has been approved, the Alliance Cloud team will provide you with access to an OpenStack dashboard, where you’ll be able to manage your allocated cloud resources. Follow the Alliance’s <a href="https://docs.alliancecan.ca/wiki/Cloud_Quick_Start" target="_blank">Cloud Quick Start</a> guide to set up an SSH key pair (if you haven’t already generated one) and launch a persistent virtual machine. We recommend using the Debian image as your boot source. You should also review <a href="https://docs.alliancecan.ca/wiki/Security_considerations_when_running_a_VM" target="_blank">security considerations with running a VM</a>.</p></li>
+<li><p>You should now have SSH access to your virtual machine, and you can start installing uMap’s system dependencies, python, postgresql, and postgis.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get update</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install python3 python3-dev python3-venv virtualenv postgresql gcc postgis libpq-dev</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Temporarily switch to the postgres user to add the umap user to postgresql, create a new database, and add the postgis extension.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> su <span class="at">-</span> postgres</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">createuser</span> umap</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">createdb</span> umap <span class="at">-O</span> umap</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">psql</span> umap <span class="at">-c</span> <span class="st">"CREATE EXTENSION postgis"</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">exit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Add a new user named umap to your virtual machine and only provide the user with the necessary privileges to run uMap. Download a starter config file for your uMap instance and update it with a new and unique secret key.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> adduser umap <span class="at">--disabled-password</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> mkdir <span class="at">-p</span> /etc/umap /srv/umap/static /srv/umap/data</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> wget https://raw.githubusercontent.com/umap-project/umap/master/umap/settings/local.py.sample <span class="at">-O</span> umap.conf</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> sed <span class="at">-i</span> <span class="st">"s/\!\!change me\!\!/</span><span class="va">$(</span><span class="ex">openssl</span> rand <span class="at">-base64</span> 32<span class="va">)</span><span class="st">/"</span> umap.conf</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chown umap:umap /srv/umap</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>You’ll likely want to make a range of modifications to the local_settings.py file, but to get uMap running, you’ll need to make the following modifications:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/umap/umap.conf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>/etc/umap/umap.conf</strong></pre>
+</div>
+<div class="sourceCode" id="cb5" data-filename="/etc/umap/umap.conf"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">DATABASES</span> = {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"default"</span><span class="ex">:</span> {</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">"ENGINE"</span><span class="ex">:</span> <span class="st">"django.contrib.gis.db.backends.postgis"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="st">"NAME"</span><span class="ex">:</span> <span class="st">"umap"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="st">"USER"</span><span class="ex">:</span> <span class="st">"umap"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="er">}</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="er">}</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>Switch to the umap user and run the commands in the following steps as that user.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> su <span class="at">-</span> umap</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>uMap has been developed using Python and the Django web framework, so it can be easily installed using a virtual environment and <code>pip</code>. An additional package, gunicorn, is also included. This package will be used to deploy uMap through a production-ready server.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv venv</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> venv/bin/activate</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">venv</span><span class="kw">)</span> <span class="ex">python3</span> <span class="at">-m</span> pip install umap-project gunicorn</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">deactivate</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Use the following commands to create the necessary tables in the umap database, collect static assets for uMap’s frontend, and create your administrator account. And enter <code>exit</code> to return to your default Debian user.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">umap</span> migrate</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">umap</span> collectstatic</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">umap</span> createsuperuser</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">exit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>uMap requires a Web Server Gateway Interface (WSGI) for it to be effectively deployed, and Gunicorn is a popular WSGI server that works well with uMap. The following commands deploy uMap through <a href="https://docs.gunicorn.org/en/latest/deploy.html#systemd" target="_blank">a systemd service and a UNIX socket running Gunicorn</a>. This provides some added stability to the instance by ensuring it starts whenever the system restarts.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/systemd/system/umap.service</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>/etc/systemd/system/umap.service</strong></pre>
+</div>
+<div class="sourceCode" id="cb10" data-filename="/etc/systemd/system/umap.service"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[Unit]</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="va">Description</span><span class="op">=</span>umap <span class="ex">daemon</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="va">Requires</span><span class="op">=</span>umap.socket</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="va">After</span><span class="op">=</span>network.target</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="ex">[Service]</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="va">Type</span><span class="op">=</span>notify</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="va">NotifyAccess</span><span class="op">=</span>main</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="va">User</span><span class="op">=</span>umap</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="va">Group</span><span class="op">=</span>umap</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="va">RuntimeDirectory</span><span class="op">=</span>gunicorn</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="va">WorkingDirectory</span><span class="op">=</span>/srv/umap/</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="va">ExecStart</span><span class="op">=</span>/home/umap/venv/bin/gunicorn <span class="ex">-w</span> 3 umap.wsgi</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="va">ExecReload</span><span class="op">=</span>/bin/kill <span class="ex">-s</span> HUP <span class="va">$MAINPID</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="va">KillMode</span><span class="op">=</span>mixed</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="va">TimeoutStopSec</span><span class="op">=</span>5</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="va">PrivateTmp</span><span class="op">=</span>true</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="va">EnvironmentFile</span><span class="op">=</span>/srv/umap/env</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="va">RestartSec</span><span class="op">=</span>1</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="va">Restart</span><span class="op">=</span>always</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a><span class="va">ProtectSystem</span><span class="op">=</span>strict</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="va">ReadWritePaths</span><span class="op">=</span>/srv/umap/var/data</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="ex">[Install]</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="va">WantedBy</span><span class="op">=</span>multi-user.target</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/systemd/system/umap.socket</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>/etc/systemd/system/umap.socket</strong></pre>
+</div>
+<div class="sourceCode" id="cb12" data-filename="/etc/systemd/system/umap.socket"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">[Unit]</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="va">Description</span><span class="op">=</span>umap <span class="ex">socket</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="va">Requires</span><span class="op">=</span>postgresql.service</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="ex">[Socket]</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="va">ListenStream</span><span class="op">=</span>/run/umap.sock</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="va">SocketUser</span><span class="op">=</span>caddy</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="va">SocketGroup</span><span class="op">=</span>caddy</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="va">SocketMode</span><span class="op">=</span>0660</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="ex">[Install]</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="va">WantedBy</span><span class="op">=</span>sockets.target</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl daemon-reload</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl enable <span class="at">--now</span> umap.socket</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Through your domain name registrar, create a DNS A record that points your domain name or subdomain to your VM’s floating IP address. Then you’ll need to open up the standard HTTP/HTTPS ports (80 and 443) on your VM’s network firewall through the OpenStack Security Groups. To do this, create a new security group and add both the HTTP and HTTPS rules to it. Navigate to the virtual machine’s interfaces tab and add the new HTTP/HTTPS security group to it alongside the default security group.</p></li>
+<li><p>While Gunicorn provides a server for uMap’s Python code, using a generic web server as a reverse proxy and static file server can help uMap run a little more efficiently. While Apache and nginx are two popular options, we like to use Caddy because it automatically supports HTTPS and takes on the hassle of ensuring certificates are up to date.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install caddy</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> nano /etc/caddy/Caddyfile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Modify the Caddyfile to serve static files and act as a reverse proxy to Gunicorn. Remember to replace <code>&lt;domain_name&gt;</code> with your registered domain name.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>/etc/caddy/Caddyfile</strong></pre>
+</div>
+<div class="sourceCode" id="cb15" data-filename="/etc/caddy/Caddyfile"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>domain_name<span class="op">&gt;</span> <span class="kw">{</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">encode</span> zstd gzip</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="ex">request_body</span> {</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>     <span class="ex">max_size</span> 5MB</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">}</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">handle</span> /static/<span class="pp">*</span> {</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>     <span class="ex">root</span> <span class="pp">*</span> /srv/umap/var</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>     <span class="ex">file_server</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>  <span class="er">}</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="ex">handle_path</span> /uploads/<span class="pp">*</span> {</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>     <span class="ex">root</span> <span class="pp">*</span> /srv/umap/var/data</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>     <span class="ex">file_server</span> {</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>        <span class="ex">hide</span> datalayer</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>     <span class="er">}</span></span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>  <span class="er">}</span></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>  <span class="ex">reverse_proxy</span> unix//srv/umap/umap.sock {</span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>     <span class="ex">header_down</span> <span class="at">-Server</span></span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>  <span class="er">}</span></span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a><span class="er">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Enable the caddy service to start the server.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl enable <span class="at">--now</span> caddy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>As a final step, modify the umap.conf file to fit your needs. A few recommended modifications are listed below, but you can find more details in <a href="https://docs.umap-project.org/en/stable/config/settings/" target="_blank">uMap Documentation - Configuration</a>.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>/etc/umap/umap.conf</strong></pre>
+</div>
+<div class="sourceCode" id="cb17" data-filename="/etc/umap/umap.conf"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">ALLOWED_HOSTS</span> = [</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>   <span class="st">"&lt;domain_name&gt;"</span><span class="ex">,</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="ex">]</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="ex">DEBUG</span> = False</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="ex">ADMINS</span> = <span class="er">(</span><span class="kw">(</span><span class="st">"&lt;name&gt;"</span><span class="ex">,</span> <span class="st">"&lt;email&gt;"</span><span class="kw">)</span><span class="ex">,</span><span class="kw">)</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="ex">Disable</span> 3rd party authentication providers</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="ex">AUTHENTICATION_BACKENDS</span> = <span class="er">(</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="co"># "social_core.backends.github.GithubOAuth2",</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="co"># "social_core.backends.bitbucket.BitbucketOAuth",</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="co"># "social_core.backends.twitter.TwitterOAuth",</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="co"># "social_core.backends.openstreetmap.OpenStreetMapOAuth",</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="st">"django.contrib.auth.backends.ModelBackend"</span><span class="ex">,</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="kw">)</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Remove the demo warning banner</span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="ex">UMAP_DEMO_SITE</span> = False</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Disable anonymous users to avoid additional strain on your server</span></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a><span class="ex">UMAP_ALLOW_ANONYMOUS</span> = False</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a><span class="ex">SITE_NAME</span> = <span class="op">&lt;</span>your site name<span class="op">&gt;</span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a><span class="ex">SITE_DESCRIPTION</span> = <span class="op">&lt;</span>a brief description of your site<span class="op">&gt;</span></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a><span class="ex">SITE_URL</span> = https://<span class="op">&lt;</span>domain name<span class="op">&gt;</span></span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the default location to Vancouver, BC</span></span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a><span class="ex">LEAFLET_LONGITUDE</span> = <span class="at">-123</span></span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a><span class="ex">LEAFLET_LATITUDE</span> = 49.2</span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a><span class="ex">LEAFLET_ZOOM</span> = 9</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To see your changes implemented, restart the umap.socket.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl restart umap.socket</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
 </section>
-<section id="virtual-environments" class="level2">
-<h2 class="anchored" data-anchor-id="virtual-environments">Virtual Environments</h2>
-<p>When you install <code>mamba</code> with Miniforge, a virtual environment is automatically created for you, which includes an installation of Python along with <code>mamba</code> itself. This is your base environment, and it can give you quick access to Python in a pinch, but to ensure the stability of <code>mamba</code>, you’ll want to avoid making any changes to this environment apart from running the occasional upgrade to <code>mamba</code>. Before getting started with using <code>mamba</code> and Python, it’s important to have an understanding of virtual environments and how <code>mamba</code> works with them to install software and packages onto your machine. If you followed along with the <a href="https://conda.io/projects/conda/en/stable/user-guide/getting-started.html" target="_blank">Managing Environments</a> section of ‘Getting Started With Conda’, then you got a very basic introduction to creating and using virtual environments.</p>
-<p>Let’s walkthrough the process again by creating a virtual environment that has a newer version of Python than the one that came pre-installed in the base environment along with the popular geospatial package, GeoPandas.</p>
-<p>To start, you will need to open a terminal on your machine. If you are using Windows, use the Minforge Prompt as noted before.</p>
-<p>Before we can start installing Python and other packages, we will need to create our new virtual environment. We will name it <code>py-geo</code>, which will remind us in the future that this is a Python environment with geospatial packages.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba create <span class="at">--name</span> py-geo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Next we’ll want to activate our newly created virtual environment, so we can start interacting with it and installing our packages into it.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba activate py-geo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>When you activate a virtual environment, the name of the environment will be prepended to your shell prompt, like so:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">py-geo</span><span class="kw">)</span> <span class="ex">$</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Now that we have our virtual environment activated, we can install the Python version that we would like to work with alongside GeoPandas.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">py-geo</span><span class="kw">)</span> <span class="ex">$</span> mamba install python=3.12 geopandas</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>GeoPandas has a decent number of dependencies, many of which other Python geospatial packages also rely on. You will notice that <code>mamba</code> lists those dependencies and asks if you want to proceed with installing them along with Python. This is a good time to ensure you did not enter the install command with a typo and are about to accidentally install the wrong package. If everything looks correct, respond to the prompt to proceed.</p>
-<p>Every package that you install with <code>mamba</code> includes information within it that lists all of its dependent packages and the range of versions that it will be compatible with. We can use <code>mamba</code> to review what dependencies were included with GeoPandas and Python itself.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">py-geo</span><span class="kw">)</span> <span class="ex">$</span> mamba list</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># packages in environment at ...\miniforge3\envs\py-geo:</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Name      Version       Build                 Channel</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">attrs</span>       23.2.0        pyh71513ae_0          conda-forge</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span>      3.12.4        h889d299_0_cpython    conda-forge</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="ex">zstd</span>        1.5.6         h0ea2cb4_0            conda-forge</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>You will notice that I have abbreviated the list quite a bit with ellipses, but you can see that we have Python 3.12.4 installed along with GeoPandas’ many dependencies. You may see newer versions listed when you run this command. In a later step, we will look at how we can upgrade or downgrade Python to another version within this environment.</p>
-<p>To ensure your virtual environment is reproducible for both yourself and collaborators, it’s important to keep an up-to-date file that lists the packages you used while running your code and store it alongside your code in a version control system, like Git. <code>mamba</code> includes the ability to generate this file for you by taking a snapshot of all the packages installed within an environment and store the name and versions of those packages into a text-based YAML (.yml) file using the following command.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">py-geo</span><span class="kw">)</span> <span class="ex">$</span> mamba env export <span class="at">--no-builds</span> <span class="op">&gt;</span> environment.yml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>To test our file, let’s make one more environment using the environment file that we just generated to see how it works, and we will just list our environments again to verify that it was created.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">py-geo</span><span class="kw">)</span> <span class="ex">$</span> mamba deactivate</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba env create <span class="at">-n</span> testenv <span class="at">-f</span> environment.yml</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba info <span class="at">--envs</span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># virtual environments:</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ex">base</span>                   <span class="pp">*</span> C:<span class="dt">\U</span>sers<span class="dt">\&lt;</span>username<span class="op">&gt;</span><span class="dt">\m</span>iniforge3</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="ex">py-geo</span>                   C:<span class="dt">\U</span>sers<span class="dt">\&lt;</span>username<span class="op">&gt;</span><span class="dt">\m</span>iniforge3\envs\py-geo</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="ex">testenv</span>                  C:<span class="dt">\U</span>sers<span class="dt">\&lt;</span>username<span class="op">&gt;</span><span class="dt">\m</span>iniforge3\envs\testenv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Next let us just do a little cleanup by removing the <code>testenv</code> environment that we just created and verify that it is no longer on our machine.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba remove <span class="at">-n</span> testenv <span class="at">--all</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba info <span class="at">--envs</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># virtual environments:</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">base</span>                   <span class="pp">*</span> C:<span class="dt">\U</span>sers<span class="dt">\&lt;</span>username<span class="op">&gt;</span><span class="dt">\m</span>iniforge3</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ex">py-geo</span>                   C:<span class="dt">\U</span>sers<span class="dt">\&lt;</span>username<span class="op">&gt;</span><span class="dt">\m</span>iniforge3\envs\py-geo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="python" class="level2">
-<h2 class="anchored" data-anchor-id="python">Python</h2>
-<p>Now I want to return to my <code>py-geo</code> environment, and rather than running Python 3.12.4, I want to downgrade my Python version to be one minor release older. We can use the following commands to activate the <code>py-geo</code> environment and then use the search tool to see what Python versions are available. One important thing to note is that <code>conda</code> and <code>mamba</code> can pull packages from different channels, which are managed by different groups and organizations. By default, <code>mamba</code> pulls from the <code>conda-forge</code> channel, which includes the most expansive and up-to-date set of packages. It’s often recommended that you start with the <code>conda-forge</code> channel and stick to it. Using multiple channels in a single environment can cause a range of conflicts that may break your environment.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> mamba activate py-geo</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">py-geo</span><span class="kw">)</span> <span class="ex">$</span> mamba search python</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">Loading</span> channels: done</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co">#Name               Version         Build                  Channel</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span>              2.7.12          0                      conda-forge</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span>              3.12.4          h889d299_0_cpython     conda-forge</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>You will notice that I have abbreviated the list quite a bit with an ellipsis, but I currently have access to a range of Python versions from 2.7.12 to 3.12.4.</p>
-<p>Now which Python version you install will heavily depend on the other packages and software that you intend to use within your environment. You will need to take a close look at what Python versions the packages that you want to use are compatible with.</p>
-<p>It’s usually a good choice to select one minor version older than the newest version of Python. This ensures a broader level of compatibility with a range of packages. For many package maintainers, it can be quite a bit of work to update their code to make it compatible with the latest minor release of Python, so we can account for this by using an earlier minor release.</p>
-<p>To downgrade my version of Python from 3.12.4 to 3.11.x, I can run the following command.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">py-geo</span><span class="kw">)</span> <span class="ex">$</span> mamba install python=3.11</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Every October, Python releases a new minor version. In a variety of cases, it can be useful to upgrade to the next minor release either to access a new feature or to just keep your environment up-to-date. To update a package with <code>mamba</code> alongside all of its dependencies and the packages that depend on it, you can use the following command:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span><span class="ex">py-geo</span><span class="kw">)</span> <span class="ex">$</span> mamba update python</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>And voilà, I’m back to Python 3.12.4 and ready to go. A newer version of Python may have been released since writing this, so you might actually see a newer version installed in your environment. And remember to test your code after each package upgrade to ensure that it’s still running as expected.</p>
+<section id="tips-and-tricks" class="level2">
+<h2 class="anchored" data-anchor-id="tips-and-tricks">Tips and Tricks</h2>
+<p>uMap doesn’t currently provide a method for uploading images or other media files to be embedded in pop-ups. You’ll need to serve those files from a different location. We recommend requesting a public <a href="https://ubc-geography.github.io/computing-resources/cloud-computing/object-storage.html" target="_blank">object storage</a> container/bucket and uploading your files there, so they can be easily embedded.</p>
+<p>uMap also supports embedding <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" target="_blank">iframes</a> in pop-ups, so if you have a more complex need for the content that you want to be presented in a pop-up, you can create an HTML file with CSS and JavaScript that fits your needs and then serve it from object storage.</p>
 
 
 </section>
@@ -1028,7 +1173,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/development-environments/conda-getting-started.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/cloud-computing/deploying-umap.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
