@@ -341,6 +341,17 @@
     ]
   },
   {
+    "objectID": "research-data-management/index.html#data-collection-systems",
+    "href": "research-data-management/index.html#data-collection-systems",
+    "title": "Research Data Management",
+    "section": "Data Collection Systems",
+    "text": "Data Collection Systems\nFor survey or form-based data collection, UBC researchers can access either of two FIPPA-compliant systems, REDCap, which is managed by UBC’s Advanced Research Computing (ARC) team, or Qualtrics, which is a vendor-supported cloud service that UBC IT manages a subscription for.\n\nREDCap\nREDCap is ideal for academic research, particularly when working with sensitive data and/or running a long-term research project. Many academic institutions support their own REDCap instances, and it’s often used for medical research. For offline data collection, REDCap provides a mobile app.\n\nUBC ARC - REDCap YouTube Playlist\nREDCap - Resources - Videos\n\n\n\nUBC Survey Tool (Qualtrics)\nQualtrics works best for quickly developing surveys for assessments or short-term research projects. It provides a ton of features alongside a modern and user-friendly interface. A mobile app is also available for offline data entry.\n\nUBC IT - Qualtrics Training Materials\nUBC CTLT - Qualtrics Studio Workshops\n\n\n\nLimeSurvey\nLimeSurvey is a free and open-source alternative to REDCap and Qualtrics. While UBC researchers do not have direct access to LimeSurvey, an instance can be easily deployed via a VM on the Alliance Cloud infrastructure. Generally, REDCap and Qualtrics are better options, but LimeSurvey can be a helpful tool to be aware of when collaborating with small organization who need to retain ownership and access to collected research data.\n\nLimeSurvey Manual",
+    "crumbs": [
+      "Research Data Management",
+      "Overview"
+    ]
+  },
+  {
     "objectID": "research-data-management/index.html#recommended-gis-and-geospatial-file-formats",
     "href": "research-data-management/index.html#recommended-gis-and-geospatial-file-formats",
     "title": "Research Data Management",

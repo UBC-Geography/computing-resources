@@ -323,7 +323,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#recommended-gis-and-geospatial-file-formats" id="toc-recommended-gis-and-geospatial-file-formats" class="nav-link active" data-scroll-target="#recommended-gis-and-geospatial-file-formats">Recommended GIS and Geospatial File Formats</a>
+  <li><a href="#data-collection-systems" id="toc-data-collection-systems" class="nav-link active" data-scroll-target="#data-collection-systems">Data Collection Systems</a>
+  <ul class="collapse">
+  <li><a href="#redcap" id="toc-redcap" class="nav-link" data-scroll-target="#redcap">REDCap</a></li>
+  <li><a href="#ubc-survey-tool-qualtrics" id="toc-ubc-survey-tool-qualtrics" class="nav-link" data-scroll-target="#ubc-survey-tool-qualtrics">UBC Survey Tool (Qualtrics)</a></li>
+  <li><a href="#limesurvey" id="toc-limesurvey" class="nav-link" data-scroll-target="#limesurvey">LimeSurvey</a></li>
+  </ul></li>
+  <li><a href="#recommended-gis-and-geospatial-file-formats" id="toc-recommended-gis-and-geospatial-file-formats" class="nav-link" data-scroll-target="#recommended-gis-and-geospatial-file-formats">Recommended GIS and Geospatial File Formats</a>
   <ul class="collapse">
   <li><a href="#vector" id="toc-vector" class="nav-link" data-scroll-target="#vector">Vector</a></li>
   <li><a href="#raster" id="toc-raster" class="nav-link" data-scroll-target="#raster">Raster</a></li>
@@ -359,6 +365,33 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://www.youtube.com/watch?v=q5eXXps1o04" target="_blank">Research Data Management Video – Part 2</a></p></li>
 <li><p><em><a href="https://ecampusontario.pressbooks.pub/canadardm/" target="_blank">Research Data Management in the Canadian Context: A Guide for Practitioners and Learners</a></em></p></li>
 </ul>
+<section id="data-collection-systems" class="level2">
+<h2 class="anchored" data-anchor-id="data-collection-systems">Data Collection Systems</h2>
+<p>For survey or form-based data collection, UBC researchers can access either of two FIPPA-compliant systems, REDCap, which is managed by UBC’s Advanced Research Computing (ARC) team, or Qualtrics, which is a vendor-supported cloud service that UBC IT manages a subscription for.</p>
+<section id="redcap" class="level3">
+<h3 class="anchored" data-anchor-id="redcap"><a href="https://arc.ubc.ca/software/redcap" target="_blank">REDCap</a></h3>
+<p>REDCap is ideal for academic research, particularly when working with sensitive data and/or running a long-term research project. Many academic institutions support their own REDCap instances, and it’s often used for medical research. For offline data collection, REDCap provides a <a href="https://projectredcap.org/software/mobile-app/" target="_blank">mobile app</a>.</p>
+<ul>
+<li><p><a href="https://www.youtube.com/playlist?list=PLvb5_JhXTpMIukzT4RQrtl7hmOVlKmpX-" target="_blank">UBC ARC - REDCap YouTube Playlist</a></p></li>
+<li><p><a href="https://projectredcap.org/resources/videos/" target="_blank">REDCap - Resources - Videos</a></p></li>
+</ul>
+</section>
+<section id="ubc-survey-tool-qualtrics" class="level3">
+<h3 class="anchored" data-anchor-id="ubc-survey-tool-qualtrics"><a href="https://it.ubc.ca/services/teaching-learning-tools/survey-tool" target="_blank">UBC Survey Tool (Qualtrics)</a></h3>
+<p>Qualtrics works best for quickly developing surveys for assessments or short-term research projects. It provides a ton of features alongside a modern and user-friendly interface. A <a href="https://www.qualtrics.com/support/survey-platform/distributions-module/mobile-distributions/offline-app/setting-up-the-offline-app/" target="_blank">mobile app</a> is also available for offline data entry.</p>
+<ul>
+<li><p><a href="https://it.ubc.ca/services/teaching-learning-tools/survey-tool/qualtrics-training" target="_blank">UBC IT - Qualtrics Training Materials</a></p></li>
+<li><p><a href="https://events.ctlt.ubc.ca/event-category/qualtrics/" target="_blank">UBC CTLT - Qualtrics Studio Workshops</a></p></li>
+</ul>
+</section>
+<section id="limesurvey" class="level3">
+<h3 class="anchored" data-anchor-id="limesurvey"><a href="https://www.limesurvey.org" target="_blank">LimeSurvey</a></h3>
+<p>LimeSurvey is a free and open-source alternative to REDCap and Qualtrics. While UBC researchers do not have direct access to LimeSurvey, an instance can be easily deployed via a VM on the Alliance Cloud infrastructure. Generally, REDCap and Qualtrics are better options, but LimeSurvey can be a helpful tool to be aware of when collaborating with small organization who need to retain ownership and access to collected research data.</p>
+<ul>
+<li><a href="https://www.limesurvey.org/manual/" target="_blank">LimeSurvey Manual</a></li>
+</ul>
+</section>
+</section>
 <section id="recommended-gis-and-geospatial-file-formats" class="level2">
 <h2 class="anchored" data-anchor-id="recommended-gis-and-geospatial-file-formats">Recommended GIS and Geospatial File Formats</h2>
 <p>GIS software and other geospatial computing software and packages can support a wide array of file formats for vector and raster data thanks in large part to the Geospatial Data Abstraction Library (GDAL). When creating, enhancing, and/or storing geospatial data, it is important to carefully select a format that best meets the needs of your project. The formats listed below focus on cases that may require broad usability among various GIS platforms and software, preservation, and performance.</p>
