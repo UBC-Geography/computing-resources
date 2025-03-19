@@ -11,6 +11,48 @@ title: Research Data Management
 
 - _[Research Data Management in the Canadian Context: A Guide for Practitioners and Learners](https://ecampusontario.pressbooks.pub/canadardm/){target="\_blank"}_
 
+## Data Collection Systems
+
+For survey or form-based data collection, UBC researchers can access either of
+two FIPPA-compliant systems, REDCap, which is managed by UBC's Advanced Research
+Computing (ARC) team, or Qualtrics, which is a vendor-supported cloud service
+that UBC IT manages a subscription for.
+
+### [REDCap](https://arc.ubc.ca/software/redcap){target="\_blank"}
+
+REDCap is ideal for academic research, particularly when working with sensitive
+data and/or running a long-term research project. Many academic institutions
+support their own REDCap instances, and it's often used for medical research.
+For offline data collection, REDCap provides a
+[mobile app](https://projectredcap.org/software/mobile-app/){target="\_blank"}.
+
+- [UBC ARC - REDCap YouTube Playlist](https://www.youtube.com/playlist?list=PLvb5_JhXTpMIukzT4RQrtl7hmOVlKmpX-){target="\_blank"}
+
+- [REDCap - Resources - Videos](https://projectredcap.org/resources/videos/){target="\_blank"}
+
+### [UBC Survey Tool (Qualtrics)](https://it.ubc.ca/services/teaching-learning-tools/survey-tool){target="\_blank"}
+
+Qualtrics works best for quickly developing surveys for assessments or
+short-term research projects. It provides a ton of features alongside a modern
+and user-friendly interface. A
+[mobile app](https://www.qualtrics.com/support/survey-platform/distributions-module/mobile-distributions/offline-app/setting-up-the-offline-app/){target="\_blank"}
+is also available for offline data entry.
+
+- [UBC IT - Qualtrics Training Materials](https://it.ubc.ca/services/teaching-learning-tools/survey-tool/qualtrics-training){target="\_blank"}
+
+- [UBC CTLT - Qualtrics Studio Workshops](https://events.ctlt.ubc.ca/event-category/qualtrics/){target="\_blank"}
+
+### [LimeSurvey](https://www.limesurvey.org){target="\_blank"}
+
+LimeSurvey is a free and open-source alternative to REDCap and Qualtrics. While
+UBC researchers do not have direct access to LimeSurvey, an instance can be
+easily deployed via a VM on the Alliance Cloud infrastructure. Generally, REDCap
+and Qualtrics are better options, but LimeSurvey can be a helpful tool to be
+aware of when collaborating with small organization who need to retain ownership
+and access to collected research data.
+
+- [LimeSurvey Manual](https://www.limesurvey.org/manual/){target="\_blank"}
+
 ## Recommended GIS and Geospatial File Formats
 
 GIS software and other geospatial computing software and packages can support a
