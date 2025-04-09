@@ -96,3 +96,39 @@ For use cases, where the overall amount of data being collected and analyzed
 nears or exceeds 1TB, contact Geography IT about setting up a RAID array with
 your local machine and submitting a request to either UBC ARC or the Digital
 Research Alliance for an allocation of HPC/object storage.
+
+When initially requesting storage in the HPC systems, these are our general
+recommended steps to move through as your storage needs increase.
+
+1. Setup an account with the
+   [Alliance](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account){target="\_blank"}.
+   This will provide you with
+   [1TB of project storage](https://alliancecan.ca/en/services/advanced-research-computing/national-services/storage){target="\_blank"}
+   on the Alliance clusters, and you can store your data on the Cedar cluster in
+   Burnaby for the lowest latency to UBC Vancouver. Additionally, your account
+   will be provided access to 20 TB of temporary storage in a scratch directory
+   and 2 TB for backup storage.
+
+2. Ask collaborators, including research assistants, to apply for Alliance
+   accounts as well. For students and staff, they'll need to list you as a
+   sponsor, and then they'll get access to the cluster and your project's
+   storage directory, which they will have read and write access to.
+
+3. When you start needing more storage, apply through the Alliance's
+   [Rapid Access Service (RAS)](https://alliancecan.ca/en/services/advanced-research-computing/accessing-resources/rapid-access-service){target="\_blank"}
+   application noting how much more storage you anticipate needing. The
+   application can be submitted at any time during the year, and you can keep
+   submitting the application as your storage needs increase until you've been
+   allocated 40 TB of project storage.
+
+4. Once you storage needs start getting towards 40 TB, then you should strongly
+   consider contacting the folks at UBC ARC for
+   [consultation](https://arc.ubc.ca/consultation){target="\_blank"}. Further
+   requests for storage will need to be submitted through the Alliance's annual
+   [Resource Allocation Competition (RAC)](https://alliancecan.ca/en/services/advanced-research-computing/accessing-resources/resource-allocation-competition/resource-allocation-competition-application-guide){target="\_blank"}.
+
+UBC ARC's cluster, Sockeye, is meant to fill any gaps left behind by the
+Alliance clusters, so if you need to keep your data specifically on UBC
+Vancouver campus or if for any other reason the Alliance clusters can't meet the
+needs of your project, you can apply for an allocation on that cluster, which
+would provide a starting allocation of 5TB, which could be increased as needed.
