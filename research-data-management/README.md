@@ -11,6 +11,97 @@ title: Research Data Management
 
 - _[Research Data Management in the Canadian Context: A Guide for Practitioners and Learners](https://ecampusontario.pressbooks.pub/canadardm/){target="\_blank"}_
 
+## Security & Privacy
+
+Ensuring research data security and privacy is a critical element to consider
+and plan for when starting any new research project. An increasing number of
+grants are now requiring that researchers clearly identify the risks associated
+with their research data along with clear procedures and safeguards that will be
+in place to mitigate and address those risks. To take a proactive approach,
+researchers must require that cybersecurity best practices are strictly followed
+at the points in which data is collected, stored, accessed, and processed.
+
+UBC researchers that plan to collect and store research information should
+consider contacting UBC Advanced Research Computing (ARC) for guidance and
+support to ensure data is properly protected. Furthermore, if the research
+encompasses any data that could be considered sensitive, contacting ARC is
+**STRONGLY** recommended.
+
+- [UBC Research Data Management - Privacy and Security](https://rdm.ubc.ca/support-services/privacy-and-security)
+
+- [UBC Advanced Research Computing - Research Cybersecurity and Compliance Services](https://arc.ubc.ca/security-privacy)
+
+- [UBC Advanced Research Computing - Information Security Compliance Checklist](https://arc.ubc.ca/media/document/arc-securitycompliancechecklist-fillablepdf)
+
+- [Government of Canada - Science and Innovation - Safeguarding Your Research](https://science.gc.ca/site/science/en/safeguarding-your-research)
+
+### Access
+
+UBC Geog IT provides direct support to faculty and research assistants to ensure
+that local hardware is compliant with UBC's standards for securely accessing
+research data. This includes ensuring laptops and desktops have full disk
+encryption, access control for system administration, and installation of UBC
+IT-provided malware protection. Additionally, researchers with machines
+connected to Geography's local network have additional protection through
+multiple firewalls.
+
+Maintaining secure computing environments is a collaborative process though, and
+ultimately, it is the responsibility of the researcher to ensure that any
+machines that are used for accessing their project's research data, including
+those used by their research assistants, are effectively secured. Part of this
+includes ensuring machines are protected with a password or passphrase that
+complies with [ISS U2](https://cio.ubc.ca/information-security-standards/U2),
+have been setup to automatically lock after, at most, 30 minutes of inactivity,
+and receive routine updates to the operating system and any installed
+software[^1]. Depending on the risk levels associated with a researcher's data,
+the restrictions noted above may need to be more stringent.
+
+- [UBC CIO - How to Stay Secure](https://cio.ubc.ca/how-stay-secure)
+
+- [UBC IT - UBC Information Security Office](https://it.ubc.ca/services/cybersecurity-services/ubc-information-security-office)
+
+Before sharing research data with recently hired research assistant, ensure that
+they have completed the following UBC training modules.
+
+- Privacy & Information Security Fundamentals Training Part
+  [1](https://wpl.ubc.ca/browse/prism/courses/wpl-srs-prsecf) &
+  [2](https://wpl.ubc.ca/browse/prism/courses/wpl-srs-prsec2)
+
+Also consider reviewing and assigning the following modules:
+
+- [Privacy and Information Security - Wherever You Work](https://wpl.ubc.ca/browse/prism/courses/wpl-srs-prswbw)
+
+- [Introduction to Research Security](https://wpl.ubc.ca/browse/vpri/researchsecurity/courses/introduction-to-research-security)
+
+### Collection & Storage
+
+Even if a project does not include Personal Identifiable Information (PII) or
+other sensitive data,
+[classifying research information](https://arc.ubc.ca/security-privacy/research-information-classification)
+that will be collected, stored, and analyzed through the lifetime of a research
+project is an important to step to identify and assess risk levels that may be
+associated with the project.
+
+- [PIA Guidelines - Survey Tools](https://privacymatters.ubc.ca/sites/default/files/REVISED_PIA%20Guidelines%20Survey%20Tools.pdf)
+
+- [DigItal Research Alliance - Data Protection, Privacy, and Confidentiality](https://docs.alliancecan.ca/wiki/Data_protection,_privacy,_and_confidentiality)
+
+Both UBC IT and UBC ARC provide tools and services, like REDCap for data
+collection and OneDrive for data storage, which are thoroughly reviewed to
+ensure compliance when working for sensitive data. Any tools that rely on
+external service providers will need to go through a Security Threat Risk
+Assessment (STRA) to ensure that the tool complies with privacy legislation and
+effectively mitigates known security threats.
+
+- [Privacy Matters @ UBC - PIA & STRA - Compliance Review & Comprehensive Evaluation Framework](https://privacymatters.ubc.ca/pia-stra)
+
+- [WestDRI & UBC ARC - Compliance or Chaos: A Research Assessment Survival Guide - Webinar](https://youtu.be/3pXITv-9zvE?si=dOyecpvxqBhakqS9)
+
+UBC ARC's
+[REDCap Security and Privacy](https://arc.ubc.ca/security-privacy/arc-redcap-security-and-privacy)
+provides a good example of the kind of information that would be gathered and
+documented through an STRA.
+
 ## Data Collection Systems
 
 For survey or form-based data collection, UBC researchers can access either of
@@ -198,3 +289,7 @@ The following algorithms are important to note:
   to reach similar levels of support as JPEG or LZW and not all distributions of
   GDAL include the necessary library to use this algorithm, but it is well worth
   monitoring in the future as its support grows.
+
+[^1]:
+    UBC ARC (2025, March 13). UBC Research Security Compliance Checklist.
+    <https://arc.ubc.ca/media/document/arc-securitycompliancechecklist-fillablepdf>{target="\_blank"}
