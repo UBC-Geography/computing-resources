@@ -323,7 +323,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#data-collection-systems" id="toc-data-collection-systems" class="nav-link active" data-scroll-target="#data-collection-systems">Data Collection Systems</a>
+  <li><a href="#security-privacy" id="toc-security-privacy" class="nav-link active" data-scroll-target="#security-privacy">Security &amp; Privacy</a>
+  <ul class="collapse">
+  <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access">Access</a></li>
+  <li><a href="#collection-storage" id="toc-collection-storage" class="nav-link" data-scroll-target="#collection-storage">Collection &amp; Storage</a></li>
+  </ul></li>
+  <li><a href="#data-collection-systems" id="toc-data-collection-systems" class="nav-link" data-scroll-target="#data-collection-systems">Data Collection Systems</a>
   <ul class="collapse">
   <li><a href="#redcap" id="toc-redcap" class="nav-link" data-scroll-target="#redcap">REDCap</a></li>
   <li><a href="#ubc-survey-tool-qualtrics" id="toc-ubc-survey-tool-qualtrics" class="nav-link" data-scroll-target="#ubc-survey-tool-qualtrics">UBC Survey Tool (Qualtrics)</a></li>
@@ -365,6 +370,49 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://www.youtube.com/watch?v=q5eXXps1o04" target="_blank">Research Data Management Video – Part 2</a></p></li>
 <li><p><em><a href="https://ecampusontario.pressbooks.pub/canadardm/" target="_blank">Research Data Management in the Canadian Context: A Guide for Practitioners and Learners</a></em></p></li>
 </ul>
+<section id="security-privacy" class="level2">
+<h2 class="anchored" data-anchor-id="security-privacy">Security &amp; Privacy</h2>
+<p>Ensuring research data security and privacy is a critical element to consider and plan for when starting any new research project. An increasing number of grants are now requiring that researchers clearly identify the risks associated with their research data along with clear procedures and safeguards that will be in place to mitigate and address those risks. To take a proactive approach, researchers must require that cybersecurity best practices are strictly followed at the points in which data is collected, stored, accessed, and processed.</p>
+<p>UBC researchers that plan to collect and store research information should consider contacting UBC Advanced Research Computing (ARC) for guidance and support to ensure data is properly protected. Furthermore, if the research encompasses any data that could be considered sensitive, contacting ARC is <strong>STRONGLY</strong> recommended.</p>
+<ul>
+<li><p><a href="https://rdm.ubc.ca/support-services/privacy-and-security">UBC Research Data Management - Privacy and Security</a></p></li>
+<li><p><a href="https://arc.ubc.ca/security-privacy">UBC Advanced Research Computing - Research Cybersecurity and Compliance Services</a></p></li>
+<li><p><a href="https://arc.ubc.ca/media/document/arc-securitycompliancechecklist-fillablepdf">UBC Advanced Research Computing - Information Security Compliance Checklist</a></p></li>
+<li><p><a href="https://science.gc.ca/site/science/en/safeguarding-your-research">Government of Canada - Science and Innovation - Safeguarding Your Research</a></p></li>
+</ul>
+<section id="access" class="level3">
+<h3 class="anchored" data-anchor-id="access">Access</h3>
+<p>UBC Geog IT provides direct support to faculty and research assistants to ensure that local hardware is compliant with UBC’s standards for securely accessing research data. This includes ensuring laptops and desktops have full disk encryption, access control for system administration, and installation of UBC IT-provided malware protection. Additionally, researchers with machines connected to Geography’s local network have additional protection through multiple firewalls.</p>
+<p>Maintaining secure computing environments is a collaborative process though, and ultimately, it is the responsibility of the researcher to ensure that any machines that are used for accessing their project’s research data, including those used by their research assistants, are effectively secured. Part of this includes ensuring machines are protected with a password or passphrase that complies with <a href="https://cio.ubc.ca/information-security-standards/U2">ISS U2</a>, have been setup to automatically lock after, at most, 30 minutes of inactivity, and receive routine updates to the operating system and any installed software<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. Depending on the risk levels associated with a researcher’s data, the restrictions noted above may need to be more stringent.</p>
+<ul>
+<li><p><a href="https://cio.ubc.ca/how-stay-secure">UBC CIO - How to Stay Secure</a></p></li>
+<li><p><a href="https://it.ubc.ca/services/cybersecurity-services/ubc-information-security-office">UBC IT - UBC Information Security Office</a></p></li>
+</ul>
+<p>Before sharing research data with recently hired research assistant, ensure that they have completed the following UBC training modules.</p>
+<ul>
+<li>Privacy &amp; Information Security Fundamentals Training Part <a href="https://wpl.ubc.ca/browse/prism/courses/wpl-srs-prsecf">1</a> &amp; <a href="https://wpl.ubc.ca/browse/prism/courses/wpl-srs-prsec2">2</a></li>
+</ul>
+<p>Also consider reviewing and assigning the following modules:</p>
+<ul>
+<li><p><a href="https://wpl.ubc.ca/browse/prism/courses/wpl-srs-prswbw">Privacy and Information Security - Wherever You Work</a></p></li>
+<li><p><a href="https://wpl.ubc.ca/browse/vpri/researchsecurity/courses/introduction-to-research-security">Introduction to Research Security</a></p></li>
+</ul>
+</section>
+<section id="collection-storage" class="level3">
+<h3 class="anchored" data-anchor-id="collection-storage">Collection &amp; Storage</h3>
+<p>Even if a project does not include Personal Identifiable Information (PII) or other sensitive data, <a href="https://arc.ubc.ca/security-privacy/research-information-classification">classifying research information</a> that will be collected, stored, and analyzed through the lifetime of a research project is an important to step to identify and assess risk levels that may be associated with the project.</p>
+<ul>
+<li><p><a href="https://privacymatters.ubc.ca/sites/default/files/REVISED_PIA%20Guidelines%20Survey%20Tools.pdf">PIA Guidelines - Survey Tools</a></p></li>
+<li><p><a href="https://docs.alliancecan.ca/wiki/Data_protection,_privacy,_and_confidentiality">DigItal Research Alliance - Data Protection, Privacy, and Confidentiality</a></p></li>
+</ul>
+<p>Both UBC IT and UBC ARC provide tools and services, like REDCap for data collection and OneDrive for data storage, which are thoroughly reviewed to ensure compliance when working for sensitive data. Any tools that rely on external service providers will need to go through a Security Threat Risk Assessment (STRA) to ensure that the tool complies with privacy legislation and effectively mitigates known security threats.</p>
+<ul>
+<li><p><a href="https://privacymatters.ubc.ca/pia-stra">Privacy Matters @ UBC - PIA &amp; STRA - Compliance Review &amp; Comprehensive Evaluation Framework</a></p></li>
+<li><p><a href="https://youtu.be/3pXITv-9zvE?si=dOyecpvxqBhakqS9">WestDRI &amp; UBC ARC - Compliance or Chaos: A Research Assessment Survival Guide - Webinar</a></p></li>
+</ul>
+<p>UBC ARC’s <a href="https://arc.ubc.ca/security-privacy/arc-redcap-security-and-privacy">REDCap Security and Privacy</a> provides a good example of the kind of information that would be gathered and documented through an STRA.</p>
+</section>
+</section>
 <section id="data-collection-systems" class="level2">
 <h2 class="anchored" data-anchor-id="data-collection-systems">Data Collection Systems</h2>
 <p>For survey or form-based data collection, UBC researchers can access either of two FIPPA-compliant systems, REDCap, which is managed by UBC’s Advanced Research Computing (ARC) team, or Qualtrics, which is a vendor-supported cloud service that UBC IT manages a subscription for.</p>
@@ -456,7 +504,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>UBC ARC (2025, March 13). UBC Research Security Compliance Checklist. <a href="https://arc.ubc.ca/media/document/arc-securitycompliancechecklist-fillablepdf" target="_blank">https://arc.ubc.ca/media/document/arc-securitycompliancechecklist-fillablepdf</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
