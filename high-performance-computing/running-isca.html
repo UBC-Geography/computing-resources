@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Containers – UBC Geography Computing Resources</title>
+<title>Running Isca – UBC Geography Computing Resources</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -76,10 +110,10 @@ ul.task-list li input[type="checkbox"] {
 <meta property="og:site_name" content="UBC Geography Computing Resources">
 <meta property="og:image:alt" content="UBC Geography logo">
 <meta property="og:locale" content="en_US">
-<link rel="canonical" href="https://ubc-geography.github.io/computing-resources/containers/index.html">
+<link rel="canonical" href="https://ubc-geography.github.io/computing-resources/high-performance-computing/running-isca.html">
 </head>
 
-<body class="floating">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -88,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../containers/index.html">Containers</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../high-performance-computing/index.html">High-Performance Computing (HPC) / High-Throughput Computing (HTC)</a></li><li class="breadcrumb-item"><a href="../high-performance-computing/running-isca.html">Running Isca</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -256,13 +290,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">High-Performance Computing (HPC) / High-Throughput Computing (HTC)</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../high-performance-computing/index.html" class="sidebar-item-text sidebar-link">
@@ -271,7 +305,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../high-performance-computing/running-isca.html" class="sidebar-item-text sidebar-link">
+  <a href="../high-performance-computing/running-isca.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Running Isca</span></a>
   </div>
 </li>
@@ -320,7 +354,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../containers/index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../containers/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Containers</span></a>
   </div>
 </li>
@@ -335,32 +369,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#container-images" id="toc-container-images" class="nav-link active" data-scroll-target="#container-images">Container Images</a>
-  <ul class="collapse">
-  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
-  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
-  <li><a href="#others" id="toc-others" class="nav-link" data-scroll-target="#others">Others</a></li>
-  </ul></li>
-  <li><a href="#engines" id="toc-engines" class="nav-link" data-scroll-target="#engines">Engines</a>
-  <ul class="collapse">
-  <li><a href="#apptainer-formerly-singularity" id="toc-apptainer-formerly-singularity" class="nav-link" data-scroll-target="#apptainer-formerly-singularity">Apptainer (formerly Singularity)</a></li>
-  <li><a href="#podman" id="toc-podman" class="nav-link" data-scroll-target="#podman">Podman</a></li>
-  <li><a href="#docker" id="toc-docker" class="nav-link" data-scroll-target="#docker">Docker</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/containers/README.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../high-performance-computing/index.html">High-Performance Computing (HPC) / High-Throughput Computing (HTC)</a></li><li class="breadcrumb-item"><a href="../high-performance-computing/running-isca.html">Running Isca</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Containers</h1>
+<h1 class="title">Running Isca</h1>
 </div>
 
 
@@ -377,72 +394,235 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Similar to virtual machines, containers are a form of virtualization that package software and the multiple dependencies required to run that software into a single, distributable environment. That container can then be run on any system that is running the appropriate engine (Docker, Podman, etc.). They are often lighter and more agile than virtual machines but can include increased security risks if not deployed correctly. In general, virtual environments managed using tools like Conda as discussed in <a href="https://UBC-Geography.github.io/computing-resources/development-environments/conda-getting-started" target="_blank">‘Getting started with Conda, Virtual Environments, and Python’</a> should provide sufficient isolation for most geospatial computing cases without the need to familiarize oneself with container technologies, but containers can be a helpful tool in cases when neither virtual environments or virtual machines are feasible.</p>
-<p>For examples on leveraging containers to run highly-customized development environments with Jupyter, RStudio, or VS Code, see <a href="https://UBC-Geography.github.io/computing-resources/development-environments/containerized-environments" target="_blank">Using Containers for Development Environments</a>.</p>
-<p>It is important to note that most containers can only run in Linux environments. Each of the container systems listed below include tools and steps for setting up simple, Linux environments from which containers can be ran on either Windows or Mac machines.</p>
-<p>Additionally, a large majority of container images are built with a simplified Linux distribution (often Ubuntu) as their base image. While some images have been built with Windows Server as their base image, it is important to note that these images cannot and likely never will run a desktop environment and/or graphical user interface (GUI).</p>
-<section id="container-images" class="level2">
-<h2 class="anchored" data-anchor-id="container-images">Container Images</h2>
-<p>There are many open container registries, where you can find publicly shared container images. <a href="https://hub.docker.com" target="_blank">Docker Hub</a> is one of the most popular options and can be a useful tool when searching for images. In general, you should be careful when selecting images and be sure to select images that are well-maintained. If you need a very minimal environment with Conda/Mamba, Conda-forge’s <a href="https://hub.docker.com/r/condaforge/mambaforge" target="_blank">mambaforge</a> image can be a good place to start as you’ll be able to install packages with <a href="https://manpages.debian.org/bookworm/apt/apt-get.8.en.html" target="_blank">APT</a> or <a href="https://mamba.readthedocs.io/en/latest/index.html" target="_blank">Mamba</a>.</p>
-<section id="python" class="level3">
-<h3 class="anchored" data-anchor-id="python">Python</h3>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This page is still a draft and requires further review.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Isca is a framework for the idealized modelling of the global circulation of planetary atmospheres at varying levels of complexity and realism. The framework is an outgrowth of models from GFDL designed for Earth’s atmosphere, but it may readily be extended into other planetary regimes. Various forcing and radiation options are available, from a dry Newtonian relaxation to a moist dynamics with full radiation.</p>
+</blockquote>
+<p>This page provides a tutorial on how to run <a href="https://execlim.github.io/Isca/">Isca</a> in an HTC/HPC environment using either UBC ARC’s Sockeye cluster or one of the Alliance clusters. It’s been adapted from both <a href="https://github.com/ExeClim/Isca?tab=readme-ov-file#getting-started">Isca’s README - Getting Started</a> and <a href="https://github.com/wseviour/Bristol_Climate_Dynamics/blob/master/Isca_SOCRATES.md#guide-to-running-isca-with-socrates-on-bluecrysal-phase-4">William Seviour’s Guide to Running Isca on the University of Bristol’s BlueCrystal Phase 4</a>. This guide is relatively technical and has the following requirements:</p>
 <ul>
-<li><p><a href="https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-minimal-notebook" target="_blank">Jupyter - Minimal Notebook</a>: A Jupyter server running JupyterLab and a Python kernel. No geospatial packages are included in this environment, but it is an excellent base image for creating customized Jupyter environments.</p></li>
-<li><p><a href="https://darribas.org/gds_env/stacks/gds_py/" target="_blank">GDS_ENV - GDS_PY</a>: Built on top of Jupyter - Minimal Notebook, this image includes a large selection of Python geospatial packages.</p></li>
+<li>Status as faculty or a librarian with an institution that holds eligibility for CFI grants</li>
+<li>An account on either UBC ARC Sockeye or the Alliance</li>
+<li>Working knowledge of UNIX/Linux</li>
 </ul>
-</section>
-<section id="r" class="level3">
-<h3 class="anchored" data-anchor-id="r">R</h3>
-<ul>
-<li><p><a href="https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html#jupyter-r-notebook" target="_blank">Jupyter - R Notebook</a>: Similarly built from Jupyter - Minimal Notebook, this image includes an R kernel and a few R packages. Custom R environments with a preference towards JupyterLab should use this as their base image.</p></li>
-<li><p><a href="https://darribas.org/gds_env/stacks/gds/" target="_blank">GDS_ENV - GDS</a>: Built on top of GDS_ENV - GDS_PY, this image includes an R kernel and a wide selection of R geospatial packages.</p></li>
-<li><p><a href="https://rocker-project.org/images/versioned/rstudio.html" target="_blank">Rocker - Geospatial</a>: Swapping JupyterLab for RStudio, this container image includes a range of R packages with a heavy focus on geospatial research.</p></li>
-</ul>
-</section>
-<section id="others" class="level3">
-<h3 class="anchored" data-anchor-id="others">Others</h3>
-<ul>
-<li><p><a href="https://github.com/postgis/docker-postgis" target="_blank">PostGIS</a></p></li>
-<li><p><a href="https://docs.geoserver.org/latest/en/user/installation/docker.html" target="_blank">GeoServer</a></p></li>
-<li><p><a href="https://docs.qgis.org/latest/en/docs/server_manual/containerized_deployment.html" target="_blank">QGIS Server</a></p></li>
-</ul>
-</section>
-</section>
-<section id="engines" class="level2">
-<h2 class="anchored" data-anchor-id="engines">Engines</h2>
-<section id="apptainer-formerly-singularity" class="level3">
-<h3 class="anchored" data-anchor-id="apptainer-formerly-singularity">Apptainer (formerly Singularity)</h3>
-<p>Developed specifically for academic and high performance computing, Apptainer avoids some of the security pitfalls of other engines, like Docker, at the expense of certain functionalities. Apptainer can only run a specific container format, but it provides all the necessary tools to complete conversions.</p>
-<ul>
-<li><p><a href="https://apptainer.org/docs/user/main/" target="_blank">Apptainer Documentation</a></p></li>
-<li><p><a href="https://docs.alliancecan.ca/wiki/Apptainer" target="_blank">Running Apptainer on an Alliance cluster</a></p></li>
-<li><p><a href="https://confluence.it.ubc.ca/display/UARC/Using+Apptainer+or+Singularity+Containers" target="_blank">Running Apptainer on UBC ARCSockeye</a></p></li>
-<li><p>UBC ARC - Apptainer Workshop 2023 - Videos: <a href="https://youtu.be/LE4HTJ0sQ3k?si=BEBNiP2V7y_LjNtO" target="_blank">Part 1</a> &amp; <a href="https://youtu.be/5P4syyFIV0M?si=AwG5WxgQw5z3Oqp-" target="_blank">Part 2</a></p></li>
-</ul>
-<p>For a few simple examples on using and running Apptainer, see <a href="https://UBC-Geography.github.io/computing-resources/high-performance-computing" target="_blank">High Performance Computing (HPC)</a>.</p>
-</section>
-<section id="podman" class="level3">
-<h3 class="anchored" data-anchor-id="podman">Podman</h3>
-<p>Similar to Apptainer, Podman avoids some of the security pitfalls found in Docker, but unlike Apptainer, Podman provides a more general-purpose container engine. When developing containers, Podman can provide a more flexible and feature-rich set of tooling compared to Apptainer. A common workflow may include building containers with Podman and then converting them to Apptainer containers prior to running in an HPC environment.</p>
-<ul>
-<li><p><a href="https://docs.podman.io/en/latest/" target="_blank">Podman Documentation</a></p></li>
-<li><p><em>Podman in Action</em> : <a href="https://go.exlibris.link/XZMWFsdp" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1371958299" target="_blank">WorldCat</a></p></li>
-</ul>
-</section>
-<section id="docker" class="level3">
-<h3 class="anchored" data-anchor-id="docker">Docker</h3>
-<p>Docker is by far the most popular container system, so similar to Podman, it can provide a helpful tool for developing and running containers on your local machine. If you are still new to managing and running containers, Docker can be a good system to get started with because of the large collection of resources and tools that have been built around it.</p>
-<ul>
-<li><p><a href="https://ubc-library-rc.github.io/intro-docker" target="_blank">UBC Library Research Commons - Introduction to Docker</a></p></li>
-<li><p><a href="https://docs.docker.com/get-started/" target="_blank">Docker Documentation</a></p></li>
-<li><p><em>Docker: Up and Running</em> : <a href="https://go.exlibris.link/z6bLGnqS" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1370903040" target="_blank">WorldCat</a></p></li>
-<li><p><em>Practical Docker with Python</em> : <a href="https://go.exlibris.link/V5Yl7J3v" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1287132682" target="_blank">WorldCat</a></p></li>
-<li><p><em>Docker Deep Dive</em> : <a href="https://go.exlibris.link/4wT3cjWD" target="_blank">UBC Library</a> | <a href="https://search.worldcat.org/title/1206238897" target="_blank">WorldCat</a></p></li>
-</ul>
+<ol type="1">
+<li><p>Isca has been built using both Python and Fortran, and to run, it requires both a Fortran compiler and a Python virtual environment. To enable Isca to run more efficiently and ensure reproducibility, an important first steps is to generate a new requirements.txt file. This file will then be used to consistently rebuild a virtual environment each time you run Isca.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Sockeye</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Alliance</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the Alliance software stack</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load CVMFS_test</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the Python module</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load python/3.12</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Upgrade pip</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> pip install <span class="at">--no-index</span> <span class="at">--upgrade</span> pip</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Pre-download the f90nml package from PYPI</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> pip download <span class="at">--no-deps</span> f90nml</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a temporary virtual environment</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ENVDIR=/tmp/<span class="va">$RANDOM</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> virtualenv <span class="at">--no-download</span> <span class="va">$ENVDIR</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Activate the environment</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> source <span class="va">$ENVDIR</span>/bin/activate</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the dependency packages</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> pip install f90nml-<span class="op">&lt;</span>version<span class="op">&gt;</span>.tar.gz</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> pip install <span class="at">--no-index</span> sh jinja2 numpy pandas xarray tqdm</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Export a requirements.txt file with packages</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> pip freeze <span class="at">--local</span> <span class="op">&gt;</span> ~/.isca/requirements.txt</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Deactivate and delete the temporary environment</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> deactivate</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> rm <span class="at">-rf</span> <span class="va">$ENVDIR</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the Python module</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load python/3.12</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Upgrade pip</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> pip install <span class="at">--no-index</span> <span class="at">--upgrade</span> pip</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Pre-download the f90nml package from PYPI</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> pip download <span class="at">--no-deps</span> f90nml</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a temporary virtual environment</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ENVDIR=/tmp/<span class="va">$RANDOM</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> virtualenv <span class="at">--no-download</span> <span class="va">$ENVDIR</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Activate the environment</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> source <span class="va">$ENVDIR</span>/bin/activate</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the dependency packages</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> pip install f90nml-<span class="op">&lt;</span>version<span class="op">&gt;</span>.tar.gz</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> pip install <span class="at">--no-index</span> sh jinja2 numpy pandas xarray tqdm</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Export a requirements.txt file with packages</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> pip freeze <span class="at">--local</span> <span class="op">&gt;</span> ~/.isca/requirements.txt</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Deactivate and delete the temporary environment</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> deactivate</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> rm <span class="at">-rf</span> <span class="va">$ENVDIR</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div></li>
+<li><p>Next, clone the Isca repository from GitHub into your home directory. If you are working with collaborators in a project directory, that might be a better location to clone the Isca repository into as that will ensure everyone is using the same source code.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git clone https://github.com/ExeClim/Isca.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>If you were previously running Isca on a local workstation, you were likely using <code>conda</code> to setup and install Isca’s environment While that workflow may still work in Sockeye or on one of the Alliance clusters, switching away from <code>conda</code> and <code>conda-forge</code> packages to Alliance provided modules and Python wheels could provide some very easy performance improvements. Isca itself already provides a standard method for porting to different environments through the environment files stored in the <code>Isca/src/extra/env</code> directory. By setting the GFDL_ENV environment variable, you can swap out environments as needed. You can also create your own local environments, which is the method used in this tutorial.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Sockeye</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Alliance</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano .isca/intel_sockeye</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>~/.isca/intel_sockeye</strong></pre>
+</div>
+<div class="sourceCode" id="cb5" data-filename="~/.isca/intel_sockeye"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> loadmodules for sockeye</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> purge</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load CVMFS_test</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load intel/2024.2.0</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load openmpi/5.0.3</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load hdf5-mpi/1.14.5</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load netcdf-fortran-mpi/4.6.1</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">F90</span><span class="op">=</span>mpifort</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">CC</span><span class="op">=</span>mpicc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano .isca/intel_alliance</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>~/.isca/intel_alliance</strong></pre>
+</div>
+<div class="sourceCode" id="cb7" data-filename="~/.isca/intel_alliance"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> loadmodules for alliance clusters</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> purge</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load intel/2024.2.0</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load openmpi/5.0.3</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load hdf5-mpi/1.14.5</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load netcdf-fortran-mpi/4.6.1</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">F90</span><span class="op">=</span>mpifort</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">CC</span><span class="op">=</span>mpicc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div></li>
+<li><p>Modify your <code>.bashrc</code> file to set Isca’s environment variables</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano ~/.bashrc</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Sockeye</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Alliance</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>~/.bashrc</strong></pre>
+</div>
+<div class="sourceCode" id="cb9" data-filename="~/.bashrc"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># directory of the Isca source code</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">GFDL_BASE</span><span class="op">=</span><span class="va">$HOME</span>/Isca</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co"># "environment" configuration for use with Sockeye</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">GFDL_ENV</span><span class="op">=</span><span class="va">$HOME</span>/.isca/intel_sockeye</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="co"># temporary working directory used in running the model</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">GFDL_WORK</span><span class="op">=</span>/scratch/<span class="op">&lt;</span>alloc-code<span class="op">&gt;</span>/isca_work</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># directory for storing model output</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">GFDL_DATA</span><span class="op">=</span>/scratch/<span class="op">&lt;</span>alloc-code<span class="op">&gt;</span>/isca_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>~/.bashrc</strong></pre>
+</div>
+<div class="sourceCode" id="cb10" data-filename="~/.bashrc"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># directory of the Isca source code</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">GFDL_BASE</span><span class="op">=</span><span class="va">$HOME</span>/Isca</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># "environment" configuration for use with Alliance clusters</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">GFDL_ENV</span><span class="op">=</span><span class="va">$HOME</span>/.isca/intel_alliance</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># temporary working directory used in running the model</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">GFDL_WORK</span><span class="op">=</span>/scratch/<span class="op">&lt;</span>username<span class="op">&gt;</span>/isca_work</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># directory for storing model output</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="bu">export</span> <span class="va">GFDL_DATA</span><span class="op">=</span>/scratch/<span class="op">&lt;</span>username<span class="op">&gt;</span>/isca_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div></li>
+<li><p>Create a new SLURM job script</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano isca_slurm_job.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Sockeye</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Alliance</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>isca_slurm_job.sh</strong></pre>
+</div>
+<div class="sourceCode" id="cb12" data-filename="isca_slurm_job.sh"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --job-name=test_case     # Specify the job name</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --account=&lt;your-alloc&gt;   # Specify your allocation code</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=1:00:00           # Request 1 hour of runtime</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --nodes=1                # Request 1 node</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --ntasks-per-node=16     # Request 16 tasks</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mail-user=&lt;your-email&gt; # Email address for job notifications</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mail-type=ALL          # Receive email notifications for all job events</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Load environment variables</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.bashrc</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Load Python</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load CVMFS_test</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load python/3.12</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Create and activate a temporary virtual environment</span></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="ex">virtualenv</span> <span class="at">--no-download</span> <span class="va">$SLURM_TMPDIR</span>/env</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> <span class="va">$SLURM_TMPDIR</span>/env/bin/activate</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Upgrade pip and install dependencies</span></span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">--no-index</span> <span class="at">--upgrade</span> pip</span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">--no-index</span> <span class="at">-r</span> <span class="va">$HOME</span>/.isca/requirements.txt</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the Isca front-end</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">-e</span> <span class="va">$GFDL_BASE</span>/src/extra/python</span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the test case</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="va">$GFDL_BASE</span>/exp/test_cases/held_suarez/held_suarez_test_case.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>isca_slurm_job.sh</strong></pre>
+</div>
+<div class="sourceCode" id="cb13" data-filename="isca_slurm_job.sh"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">#!/bin/bash</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --job-name=test_case     # Specify the job name</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --account=&lt;your-alloc&gt;   # Specify your allocation code</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --time=1:00:00           # Request 1 hour of runtime</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --nodes=1                # Request 1 node</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --ntasks-per-node=16     # Request 16 tasks</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mail-user=&lt;your-email&gt; # Email address for job notifications</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co">#SBATCH --mail-type=ALL          # Receive email notifications for all job events</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Load environment variables</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> ~/.bashrc</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Load Python</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="ex">module</span> load python/3.12</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Create and activate a temporary virtual environment</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="ex">virtualenv</span> <span class="at">--no-download</span> <span class="va">$SLURM_TMPDIR</span>/env</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> <span class="va">$SLURM_TMPDIR</span>/env/bin/activate</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Upgrade pip and install dependencies</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">--no-index</span> <span class="at">--upgrade</span> pip</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">--no-index</span> <span class="at">-r</span> <span class="va">$HOME</span>/.isca/requirements.txt</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the Isca front-end</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pip install <span class="at">-e</span> <span class="va">$GFDL_BASE</span>/src/extra/python</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the test case</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="va">$GFDL_BASE</span>/exp/test_cases/held_suarez/held_suarez_test_case.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div></li>
+<li><p>Submit your job</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> sbatch isca_slurm_job.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Once the job has finished review the output in the scratch directory and copy any relevant data to either your home or project directory for retention.</p></li>
+</ol>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1014,7 +1194,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/containers/README.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/high-performance-computing/running-isca.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
