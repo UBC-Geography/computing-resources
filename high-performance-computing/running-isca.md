@@ -43,7 +43,7 @@ This guide is relatively technical and has the following requirements:
 
    ```bash
    # Load the Alliance software stack
-   $ module load CVMFS_test
+   $ module load CVMFS_CC
    # Load the Python module
    $ module load python/3.12
    # Upgrade pip
@@ -123,7 +123,7 @@ This guide is relatively technical and has the following requirements:
    echo loadmodules for sockeye
 
    module purge
-   module load CVMFS_test
+   module load CVMFS_CC
    module load intel/2024.2.0
    module load openmpi/5.0.3
    module load hdf5-mpi/1.14.5
@@ -213,7 +213,7 @@ This guide is relatively technical and has the following requirements:
    # Load environment variables
    source ~/.bashrc
    # Load Python
-   module load CVMFS_test
+   module load CVMFS_CC
    module load python/3.12
    # Create and activate a temporary virtual environment
    virtualenv --no-download $SLURM_TMPDIR/env
