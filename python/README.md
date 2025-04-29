@@ -1,6 +1,8 @@
 ---
 output-file: index.html
 title: Python
+# change to date to last-modified after next modification
+date: 2025-01-16
 ---
 
 Python is one of the most popular programming languages in the world. Its low

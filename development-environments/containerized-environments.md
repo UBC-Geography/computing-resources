@@ -1,5 +1,7 @@
 ---
 title: Using Containers for Development Environments
+# change to date to last-modified after next modification
+date: 2024-12-05
 ---
 
 While Conda can provide extremely convenient development environments, you may

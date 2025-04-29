@@ -1,6 +1,8 @@
 ---
 output-file: index.html
 title: Cloud Computing
+# change to date to last-modified after next modification
+date: 2024-12-11
 ---
 
 Similar to high performance computing (HPC), cloud computing provides hardware
@@ -72,6 +74,17 @@ particularly useful for the following use cases:
 - Running a web service with software like GeoServer, GeoNode, Ushahidi, uMap
   (OpenStreetMap), or QGIS server.
 - Developing dynamic digital exhibits or publications with Omeka and/or Scalar.
+
+Ideas/Examples:
+
+- xDashboard
+- xOmeka
+- uMap
+- OpenWebMap
+- Ushahidi
+- CollectionBuilder
+- JupyterHub
+- Immich?
 
 Again, when working with persistent VMs, consider any implications that may come
 from preserving your work once the VM is no longer available by asking yourself

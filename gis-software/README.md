@@ -1,6 +1,8 @@
 ---
 output-file: index.html
 title: GIS Software
+# change to date to last-modified after next modification
+date: 2024-12-11
 ---
 
 The ecosystem of GIS software is quite large and complex, with new software
@@ -185,6 +187,8 @@ embed images or other media on your map, checkout the
 for free/low-cost hosting options.
 
 - [OSM Wiki- uMap](https://wiki.openstreetmap.org/wiki/UMap){target="\_blank"}
+
+- [Deploying uMap on the Alliance Cloud](https://ubc-geography.github.io/computing-resources/cloud-computing/deploying-umap.html){target="\_blank"}
 
 ### QGIS2WEB
 

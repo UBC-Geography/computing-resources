@@ -1,6 +1,8 @@
 ---
 output-file: index.html
 title: Digital Communications
+# change to date to last-modified after next modification
+date: 2024-12-05
 ---
 
 ## WordPress
@@ -123,6 +125,10 @@ that can be used to customize the style of a website.
 
 - [UBC Library Research Commons - Building a project website with Jekyll and GitHub Pages](https://ubc-library-rc.github.io/intro-project-sites/){target="\_blank"}
 
+### Quire (JavaScript)
+
+https://quire.getty.edu/
+
 ## Digital Exhibit Tools
 
 Storing and presenting digital assets, like images, audio, and video files, can
@@ -145,6 +151,8 @@ developing and managing digital exhibits.
 
 #### Cloud Hosting
 
+- [Deploying Omeka Classic on the Alliance Cloud](https://ubc-geography.github.io/computing-resources/cloud-computing/deploying-omeka-classic.html){target="\_blank"}
+
 - [UBC IT Shared Hosting](https://it.ubc.ca/services/web-servers-storage/shared-web-hosting){target="\_blank"}
 
 - [Omeka Classic Documentation](https://omeka.org/classic/docs/){target="\_blank"}
@@ -157,11 +165,7 @@ Lacking a content management system, CollectionBuilder centers the development
 and management of digital exhibits around CSVs, which can be easily created and
 managed via a spreadsheet editor. Built as a theme around a static site
 generator (Jekyll), CollectionBuilder creates digital exhibits as
-easy-to-preserve websites. Paired with the Alliance's Arbutus Object Storage,
-CollectionBuilder exhibits provide a fast and customizable method for publicly
-sharing a variety of media alongside a rich set of metadata. Additionally,
-CollectionBuilder automatically generates a Leaflet-based web map from any
-provided geospatial metadata.
+easy-to-preserve websites.
 
 - [CollectionBuilder Documentation](https://collectionbuilder.github.io/cb-docs/){target="\_blank"}
 

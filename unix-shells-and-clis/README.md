@@ -1,6 +1,8 @@
 ---
 output-file: index.html
 title: Unix Shells & Command Line Interfaces (CLI)
+# change to date to last-modified after next modification
+date: 2025-01-16
 ---
 
 Having confidence when using a Unix shell, particularly Bash, is crucial when

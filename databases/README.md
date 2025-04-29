@@ -1,6 +1,8 @@
 ---
 output-file: index.html
 title: Databases
+# change to date to last-modified after next modification
+date: 2024-12-11
 ---
 
 Databases, and particularly spatial databases as a piece of GIS software, play a

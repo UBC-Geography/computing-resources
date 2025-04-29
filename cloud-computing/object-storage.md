@@ -1,5 +1,7 @@
 ---
 title: Object Storage
+# change to date to last-modified after next modification
+date: 2024-12-10
 ---
 
 Object storage, also known as blob storage or even S3 storage in the context of
@@ -207,3 +209,7 @@ providers have generous free tiers and generally lower pricing options.
 - [Cloudflare R2](https://developers.cloudflare.com/r2/){target="\_blank"}
 
 - [Backblaze B2](https://www.backblaze.com/docs/cloud-storage){target="\_blank"}
+
+## Connecting a Content Delivery Network (CDN)
+
+Benefits Cloudfront via UBC IT Hybrid

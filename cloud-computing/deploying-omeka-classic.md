@@ -1,5 +1,7 @@
 ---
 title: Deploying Omeka Classic
+# change to date to last-modified after next modification
+date: 2025-02-27
 ---
 
 Omeka Classic is a free and open-source content management system that focuses
@@ -309,3 +311,18 @@ authenticate your instance to Arbutus Object Storage.
 
    ...
    ```
+
+## Performance Tweaks (Optional)
+
+In general, Making performance tweaks to your Omeka server can help both ensure
+that its running as efficiently as possible while also improving access for
+users that may network connections with limited bandwidth.
+
+Enable apache2 expire mod and uncomment .htaccess
+https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/?utm_source=lighthouse&utm_medium=devtools
+
+Install brotli and enable brotli mod in apache
+
+Connect a CDN (cloudfront via UBC IT Hybrid Cloud or fastly). works best with S3
+storage ??? I don't know if this will work because Cloudfront and S3 url would
+be different

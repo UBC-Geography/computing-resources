@@ -1,6 +1,8 @@
 ---
 output-file: index.html
 title: Julia
+# change to date to last-modified after next modification
+date: 2024-12-05
 ---
 
 Compared to Python and R, Julia is a relatively young language that is slowly

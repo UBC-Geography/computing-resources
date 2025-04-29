@@ -1,6 +1,8 @@
 ---
 output-file: index.html
 title: R
+# change to date to last-modified after next modification
+date: 2025-01-16
 ---
 
 Alongside Python, R is one of the commonly used programming languages in

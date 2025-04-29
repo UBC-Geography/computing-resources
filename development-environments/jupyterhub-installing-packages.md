@@ -1,5 +1,7 @@
 ---
 title: Installing Packages in UBC LT's Jupyter Open or UBC Syzygy
+# change to date to last-modified after next modification
+date: 2024-12-05
 ---
 
 When using one of UBC's remote Jupyter services, you will likely find that

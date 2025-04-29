@@ -1,6 +1,8 @@
 ---
 output-file: index.html
 title: XR - Virtual Reality / Augmented Reality
+# change to date to last-modified after next modification
+date: 2024-12-05
 ---
 
 Extended reality (XR), which encompasses virtual reality (VR), augmented reality

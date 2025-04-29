@@ -1,6 +1,8 @@
 ---
 output-file: index.html
 title: JavaScript
+# change to date to last-modified after next modification
+date: 2025-01-20
 ---
 
 While JavaScript has fewer applications in geography compared to other languages

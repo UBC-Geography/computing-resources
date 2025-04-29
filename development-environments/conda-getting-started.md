@@ -1,5 +1,7 @@
 ---
 title: Getting Started with Conda, Virtual Environments, and Python
+# change to date to last-modified after next modification
+date: 2024-12-05
 ---
 
 There are many different ways to install and start using Python on your personal

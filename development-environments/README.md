@@ -1,6 +1,8 @@
 ---
 output-file: index.html
 title: Development Environments
+# change to date to last-modified after next modification
+date: 2025-01-16
 ---
 
 A development environment can often encompass both a code editor or integrated

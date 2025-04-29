@@ -1,5 +1,7 @@
 ---
 title: Working with Private GitHub Repositories from JupyterHub
+# change to date to last-modified after next modification
+date: 2024-12-05
 ---
 
 ## Using Fine-Grained Personal Access Tokens

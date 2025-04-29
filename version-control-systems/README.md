@@ -1,6 +1,8 @@
 ---
 output-file: index.html
 title: Version Control Systems
+# change to date to last-modified after next modification
+date: 2025-01-16
 ---
 
 Implementing version control is a commonly used best practice among programmers,

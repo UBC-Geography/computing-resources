@@ -1,6 +1,8 @@
 ---
 output-file: index.html
 title: Research Data Management
+# change to date to last-modified after next modification
+date: 2025-04-15
 ---
 
 - [UBC Library Research Commons - Research Data Management](https://ubc-library-rc.github.io/rdm/){target="\_blank"}

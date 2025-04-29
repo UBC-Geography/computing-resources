@@ -1,11 +1,13 @@
 ---
 title: Deploying uMap
+# change to date to last-modified after next modification
+date: 2025-03-13
 ---
 
 [uMap](https://umap-project.org/){target="\_blank"} is an
 [OpenStreetMap (OSM)](https://www.openstreetmap.org/about){target="\_blank"}
 project that provides a free and open-source web mapping tool. Researchers with
-a access to a uMap instance can quickly create, manage, and share web maps with
+access to a uMap instance can quickly create, manage, and share web maps with
 their own data using a comprehensive set of editing tools or via imported data
 from OSM or a local GeoJSON file.
 

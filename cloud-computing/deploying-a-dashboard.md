@@ -1,5 +1,7 @@
 ---
 title: Deploying a Dashboard
+# change to date to last-modified after next modification
+date: 2025-01-31
 ---
 
 This page provides a tutorial on how to deploy an interactive dashboard to an
@@ -136,7 +138,27 @@ Requirements:
 
    ```bash
    $ sudo apt install caddy
-   $ sudo -E caddy reverse-proxy --from <your_domain_name> --to :8866
+   ```
+
+   ```bash
+   $ sudo nano /etc/caddy/Caddyfile
+   ```
+
+   ```
+   <domain_name> {
+      reverse_proxy localhost:8866
+   }
+   ```
+
+   ```bash
+   $ sudo caddy run --config /etc/caddy/Caddyfile
    ```
 
    Navigate to your dashboard to see it in action!
+
+Resources:
+
+- Caddy documentation
+- Voila documentation
+- miniforge docs
+- systemd docs
