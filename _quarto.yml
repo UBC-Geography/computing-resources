@@ -114,7 +114,7 @@ website:
 
 format:
   html:
-    published-title: Last Modified
+    published-title: "Last Modified"
     theme:
       light: [sandstone, theme-light.scss]
       dark: [sandstone, theme-dark.scss]
