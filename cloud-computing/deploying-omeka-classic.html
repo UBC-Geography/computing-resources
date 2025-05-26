@@ -73,8 +73,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-bf82237d22cb6473adfcf672a908c441.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-bcb43b4882aeb3c8dbb038c32289c337.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6557d9e47e989dd7fdc3650632b22036.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-a722b11febea6350ccdf643701aaee72.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -310,6 +310,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Running Isca</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../high-performance-computing/running-cesm.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Running CESM</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -378,7 +384,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#installation" id="toc-installation" class="nav-link active" data-scroll-target="#installation">Installation</a></li>
   <li><a href="#plugins-optional" id="toc-plugins-optional" class="nav-link" data-scroll-target="#plugins-optional">Plugins (Optional)</a></li>
   <li><a href="#object-storage-optional" id="toc-object-storage-optional" class="nav-link" data-scroll-target="#object-storage-optional">Object Storage (Optional)</a></li>
-  <li><a href="#performance-tweaks-optional" id="toc-performance-tweaks-optional" class="nav-link" data-scroll-target="#performance-tweaks-optional">Performance Tweaks (Optional)</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/cloud-computing/deploying-omeka-classic.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -560,13 +565,6 @@ Note
 <span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ol>
-</section>
-<section id="performance-tweaks-optional" class="level2">
-<h2 class="anchored" data-anchor-id="performance-tweaks-optional">Performance Tweaks (Optional)</h2>
-<p>In general, Making performance tweaks to your Omeka server can help both ensure that its running as efficiently as possible while also improving access for users that may network connections with limited bandwidth.</p>
-<p>Enable apache2 expire mod and uncomment .htaccess https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/?utm_source=lighthouse&amp;utm_medium=devtools</p>
-<p>Install brotli and enable brotli mod in apache</p>
-<p>Connect a CDN (cloudfront via UBC IT Hybrid Cloud or fastly). works best with S3 storage ??? I don’t know if this will work because Cloudfront and S3 url would be different</p>
 
 
 </section>

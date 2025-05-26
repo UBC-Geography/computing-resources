@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="dcterms.date" content="2025-05-26">
+
+<title>Running the Community Earth Sytem Model (CESM) – UBC Geography Computing Resources</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6557d9e47e989dd7fdc3650632b22036.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-a722b11febea6350ccdf643701aaee72.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<meta name="google-site-verification" content="J6iS77StTO4bFu1kqLjEiR5Q4BGI8EE0VKJzUbWw1ME">
+
+
+<meta property="og:title" content="UBC Geography Computing Resources">
+<meta property="og:description" content="A listing of computing resources and accompanying documentation that can be helpful in familiarizing oneself with various tools and software that are used in Geography research, instruction, and learning.">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/101839150?s=400&amp;u=adcfa46cecc67f714d828dcb66a26a6d1093d8bd&amp;v=4">
+<meta property="og:site_name" content="UBC Geography Computing Resources">
+<meta property="og:image:alt" content="UBC Geography logo">
+<meta property="og:locale" content="en_US">
+<link rel="canonical" href="https://ubc-geography.github.io/computing-resources/high-performance-computing/running-cesm.html">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../high-performance-computing/index.html">High-Performance Computing (HPC) / High-Throughput Computing (HTC)</a></li><li class="breadcrumb-item"><a href="../high-performance-computing/running-cesm.html">Running CESM</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="https://geog.ubc.ca" class="sidebar-logo-link">
+      <img src="../assets/images/white-logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Computing Resources</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../digital-communications/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Digital Communications</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Research Data Management</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../research-data-management/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../research-data-management/research-data-storage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Research Data Storage</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../gis-software/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">GIS Software</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../unix-shells-and-clis/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">UNIX Shells and CLIs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Development Environments</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../development-environments/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../development-environments/conda-getting-started.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conda - Getting Started</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../development-environments/jupyterhub-installing-packages.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">JupyterHub - Installing Packages</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../development-environments/containerized-environments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Containerized Environments</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../python/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Python</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../r/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">R</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../javascript/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">JavaScript</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../julia/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Julia</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../databases/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Databases</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Version Control Systems</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control-systems/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../version-control-systems/jupyterhub-private-repo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Working with Private GitHub Repositories from JupyterHub</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">High-Performance Computing (HPC) / High-Throughput Computing (HTC)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../high-performance-computing/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../high-performance-computing/running-isca.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Running Isca</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../high-performance-computing/running-cesm.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Running CESM</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Cloud Computing</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cloud-computing/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cloud-computing/object-storage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Object Storage</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cloud-computing/deploying-a-dashboard.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Deploying a Dashboard</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cloud-computing/deploying-omeka-classic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Deploying Omeka Classic</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cloud-computing/deploying-umap.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Deploying uMap</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../containers/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Containers</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../xr/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">XR - Virtual Reality / Augmented Reality</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#porting-cesm" id="toc-porting-cesm" class="nav-link active" data-scroll-target="#porting-cesm">Porting CESM</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/high-performance-computing/running-cesm.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../high-performance-computing/index.html">High-Performance Computing (HPC) / High-Throughput Computing (HTC)</a></li><li class="breadcrumb-item"><a href="../high-performance-computing/running-cesm.html">Running CESM</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Running the Community Earth Sytem Model (CESM)</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Last Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 26, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This page is still a draft and requires further review.</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>The Community Earth System Model is a fully coupled global climate model developed in collaboration with colleagues in the research community. CESM provides state of the art computer simulations of Earth’s past, present, and future climate states.</p>
+</blockquote>
+<p>This page provides a tutorial on how to port <a href="https://github.com/ESCOMP/CESM">CESM</a> on an HTC/HPC environment using either UBC ARC’s Sockeye cluster or one of the Alliance clusters. This guide is relatively technical and has the following requirements:</p>
+<ul>
+<li>Status as faculty or a librarian with an institution that holds eligibility for CFI grants</li>
+<li>An account on either UBC ARC Sockeye or the Alliance</li>
+<li>Working knowledge of UNIX/Linux</li>
+</ul>
+<p>While this guide may be helpful to some, we strongly recommend reaching out to support before attempting to setup CESM on your own as some configurations may need to be modified, especially as systems are upgraded with new infrastructure.</p>
+<p>If you are looking for any easier approach to run CESM, CESM 2.1.3 is available as a module on the Alliance software stack, which can also be easily loaded on the Sockeye cluster.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load cesm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li><p><a href="https://docs.alliancecan.ca/wiki/CESM">Alliance Documentation - CESM</a></p></li>
+<li><p><a href="https://escomp.github.io/CESM/versions/cesm2.2/html/introduction.html">CESM 2.2 Documentation</a></p></li>
+<li><p><a href="https://esmci.github.io/cime/versions/master/html/users_guide/porting-cime.html">CIME Documentation - Porting Guide</a></p></li>
+</ul>
+<section id="porting-cesm" class="level2">
+<h2 class="anchored" data-anchor-id="porting-cesm">Porting CESM</h2>
+<ol type="1">
+<li><p>Start by downloading CESM’s source code from GitHub. This guide uses the latest stable release of CESM as of writing, but you can easily switch between minor versions using these <a href="https://escomp.github.io/CESM/versions/cesm2.2/html/downloading_cesm.html">instructions</a> from the CESM documentation.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">Sockeye</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Alliance</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load CVMFS_CC</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load python/3.12</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git clone <span class="at">-b</span> release-cesm2.2.2 https://github.com/ESCOMP/CESM.git</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python CESM/manage_externals/checkout_externals</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> module load python/3.12</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git clone <span class="at">-b</span> release-cesm2.2.2 https://github.com/ESCOMP/CESM.git</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python CESM/manage_externals/checkout_externals</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div></li>
+<li><p>To properly port CESM to a new system, a few configurations files need to be created that include details about the machine that CESM will be running on, how CESM should submit jobs to the machine/cluster’s job scheduler, and what tweaks might need to be made for the compilation step.</p>
+<p>The first config file to create should be the <code>config_machines.xml</code> file. Examples for Sockeye and the Alliance’s Cedar cluster are provided below.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano ~/.cime/config_machines.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Sockeye</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Alliance - Cedar</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>On Sockeye, you can load the Alliance’s software stack to access larger and often more up-to-date collection of software modules, which would be used by CESM for compilation.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>~/.cime/config_machines.xml</strong></pre>
+</div>
+<div class="sourceCode" id="cb5" data-filename="~/.cime/config_machines.xml"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">"1.0"</span><span class="fu">?&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">config_machines</span><span class="ot"> version=</span><span class="st">"2.0"</span>&gt;</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>   &lt;<span class="kw">machine</span><span class="ot"> MACH=</span><span class="st">"sockeye"</span>&gt;</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">DESC</span>&gt;UBC ARC cluster, os is Linux, 40 pes/node, batch system is SLURM&lt;/<span class="kw">DESC</span>&gt;</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">OS</span>&gt;LINUX&lt;/<span class="kw">OS</span>&gt;</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">COMPILERS</span>&gt;intel,gnu&lt;/<span class="kw">COMPILERS</span>&gt;</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">MPILIBS</span>&gt;openmpi&lt;/<span class="kw">MPILIBS</span>&gt;</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">PROJECT</span>&gt;&lt;<span class="kw">alloc-code</span>&gt;&lt;/<span class="kw">PROJECT</span>&gt;</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">CIME_OUTPUT_ROOT</span>&gt;/scratch/&lt;<span class="kw">alloc-code</span>&gt;/cesm/output&lt;/<span class="kw">CIME_OUTPUT_ROOT</span>&gt;</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">DIN_LOC_ROOT</span>&gt;/scratch/&lt;<span class="kw">alloc-code</span>&gt;/cesm/inputdata&lt;/<span class="kw">DIN_LOC_ROOT</span>&gt;</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">DIN_LOC_ROOT_CLMFORC</span>&gt;${DIN_LOC_ROOT}/atm/datm7&lt;/<span class="kw">DIN_LOC_ROOT_CLMFORC</span>&gt;</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">DOUT_S_ROOT</span>&gt;$CIME_OUTPUT_ROOT/archive/$CASE&lt;/<span class="kw">DOUT_S_ROOT</span>&gt;</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">GMAKE</span>&gt;make&lt;/<span class="kw">GMAKE</span>&gt;</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">GMAKE_J</span>&gt;8&lt;/<span class="kw">GMAKE_J</span>&gt;</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">BATCH_SYSTEM</span>&gt;slurm&lt;/<span class="kw">BATCH_SYSTEM</span>&gt;</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">SUPPORTED_BY</span>&gt;&lt;<span class="kw">your-email</span>&gt;&lt;/<span class="kw">SUPPORTED_BY</span>&gt;</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">MAX_TASKS_PER_NODE</span>&gt;40&lt;/<span class="kw">MAX_TASKS_PER_NODE</span>&gt;</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">MAX_MPITASKS_PER_NODE</span>&gt;40&lt;/<span class="kw">MAX_MPITASKS_PER_NODE</span>&gt;</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">PROJECT_REQUIRED</span>&gt;TRUE&lt;/<span class="kw">PROJECT_REQUIRED</span>&gt;</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">mpirun</span><span class="ot"> mpilib=</span><span class="st">"openmpi"</span>&gt;</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">executable</span>&gt;mpirun&lt;/<span class="kw">executable</span>&gt;</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">arguments</span>&gt;</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">arg</span><span class="ot"> name=</span><span class="st">"anum_tasks"</span>&gt; -np {{ total_tasks }}&lt;/<span class="kw">arg</span>&gt;</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>       &lt;/<span class="kw">arguments</span>&gt;</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>     &lt;/<span class="kw">mpirun</span>&gt;</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">module_system</span><span class="ot"> type=</span><span class="st">"module"</span><span class="ot"> allow_error=</span><span class="st">"true"</span>&gt;</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">init_path</span><span class="ot"> lang=</span><span class="st">"perl"</span>&gt;$ENV{MODULESHOME}/init/perl&lt;/<span class="kw">init_path</span>&gt;</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">init_path</span><span class="ot"> lang=</span><span class="st">"python"</span>&gt;$ENV{MODULESHOME}/init/env_modules_python.py&lt;/<span class="kw">init_path</span>&gt;</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">init_path</span><span class="ot"> lang=</span><span class="st">"csh"</span>&gt;$ENV{MODULESHOME}/init/csh&lt;/<span class="kw">init_path</span>&gt;</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">init_path</span><span class="ot"> lang=</span><span class="st">"sh"</span>&gt;$ENV{MODULESHOME}/init/sh&lt;/<span class="kw">init_path</span>&gt;</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">cmd_path</span><span class="ot"> lang=</span><span class="st">"perl"</span>&gt;$ENV{MODULESHOME}/libexec/lmod perl&lt;/<span class="kw">cmd_path</span>&gt;</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">cmd_path</span><span class="ot"> lang=</span><span class="st">"python"</span>&gt;$ENV{MODULESHOME}/libexec/lmod python&lt;/<span class="kw">cmd_path</span>&gt;</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">cmd_path</span><span class="ot"> lang=</span><span class="st">"csh"</span>&gt;module&lt;/<span class="kw">cmd_path</span>&gt;</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">cmd_path</span><span class="ot"> lang=</span><span class="st">"sh"</span>&gt;module&lt;/<span class="kw">cmd_path</span>&gt;</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">modules</span>&gt;</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"purge"</span>/&gt;</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;CVMFS_CC&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;StdEnv/2023&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;python/3.11.5&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;cmake/3.31.0&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>       &lt;/<span class="kw">modules</span>&gt;</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">modules</span><span class="ot"> compiler=</span><span class="st">"intel"</span>&gt;</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;intel/2023.2.1&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;imkl/2024.2.0&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>       &lt;/<span class="kw">modules</span>&gt;</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">modules</span><span class="ot"> compiler=</span><span class="st">"gnu"</span>&gt;</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;gcc/12.3&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;openblas/0.3.24&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>       &lt;/<span class="kw">modules</span>&gt;</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">modules</span><span class="ot"> mpilib=</span><span class="st">"openmpi"</span>&gt;</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;openmpi/4.1.5&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;hdf5-mpi/1.14.5&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;netcdf-mpi/4.9.2&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;netcdf-c++4-mpi/4.3.1&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;netcdf-fortran-mpi/4.6.1&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;pnetcdf/1.12.3&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;parallelio/2.6.3&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;esmf/8.7.0&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>       &lt;/<span class="kw">modules</span>&gt;</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>     &lt;/<span class="kw">module_system</span>&gt;</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">environment_variables</span>&gt;</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">env</span><span class="ot"> name=</span><span class="st">"OMP_STACKSIZE"</span>&gt;256M&lt;/<span class="kw">env</span>&gt;</span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>     &lt;/<span class="kw">environment_variables</span>&gt;</span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">environment_variables</span><span class="ot"> comp_interface=</span><span class="st">"nuopc"</span>&gt;</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">env</span><span class="ot"> name=</span><span class="st">"ESMF_RUNTIME_PROFILE"</span>&gt;ON&lt;/<span class="kw">env</span>&gt;</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">env</span><span class="ot"> name=</span><span class="st">"ESMF_RUNTIME_PROFILE_OUTPUT"</span>&gt;SUMMARY&lt;/<span class="kw">env</span>&gt;</span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>     &lt;/<span class="kw">environment_variables</span>&gt;</span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">resource_limits</span>&gt;</span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">resource</span><span class="ot"> name=</span><span class="st">"RLIMIT_STACK"</span>&gt;300000000&lt;/<span class="kw">resource</span>&gt;</span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>     &lt;/<span class="kw">resource_limits</span>&gt;</span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>   &lt;/<span class="kw">machine</span>&gt;</span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a> &lt;/<span class="kw">config_machines</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>While the following example is focused on the Cedar cluster, with a few modifications, it could also work on other Alliance clusters. One item to note is that many Alliance clusters run both Intel and AMD CPUs in their nodes, and according to the <a href="https://docs.alliancecan.ca/wiki/BLAS_and_LAPACK">Alliance’s documentation</a> loading Flexiblas for BLAS and LAPACK can be a safe method to ensure you are using the best library for whichever nodes you might be running on.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>~/.cime/config_machines.xml</strong></pre>
+</div>
+<div class="sourceCode" id="cb6" data-filename="~/.cime/config_machines.xml"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">&lt;?xml</span><span class="ot"> version=</span><span class="st">"1.0"</span><span class="fu">?&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">config_machines</span><span class="ot"> version=</span><span class="st">"2.0"</span>&gt;</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>   &lt;<span class="kw">machine</span><span class="ot"> MACH=</span><span class="st">"cedar"</span>&gt;</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">DESC</span>&gt;Alliance cluster hosted at SFU, os is Linux, 48 pes/node, batch system is SLURM&gt;/DESC&gt;</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">NODENAME_REGEX</span>&gt;c[de].*.computecanada.ca&lt;/<span class="kw">NODENAME_REGEX</span>&gt;</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">OS</span>&gt;LINUX&lt;/<span class="kw">OS</span>&gt;</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">COMPILERS</span>&gt;intel,gnu&lt;/<span class="kw">COMPILERS</span>&gt;</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">MPILIBS</span>&gt;openmpi&lt;/<span class="kw">MPILIBS</span>&gt;</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">PROJECT</span>&gt;&lt;<span class="kw">group_name</span>&gt;&lt;/<span class="kw">PROJECT</span>&gt;</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">CIME_OUTPUT_ROOT</span>&gt;$ENV{SCRATCH}/cesm/output&lt;/<span class="kw">CIME_OUTPUT_ROOT</span>&gt;</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">DIN_LOC_ROOT</span>&gt;$ENV{SCRATCH}/cesm/inputdata&lt;/<span class="kw">DIN_LOC_ROOT</span>&gt;</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">DIN_LOC_ROOT_CLMFORC</span>&gt;$DIN_LOC_ROOT/atm/datm7&lt;/<span class="kw">DIN_LOC_ROOT_CLMFORC</span>&gt;</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">DOUT_S_ROOT</span>&gt;$CIME_OUTPUT_ROOT/archive/$CASE&lt;/<span class="kw">DOUT_S_ROOT</span>&gt;</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">GMAKE</span>&gt;make&lt;/<span class="kw">GMAKE</span>&gt;</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">GMAKE_J</span>&gt;8&lt;/<span class="kw">GMAKE_J</span>&gt;</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">BATCH_SYSTEM</span>&gt;slurm&lt;/<span class="kw">BATCH_SYSTEM</span>&gt;</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">SUPPORTED_BY</span>&gt;support@tech.alliancecan.ca&lt;/<span class="kw">SUPPORTED_BY</span>&gt;</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">MAX_TASKS_PER_NODE</span>&gt;48&lt;/<span class="kw">MAX_TASKS_PER_NODE</span>&gt;</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">MAX_MPITASKS_PER_NODE</span>&gt;48&lt;/<span class="kw">MAX_MPITASKS_PER_NODE</span>&gt;</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">PROJECT_REQUIRED</span>&gt;TRUE&lt;/<span class="kw">PROJECT_REQUIRED</span>&gt;</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">mpirun</span><span class="ot"> mpilib=</span><span class="st">"openmpi"</span>&gt;</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">executable</span>&gt;mpirun&lt;/<span class="kw">executable</span>&gt;</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">arguments</span>&gt;</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>             &lt;<span class="kw">arg</span><span class="ot"> name=</span><span class="st">"anum_tasks"</span>&gt; -np {{ total_tasks }}&lt;/<span class="kw">arg</span>&gt;</span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>         &lt;/<span class="kw">arguments</span>&gt;</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>     &lt;/<span class="kw">mpirun</span>&gt;</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">module_system</span><span class="ot"> type=</span><span class="st">"module"</span><span class="ot"> allow_error=</span><span class="st">"true"</span>&gt;</span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">init_path</span><span class="ot"> lang=</span><span class="st">"perl"</span>&gt;$ENV{MODULESHOME}/init/perl&lt;/<span class="kw">init_path</span>&gt;</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">init_path</span><span class="ot"> lang=</span><span class="st">"python"</span>&gt;$ENV{MODULESHOME}/init/env_modules_python.py&lt;/<span class="kw">init_path</span>&gt;</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">init_path</span><span class="ot"> lang=</span><span class="st">"csh"</span>&gt;$ENV{MODULESHOME}/init/csh&lt;/<span class="kw">init_path</span>&gt;</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">init_path</span><span class="ot"> lang=</span><span class="st">"sh"</span>&gt;$ENV{MODULESHOME}/init/sh&lt;/<span class="kw">init_path</span>&gt;</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">cmd_path</span><span class="ot"> lang=</span><span class="st">"perl"</span>&gt;$ENV{MODULESHOME}/libexec/lmod perl&lt;/<span class="kw">cmd_path</span>&gt;</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">cmd_path</span><span class="ot"> lang=</span><span class="st">"python"</span>&gt;$ENV{MODULESHOME}/libexec/lmod python&lt;/<span class="kw">cmd_path</span>&gt;</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">cmd_path</span><span class="ot"> lang=</span><span class="st">"csh"</span>&gt;module&lt;/<span class="kw">cmd_path</span>&gt;</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>       &lt;<span class="kw">cmd_path</span><span class="ot"> lang=</span><span class="st">"sh"</span>&gt;module&lt;/<span class="kw">cmd_path</span>&gt;</span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">modules</span>&gt;</span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"purge"</span>/&gt;</span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;StdEnv/2023&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;python/3.11.5&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;cmake/3.31.0&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>     &lt;/<span class="kw">modules</span>&gt;</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">modules</span><span class="ot"> compiler=</span><span class="st">"intel"</span>&gt;</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;intel/2023.2.1&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>     &lt;/<span class="kw">modules</span>&gt;</span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">modules</span><span class="ot"> compiler=</span><span class="st">"gnu"</span>&gt;</span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;gcc/12.3&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>     &lt;/<span class="kw">modules</span>&gt;</span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">modules</span>&gt;</span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;flexiblas/3.3.1&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>     &lt;/<span class="kw">modules</span>&gt;</span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">modules</span><span class="ot"> mpilib=</span><span class="st">"openmpi"</span>&gt;</span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;openmpi/4.1.5&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;hdf5-mpi/1.14.5&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;netcdf-mpi/4.9.2&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;netcdf-c++4-mpi/4.3.1&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;netcdf-fortran-mpi/4.6.1&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;pnetcdf/1.12.3&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;parallelio/2.6.3&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>         &lt;<span class="kw">command</span><span class="ot"> name=</span><span class="st">"load"</span>&gt;esmf/8.7.0&lt;/<span class="kw">command</span>&gt;</span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>     &lt;/<span class="kw">modules</span>&gt;</span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a> &lt;/<span class="kw">module_system</span>&gt;</span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a> &lt;<span class="kw">environment_variables</span>&gt;</span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>   &lt;<span class="kw">env</span><span class="ot"> name=</span><span class="st">"OMP_STACKSIZE"</span>&gt;256M&lt;/<span class="kw">env</span>&gt;</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a> &lt;/<span class="kw">environment_variables</span>&gt;</span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a> &lt;<span class="kw">environment_variables</span><span class="ot"> comp_interface=</span><span class="st">"nuopc"</span>&gt;</span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>   &lt;<span class="kw">env</span><span class="ot"> name=</span><span class="st">"ESMF_RUNTIME_PROFILE"</span>&gt;ON&lt;/<span class="kw">env</span>&gt;</span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>   &lt;<span class="kw">env</span><span class="ot"> name=</span><span class="st">"ESMF_RUNTIME_PROFILE_OUTPUT"</span>&gt;SUMMARY&lt;/<span class="kw">env</span>&gt;</span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a> &lt;/<span class="kw">environment_variables</span>&gt;</span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a> &lt;<span class="kw">resource_limits</span>&gt;</span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>   &lt;<span class="kw">resource</span><span class="ot"> name=</span><span class="st">"RLIMIT_STACK"</span>&gt;300000000&lt;/<span class="kw">resource</span>&gt;</span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a> &lt;/<span class="kw">resource_limits</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<p>Once you’ve finished creating <code>config_machines.xml</code>, run the file through <code>xmllint</code> to verify that it complies with the XML schema.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> xmllint <span class="at">--noout</span> <span class="at">--schema</span> <span class="va">$CIME</span>/config/xml_schemas/config_machines.xsd <span class="va">$HOME</span>/.cime/config_machines.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>The next config file to create is <code>config_batch.xml</code>. Since both Sockeye and the Alliance clusters use the SLURM job scheduler, this file should be pretty easy to adapt between any of the clusters. Just remember to replace <code>&lt;machine_name&gt;</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> nano ~/.cime/config_batch.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>~/.cime/config_batch.xml</strong></pre>
+</div>
+<div class="sourceCode" id="cb9" data-filename="~/.cime/config_batch.xml"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">batch_system</span><span class="ot"> MACH=</span><span class="st">"</span><span class="er">&lt;</span><span class="st">machine_name&gt;"</span><span class="ot"> type=</span><span class="st">"slurm"</span> &gt;</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">batch_submit</span>&gt;sbatch&lt;/<span class="kw">batch_submit</span>&gt;</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">batch_cancel</span>&gt;scancel&lt;/<span class="kw">batch_cancel</span>&gt;</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">batch_directive</span>&gt;#SBATCH&lt;/<span class="kw">batch_directive</span>&gt;</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">jobid_pattern</span>&gt;(\d+)$&lt;/<span class="kw">jobid_pattern</span>&gt;</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">depend_string</span>&gt; --dependency=afterok:jobid&lt;/<span class="kw">depend_string</span>&gt;</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">depend_allow_string</span>&gt; --dependency=afterany:jobid&lt;/<span class="kw">depend_allow_string</span>&gt;</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">depend_separator</span>&gt;,&lt;/<span class="kw">depend_separator</span>&gt;</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">submit_args</span>&gt;</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">arg</span><span class="ot"> flag=</span><span class="st">"--time"</span><span class="ot"> name=</span><span class="st">"$JOB_WALLCLOCK_TIME"</span>/&gt;</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">arg</span><span class="ot"> flag=</span><span class="st">"--account"</span><span class="ot"> name=</span><span class="st">"$PROJECT"</span>/&gt;</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">submit_args</span>&gt;</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">directives</span>&gt;</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">directive</span>&gt;--job-name={{ job_id }}&lt;/<span class="kw">directive</span>&gt;</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">directive</span>&gt;--nodes={{ num_nodes }}&lt;/<span class="kw">directive</span>&gt;</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">directive</span>&gt;--ntasks-per-node={{ tasks_per_node }}&lt;/<span class="kw">directive</span>&gt;</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">directive</span>&gt;--output={{ job_id }}&lt;/<span class="kw">directive</span>&gt;</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">directive</span>&gt;--exclusive&lt;/<span class="kw">directive</span>&gt;</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">directive</span>&gt;--mem=0&lt;/<span class="kw">directive</span>&gt;</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">directives</span>&gt;</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">unknown_queue_directives</span>&gt;regular&lt;/<span class="kw">unknown_queue_directives</span>&gt;</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">queues</span>&gt;</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>    &lt;<span class="kw">queue</span><span class="ot"> walltimemax=</span><span class="st">"12:00:00"</span><span class="ot"> nodemin=</span><span class="st">"1"</span><span class="ot"> nodemax=</span><span class="st">"4032"</span>&gt;&lt;<span class="kw">machine_name</span>&gt;&lt;/<span class="kw">queue</span>&gt;</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>  &lt;/<span class="kw">queues</span>&gt;</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">batch_system</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Again validate this file using <code>xmllint</code>.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> xmllint <span class="at">--noout</span> <span class="at">--schema</span> <span class="va">$CIME</span>/config/xml_schemas/config_batch.xsd <span class="va">$HOME</span>/.cime/config_batch.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>The last config file is used to provide information for the compilation step. For versrions of CESM &lt;= 2.2.2, a <code>config_compilers.xml</code> file should be created, while newer versions of CESM will deperecate that config file and switch to using cmake macros file.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Sockeye</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false">Allianec - Cedar</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>~/.cime/config_compilers.xml</strong></pre>
+</div>
+<div class="sourceCode" id="cb11" data-filename="~/.cime/config_compilers.xml"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">compiler</span><span class="ot"> MACH=</span><span class="st">"sockeye"</span>&gt;</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">CPPDEFS</span>&gt;</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">append</span><span class="ot"> MODEL=</span><span class="st">"gptl"</span>&gt; -DHAVE_NANOTIME -DBIT64 -DHAVE_VPRINTF -DHAVE_BACKTRACE -DHAVE_SLASHPROC -DHAVE_COMM_F2C -DHAVE_TIMES -DHAVE_GETTIMEOFDAY &lt;/<span class="kw">append</span>&gt;</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>   &lt;/<span class="kw">CPPDEFS</span>&gt;</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">ESMF_LIBDIR</span>&gt;$ENV{EBROOTESMF}/lib&lt;/<span class="kw">ESMF_LIBDIR</span>&gt;</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">HDF5_PATH</span>&gt;$ENV{HDF5_DIR}&lt;/<span class="kw">HDF5_PATH</span>&gt;</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">MPI_LIB_NAME</span>&gt;openmpi&lt;/<span class="kw">MPI_LIB_NAME</span>&gt;</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">MPI_PATH</span>&gt;$ENV{EBROOTOPENMPI}&lt;/<span class="kw">MPI_PATH</span>&gt;</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>   &lt;<span class="kw">NETCDF_C_PATH</span>&gt;$ENV{EBROOTNETCDF}&lt;/<span class="kw">NETCDF_C_PATH</span>&gt;</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">NETCDF_FORTRAN_PATH</span>&gt;$ENV{EBROOTNETCDFMINFORTRAN}&lt;/<span class="kw">NETCDF_FORTRAN_PATH</span>&gt;</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>   &lt;<span class="kw">PIO_FILESYSTEM_HINTS</span>&gt;lustre&lt;/<span class="kw">PIO_FILESYSTEM_HINTS</span>&gt;</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>   &lt;<span class="kw">PNETCDF_PATH</span>&gt;$ENV{PNETCDF}&lt;/<span class="kw">PNETCDF_PATH</span>&gt;</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">compiler</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>~/.cime/config_compilers.xml</strong></pre>
+</div>
+<div class="sourceCode" id="cb12" data-filename="~/.cime/config_compilers.xml"><pre class="sourceCode xml code-with-copy"><code class="sourceCode xml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>&lt;<span class="kw">compiler</span><span class="ot"> MACH=</span><span class="st">"cedar"</span>&gt;</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">CPPDEFS</span>&gt;</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">append</span><span class="ot"> MODEL=</span><span class="st">"gptl"</span>&gt; -DHAVE_NANOTIME -DBIT64 -DHAVE_VPRINTF -DHAVE_BACKTRACE -DHAVE_SLASHPROC -DHAVE_COMM_F2C -DHAVE_TIMES -DHAVE_GETTIMEOFDAY &lt;/<span class="kw">append</span>&gt;</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>   &lt;/<span class="kw">CPPDEFS</span>&gt;</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">ESMF_LIBDIR</span>&gt;$ENV{EBROOTESMF}/lib&lt;/<span class="kw">ESMF_LIBDIR</span>&gt;</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">HDF5_PATH</span>&gt;$ENV{HDF5_DIR}&lt;/<span class="kw">HDF5_PATH</span>&gt;</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">MPI_LIB_NAME</span>&gt;openmpi&lt;/<span class="kw">MPI_LIB_NAME</span>&gt;</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">MPI_PATH</span>&gt;$ENV{EBROOTOPENMPI}&lt;/<span class="kw">MPI_PATH</span>&gt;</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>   &lt;<span class="kw">NETCDF_C_PATH</span>&gt;$ENV{EBROOTNETCDF}&lt;/<span class="kw">NETCDF_C_PATH</span>&gt;</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  &lt;<span class="kw">NETCDF_FORTRAN_PATH</span>&gt;$ENV{EBROOTNETCDFMINFORTRAN}&lt;/<span class="kw">NETCDF_FORTRAN_PATH</span>&gt;</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>   &lt;<span class="kw">PIO_FILESYSTEM_HINTS</span>&gt;lustre&lt;/<span class="kw">PIO_FILESYSTEM_HINTS</span>&gt;</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>   &lt;<span class="kw">PNETCDF_PATH</span>&gt;$ENV{PNETCDF}&lt;/<span class="kw">PNETCDF_PATH</span>&gt;</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>   &lt;<span class="kw">SLIBS</span>&gt;</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>     &lt;<span class="kw">append</span>&gt;-L$ENV{FLEXIBLAS_LIBRARY_PATH} -lflexiblas&lt;/<span class="kw">append</span>&gt;</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>   &lt;/<span class="kw">SLIBS</span>&gt;</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>&lt;/<span class="kw">compiler</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<p>Again, use <code>xmllint</code> for validation.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> xmllint <span class="at">--noout</span> <span class="at">--schema</span> <span class="va">$CIME</span>/config/xml_schemas/config_compilers_v2.xsd <span class="va">$HOME</span>/.cime/config_compilers.xml</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Newer version of CESM will switch to using Cmake Macros</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Sockeye</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Alliance - Cedar</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>~/.cime/sockeye.cmake</strong></pre>
+</div>
+<div class="sourceCode" id="cb14" data-filename="~/.cime/sockeye.cmake"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">(</span><span class="ex">COMP_NAME</span> STREQUAL gptl<span class="kw">)</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">string</span><span class="er">(</span><span class="ex">APPEND</span> CPPDEFS <span class="st">" -DHAVE_NANOTIME -DBIT64 -DHAVE_VPRINTF -DHAVE_BACKTRACE -DHAVE_SLASHPROC -DHAVE_COMM_F2C -DHAVE_TIMES -DHAVE_GETTIMEOFDAY"</span><span class="kw">)</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="fu">endif()</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">ESMF_LIBDIR</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{EBROOTESMF}/lib"</span><span class="kw">)</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">MPI_LIB_NAME</span> <span class="st">"openmpi"</span><span class="kw">)</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">MPI_PATH</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{EBROOTOPENMPI}"</span><span class="kw">)</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">HDF5_PATH</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{HDF5_DIR}"</span><span class="kw">)</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">NETCDF_C_PATH</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{EBROOTNETCDF}"</span><span class="kw">)</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">NETCDF_FORTRAN_PATH</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{EBROOTNETCDFMINFORTRAN}"</span><span class="kw">)</span></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">PNETCDF_PATH</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{PNETCDF}"</span><span class="kw">)</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">PIO_FILESYSTEM_HINTS</span> <span class="st">"lustre"</span><span class="kw">)</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">PIO_LIBDIR</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{PIO}/lib"</span><span class="kw">)</span></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">PIO_INCDIR</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{PIO}/include"</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>~/.cime/cedar.cmake</strong></pre>
+</div>
+<div class="sourceCode" id="cb15" data-filename="~/.cime/cedar.cmake"><pre class="sourceCode sh code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="kw">(</span><span class="ex">COMP_NAME</span> STREQUAL gptl<span class="kw">)</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="ex">string</span><span class="er">(</span><span class="ex">APPEND</span> CPPDEFS <span class="st">" -DHAVE_NANOTIME -DBIT64 -DHAVE_VPRINTF -DHAVE_BACKTRACE -DHAVE_SLASHPROC -DHAVE_COMM_F2C -DHAVE_TIMES -DHAVE_GETTIMEOFDAY"</span><span class="kw">)</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">endif()</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">ESMF_LIBDIR</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{EBROOTESMF}/lib"</span><span class="kw">)</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">MPI_LIB_NAME</span> <span class="st">"openmpi"</span><span class="kw">)</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">MPI_PATH</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{EBROOTOPENMPI}"</span><span class="kw">)</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">HDF5_PATH</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{HDF5_DIR}"</span><span class="kw">)</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">NETCDF_C_PATH</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{EBROOTNETCDF}"</span><span class="kw">)</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">NETCDF_FORTRAN_PATH</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{EBROOTNETCDFMINFORTRAN}"</span><span class="kw">)</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">PNETCDF_PATH</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{PNETCDF}"</span><span class="kw">)</span></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">PIO_FILESYSTEM_HINTS</span> <span class="st">"lustre"</span><span class="kw">)</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">PIO_LIBDIR</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{PIO}/lib"</span><span class="kw">)</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span><span class="er">(</span><span class="ex">PIO_INCDIR</span> <span class="st">"</span><span class="va">$ENV</span><span class="st">{PIO}/include"</span><span class="kw">)</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="ex">string</span><span class="er">(</span><span class="ex">REPLACE</span> <span class="st">"-mkl=cluster"</span> <span class="st">""</span> SLIBS <span class="st">"</span><span class="va">${SLIBS}</span><span class="st">"</span><span class="kw">)</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a><span class="ex">string</span><span class="er">(</span><span class="ex">APPEND</span> SLIBS <span class="st">"-lflexiblas"</span><span class="kw">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div></li>
+<li><p>To further validate the config files, run the <code>scripts_regression_test.py</code> that’s included with CESM.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> python ./CESM/cime/scripts/tests/scripts_regression_test.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>run cheyenne prealpha tests</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ./CESM/cime/scripts/create_test <span class="at">--xml-category</span> prealpha <span class="at">--xml-machine</span> cheyenne <span class="at">--xml-compiler</span> intel <span class="at">--machine</span> <span class="op">&lt;</span>your_machine_name<span class="op">&gt;</span> --compiler <span class="op">&lt;</span>your_compiler_name<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/ubc-geography\.github\.io\/computing-resources");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/UBC-Geography/computing-resources/edit/main/high-performance-computing/running-cesm.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/UBC-Geography/computing-resources/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
