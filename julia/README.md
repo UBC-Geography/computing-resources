@@ -1,8 +1,7 @@
 ---
 output-file: index.html
 title: Julia
-# change to date to last-modified after next modification
-date: 2024-12-05
+date: last-modified
 ---
 
 Compared to Python and R, Julia is a relatively young language that is slowly
@@ -35,6 +34,10 @@ environments.
 - _Mastering Julia_ :
   [UBC Library](https://go.exlibris.link/GvqfyYsy){target="\_blank"} |
   [WorldCat](https://search.worldcat.org/title/1419373810){target="\_blank"}
+
+- _Julia Quick Syntax Reference_ :
+  [UBC Library](https://go.exlibris.link/jNcDThCh){target="\_blank"} |
+  [WorldCat](https://search.worldcat.org/title/1487664583){target="\_blank"}
 
 ## Geospatial Libraries/Packages
 

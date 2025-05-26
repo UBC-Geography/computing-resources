@@ -1,8 +1,7 @@
 ---
 output-file: index.html
 title: R
-# change to date to last-modified after next modification
-date: 2025-01-16
+date: last-modified
 ---
 
 Alongside Python, R is one of the commonly used programming languages in
@@ -40,6 +39,10 @@ basics of R.
 - _R for Data Science_ :
   [UBC Library](https://go.exlibris.link/FW9jGNqj){target="\_blank"} |
   [WorldCat](https://search.worldcat.org/title/1392138200){target="\_blank"}
+
+- _Data Insight Foundations : Step-by-Step Data Analysis with R_ :
+  [UBC Library](https://learning.oreilly.com/library/view/data-insight-foundations/9798868805806/){target="\_blank"}
+  | [WorldCat](https://search.worldcat.org/title/1513398001){target="\_blank"}
 
 - _R-ticulate : A Beginner's Guide to Data Analysis for Natural Scientists_ :
   [UBC Library](https://go.exlibris.link/BTKFxJ9H){target="\_blank"} |

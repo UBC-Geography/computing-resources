@@ -1,8 +1,7 @@
 ---
 output-file: index.html
 title: Digital Communications
-# change to date to last-modified after next modification
-date: 2024-12-05
+date: last-modified
 ---
 
 ## WordPress
@@ -127,7 +126,14 @@ that can be used to customize the style of a website.
 
 ### Quire (JavaScript)
 
-https://quire.getty.edu/
+Developed and maintained by [Getty](https://www.getty.edu/), Quire is built on
+the static site generator, [11ty](https://www.11ty.dev/), and focuses on acting
+as a tool that can facilitate the creation of media-rich, sustainable, and
+easily preserved digital publications.
+
+- [Quire Overview, Documentation, and Resources](https://quire.getty.edu/)
+
+- [Quire - GitHub README](https://github.com/thegetty/quire)
 
 ## Digital Exhibit Tools
 

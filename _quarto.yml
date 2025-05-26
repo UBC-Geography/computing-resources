@@ -95,6 +95,8 @@ website:
             text: Overview
           - href: "high-performance-computing/running-isca.html"
             text: Running Isca
+          - href: "high-performance-computing/running-cesm.html"
+            text: Running CESM
       - section: Cloud Computing
         contents:
           - href: "cloud-computing/index.html"

@@ -1,8 +1,7 @@
 ---
 output-file: index.html
 title: Development Environments
-# change to date to last-modified after next modification
-date: 2025-01-16
+date: last-modified
 ---
 
 A development environment can often encompass both a code editor or integrated
@@ -111,21 +110,6 @@ students will need a Google account and a noncommercial Google Cloud Project,
 which can be setup [here](https://code.earthengine.google.com/register).
 [JavaScript - GEE](https://ubc-geography.github.io/computing-resources/javascript/#google-earth-engine-gee)
 provides resources for getting started with GEE through the code editor and API.
-
-### Glitch
-
-Similar to Google Earth Engine, Glitch provides a JavaScript-based coding
-playground, but focuses on web development rather than remote sensing. It can
-provide a quick way of setting up either a static website or a very basic web
-application. For geographers, Glitch is particularly useful for developing
-[web maps](https://ubc-geography.github.io/computing-resources/javascript/#web-mapping)
-and [WebXR](https://ubc-geography.github.io/computing-resources/xr/#webxr)
-content. Glitch also provides a useful feature that enables users 'remix' each
-others projects by using another project as a template for new one.
-
-[Glitch - Help Articles](https://help.glitch.com/hc/en-us)
-
-[Glitch Example - Starter Leaflet](https://glitch.com/~starter-leaflet)
 
 ## Virtual Environment Managers
 

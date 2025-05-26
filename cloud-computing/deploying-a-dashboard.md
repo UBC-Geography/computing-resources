@@ -92,7 +92,7 @@ Requirements:
 
    Then use the following text as a template for your service:
 
-   ```txt
+   ```{.txt filename="/usr/lib/systemd/system/voila.service"}
    [Unit]
    Description=Voila
 
@@ -144,7 +144,7 @@ Requirements:
    $ sudo nano /etc/caddy/Caddyfile
    ```
 
-   ```
+   ```{.txt filename="/etc/caddy/Caddyfile"}
    <domain_name> {
       reverse_proxy localhost:8866
    }
@@ -155,10 +155,3 @@ Requirements:
    ```
 
    Navigate to your dashboard to see it in action!
-
-Resources:
-
-- Caddy documentation
-- Voila documentation
-- miniforge docs
-- systemd docs

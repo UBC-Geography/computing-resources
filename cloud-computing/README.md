@@ -75,17 +75,6 @@ particularly useful for the following use cases:
   (OpenStreetMap), or QGIS server.
 - Developing dynamic digital exhibits or publications with Omeka and/or Scalar.
 
-Ideas/Examples:
-
-- xDashboard
-- xOmeka
-- uMap
-- OpenWebMap
-- Ushahidi
-- CollectionBuilder
-- JupyterHub
-- Immich?
-
 Again, when working with persistent VMs, consider any implications that may come
 from preserving your work once the VM is no longer available by asking yourself
 whether your work can be easily exported, web archived, and/or hosted externally

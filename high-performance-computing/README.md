@@ -1,8 +1,7 @@
 ---
 output-file: index.html
 title: High-Performance Computing / High-Throughput Computing
-# change to date to last-modified after next modification
-date: 2025-01-07
+date: last-modified
 ---
 
 High-performance computing (HPC) and high-throughput computing (HTC) can provide
@@ -86,6 +85,16 @@ receive larger allocations of storage.
 
 Documentation:
 <https://docs.alliancecan.ca/wiki/Getting_started>{target="\_blank"}
+
+::: {.callout-note}
+
+The Alliance is currently in the process of implementing significant upgrades to
+their HPC systems, so the information listed below may no longer be up to date.
+For details on the status of current upgrades, review the
+[Infrastructure Renewal](https://docs.alliancecan.ca/wiki/Infrastructure_renewal)
+page on their wiki.
+
+:::
 
 Clusters:
 

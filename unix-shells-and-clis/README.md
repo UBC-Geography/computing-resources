@@ -110,6 +110,8 @@ $ conda install -c conda-forge libgdal -y
 
 :::
 
+<!-- TODO: Add [tippecanoe](https://github.com/felt/tippecanoe) -->
+
 ### ImageMagick
 
 When processing large collections of images, ImageMagick is a very popular tool

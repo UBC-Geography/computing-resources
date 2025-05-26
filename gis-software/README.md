@@ -98,6 +98,8 @@ materials below and find upcoming workshops on their
   [UBC Library](https://go.exlibris.link/NcZblRWv){target="\_blank"} |
   [WorldCat](https://search.worldcat.org/title/979891998){target="\_blank"}
 
+<!-- TODO: Add [GRASS](https://grass.osgeo.org/) -->
+
 ## GeoServer
 
 GIS servers, like ArcGIS Server, QGIS Server, and GeoServer, enable users to
